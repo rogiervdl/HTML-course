@@ -162,6 +162,13 @@ aside a:hover {
    color: #faf5e6;
 }
 
+aside #qr {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .wrapper > header h1, .wrapper > header h1 + p, aside {
    -webkit-transition: all .2s ease;
       -moz-transition: all .2s ease;
