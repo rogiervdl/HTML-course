@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Tables</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>TABLES</h1>
+          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <figure>
+            <img src="img/05_tables/icon.jpg" alt="" class="border">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TABLES</h1>
+          <h2>When to use</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Tables are just tables</h2>
+          <ul>
+            <li>
+              Used for data that loose their meaning without the rows and colums of tables
+            </li>
+            <li>
+              Do not use for positioning content, that's what we will use CSS for!
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="Table or not?">
+          <h2>Table or not? (1)</h2>
+          <img src="img/05_tables/table1.jpg" alt="table or not?">
+          <ul>
+            <li class="arrow fragment">yes; content loses meaning without a table</li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Table or not? (2)</h2>
+          <img src="img/05_tables/table2.jpg" alt="table or not?">
+          <ul>
+            <li class="arrow fragment">no; there are other non-tabular desings possible</li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Table or not? (3)</h2>
+          <img src="img/05_tables/table3.jpg" alt="table or not?">
+          <ul>
+            <li class="arrow fragment">no; there are other non-tabular desings possible</li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Table or not? (4)</h2>
+          <img src="img/05_tables/table4.jpg" alt="table or not?">
+          <ul>
+            <li class="arrow fragment">yes; a shopping cart is a kind of spreadsheet, which is a table</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TABLES</h1>
+          <h2>Tables in HTML</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Rows and cells</h2>
+          <ul>
+            <li>
+              Version with <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> and <code>&lt;td&gt;</code>:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hour&lt;/td&gt;
+    &lt;td&gt;Band&lt;/td&gt;
+    &lt;td&gt;Genre&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;20:00&lt;/td&gt;
+    &lt;td&gt;Cloon&lt;/td&gt;
+    &lt;td&gt;Complex, Freaky, Rock&amp;Rollah&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;21:30&lt;/td&gt;
+    &lt;td&gt;Marvelas&lt;/td&gt;
+    &lt;td&gt;Jazzy funky hiphop&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;23:00&lt;/td&gt;
+    &lt;td&gt;Stash&lt;/td&gt;
+    &lt;td&gt;Rock&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;01:00&lt;/td&gt;
+    &lt;td&gt;Moiano&lt;/td&gt;
+    &lt;td&gt;Souljazz&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre></div>
+              <div class="demolink"><a href="demos/05_tables/table1.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Caption and header cells</h2>
+          <ul>
+            <li>
+              Version with <code>&lt;caption&gt;</code> and <code>&lt;th&gt;</code>:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!-- table HTML code starts here --&gt;
+&lt;table&gt;
+  &lt;caption&gt;Program wednesday 20 juli 2005&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Hour&lt;/th&gt;
+    &lt;th&gt;Band&lt;/th&gt;
+    &lt;th&gt;Genre&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hour&lt;/td&gt;
+    &lt;td&gt;Band&lt;/td&gt;
+    &lt;td&gt;Genre&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;20:00&lt;/td&gt;
+    &lt;td&gt;Cloon&lt;/td&gt;
+    &lt;td&gt;Complex, Freaky, Rock&amp;Rollah&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;21:30&lt;/td&gt;
+    &lt;td&gt;Marvelas&lt;/td&gt;
+    &lt;td&gt;Jazzy funky hiphop&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;23:00&lt;/td&gt;
+    &lt;td&gt;Stash&lt;/td&gt;
+    &lt;td&gt;Rock&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;01:00&lt;/td&gt;
+    &lt;td&gt;Moiano&lt;/td&gt;
+    &lt;td&gt;Souljazz&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre></div>
+              <div class="demolink"><a href="demos/05_tables/table2.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Thead, tfoot and tbody</h2>
+          <ul>
+            <li>
+              Version with <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> and <code>&lt;tbody&gt;</code>:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+  &lt;caption&gt;...table caption...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      ...table header content
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      ...table footer content
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      ...table data row
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      ...table data row
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+      ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></div>
+            </li>
+            <li class="arrow">
+              don't use unless you have good reasons (e.g. complex design)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Colspan and rowspan</h2>
+          <ul>
+            <li>
+              Merge cells with <code>colspan</code> and <code>rowspan</code>
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+  &lt;caption&gt;Programma Gentse feesten 2005&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;&lt;/td&gt;
+    &lt;td colspan="2"&gt;Woensdag 20 juli&lt;/td&gt;
+    &lt;td colspan="2"&gt;Donderdag 21 juli&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Uur&lt;/th&gt;
+    &lt;th&gt;Groep&lt;/th&gt;
+    &lt;th&gt;Uur&lt;/th&gt;
+    &lt;th&gt;Groep&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="3"&gt;Vroege avond&lt;/td&gt;
+    &lt;td&gt;19:30&lt;/td&gt;
+    &lt;td&gt;Cloon&lt;/td&gt;
+    &lt;td&gt;19:30&lt;/td&gt;
+    &lt;td&gt;Sadko&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;20:30&lt;/td&gt;
+    &lt;td&gt;Veres&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;21:30&lt;/td&gt;
+    &lt;td&gt;Marvelas&lt;/td&gt;
+    &lt;td&gt;21:30&lt;/td&gt;
+    &lt;td&gt;The Kolinda Project&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Late avond&lt;/td&gt;
+    &lt;td&gt;23:00&lt;/td&gt;
+    &lt;td&gt;Stash&lt;/td&gt;
+    &lt;td&gt;23:00&lt;/td&gt;
+    &lt;td&gt;Warsaw Village Band&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;01:00&lt;/td&gt;
+    &lt;td&gt;Moiano&lt;/td&gt;
+    &lt;td&gt;01:00&lt;/td&gt;
+    &lt;td&gt;La Caravane Elektro&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></div>
+              <div class="demolink"><a href="demos/05_tables/table3.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Nested tables</h2>
+          <ul>
+            <li>
+              I have never seen nested tabular data in my life, so don't nest tables...
+            </li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+
+    <!-- Index Link -->
+    <aside class="back">
+      <nav>
+        <p><a href="index.html">&larr; Back to index</a></p>
+      </nav>
+    </aside>
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <!-- <script src="vendor/prefixfree.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

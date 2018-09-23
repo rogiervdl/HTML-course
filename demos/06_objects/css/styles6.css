@@ -1,0 +1,174 @@
+
+/* General Section */
+body {
+	background-color: #999;
+	font-family: Verdana;
+}
+
+/* Site Wrapper */
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+	background-color: white;
+	background-image: url(../img/fauxcolumn.png);
+	background-repeat: repeat-y;
+}
+
+/* Header Section */
+#wrapper > header {
+	background-color: #333;
+	padding: 20px;
+	height: 60px;
+	position: relative;
+	color: #ccc;
+}
+#wrapper > header h1 {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	margin: 0;
+	padding: 0px;
+}
+#wrapper > header p {
+	text-align: right;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	margin: 0;
+}
+#wrapper > header a {
+	color: #ddd;
+}
+#wrapper > header a:hover {
+	color: white;
+}
+
+/* Main Menu Section */
+#mainmenu {
+	display: block;
+}
+#mainmenu a {
+	color: #ccc;
+}
+#mainmenu ul {
+	background-color: #666;
+	margin: 0;
+	padding-left: 10px;
+}
+#mainmenu ul li {
+	display: inline-block;
+}
+#mainmenu ul li a {
+	line-height: 24px;
+	display: inline-block;
+	height: 28px;
+	width: 50px;
+	padding: 2px 5px;
+	text-align: center;
+}
+#mainmenu ul li + li:before {
+	content: '|';
+	color: #999;
+}
+
+/* Sub Menu Section */
+
+#submenu {
+	width: 180px;
+	padding: 10px 10px 10px 20px;
+	float: left;
+}
+#submenu ul {
+	padding-left: 0px;
+}
+
+
+
+/* Content Section */
+#content {
+	width: 640px;
+	padding: 10px 10px 10px 20px;
+	float: left;
+}
+
+#content h2 {
+	margin-top: 10px;
+}
+
+#content aside {
+	float: right;
+	width: 130px;
+	border: 1px solid gray;
+	font-size: smaller;
+	padding: 10px;
+	margin: 0 0 10px 10px;
+}
+
+#content aside p {
+	margin: 0;
+}
+
+#content aside h1 {
+	font-size: 10px;
+}
+
+#content article footer {
+	font-size: smaller;
+	margin-bottom: 10px;
+}
+
+#content article {
+	font-size: 12px;
+	line-height: 1.7;
+}
+
+#content article {
+	text-align: justify;
+}
+
+#comments {
+	border-top: 1px dotted #ccc;
+}
+
+#comments footer {
+	font-size: smaller;
+	font-style: italic;
+}
+
+/* Footer Section */
+#wrapper > footer {
+	background-color: #666;
+	text-align: center;
+	font-size: smaller;
+	color: #eee;
+	clear: both;
+	padding: 10px;
+}
+
+#wrapper > footer a {
+	color: #ccc;
+}
+
+#wrapper > footer p, #wrapper > footer ul  {
+	margin: 0;
+}
+
+#wrapper > footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+#wrapper > footer li {
+	display: inline-block;
+}
+
+#wrapper > footer ul a {
+	line-height: 24px;
+	display: inline;
+	padding: 2px 5px;
+}
+#wrapper > footer li + li:before {
+	content: '|';
+	color: #999;
+}
+

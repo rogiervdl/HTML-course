@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Text</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <figure>
+            <img src="img/03_text/icon.jpg" alt="" class="border">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <h2>Blocklevel elements</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Structuring text</h2>
+          <ul>
+            <li>
+              Avoid plain text without structure in the <code>&lt;body&gt;</code>:
+              <pre class="bigger"><code class="language-html wrong">...
+&lt;body&gt;
+  Hello!
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+            <li class="fragment no-style">
+              Better:
+              <pre class="bigger"><code class="language-html right">...
+&lt;body&gt;
+  &lt;p&gt;Hello!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Headings</h2>
+          <ul>
+            <li>
+              Are titles and subtitles of a page:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;h1&gt;Title level 1&lt;/h1&gt;
+&lt;h2&gt;Title level 2&lt;/h2&gt;
+&lt;h3&gt;Title level 3&lt;/h3&gt;
+&lt;h4&gt;Title level 4&lt;/h4&gt;
+&lt;h5&gt;Title level 5&lt;/h5&gt;
+&lt;h6&gt;Title level 6&lt;/h6&gt;
+...</code></pre>
+            </li>
+            <li class="fragment">
+              <code>&lt;h1&gt;</code> is normallly used for the site title<br>
+              <code>&lt;h2&gt;</code> is used for the page title<br>
+              <code>&lt;h3&gt;</code> is used for page chapters<br>
+              <code>&lt;h4&gt;</code> is used for page subchapters<br>
+              etc...
+            </li>
+            <li class="fragment">
+              When using page sections, headings numbering becomes a litte more complicated than this, see <a href="#">this chapter</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Paragraphs</h2>
+          <ul>
+            <li>
+              Block of continuous text:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat.
+&lt;/p&gt;
+&lt;p&gt;
+  Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Unordered lists</h2>
+          <ul>
+            <li>
+              For lists of similar items without numbering:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;Don't forget to buy:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;milk&lt;/li&gt;
+  &lt;li&gt;bread&lt;/li&gt;
+  &lt;li&gt;apples&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+            </li>
+            <li class="fragment">
+              Also used for menu's:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="products.html"&gt;Products&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="support.html"&gt;Support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Unordered lists</h2>
+          <ul>
+            <li>
+              For menu's with submenu's use nested lists:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;ul&gt;
+  &lt;li&gt;
+    Item 1
+    &lt;ul&gt;
+      &lt;li&gt;item 1.1&lt;/li&gt;
+      &lt;li&gt;item 1.2&lt;/li&gt;
+      &lt;li&gt;item 1.3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    Item 2
+    &lt;ul&gt;
+      &lt;li&gt;item 2.1&lt;/li&gt;
+      &lt;li&gt;item 2.2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    Item 3
+    &lt;ul&gt;
+      &lt;li&gt;item 3.1&lt;/li&gt;
+      &lt;li&gt;item 3.2&lt;/li&gt;
+      &lt;li&gt;item 3.3&lt;/li&gt;
+      &lt;li&gt;item 3.4&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Ordered lists</h2>
+          <ul>
+            <li>
+              For lists of similar items with numbering:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;Wie is de slimste van de familie?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;homer&lt;/li&gt;
+  &lt;li&gt;bart&lt;/li&gt;
+  &lt;li&gt;lisa&lt;/li&gt;
+  &lt;li&gt;maggie&lt;/li&gt;
+&lt;/ol&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Definition lists</h2>
+          <ul>
+            <li>
+              For term-definition pairs:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;dl&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;A simple mechanism for layout, colors etc...&lt;/dd&gt;
+  &lt;dt&gt;XHTML&lt;/dt&gt;
+  &lt;dd&gt;Is a redefinition of HTML in XML&lt;/dd&gt;
+  &lt;dt&gt;XML&lt;/dt&gt;
+  &lt;dd&gt;Is a flexible and simple markup language&lt;/dd&gt;
+&lt;/dl&gt;
+...</code></pre>
+            </li>
+            <li class="arrow">
+              rarely used
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Blockquotes</h2>
+          <ul>
+            <li>
+              For long quotes:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;blockquote&gt;
+  O tempora, o mores!
+  Senatus haec intellegit. consul videt; hic tamen vivit.
+  Vivit? immo vero etiam in senatum venit, fit publici consilii
+  particeps, notat et designat oculis ad caedem unum quemque
+  nostrum.
+&lt;/blockquote&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="Details">
+          <h2>Details</h2>
+          <ul>
+            <li>
+              Details:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;details open&gt;
+  &lt;p&gt;
+    If your browser supports this element, you should be able to 
+    expand and collapse these details. Without any scripts!
+  &lt;/p&gt;
+  &lt;p&gt;
+    This allows you to hide content, e.g. a detailed explanation that
+    would otherwise hinder the reader.
+  &lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </li>
+            <li class="arrow">
+              <a href="https://caniuse.com/#search=details">unsupported by Edge</a>, but you can <a href="https://github.com/rstacruz/details-polyfill">use a polyfill</a> (Javascript backup)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Dialog</h2>
+          <ul>
+            <li>
+              Dialog:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;dialog id="dialog1" open&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet. Earum, inventore!&lt;/p&gt;
+  &lt;button id="exit"&gt;Exit&lt;/button&gt;
+&lt;/dialog&gt;
+</code></pre>
+            </li>
+            <li class="arrow">
+              currently <a href="http://caniuse.com/#search=dialog">Chrome and Opera only</a>
+            </li>
+          </ul>
+          <div class="demolink"><a href="demos/03_text/dialog.html">dialog demo</a> (with css and javascript)</div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <h2>Inline elements</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Line break</h2>
+          <ul>
+            <li>
+              To end a line manually in a paragraph:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  hij kuste haar lippen&lt;br&gt;
+  weinig op zijn gemak&lt;br&gt;
+  zij kneep haar benen tesaam&lt;br&gt;
+  zodat zijn brilletje brak&lt;br&gt;
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="fragment">
+              Do not use to force a blank line:
+              <pre class="bigger"><code class="language-html wrong overlayrun">...
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+enim ad minim veniam, quis nostrud exercitation ullamco
+nisi ut aliquip ex ea commodo consequat.
+&lt;br&gt;&lt;br&gt;
+Duis aute irure dolor in reprehenderit in voluptate velit
+cillum dolore eu fugiat nulla pariatur. Excepteur sint
+cupidatat non proident, sunt in culpa qui officia deserunt
+anim id est laborum
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="Strong and emphasize">
+          <h2>Strong and emphasize (1)</h2>
+          <ul>
+            <li>
+              Compare <strong>strong</strong> with louder voice (important term), and <i>emphasize</i> with slower voice (new term):
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  The Congolese word &lt;em&gt;Ilunga&lt;/em&gt; means that someone
+  can forgive a &lt;strong&gt;first&lt;/strong&gt; incident,
+  accept a &lt;strong&gt;second&lt;/strong&gt;, but cannot
+  tolerate a &lt;strong&gt;third&lt;/strong&gt; incident
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Strong and emphasize (2)</h2>
+          <ul>
+            <li>
+              do <strong>not</strong> use <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> on a <i>whole sentence</i>,<br>
+              do <strong>not</strong> use <code>&lt;strong&gt;</code> just because it should <i>look</i> bold,<br>
+              do <strong>not</strong> use <code>&lt;em&gt;</code> just because it should <i>look</i> italic:
+              <pre class="bigger"><code class="language-html overlayrun wrong">...
+&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat.
+  ...
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;published March 2001&lt;/em&gt;&lt;/p&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Small, b and i</h2>
+          <ul>
+            <li>
+              Small:
+            <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  &lt;small&gt;copyright 1999-2050 by Rogier van der linde&lt;/small&gt; incident
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li>
+              The tags <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> used to mean 'bold' and 'italic'. This is presentational and not allowed in HTML, so they got a different meaning in HTML5: 
+              <ul>
+                <li><em><code>&lt;b&gt;</code></em> now means 'stylistically offset' (if extra importance: use <code>&lt;em&gt;</code>)</li>
+                <li><em><code>&lt;i&gt;</code></em> now means 'alternate voice or mood' (if extra importance: use <code>&lt;strong&gt;</code>)</li>
+              </ul>
+            </li>
+            <li class="arrow">
+              <span class="warning">since this causes confusion, <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> is not allowed in this course</span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Citation</h2>
+          <ul>
+            <li>
+              Indicates a title of a work (book, film...)
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  His newest novel, &lt;cite&gt;I embrace you with thousand arms&lt;/cite&gt;
+  is, like his previous books, lighthearted literature, which has
+  not always been received positively by the public.
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="arrow">
+              rarely used
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Inline quotes</h2>
+          <ul>
+            <li>
+              For short quotes:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  The original context of the saying &lt;q&gt;O tempora, o mores&lt;/q&gt;
+  is this:
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="arrow">
+              rarely used
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Abbreviations</h2>
+          <ul>
+            <li>
+              Title attribute is optional but useful as tooltip:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  The &lt;abbr title="North Atlantic Treaty Organization"&gt;NATO&lt;/abbr&gt;
+  and the &lt;abbr title="European Union"&gt;EU&lt;/abbr&gt; both
+  have their headquarters in Brussels.
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Subscript and superscript</h2>
+          <ul>
+            <li>
+              Example:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  H&lt;sub&gt;2&lt;/sub&gt;S0&lt;sub&gt;4&lt;/sub&gt; is the formula for
+  sulphuric acid. A nuclear bomb is based on the formula
+  E = m.c&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Computer terms</h2>
+          <ul>
+            <li>
+              Example:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  If we change line 98 to:
+  &lt;code&gt;
+    // construction list of test resuts&lt;br&gt;
+    ArrayList testList = new ArrayList(4);&lt;br&gt;
+    ...&lt;br&gt;
+  &lt;/code&gt;
+  We may now use the variabel &lt;var&gt;lastUpdated&lt;/var&gt; as parameter
+  in the main function and re-run the program (press
+  &lt;kbd&gt;Ctrl-F7&lt;/kbd&gt;). This yields the following result:
+  &lt;samp&gt;Script executed succesfully&lt;/samp&gt;
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="arrow">
+              <code>&lt;code&gt;</code> is useful in programming blogs, the other tags are rarely used 
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Code fragments</h2>
+          <ul>
+            <li>
+              Compare:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+class HelloServant extends _HelloImplBase {
+  public String sayHello() {
+    return '\nHello world !!\n';
+  }
+}
+&lt;/p&gt;</code></pre>
+            </li>
+            <li class="no-style">
+              With:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;pre&gt;
+class HelloServant extends _HelloImplBase {
+  public String sayHello() {
+    return '\nHello world !!\n';
+  }
+}
+&lt;/pre&gt;</code></pre>
+            </li>
+            <li class="arrow">
+              only useful in programming blogs; <span class="warning">don't use this to layout normal text!</span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Meter, progress &amp; mark</h2>
+          <ul>
+            <li>
+              New since HTML5:
+              <pre class="bigger"><code class="language-html" contenteditable data-subject="#meter">Your score is:
+&lt;meter max="100" low="30" high="70" optimum="100" value="80"&gt;A+&lt;/meter&gt;
+</code></pre>
+              <pre class="bigger"><code class="language-html" contenteditable data-subject="#progress">Download is:
+&lt;progress value="75" max="100"&gt;3/4 complete&lt;/progress&gt;
+</code></pre>
+              <pre class="bigger"><code class="language-html">This part is &lt;mark&gt;higlighted&lt;/mark&gt;.</code></pre>
+            </li>
+          </ul>
+          <div class="codedemo">
+            <p id="meter">
+              Your score is: <meter min="0" max="100" low="30" high="70" optimum="100" value="80">A+</meter><br>
+            </p>
+            <p id="progress">
+              Download is: <progress value="75" max="100">3/4complete</progress>
+            </p>
+            <p>
+              This part is <mark>higlighted</mark>              
+            </p>
+          </div>
+          <div class="tooltip">
+            <div>
+              Tip: you can edit the numbers above by clicking them and using the up and down keys
+            </div>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <h2>HTML character entities</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Code confusion</h2>
+          <ul>
+            <li>
+              Prevent possible confusion with markup code:
+              <pre class="bigger"><code class="language-html wrong overlayrun">...
+&lt;p&gt;
+  if p1&lt;&lt;p2 or p1&gt;&gt;p2 then...
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="fragment no-style">
+              these should be encoded, see list at <a href="https://www.w3schools.com/charsets/ref_html_entities_4.asp">w3schools.com</a>; corrected:
+              <pre class="bigger"><code class="language-html right overlayrun">...
+&lt;p&gt;
+  if p1<em>&amp;lt;&amp;lt;</em>p2 or p1<em>&amp;gt;&amp;gt;</em>p2 then...
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Character substitution</h2>
+          <ul>
+            <li>
+              <del>Prevent character substitution when viewing page on other platforms:</del>
+              <pre class="bigger"><code class="language-html">...
+&lt;ul&gt;
+  &lt;li&gt;Andreas Kl&ouml;den&lt;/li&gt;
+  &lt;li&gt;Jos&eacute; Azevedo&lt;/li&gt;
+  &lt;li&gt;&Ccedil;&eacute;dric Chavanel&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+            </li>
+            <li class="no-style">
+              <del>corrected:</del> <span style="color: #900">&rarr; no longer necessary if you use UTF-8</span>
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;ul&gt;
+  &lt;li&gt;Andreas Kl<em>&amp;ouml;</em>den&lt;/li&gt;
+  &lt;li&gt;Jos<em>&amp;eacute;</em> Azevedo&lt;/li&gt;
+  &lt;li&gt;<em>&amp;Ccedil;&amp;eacute;</em>dric Chavanel&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Special characters</h2>
+          <ul>
+            <li>
+              Special characters:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  buy the Samsung<em>&amp;reg;</em> Galaxy today for <em>&amp;euro;</em>499!
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="no-style">
+              &rarr; helpful for characters that are hard to find on your keyboard
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Correct typography</h2>
+          <ul>
+            <li>
+              Improve up your documents with the correct typographic characters:
+            </li>
+            <li class="no-style">
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;en dash&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: Antwerp-Brussels&lt;br&gt;
+    good: Antwerp<em>&amp;ndash;</em>Brussels&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;em dash&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: I was in - what is the name of that caf&amp;eacute; again?&lt;br&gt;
+    good: I was in <em>&amp;mdash;</em> what's the name of that caf&amp;eacute; again?
+  &lt;/dd&gt;
+  &lt;dt&gt;minus&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: 1+4-2=3&lt;br&gt;
+    good: 1+4<em>&amp;minus;</em>2=3&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;single quotes&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: 'test'&lt;br&gt;
+    good: <em>&amp;lsquo;</em>test<em>&amp;rsquo;</em>&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;double quotes&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: &quot;test&quot;&lt;br&gt;
+    good: <em>&amp;ldquo;</em>test<em>&amp;rdquo;</em>&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;ellipsis&lt;/dt&gt;
+  &lt;dd&gt;
+    wrong: test...&lt;br&gt;
+    good: test<em>&amp;hellip;</em>&lt;br&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;</code></pre></div>
+              <div class="demolink"><a href="demos/03_text/typography.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+      </section>
+      </section>
+
+    </div>
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+
+    <!-- Index Link -->
+    <aside class="back">
+      <nav>
+        <p><a href="index.html">&larr; Back to index</a></p>
+      </nav>
+    </aside>
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <!-- <script src="vendor/prefixfree.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

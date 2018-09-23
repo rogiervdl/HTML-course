@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Objects</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <figure>
+            <img src="img/06_objects/icon.jpg" alt="" class="border">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <h2>Plugins</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section data-toc-title="Embedding Flash">
+          <h2>Embedding Flash</h2>
+          <ul>
+            <li>
+              Use <code>&lt;object&gt;</code>:
+                <pre class="bigger"><code class="language-html">&lt;object align="middle" width="700" height="520" data="index.swf"
+        type="application/x-shockwave-flash"&gt;
+  &lt;param name="quality" value="high"&gt;
+  &lt;param name="bgcolor" value="#006600"&gt;
+  &lt;param name="play" value="true"&gt;
+  &lt;param name="loop" value="true"&gt;
+  &lt;param name="wmode" value="window"&gt;
+  &lt;param name="scale" value="showall"&gt;
+  &lt;param name="menu" value="true"&gt;
+  ...
+&lt;/object&gt;
+</code></pre>
+            </li>
+            <li class="arrow">
+              <span class="warning">support is in decline; Flash is as dead as a dodo</span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Embedding Applets</h2>
+          <ul>
+            <li>
+              Applets are written in Java; mostly used in technical/scientific situations
+            </li>
+            <li>
+              Use <code>&lt;object&gt;</code>:
+              <pre class="bigger"><code class="language-html verysmallpanel">&lt;object type="application/x-java-applet"
+        height="300" width="540" &gt;
+  &lt;param name="code" value="shm.class"&gt;
+  &lt;param name="yellow" value="yellow"&gt;
+  &lt;param name="blue" value="blue"&gt;
+  &lt;param name="bgColor" value="lightGray"&gt;
+  &lt;param name="Reset" value="Reset"&gt;
+  &lt;param name="Start" value="Start"&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      This applet requires Java 1.4.2 or higher.
+      &lt;a href="http://www.java.com/en/download/index.jsp"&gt;
+        Get the latest Java Plug-in.
+        Then you should see a result similar to this:
+        &lt;img src="img/applet.png"&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/object&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/06_objects/applet.html">demo</a></div>
+            </li>
+            <li class="arrow">
+              <span class="warning">Oracle pulled the plug since JDK9</span>
+            </li>
+          </ul>
+        </section>
+        <section style="text-align:center">
+          <h2>10 disadvantages of Flash</h2>
+          (and in fact, all plugins)<br>
+          <img src="img/06_objects/flash.jpg" alt="man flashing">
+          <div class="tooltip">
+            <div>
+              <ol>
+                <li>Flash requires a plugin</li>
+                <li>Flash is often buggy and eats battery life</li>
+                <li>Flash is not supported on many mobile devices (iPad, iPhone, Firefox or Chrome mobile...)</li>
+                <li>Flash sites are generally bandwidth-heavier</li>
+                <li>Flash ignores browsing history, back button does not work</li>
+                <li>individual Flash pages cannot be bookmarked</li>
+                <li>coupling with a decent CMS or even design changes are virtually impossible</li>
+                <li>font sizes, which are often very small in Flash sites, are not adjustable by the user</li>
+                <li>Flash is not accessible for the blind, therefore it is forbidden for public sites</li>
+                <li>search engines do not like Flash</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <h2>Audio &amp; video</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Audio and video</h2>
+          <ul>
+            <li>
+              These days still done with Flash based players
+            </li>
+            <li>
+              HTML5 provides <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags
+              <pre class="bigger"><code class="language-html">&lt;audio src="media/paoloconte.mp3"
+  controls
+  width="670"
+  style="border: solid 3px black; margin:200"&gt;
+  Your browser dows not support the audio tag
+&lt;/audio&gt;
+</code></pre>
+              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4"
+  controls
+  poster="img/meloYBratt.jpg"
+  width="320" height="240"&gt;
+  Your browser dows not support the video tag
+&lt;/video&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/06_objects/audio_video.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Formats</h2>
+          <ul>
+            <li>
+              Major media formats (but more exist): 
+              <ul>
+                <li>video: mp4, ogg, webm</li>
+                <li>audio: mp3, ogg, webm, wav</li>
+                <li>picture: jpg, png, gif, webp, svg</li>
+              </ul>
+            </li>
+            <li>
+              Different media for different systems:
+              <pre class="bigger"><code class="language-html">&lt;video poster="img/poster.jpg"&gt;
+  &lt;source src="media/video.3gp" type="video/3gpp" media="handheld"&gt;
+  &lt;source src="media/video.ogv" type="video/ogg; codecs=theora, vorbis"&gt;
+  &lt;source src="media/video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;audio&gt;
+  &lt;source src="media/music.oga" type="audio/ogg"&gt;
+  &lt;source src="media/music.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Compatibility issues</h2>
+          <ul>
+            <li>
+              Compatibility problems:
+              <ul class="x-style">
+                <li>Firefox doesn't support mp3/aac/mp4 (patents!)</li>
+                <li>IE doesn't support oga/ogv/wav/webm</li>
+                <li>Safari doesn't support oga/ogv/webm</li>
+              </ul>
+            </li>
+            <li>
+              Several problems remain unsolved today:
+              <ul>
+                <li>no single format supported by all major browsers</li>
+                <li>&lt;audio&gt; and &lt;video&gt; elements support still has bugs in some browsers</li>
+                <li>Flash alternatives only work on Flash-supported devices</li>
+              </ul>
+            </li>
+            <li>
+              Solutions:
+              <ul class="arrow">
+                <li>use a specalized media library like <a href="http://mediaelementjs.com/">mediaElement</a></li>
+                <li>or, upload your video to Youtube and embed the code from there</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[Custom controls]</h2>
+          <ul>
+            <li>
+              Build custom controls with Javascript:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt; HTML5 testpage &lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;script&gt;
+    window.onload = function() {
+      var video = document.getElementById("video");
+      video.controls = false;
+      document.getElementById("lnkPlay").onclick = function() {
+        if (video.paused) video.play();
+        else video.pause();
+        return false;
+      }
+      document.getElementById("lnkMute").onclick = function() {
+        if (video.volume &gt; 0) video.volume = 0;
+        else video.volume = 1;
+        return false;
+      }
+      document.getElementById("inpSeek").onchange = function() {
+        video.currentTime = this.value;
+      }
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;video src="media/tango.mp4" poster="img/meloYBratt.jpg"
+    width="320" height="240" id="video" controls&gt;
+    Your browser dows not support the video tag
+  &lt;/video&gt;
+  &lt;nav id="myControls"&gt;
+    &lt;a href="#" id="lnkPlay"&gt;play&lt;/a&gt;
+    &lt;a href="#" id="lnkMute"&gt;mute&lt;/a&gt;
+    &lt;input type="range" min="0" max="211" value="0" id="inpSeek" &gt;
+  &lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+              <div class="demolink"><a href="demos/06_objects/audio_video_js.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[Styling]</h2>
+          <ul>
+            <li>
+              Even styling with CSS is possible:
+              <pre class="bigger"><code class="language-css">#testvideo {
+  transform: rotateZ(5deg);
+  -webkit-box-shadow: rgba(0, 0, 128, 0.25) 10px 10px 15px #990;
+}
+</code></pre>
+              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4" controls
+  poster="img/meloYBratt.jpg"
+  width="360" height="240" id="testvideo"&gt;
+  Your browser dows not support the video tag
+&lt;/video&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/06_objects/audio_video_css.html">demo</a></div>
+            </li>
+            <li class="no-style">
+                → you could even <a href="http://www.ycoyacht.com/">use a video as a background</a><br>
+                → but: background video has become a terrible design cliché, really
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <h2>Images</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section data-toc-title="The &amp;lt;img /&amp;gt; tag">
+          <h2>The &lt;img&gt; tag</h2>
+          <ul>
+            <li>
+              Yes, images are objects too, for which browser support is not evident (patents!)
+            </li>
+            <li>
+              W3C briefly experimented with an <code>&lt;object&gt;</code> version, but the <code>&lt;img&gt;</code> tag survived:
+            </li>
+            <li>
+              Attribute <code>alt</code> with <i>relevant description</i> is required for the vision-impaired; the <code>title</code> attribute is optional and is often implemented as tooltip
+              <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/06_objects/photo.jpg"
+alt="picture of my brothers" title="these are my beloved brothers"&gt;
+
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Figure and figcaption</h2>
+          <ul>
+            <li>
+              Add a caption with <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> (introduced in HTML5):
+              <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
+  &lt;img src="img/06_objects/photo.jpg"
+    alt="picture of my two brothers"&gt;
+  &lt;figcaption&gt;picture of my two brothers&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </li>
+            <li>
+              A <code>&lt;figure&gt;</code> may contain multiple images:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
+  &lt;img src="img/10_html5/horseA.jpg" alt="drawing step1"&gt;
+  &lt;img src="img/10_html5/horseB.jpg" alt="drawing step2"&gt;
+  &lt;img src="img/10_html5/horseC.jpg" alt="drawing step3"&gt;
+  &lt;figcaption&gt;how to draw a horse&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              Actually a figure can also contain video, or in fact anything be used for anything that can be placed outside the main text. Literally from the W3C:
+              <blockquote>
+                The figure element represents a unit of content, optionally with a caption, that is self-contained, that is typically referenced as a single unit from the main flow of the document, and that can be moved away from the main flow of the document without affecting the document’s meaning.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section data-toc-title="Design or content?">
+          <h2>Design or content? (1)</h2>
+          <ul>
+            <li>
+              Caution! Images for design should be inserted by CSS, not by HTML
+            </li>
+            <li>
+              These images are independent of design, and should be coded:
+              <ul class="v-style">
+                <li>photo's illustrating an article</li>
+                <li>logo's of other companies</li>
+                <li>banners</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              These images are part of design, and should be ignored:
+              <ul class="x-style">
+                <li>graphic buttons</li>
+                <li>your own logo</li>
+                <li>background images</li>
+                <li>...</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Design or content? (2)</h2>
+          <p>Identify which images are design and which are content:</p>
+          <img src="img/06_objects/ss1.jpg" alt="webpage screenshot" class="bordered">
+        </section>
+        <section>
+          <h2>Scalable Vector Graphics</h2>
+          <ul>
+            <li>
+              A different image type is <em>SVG</em> (Scalable Vector Graphics). It isn't <em>bitmapped</em> like jpg or png, i.e. described by pixels, but <em>vectorized</em>, i.e. described by curves and fills
+            </li>
+            <li>
+              SVG images cale endlessly without quality loss
+            </li>
+            <li>
+              Creating and editing SVG requires specialized software (e.g. Adobe Illustrator), but you can use it in webpages just like any other image:
+              <pre class="bigger"><code class="language-html">&lt;img src="img/06_objects/svg-logo.svg" alt="SVG logo"&gt;
+</code></pre>
+            </li>
+          </ul>
+          <p><img src="img/06_objects/svg-logo.svg" alt="SVG logo" style="width:300px"></p>
+        </section>
+        <section>
+          <h2>[Inline SVG]</h2>
+          <ul>
+            <li>
+              You can also theoretically create your own SVG (also check the famous <a href="demos/06_objects/svg_tiger.svg">tiger</a> or <a href="demos/06_objects/svg_text.svg">trazy text</a> examples):
+              <pre class="bigger"><code class="language-html" contenteditable data-step="10" data-subject="#svg1">&lt;svg height="150"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+      &lt;stop offset="0%"
+            style="stop-color:rgb(255,255,0);stop-opacity:1" /&gt;
+      &lt;stop offset="100%"
+            style="stop-color:rgb(255,0,0);stop-opacity:1" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;ellipse cx="200" cy="60" rx="85" ry="55" fill="url(#grad1)"
+          onclick="alert('hello');"/&gt;
+  &lt;text fill="#ffffff" font-size="45" x="155" y="75"&gt;SVG&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+            </li>
+          </ul>
+          <div id="svg1" style="float: left;">
+            <svg height="130">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="90" cy="60" rx="85" ry="55" fill="url(#grad1)" onclick="alert('hello');" />
+              <text fill="#ffffff" font-size="45" x="45" y="75">SVG</text>
+            </svg>
+          </div>
+          <div class="tooltip">
+            <div>
+              Tip: you can edit the numbers above by clicking them and using the up and down keys
+            </div>
+          </div>
+        </section>
+      <section>
+        <h2>[SVG filtering demo]</h2>
+        <ul>
+          <li>
+            Just to show you how endless the possibilities of SVG are, a demo that converts any image to duotone (don't worry too much about the exact code; you'll learn more about it later):
+            <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;filter with SVG&lt;/title&gt;
+  &lt;style&gt;
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
+    #controls {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      border: 2px ridge;
+    }
+
+    #duotone {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: cover;
+    }
+
+    svg {
+        color-interpolation-filters:sRGB;
+    }
+
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;svg width="1024" height="640" viewBox="0 0 1024 640" id="duotone"
+    preserveAspectRatio="xMidYMid slice"&gt;
+    &lt;defs&gt;
+      &lt;filter id="duotone-filter"&gt;
+        &lt;feColorMatrix
+          type="matrix"
+          values="1  0  0  0  0
+                  0  1  0  0  0
+                  0  0  1  0  0
+                  0  0  0  1  0"/&gt;
+      &lt;/filter&gt;
+    &lt;/defs&gt;
+    &lt;image width="1024" height="640" filter="url(#duotone-filter)"
+      xlink:href="img/kanye-west.jpg"/&gt;
+  &lt;/svg&gt;
+  &lt;div id="controls"&gt;
+    &lt;input type="color" id="color1" value="#8a702d" /&gt;
+    &lt;input type="color" id="color2" value="#19264f" /&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    // converts #hex to array of rgb values
+    function hexToRgb(hex) {
+      var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? [
+        parseInt(result[1], 16), // R
+        parseInt(result[2], 16), // G
+        parseInt(result[3], 16) // B
+      ] : null;
+    }
+
+    // calculates filter matrix for two colors
+    function convertToDueTone(color1, color2) {
+      var matrix = document.querySelector('feColorMatrix');
+      var value = [
+        [color1[0]/256 - color2[0]/256, 0, 0, 0, color2[0]/256],
+        [color1[1]/256 - color2[1]/256, 0, 0, 0, color2[1]/256],
+        [color1[2]/256 - color2[2]/256, 0, 0, 0, color2[2]/256],
+        [0, 0, 0, 1, 0]
+      ];
+      matrix.setAttribute('values', value.join(' '));
+    }
+
+    // init
+    var inpColor1 = document.getElementById('color1');
+    var inpColor2 = document.getElementById('color2');
+    convertToDueTone(hexToRgb(inpColor1.value), hexToRgb(inpColor2.value));
+
+    // bind color picker change events
+    document.getElementById('color1').addEventListener('change', function() {
+      convertToDueTone(hexToRgb(inpColor1.value), hexToRgb(inpColor2.value));
+    })
+    document.getElementById('color2').addEventListener('change', function() {
+      convertToDueTone(hexToRgb(inpColor1.value), hexToRgb(inpColor2.value));
+    })
+
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+              <div class="demolink"><a href="demos/06_objects/svg_filters.html">demo</a> (inspired by <a href="https://codepen.io/jmperez/pen/LGqaxQ/">this pen</a>)</div>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+
+    <!-- Index Link -->
+    <aside class="back">
+      <nav>
+        <p><a href="index.html">&larr; Back to index</a></p>
+      </nav>
+    </aside>
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <!-- <script src="vendor/prefixfree.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

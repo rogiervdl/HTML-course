@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> HTML5 testpage </title>
+	<meta charset="utf-8">
+	<script>
+		window.onload = function() {
+			var video = document.getElementById("video");
+			video.controls = false;
+			document.getElementById("lnkPlay").onclick = function() {
+				if (video.paused) video.play();
+				else video.pause();
+				return false;
+			}
+			document.getElementById("lnkMute").onclick = function() {
+				if (video.volume > 0) video.volume = 0;
+				else video.volume = 1;
+				return false;
+			}
+			document.getElementById("inpSeek").onchange = function() {
+				video.currentTime = this.value;
+			}
+		}
+	</script>
+</head>
+<body>
+	<video src="media/tango.mp4" poster="img/meloYBratt.jpg"
+		width="320" height="240" id="video" controls>
+		Your browser dows not support the video tag
+	</video>
+	<nav id="myControls">
+		<a href="#" id="lnkPlay">play</a>
+		<a href="#" id="lnkMute">mute</a>
+		<input type="range" min="0" max="211" value="0" id="inpSeek" >
+	</nav>
+</body>
+</html>

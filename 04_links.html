@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Links</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>LINKS</h1>
+          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <figure>
+            <img src="img/04_links/icon.jpg" alt="" class="border">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>LINKS</h1>
+          <h2>HTTP(S)</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section data-toc-title="Anatomy of the URL">
+          <h2>Anatomy of the URL (1)</h2>
+          <ul>
+            <li>
+              A <em>hyperlink</em> (HTML link) points to a <em>URL</em> (Uniform Resource Locator). Possible parts of the URL:<br>
+            </li>
+            <li class="no-style">
+              <span style="font-size: smaller">protocol://username:password@subdomain.host:port/path/filename#anchor?parameters</span>
+            </li>
+            <li>
+              Description:
+              <ul>
+                <li><em>protocol</em>: way of data transport, e.g. http, https, mailto, tel... (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">full list here</a>)</li>
+                <li><em>username:password</em>: rarely used, allows immediate login on some pages</li>
+                <li><em>subdomain</em>: first part of the domain, e.g. www</li>
+                <li><em>host</em>: domain where site is hosted, e.g. gadgets.com</li>
+                <li><em>port</em>: rather technical, is a number the server listens to (default 80)</li>
+                <li><em>path</em>: where the resource is located, e.g. /products/jewelry/</li>
+                <li><em>filename</em>: file name of the resource, e.g. overview.html</li>
+                <li><em>anchor</em>: a link to a specific location on the page (see further)</li>
+                <li><em>parameters</em>: data added to the URL, e.g. category=men&amp;sort=price&amp;order=asc</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Anatomy of the URL (2)</h2>
+          <ul>
+            <li>
+              Spot the parts in these examples:
+            </li>
+            <li class="no-style">
+              <span style="font-size: smaller">http://www.gadgets.com/products/jewelry/list.php?category=men&amp;sort=price</span><br>
+              <span style="font-size: smaller">https://login.gadgets.com:8080/?returnto=jewelry</span><br>
+            </li>
+            <li>
+              For parts that aren't provided, default values are used:
+            </li>
+            <li class="no-style">
+              <span style="font-size: smaller">https://gadgets.com/shops/</span> &rarr; <span style="font-size: smaller">https://www.gadgets.com:80/shops/index.php</span><br>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Relative links</h2>
+          <ul>
+            <li>
+              If no domain is provided, the link is <em>relative</em>; otherwise it is <em>absolute</em>
+            </li>
+            <li>
+              What is the URL, if the link comes from <span style="font-size: smaller">https://www.gadgets.com/sales/details/view.php?id=328</span>?
+            </li>
+            <li class="no-style">
+              <span style="font-size: smaller">/images/icon.png</span><br>
+              <span style="font-size: smaller">images/icon.png</span><br>
+              <span style="font-size: smaller">../css/styles.css</span><br>
+            </li>
+            <li>
+              Answers:
+            </li>
+            <li class="no-style fragment">
+              <span style="font-size: smaller">https://www.gadgets.com/shops/index.php</span><br>
+              <span style="font-size: smaller">https://www.gadgets.com/images/icon.png</span><br>
+              <span style="font-size: smaller">https://www.gadgets.com/sales/details/images/icon.png</span>
+            </li>
+            <li class="arrow">
+              <span class="warning">you should always use relative links for your own resources</span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Aliases</h2>
+          <ul>
+            <li>
+              An <em>alias</em> is a link pointing to another link
+            </li>
+            <li>
+              An alias is created on the server, or online with a <em>URL shortener</em> (screenshot from <a href="https://goo.gl/">goo.gl</a>; other options are <a href="https://tinyurl.com/">tinyurl.com</a>, <a href="https://bitly.com/">bitly.com</a>...):
+            </li>
+          </ul>          
+          <p>
+            <img src="img/04_links/shortener.png" alt="" class="bordered" style="display: block; margin: 0 auto; max-height: 300px; margin-top: 20px;">
+          </p>
+        </section>
+        <section data-toc-title="Request / response">
+          <h2>Request / response (1)</h2>
+          <ul>
+            <li>
+              Web pages are usually delivered through HTTP (HyperText Transfer Protocol)
+              <ul>
+                <li>user clicks on a link 'index.html'</li>
+                <li>browser sends HTTP request to the server for the page</li>
+                <li>server returns HTTP response with the html code</li>
+                <li>browser scans html code for any linked resource:<br> images, css files, external scripts, fonts...</li>
+                <li>browser sends HTTP request for each resource</li>
+                <li>each received resource is inserted in the page</li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/04_links/http.png" alt="http" style="border: 0">
+        </section>
+        <section data-toc-title="">
+          <h2>HTTP Request / response (2)</h2>
+          <ul>
+            <li>
+              Learn by analyzing traffic with a network tool, e.g. for Toledo home (<a href="img/04_links/toledo_homepage_1.jpg">1</a>, <a href="img/04_links/toledo_homepage_2.jpg">2</a>, <a href="img/04_links/toledo_homepage_3.jpg">3</a>, <a href="img/04_links/toledo_homepage_4.jpg">4</a>) and login (<a href="img/04_links/toledo_login_1.jpg">1</a>)
+            </li>
+            <li>
+              Provides information about:
+              <ul>
+                <li>status codes (200 ok, 304 not modified, 404 not found...)</li>
+                <li>MIME types (text/html, text/css, image/png...)</li>
+                <li>timeline with load times and latencies</li>
+                <li>request and response headers</li>
+                <li>request methods GET and POST</li>
+                <li>cookies</li>
+                <li>...</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Load times</h2>
+          <ul>
+            <li>
+              Observations:
+              <ul>
+                <li>first the html page is fully loaded</li>
+                <li>then other resources are loaded &plusmn; in order of appearance</li>
+                <li>
+                  number of parallel downloads is limited (usually 2 &ndash; 7)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Too many resources is bad for page loading time and your Google ranking
+            </li>
+            <li>
+              Possible solutions:
+              <ul>
+                <li>concatenate scripts &amp; styles in large single files</li>
+                <li>use CSS sprite sheets for icons and other small images</li>
+                <li>ask your web hosting company to enable HTTP2 </li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/04_links/timeline.jpg" alt="timeline" style="position: absolute; right: 0; bottom: 30px">
+        </section>
+<!--         <section>
+          <h2>HTTP headers</h2>
+          <ul>
+            <li>
+              Request and response each start with a header
+            </li>
+            <li>
+              Request header contains
+              <ul>
+                <li>info about accepted MIME types, charset, encoding, language...</li>
+                <li>info about the browser and operation system ('User-agent')</li>
+                <li>URL where the request was made ('Referrer')</li>
+                <li>available cookies</li>
+              </ul>
+            </li>
+            <li>
+              Response header contains
+              <ul>
+                <li>info about the server</li>
+                <li>served content MIME type</li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/04_links/headers.jpg" alt="header" style="position: absolute; right: 0; bottom: 30px">
+        </section>
+        <section>
+          <h2>GET/POST</h2>
+          <ul>
+            <li>
+              Two possible request formats: GET and POST
+            </li>
+            <li>
+              GET:
+              <ul>
+                <li>default request format</li>
+                <li>extra parameters &mdash; e.g. from a <code>&lt;form&gt;</code> &mdash; are attached to the request URL; format <code>...?q=test&amp;lang=nl</code></li>
+                <li>page can be bookmarked with parameters</li>
+                <li>not safe: parameter values are visible in browser history</li>
+              </ul>
+            </li>
+            <li>
+              POST:
+              <ul>
+                <li>extra parameters are added to the request body</li>
+                <li>files upload is only possible with POST</li>
+                <li>page cannot be bookmarked with <br>parameters</li>
+                <li>little bit safer than GET: <br>parameters are more hidden <br>(but beware of network sniffers!)</li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/04_links/post.jpg" alt="post" style="position: absolute; right: 0; bottom: 30px">
+        </section>
+        <section>
+          <h2>Cookies</h2>
+          <ul>
+            <li>Name&ndash;value pairs</li>
+            <li>Contain information left behind by webpages for autologin, user preferences...</li>
+            <li>Browser limits number and size of cookies</li>
+            <li>User may block or remove cookies at any time</li>
+            <li>Likely to be replaced by more flexible<br> <em>localStorage</em> and <em>sessionStorage</em> <br>in HTML5</li>
+          </ul>
+          <img src="img/04_links/cookies.jpg" alt="cookies" style="position: absolute; right: 0; bottom: 30px">
+        </section>
+ -->        <section>
+          <h2>HTTPS</h2>
+          <ul>
+            <li>secure HTTP: all requests and responses are <em>encrypted</em></li>
+            <li><em>server certificate</em> ensures you are communicating with this site and not with a malicious copy</li>
+            <li>requires handshake / public&amp;private keys / ... between server and browser (rather complex)</li>
+            <li>
+              today an <strong>absolute must</strong> for websites 
+              <ul>
+                <li>prevent stealing login credentials over plain HTTP with network sniffer</li>
+                <li>prevent MITM (Man In The Middle) attacks, injecting scripts etc.</li>
+                <li>plain HTTP sites are denied access to sensitive API's like webcam</li>
+                <li>HTTPS sites get a higher ranking in Google</li>
+                <li>performance loss is limited (a few %)</li>
+              </ul>
+            </li>
+          <img src="img/04_links/mitm.png" alt="mitm" style="float: right; max-width: 300px">
+          </ul>
+          <div class="tooltip">
+            <div>
+              A WIFI network with a shared key where everyone knows the key isn't any safer than an open WIFI network. An attacker might create a copy of the network (same SID, same password) and then inject content in any HTTP website you visit. With HTTPS however, the certificate makes sure you are communicating with the website you want and not a copy, and on top of that, it also encrypts all your traffic.
+            </div>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>LINKS</h1>
+          <h2>Links in HTML</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <ul>
+            <li>
+              Example (notice the <code>title</code> attribute):
+              <pre class="bigger"><code class="language-html overlayrun">&lt;a href="index.html"&gt;&lt;h1&gt;Site Title Here&lt;/h1&gt;&lt;/a&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;a href="page1.html" title="edit this item"&gt;
+      &lt;img src="img/04_links/edit.gif" alt="edit icon"&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="page1.html" title="delete this item"&gt;
+      &lt;img src="img/04_links/del.gif" alt="delete icon"&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </li>
+          </ul>
+          <ul>
+            <li class="arrow">
+              the (optional) <code>title</code> attribute adds meaning to the link
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              A good descriptive title attribute is especially important when linking an image, as screen readers (used by visually impaired) cannot read images.
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Relative paths</h2>
+          <ul>
+            <li>Make all your internal links relative:
+              <pre class="bigger"><code class="language-html">&lt;!-- file 'index.html' --&gt;
+  ...
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
+  &lt;script src="js/lib/require/require.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+  &lt;p&gt;&lt;img src="img/pictures/photo.jpg" alt="my picture"&gt;&lt;/p&gt;
+  ...</code></pre>
+              <pre class="bigger"><code class="language-css">/* file 'css/styles.css' */
+h1 {
+  background-image: url(../img/logo.jpg);
+  ...
+}</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Anchors</h2>
+          <ul>
+            <li>
+              Are internal links that jump to another location in the same page
+            </li>
+            <li>
+              Link to <code>id="someId"</code> with <code>href="#someId"</code>:
+              <pre class="bigger"><code class="language-html dontrun">...
+&lt;h2&gt;&lt;a id="top"&gt;Jump to a specific chapter:&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  ...
+  &lt;li&gt;&lt;a href="#chapter3"&gt;chapter 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...
+&lt;h3&gt;&lt;a id="chapter3"&gt;Chapter 3&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+  &lt;a href="#top"&gt;back to top&lt;/a&gt;
+&lt;/p&gt;
+...
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2><del>Image maps</del></h2>
+          <ul>
+            <li>
+              Define a map with clickable areas:
+              <pre class="bigger"><code class="language-html dontrun">&lt;map id="globe"&gt;
+  &lt;area shape="poly" coords="2,13,58,91,139,2" href="n-am.html"
+      alt="North America"&gt;
+  &lt;area shape="circle" coords="297,139,26" href="australia.html"
+      alt="Australia"&gt;
+   ...
+&lt;/map&gt;
+</code></pre>
+            </li>
+            <li>
+              Link to <code>id="mapId"</code> with <code>usemap="#mapId"</code>:
+              <pre class="bigger"><code class="language-html dontrun">&lt;img src="img/adventureMap.gif" usemap="#globe" alt="world map"&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/04_links/imagemaps.html">demo (Firefox)</a></div>
+            </li>
+          </ul>
+          <ul>
+            <li class="arrow">
+              <span class="warning">most browsers dropped support; you shouldn't use image maps anymore</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+
+    <!-- Index Link -->
+    <aside class="back">
+      <nav>
+        <p><a href="index.html">&larr; Back to index</a></p>
+      </nav>
+    </aside>
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <!-- <script src="vendor/prefixfree.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

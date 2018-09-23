@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Forms</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>FORMS</h1>
+          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <figure>
+            <img src="img/07_forms/icon.jpg" alt="" class="border">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>FORMS</h1>
+          <h2>Forms</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Full example</h2>
+          <pre class="bigger"><code class="language-html overlayrun">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt; Testpage &lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;form action="/scripts/test.php" method="post" enctype="multipart/form-data"&gt;
+
+    &lt;fieldset&gt;
+      &lt;legend&gt;Login&lt;/legend&gt;
+      &lt;p&gt;
+        &lt;label for="username"&gt;Username:&lt;/label&gt;
+        &lt;input type="text" id="username" name="username" autofocus&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" id="password" name="password" placeholder="at least 8 characters"&gt;
+      &lt;/p&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+      &lt;legend&gt;No account yet? Create one here:&lt;/legend&gt;
+      &lt;p&gt;
+        &lt;label for="name"&gt;Full name *:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;Gender&lt;/label&gt;:
+        &lt;label&gt;&lt;input type="radio" name="gender" value="f" checked&gt; Female&lt;/label&gt;
+        &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; Male&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for="favcol"&gt;Your favorite color:&lt;/label&gt;
+        &lt;input type="color" id="favcolor" value="#f789df"&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for="education"&gt;Your education *:&lt;/label&gt;
+        &lt;select name="education" id="education" required&gt;
+          &lt;option value="-1"&gt;Select...&lt;/option&gt;
+          &lt;option value="0"&gt;Primary school&lt;/option&gt;
+          &lt;option value="1"&gt;Secondary school&lt;/option&gt;
+          &lt;option value="2"&gt;Higer education&lt;/option&gt;
+          &lt;option value="3"&gt;Master&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;Skills&lt;/label&gt;:
+        &lt;label&gt;&lt;input type="checkbox" name="html" checked&gt;HTML&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" name="js"&gt;Javascript&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" name="css" checked&gt;CSS&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" name="php"&gt;PHP&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for="photo"&gt;Upload a picture (.gif of .jpeg):&lt;/label&gt;
+        &lt;input type="file" id="photo" name="photo"&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for="desc"&gt;Comments:&lt;/label&gt;
+        &lt;textarea id="desc" name="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
+      &lt;/p&gt;
+    &lt;/fieldset&gt;
+
+    &lt;input type="hidden" name="verb" value="xyz"&gt;
+    &lt;p&gt;
+      &lt;input type="submit" name="btnOk" value="Send"&gt;
+      &lt;input type="submit" name="btnCancel" value="Cancel" formnovalidate&gt;
+    &lt;/p&gt;
+  &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <div class="demolink"><a href="demos/07_forms/fullexample.html">demo</a></div>
+        </section>
+        <section>
+          <h2>Form structure</h2>
+          <ul>
+            <li>The <code>&lt;form&gt;</code> element
+              <ul>
+                <li>is mandatory for all forms</li>
+                <li>should include anything that belongs to the form, also titles, help texts, error messages etc...</li>
+                <li>should have an action attribute (more about this in later courses)</li>
+                <li>should have a submit button</li>
+              </ul>
+              <pre class="bigger"><code class="language-html">&lt;form action="#"&gt;
+  &lt;h3&gt;Registration form&lt;/h3&gt;
+  ...
+  &lt;p&gt;fields with an * are required&lt;/p&gt;
+  ...
+  &lt;p&gt;
+    after submitting the form, you'll receive an email
+    with further instructions
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Send"&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+            </li>
+            <li class="no-style">&rarr; markup suggestion: group each label/input pair in a <code>&lt;p&gt;</code></li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Fieldsets</h2>
+          <ul>
+            <li>
+              If your form contains more than a few controls, use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> to create groups:
+              <pre class="bigger"><code class="language-html">&lt;form action="#"&gt;
+  ...
+  &lt;fieldset&gt;
+    &lt;legend&gt;Login information&lt;/legend&gt;
+    ...
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Personal information&lt;/legend&gt;
+    ...
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Preferences&lt;/legend&gt;
+    ...
+  &lt;/fieldset&gt;
+  ...
+&lt;/form&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Value and id attributes</h2>
+          <ul>
+            <li>Each control may have <code>value</code> and <code>id</code> attributes. Don't worry too much about their exact meaning. Just remember for now:
+              <ul>
+                <li>basically, the <code>value</code> attribute is what will be sent with the form</li>
+                <li>a group of radiobuttons should have the same <code>value</code> attribute</li>
+                <li>the <code>value</code> attribute also sets the value of a field or text on a button</li>
+                <li>the <code>for</code> attribute of <code>&lt;label&gt;</code> should point to the <code>id</code> attribute of the corresponding control:</li>
+              </ul>
+              <pre class="bigger"><code class="language-html right">&lt;p&gt;
+  &lt;label for="name"&gt;Your name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+&lt;/p&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Labels</h2>
+          <ul>
+            <li>
+              All controls should be preceded by their &lt;label&gt;:
+              <pre class="bigger"><code class="language-html right">&lt;p&gt;
+  &lt;label for="name"&gt;Your name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+&lt;/p&gt;
+</code></pre>
+            </li>
+            <li>
+              Exception: radionbuttons and checkboxes can be nested in their <code>&lt;label&gt;</code>; <code>for</code> and <code>id</code> are not needed here:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  &lt;label&gt;&lt;input type="radio" name="gender" value="f" checked&gt; Female&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; Male&lt;/label&gt;
+&lt;/p&gt;  
+</code></pre>
+            </li>
+            <li class="no-style">
+             &rarr; following these rules will help future layout with CSS
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>FORMS</h1>
+          <h2>Input types</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Text input types</h2>
+          <ul>
+            <li>
+              Text field:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="text" name="name"&gt;</code></pre>
+            </li>
+            <li>
+              Text area:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;textarea name="box1" cols="20" rows="5"&gt;&lt;/textarea&gt;
+</code></pre>
+            </li>
+            <li>
+              Password field:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="password" name="password"&gt;</code></pre>
+            </li>
+            <li>
+              Hidden field (used to send extra data):
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="hidden" name="action" value="xyz"&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Radiobuttons &amp; checkboxes</h2>
+          <ul>
+            <li>
+              Radiobuttons:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="radio" name="group1" value="a"&gt;
+&lt;input type="radio" name="group1" value="b"&gt;
+&lt;input type="radio" name="group1" value="c"&gt;
+</code></pre>
+             &rarr; note: radiobuttons of the same group have identical <code>name</code> attributes
+            </li>
+            <li>
+              Checkboxes:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="checkbox" name="chb1" value="a"&gt;
+&lt;input type="checkbox" name="chb2" value="b"&gt;
+&lt;input type="checkbox" name="chb3" value="c"&gt;
+</code></pre>
+             &rarr; note: checkboxes have identical <code>name</code> attributes
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Lists</h2>
+          <ul>
+            <li>
+              Dropdown list:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;select name="education"&gt;
+  &lt;option value="-1"&gt;Select...&lt;/option&gt;
+  &lt;option value="0"&gt;Primary school&lt;/option&gt;
+  &lt;option value="1"&gt;Secondary school&lt;/option&gt;
+  &lt;option value="2"&gt;Higer education&lt;/option&gt;
+  &lt;option value="3"&gt;Master&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+            </li>
+            <li>
+              With <code>multiple</code> attribute:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;select name="education" multiple&gt;
+  &lt;option value="0"&gt;banana&lt;/option&gt;
+  &lt;option value="1"&gt;apple&lt;/option&gt;
+  &lt;option value="2"&gt;potato&lt;/option&gt;
+  &lt;option value="3"&gt;avocado&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+            </li>
+          </ul>
+          <ul>
+            <li class="arrow">
+              not very intuïtive for the user; use checkboxes instead
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>File upload</h2>
+          <ul>
+            <li>
+              File upload field:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo"&gt;</code></pre>
+            </li>
+            <li>
+              The <code>multiple</code> attribute allows multiple file uploads:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" multiple&gt;</code></pre>
+            </li>
+            <li>
+              The <code>accept</code> attribute limits file types:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" accept="image/jpeg,image/jpg,image/png"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" accept=".jpeg,.jpg,.png"&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Buttons</h2>
+          <ul>
+            <li>
+              Submit button:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" name="btnOk" value="Send"&gt;</code></pre>
+            </li>
+            <li class="no-style">
+              Alternative syntax (offers more possibilities):
+              <pre class="bigger"><code class="language-html overlayrun">&lt;button type="submit"&gt;
+  &lt;img src="img/07_forms/ok.png" alt="save icon"/&gt; Save
+&lt;/button&gt;
+&lt;button type="submit"&gt;
+  &lt;img src="img/07_forms/cancel.png" alt="cancel icon"/&gt; Cancel
+&lt;/button&gt;</code></pre>
+            </li>
+            <li>
+              Buttons that do nothing are also possible:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="button" name="btn1" value="Click me"&gt;</code></pre>
+            </li>
+            <li class="arrow smaller">
+              only useful with Javascript attached, and even then you'd better use a link
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              If your <code>&lt;button&gt;</code> only contains an image, e.g.
+              <pre><code>&lt;button type="submit"&gt;
+&lt;img src="img/icon_save.png" alt="save"/&gt;
+&lt;/button&gt;</code></pre>
+make sure to provide an <code>alt</code> attribute with the <i>same value as the text on the image</i>. This greatly helps screen readers.
+            </div>
+          </div>
+        </section>
+        <section data-toc-title="HTML5 input types">
+          <h2>HTML5 input types (1)</h2>
+          <ul>
+            <li>
+              HTML5 added several new input types; full list see <a href="https://www.w3schools.com/html/html_form_input_types.asp">w3schools</a>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  &lt;label for="email1"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" name="email1" for="email1"&gt;
+&lt;p&gt;
+&lt;p&gt;
+  &lt;label for="nr1"&gt;Number:&lt;/label&gt;
+  &lt;input type="number" id="nr1" min="10" max="20" step="2"&gt;
+&lt;p&gt;
+&lt;p&gt;
+  &lt;label for="dat1"&gt;Date (&lt;a href="https://caniuse.com/#search=date"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
+  &lt;input type="date" name="dat1" id="dat1"&gt;
+&lt;p&gt;
+&lt;p&gt;
+  &lt;label for="dat1"&gt;Time (&lt;a href="https://caniuse.com/#search=time"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
+  &lt;input type="time" name="tim1" id="tim1"&gt;
+&lt;p&gt;
+&lt;p&gt;
+  &lt;label for="col1"&gt;Color (&lt;a href="https://caniuse.com/#search=color"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
+  &lt;input type="color" name="col1" id="col1"&gt;
+&lt;p&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>HTML5 input types (2)</h2>
+          <ul>
+            <li>
+              Feel free to use these new input types, but remember
+              <ul>
+                <li>unsupported types fall back to &lt;input type="text"&gt;</li>
+                <li>alternative: use a Javascript library or a polyfill (e.g. for <a href="http://html5please.com/">date</a>)</li>
+              </ul>
+            </li>
+            <li>
+              Most smartphones will recognize the right input type:
+            </li>
+            <li class="no-style">
+              <figure>
+                <img src="img/07_forms/iphone1.jpg" alt="" class="border">
+                <img src="img/07_forms/iphone2.jpg" alt="" class="border">
+                <img src="img/07_forms/iphone3.jpg" alt="" class="border">
+                <figcaption>note how iPhone change its keyboard (type <code>tel</code>, <code>url</code>, <code>email</code>)</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Button or link?</h2>
+          <ul>
+            <li>
+              Links and buttons are often confused, because links sometimes look like buttons and vice versa. The difference is very clear:
+              <ul>
+                <li>
+                  <span class="warning">inside a form (submit): use a button</span>
+                </li>
+                <li>
+                  <span class="warning">outside a form (action or navigation): use a link</span>
+                </li>
+              </ul>
+            </li>
+            <li class="no-style">
+              &rarr; Where would you use a button, and where a link?
+              <img src="img/07_forms/link-or-button.png" alt="">
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>FORMS</h1>
+          <h2>Form attributes</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Placeholder</h2>
+          <ul>
+            <li>
+              Shows a helper text in the field:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  &lt;label for="name"&gt;Your name:&lt;/label&gt;
+  &lt;input type="text" name="name" id="name" placeholder="e.g. John Smith"&gt;
+&lt;/p&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Autofocus</h2>
+          <ul>
+            <li>
+              Focuses on the field when the form loads:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  &lt;label for="login"&gt;Your login:&lt;/label&gt;
+  &lt;input type="text" name="login" id="login"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="pw"&gt;Your password:&lt;/label&gt;
+  &lt;input type="password" name="pw" id="pw" autofocus&gt;
+&lt;/p&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Required</h2>
+          <ul>
+            <li>
+              Will perform basic validation based on the input type on submitting. Use the <code>formnovalidate</code> attribute on a button to disable validation.
+              <pre class="bigger"><code class="language-html overlayrun">&lt;form action="#"&gt;
+  &lt;p&gt;               
+    &lt;label for="email"&gt;Your email:&lt;/label&gt;
+    &lt;input type="email" name="email" id="email" required&gt;
+  &lt;/p&gt;               
+  &lt;p&gt;               
+    &lt;input type="submit" value="Go!"&gt;
+    &lt;input type="submit" value="Cancel" formnovalidate&gt;
+  &lt;/p&gt;               
+&lt;/form&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+
+    <!-- Index Link -->
+    <aside class="back">
+      <nav>
+        <p><a href="index.html">&larr; Back to index</a></p>
+      </nav>
+    </aside>
+
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <!-- <script src="vendor/prefixfree.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

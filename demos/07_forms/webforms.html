@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title> Testpage </title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>New form attributes</legend>
+			<dl>
+				<dt><label for="text1">Focus:</label></dt>
+				<dd><input type="text" name="text1" id="text1" autofocus="autofocus"></dd>
+				<dt><label for="text2">Placeholder:</label></dt>
+				<dd><input type="text" name="text2" id="text2" placeholder="type some text"></dd>
+				<dt><label for="text3">Required:</label></dt>
+				<dd><input type="text" name="text3" id="text3" required="required"></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<legend>New form input types</legend>
+			<dl>
+				<dt><label for="email1">Email:</label></dt>
+				<dd><input type="email" name="email1" id="email1"></dd>
+				<dt><label for="time1">Time (Opera, Chrome, Safari):</label></dt>
+				<dd><input type="time" name="time1" id="time1"></dd>
+				<dt><label for="date1">Date (Opera, Chrome, Safari):</label></dt>
+				<dd><input type="date" name="date1" id="date1"></dd>
+				<dt><label for="month1">Month (Opera, Chrome, Safari):</label></dt>
+				<dd><input type="month" name="month1" id="month1"></dd>
+				<dt><label for="week1">Week (Opera, Chrome, Safari):</label></dt>
+				<dd><input type="week" name="week1" id="week1"></dd>
+				<dt><label for="range1">Range:</label></dt>
+				<dd><input type="range" min="0" max="50" value="0" name="range1" id="range1"></dd>
+				<dt><label for="color1">Color (Opera, Chrome):</label></dt>
+				<dd><input type="color" name="color1" id="color1"></dd>
+				<dt><label for="speech1">Speech (Chrome):</label></dt>
+				<dd><input type="text" x-webkit-speech name="speech1" id="speech1"></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<legend>Interactivity</legend>
+			<dl>
+				<dt><label for="text4">Datalist (Opera, Chrome, IE):</label></dt>
+				<dd>
+					<input type="text" name="text4" id="text4" list="datalist1">
+					<datalist id="datalist1">
+						<option value="possible value 1">
+						<option value="possible value 2">
+						<option value="possible value 3">
+					</datalist>
+				</dd>
+				<dt>Details (Opera, Chrome)</dt>
+				<dd>
+					<details>
+						<p>
+							If your browser supports this element, it should allow you to
+							expand and collapse these details.
+						</p>
+					</details>
+				</dd>
+			</dl>
+		</fieldset>
+		<p><input type="submit" value="Submit form"></p>
+	</form>
+</body>
+</html>
