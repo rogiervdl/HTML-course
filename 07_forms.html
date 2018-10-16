@@ -48,18 +48,17 @@
 &lt;body&gt;
 
   &lt;form&gt;
-
     &lt;p&gt;
       &lt;label for="username"&gt;Username:&lt;/label&gt;
-      &lt;input type="text" id="username" name="username" autofocus&gt;
+      &lt;input type="text" id="username" autofocus&gt;
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label for="password"&gt;Password:&lt;/label&gt;
-      &lt;input type="password" id="password" name="password" placeholder="at least 8 characters"&gt;
+      &lt;input type="password" id="password" placeholder="at least 8 characters"&gt;
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label for="name"&gt;Full name *:&lt;/label&gt;
-      &lt;input type="text" id="name" name="name" required&gt;
+      &lt;input type="text" id="name" required&gt;
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label&gt;Gender&lt;/label&gt;:
@@ -72,7 +71,7 @@
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label for="education"&gt;Your education *:&lt;/label&gt;
-      &lt;select name="education" id="education" required&gt;
+      &lt;select id="education" required&gt;
         &lt;option value="-1"&gt;Select...&lt;/option&gt;
         &lt;option value="0"&gt;Primary school&lt;/option&gt;
         &lt;option value="1"&gt;Secondary school&lt;/option&gt;
@@ -82,24 +81,24 @@
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label&gt;Skills&lt;/label&gt;:
-      &lt;label&gt;&lt;input type="checkbox" name="html" checked&gt;HTML&lt;/label&gt;
-      &lt;label&gt;&lt;input type="checkbox" name="js"&gt;Javascript&lt;/label&gt;
-      &lt;label&gt;&lt;input type="checkbox" name="css" checked&gt;CSS&lt;/label&gt;
-      &lt;label&gt;&lt;input type="checkbox" name="php"&gt;PHP&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox" checked&gt; HTML&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox"&gt; Javascript&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox" checked&gt; CSS&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox"&gt; PHP&lt;/label&gt;
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label for="photo"&gt;Upload a picture (.gif of .jpeg):&lt;/label&gt;
-      &lt;input type="file" id="photo" name="photo"&gt;
+      &lt;input type="file" id="photo"&gt;
     &lt;/p&gt;
     &lt;p&gt;
       &lt;label for="desc"&gt;Comments:&lt;/label&gt;
-      &lt;textarea id="desc" name="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
+      &lt;textarea id="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
     &lt;/p&gt;
 
-    &lt;input type="hidden" name="verb" value="xyz"&gt;
+    &lt;input type="hidden" value="xyz"&gt;
     &lt;p&gt;
-      &lt;input type="submit" name="btnOk" value="Send"&gt;
-      &lt;input type="submit" name="btnCancel" value="Cancel" formnovalidate&gt;
+      &lt;input type="submit" value="Send"&gt;
+      &lt;input type="submit" value="Cancel" formnovalidate&gt;
     &lt;/p&gt;
   &lt;/form&gt;
 
@@ -123,11 +122,11 @@
       &lt;legend&gt;Login&lt;/legend&gt;
       &lt;p&gt;
         &lt;label for="username"&gt;Username:&lt;/label&gt;
-        &lt;input type="text" id="username" name="username" autofocus&gt;
+        &lt;input type="text" id="username" autofocus&gt;
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label for="password"&gt;Password:&lt;/label&gt;
-        &lt;input type="password" id="password" name="password" placeholder="at least 8 characters"&gt;
+        &lt;input type="password" id="password" placeholder="at least 8 characters"&gt;
       &lt;/p&gt;
     &lt;/fieldset&gt;
 
@@ -135,7 +134,7 @@
       &lt;legend&gt;No account yet? Create one here:&lt;/legend&gt;
       &lt;p&gt;
         &lt;label for="name"&gt;Full name *:&lt;/label&gt;
-        &lt;input type="text" id="name" name="name" required&gt;
+        &lt;input type="text" id="name" required&gt;
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label&gt;Gender&lt;/label&gt;:
@@ -148,7 +147,7 @@
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label for="education"&gt;Your education *:&lt;/label&gt;
-        &lt;select name="education" id="education" required&gt;
+        &lt;select id="education" required&gt;
           &lt;option value="-1"&gt;Select...&lt;/option&gt;
           &lt;option value="0"&gt;Primary school&lt;/option&gt;
           &lt;option value="1"&gt;Secondary school&lt;/option&gt;
@@ -158,25 +157,25 @@
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label&gt;Skills&lt;/label&gt;:
-        &lt;label&gt;&lt;input type="checkbox" name="html" checked&gt;HTML&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox" name="js"&gt;Javascript&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox" name="css" checked&gt;CSS&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox" name="php"&gt;PHP&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" checked&gt; HTML&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Javascript&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" checked&gt; CSS&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; PHP&lt;/label&gt;
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label for="photo"&gt;Upload a picture (.gif of .jpeg):&lt;/label&gt;
-        &lt;input type="file" id="photo" name="photo"&gt;
+        &lt;input type="file" id="photo"&gt;
       &lt;/p&gt;
       &lt;p&gt;
         &lt;label for="desc"&gt;Comments:&lt;/label&gt;
-        &lt;textarea id="desc" name="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
+        &lt;textarea id="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
       &lt;/p&gt;
     &lt;/fieldset&gt;
 
     &lt;input type="hidden" name="verb" value="xyz"&gt;
     &lt;p&gt;
-      &lt;input type="submit" name="btnOk" value="Send"&gt;
-      &lt;input type="submit" name="btnCancel" value="Cancel" formnovalidate&gt;
+      &lt;input type="submit" value="Send"&gt;
+      &lt;input type="submit" value="Cancel" formnovalidate&gt;
     &lt;/p&gt;
   &lt;/form&gt;
 
@@ -247,7 +246,7 @@
               </ul>
               <pre class="bigger"><code class="language-html right">&lt;p&gt;
   &lt;label for="name"&gt;Your name:&lt;/label&gt;
-  &lt;input type="text" id="name" name="name"&gt;
+  &lt;input type="text" id="name"&gt;
 &lt;/p&gt;
 </code></pre>
             </li>
@@ -260,7 +259,7 @@
               All controls should be preceded by their &lt;label&gt;:
               <pre class="bigger"><code class="language-html right">&lt;p&gt;
   &lt;label for="name"&gt;Your name:&lt;/label&gt;
-  &lt;input type="text" id="name" name="name"&gt;
+  &lt;input type="text" id="name"&gt;
 &lt;/p&gt;
 </code></pre>
             </li>
@@ -291,16 +290,20 @@
           <ul>
             <li>
               Text field:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="text" name="name"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="fname"&gt;First name:&lt;/label&gt;
+&lt;input type="text" id="fname" placeholder="bv. Bob"&gt;s</code></pre>
             </li>
             <li>
               Text area:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;textarea name="box1" cols="20" rows="5"&gt;&lt;/textarea&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="bio"&gt;Bio:&lt;/label&gt;
+&lt;textarea id="bio" cols="40" rows="5" required&gt;&lt;/textarea&gt;
 </code></pre>
             </li>
             <li>
               Password field:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="password" name="password"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="pw"&gt;Password:&lt;/label&gt;
+&lt;input type="password" id="pw" placeholder="at least 8 characters"&gt;
+</code></pre>
             </li>
             <li>
               Hidden field (used to send extra data):
@@ -313,17 +316,17 @@
           <ul>
             <li>
               Radiobuttons:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="radio" name="group1" value="a"&gt;
-&lt;input type="radio" name="group1" value="b"&gt;
-&lt;input type="radio" name="group1" value="c"&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label&gt;&lt;input type="radio" name="group1" value="a"&gt; option a&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="group1" value="b"&gt; option b&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="group1" value="c"&gt; option c&lt;/label&gt;
 </code></pre>
              &rarr; note: radiobuttons of the same group have identical <code>name</code> attributes
             </li>
             <li>
               Checkboxes:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="checkbox" name="chb1" value="a"&gt;
-&lt;input type="checkbox" name="chb2" value="b"&gt;
-&lt;input type="checkbox" name="chb3" value="c"&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label&gt;&lt;input type="checkbox" value="a"&gt; choice 1&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" value="b"&gt; choice 2&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" value="c"&gt; choice 3&lt;/label&gt;
 </code></pre>
              &rarr; note: checkboxes have identical <code>name</code> attributes
             </li>
@@ -334,17 +337,18 @@
           <ul>
             <li>
               Dropdown list:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;select name="education"&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="edu"&gt;Education: &lt;/label&gt;
+&lt;select id="edu"&gt;
   &lt;option value="-1"&gt;Select...&lt;/option&gt;
   &lt;option value="0"&gt;Primary school&lt;/option&gt;
   &lt;option value="1"&gt;Secondary school&lt;/option&gt;
   &lt;option value="2"&gt;Higer education&lt;/option&gt;
-  &lt;option value="3"&gt;Master&lt;/option&gt;
 &lt;/select&gt;</code></pre>
             </li>
             <li>
               With <code>multiple</code> attribute:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;select name="education" multiple&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="edu"&gt;Education: &lt;/label&gt;
+&lt;select multiple&gt;
   &lt;option value="0"&gt;banana&lt;/option&gt;
   &lt;option value="1"&gt;apple&lt;/option&gt;
   &lt;option value="2"&gt;potato&lt;/option&gt;
@@ -363,16 +367,18 @@
           <ul>
             <li>
               File upload field:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="photo"&gt;Profile picture: &lt;/label&gt;
+&lt;input type="file" id="photo"&gt;</code></pre>
             </li>
             <li>
               The <code>multiple</code> attribute allows multiple file uploads:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" multiple&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="photo"&gt;Profile picture:&lt;/label&gt;
+&lt;input type="file" multiple&gt;</code></pre>
             </li>
             <li>
               The <code>accept</code> attribute limits file types:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" accept="image/jpeg,image/jpg,image/png"&gt;</code></pre>
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" name="photo" accept=".jpeg,.jpg,.png"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" accept="image/jpeg,image/jpg,image/png"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="file" accept=".jpeg,.jpg,.png"&gt;</code></pre>
             </li>
           </ul>
         </section>
@@ -381,7 +387,7 @@
           <ul>
             <li>
               Submit button:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" name="btnOk" value="Send"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" value="Send"&gt;</code></pre>
             </li>
             <li class="no-style">
               Alternative syntax (offers more possibilities):
@@ -394,7 +400,7 @@
             </li>
             <li>
               Buttons that do nothing are also possible:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="button" name="btn1" value="Click me"&gt;</code></pre>
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="button" value="Click me"&gt;</code></pre>
             </li>
             <li class="arrow smaller">
               only useful with Javascript attached, and even then you'd better use a link
@@ -417,7 +423,7 @@ make sure to provide an <code>alt</code> attribute with the <i>same value as the
               HTML5 added several new input types; full list see <a href="https://www.w3schools.com/html/html_form_input_types.asp">w3schools</a>
               <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
   &lt;label for="email1"&gt;Email:&lt;/label&gt;
-  &lt;input type="email" name="email1" for="email1"&gt;
+  &lt;input type="email" for="email1"&gt;
 &lt;p&gt;
 &lt;p&gt;
   &lt;label for="nr1"&gt;Number:&lt;/label&gt;
@@ -425,15 +431,15 @@ make sure to provide an <code>alt</code> attribute with the <i>same value as the
 &lt;p&gt;
 &lt;p&gt;
   &lt;label for="dat1"&gt;Date (&lt;a href="https://caniuse.com/#search=date"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
-  &lt;input type="date" name="dat1" id="dat1"&gt;
+  &lt;input type="date" id="dat1"&gt;
 &lt;p&gt;
 &lt;p&gt;
   &lt;label for="dat1"&gt;Time (&lt;a href="https://caniuse.com/#search=time"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
-  &lt;input type="time" name="tim1" id="tim1"&gt;
+  &lt;input type="time" id="tim1"&gt;
 &lt;p&gt;
 &lt;p&gt;
   &lt;label for="col1"&gt;Color (&lt;a href="https://caniuse.com/#search=color"&gt;shaky support&lt;/a&gt;):&lt;/label&gt;
-  &lt;input type="color" name="col1" id="col1"&gt;
+  &lt;input type="color" id="col1"&gt;
 &lt;p&gt;
 </code></pre>
             </li>
@@ -498,7 +504,7 @@ make sure to provide an <code>alt</code> attribute with the <i>same value as the
               Shows a helper text in the field:
               <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
   &lt;label for="name"&gt;Your name:&lt;/label&gt;
-  &lt;input type="text" name="name" id="name" placeholder="e.g. John Smith"&gt;
+  &lt;input type="text" id="name" placeholder="e.g. John Smith"&gt;
 &lt;/p&gt;</code></pre>
             </li>
           </ul>
@@ -510,11 +516,11 @@ make sure to provide an <code>alt</code> attribute with the <i>same value as the
               Focuses on the field when the form loads:
               <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
   &lt;label for="login"&gt;Your login:&lt;/label&gt;
-  &lt;input type="text" name="login" id="login"&gt;
+  &lt;input type="text" id="login"&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;label for="pw"&gt;Your password:&lt;/label&gt;
-  &lt;input type="password" name="pw" id="pw" autofocus&gt;
+  &lt;input type="password" id="pw" autofocus&gt;
 &lt;/p&gt;</code></pre>
             </li>
           </ul>
@@ -527,7 +533,7 @@ make sure to provide an <code>alt</code> attribute with the <i>same value as the
               <pre class="bigger"><code class="language-html overlayrun">&lt;form action="#"&gt;
   &lt;p&gt;               
     &lt;label for="email"&gt;Your email:&lt;/label&gt;
-    &lt;input type="email" name="email" id="email" required&gt;
+    &lt;input type="email" id="email" required&gt;
   &lt;/p&gt;               
   &lt;p&gt;               
     &lt;input type="submit" value="Go!"&gt;
