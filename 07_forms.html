@@ -47,7 +47,77 @@
 &lt;/head&gt;
 &lt;body&gt;
 
-  &lt;form action="/scripts/test.php" method="post" enctype="multipart/form-data"&gt;
+  &lt;form&gt;
+
+    &lt;p&gt;
+      &lt;label for="username"&gt;Username:&lt;/label&gt;
+      &lt;input type="text" id="username" name="username" autofocus&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="password"&gt;Password:&lt;/label&gt;
+      &lt;input type="password" id="password" name="password" placeholder="at least 8 characters"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="name"&gt;Full name *:&lt;/label&gt;
+      &lt;input type="text" id="name" name="name" required&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label&gt;Gender&lt;/label&gt;:
+      &lt;label&gt;&lt;input type="radio" name="gender" value="f" checked&gt; Female&lt;/label&gt;
+      &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; Male&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="favcol"&gt;Your favorite color:&lt;/label&gt;
+      &lt;input type="color" id="favcolor" value="#f789df"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="education"&gt;Your education *:&lt;/label&gt;
+      &lt;select name="education" id="education" required&gt;
+        &lt;option value="-1"&gt;Select...&lt;/option&gt;
+        &lt;option value="0"&gt;Primary school&lt;/option&gt;
+        &lt;option value="1"&gt;Secondary school&lt;/option&gt;
+        &lt;option value="2"&gt;Higer education&lt;/option&gt;
+        &lt;option value="3"&gt;Master&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label&gt;Skills&lt;/label&gt;:
+      &lt;label&gt;&lt;input type="checkbox" name="html" checked&gt;HTML&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox" name="js"&gt;Javascript&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox" name="css" checked&gt;CSS&lt;/label&gt;
+      &lt;label&gt;&lt;input type="checkbox" name="php"&gt;PHP&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="photo"&gt;Upload a picture (.gif of .jpeg):&lt;/label&gt;
+      &lt;input type="file" id="photo" name="photo"&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="desc"&gt;Comments:&lt;/label&gt;
+      &lt;textarea id="desc" name="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+
+    &lt;input type="hidden" name="verb" value="xyz"&gt;
+    &lt;p&gt;
+      &lt;input type="submit" name="btnOk" value="Send"&gt;
+      &lt;input type="submit" name="btnCancel" value="Cancel" formnovalidate&gt;
+    &lt;/p&gt;
+  &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <div class="demolink"><a href="demos/07_forms/fullexample.html">demo</a></div>
+        </section>
+        <section>
+          <h2>Full example with fieldsets</h2>
+          <pre class="bigger"><code class="language-html overlayrun">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt; Testpage &lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;form&gt;
 
     &lt;fieldset&gt;
       &lt;legend&gt;Login&lt;/legend&gt;
