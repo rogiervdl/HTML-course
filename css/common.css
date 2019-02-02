@@ -6,23 +6,6 @@
 
 
 /*********************************************
- * VENDOR
- *********************************************/
-
-@import '../vendor/reveal/css/reveal.css';
-@import '../vendor/highlight/styles/vs.css';
-@import '../vendor/reveal/css/theme/beige.css';
-@import '../css/reveal-mods.css';
-
-/*********************************************
- * FONTS
- *********************************************/
-
-@import '../fonts/droidsans/webfont.css';
-@import '../fonts/lato/webfont.css';
-@import '../fonts/leaguegothic/webfont.css';
-
-/*********************************************
  * GENERAL STYLES
  *********************************************/
 
