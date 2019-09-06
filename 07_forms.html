@@ -197,10 +197,9 @@
               <ul>
                 <li>is mandatory for all forms</li>
                 <li>should include anything that belongs to the form, also titles, help texts, error messages etc...</li>
-                <li>should have an action attribute (more about this in later courses)</li>
-                <li>should have a submit button</li>
+                <li>should probably have a submit button at the end</li>
               </ul>
-              <pre class="bigger"><code class="language-html">&lt;form action="#"&gt;
+              <pre class="bigger"><code class="language-html">&lt;form&gt;
   &lt;h3&gt;Registration form&lt;/h3&gt;
   ...
   &lt;p&gt;fields with an * are required&lt;/p&gt;
@@ -217,7 +216,7 @@
           </ul>
         </section>
         <section data-toc-title="">
-          <h2>Fieldsets</h2>
+          <h2>[Fieldsets]</h2>
           <ul>
             <li>
               If your form contains more than a few controls, use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> to create groups:
@@ -353,7 +352,7 @@
 &lt;/select&gt;</code></pre>
             </li>
             <li>
-              With <code>multiple</code> attribute:
+              [With <code>multiple</code> attribute]:
               <pre class="bigger"><code class="language-html overlayrun">&lt;label for="edu"&gt;Education: &lt;/label&gt;
 &lt;select multiple&gt;
   &lt;option value="0"&gt;banana&lt;/option&gt;

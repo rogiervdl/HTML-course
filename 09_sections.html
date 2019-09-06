@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="vendor/highlight/styles/vs.css">
   <link rel="stylesheet" href="css/reveal-mods.css">
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/09_sections.css">
 </head>
 
 <body>
@@ -34,1283 +35,6 @@
           <footer>
             <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
           </footer>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>SECTIONS</h1>
-          <h2>Sectioning &mdash; old style</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section data-toc-title="&amp;lt;div&amp;gt; and &amp;lt;span&amp;gt;">
-          <h2>Elements &lt;div&gt; and &lt;span&gt;</h2>
-          <ul>
-            <li>
-              Traditionally, these elements were used to mark parts of a document:<br>
-              <code>&lt;div&gt;</code><br>
-              <code>&lt;span&gt;</code>
-            </li>
-            <li>
-              <em><code>&lt;div&gt;</code></em> is a blocklevel element (like paragraphs)
-            </li>
-            <li>
-              <em><code>&lt;span&gt;</code></em> is an inline element (like characters)
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Sample page without divisions</h2>
-          <ul>
-            <li class="no-style">
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Submenu&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
-
-&lt;h3&gt;Part 1&lt;/h3&gt;
-&lt;p&gt;
-  But I must explain to you how all this mistaken idea of denouncing pleasure
-  and praising pain was born and I will give you a complete account of the system,
-  and expound the actual teachings of the great explorer of the truth, the
-  master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-  itself, because it is pleasure, but because those who do not know how to pursue
-  pleasure rationally encounter consequences that are extremely painful.
-&lt;/p&gt;
-
-&lt;h3&gt;Part 2&lt;/h3&gt;
-&lt;p&gt;
-  Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
-  because it is pain, but because occasionally circumstances occur in which toil
-  and pain can procure him some great pleasure. To take a trivial example, which of
-  us ever undertakes laborious physical exercise, except to obtain some advantage
-  from it? But who has any right to find fault with a man who chooses to enjoy a
-  pleasure that has no annoying consequences, or one who avoids a pain that
-  produces no resultant pleasure?
-&lt;/p&gt;
-
-&lt;h3&gt;Part 3&lt;/h3&gt;
-&lt;p&gt;
-  On the other hand, we denounce with righteous indignation and dislike men who are
-  so beguiled and demoralized by the charms of pleasure of the moment, so blinded
-  by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-  and equal blame belongs to those who fail in their duty through weakness of will,
-  which is the same as saying through shrinking from toil and pain.
-&lt;/p&gt;
-
-&lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-&lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;Advertisement&lt;/h4&gt;
-&lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-&lt;p&gt;&amp;copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;Comments&lt;/h4&gt;
-&lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
-&lt;p&gt;
-  I personally believe Lorem Ipsum is the most sensitive poem ever written
-  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
-&lt;/p&gt;
-&lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
-&lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
-
-&lt;p&gt;&amp;copy; Rogier van der Linde, 2010&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
-  &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
-  &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
-&lt;/ul&gt;
-</code></pre></div>
-              <div class="demolink"><a href="demos/09_sections/unstructured.html">demo</a> (or preview <a href="demos/09_sections/designed.html">with design</a>)</div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Sample page with divisions</h2>
-          <ul>
-            <li class="no-style">
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;div id="wrapper"&gt;
-  &lt;div id="header"&gt;
-    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-    &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id="mainmenu"&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div id="submenu"&gt;
-    &lt;p&gt;Submenu&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div id="content"&gt;
-    &lt;div id="blogpost"&gt;
-      &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
-      &lt;h3&gt;Part 1&lt;/h3&gt;
-      &lt;p&gt;
-        But I must explain to you how all this mistaken idea of denouncing pleasure
-        and praising pain was born and I will give you a complete account of the system,
-        and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
-        master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-        itself, because it is pleasure, but because those who do not know how to pursue
-        pleasure rationally encounter consequences that are extremely painful.
-      &lt;/p&gt;
-      &lt;h3&gt;Part 2&lt;/h3&gt;
-      &lt;p&gt;
-        Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
-        because it is pain, but because occasionally circumstances occur in which toil
-        and pain can procure him some great pleasure. To take a trivial example, which of
-        us ever undertakes laborious physical exercise, except to obtain some advantage
-        from it? But who has any right to find fault with a man who chooses to enjoy a
-        pleasure that has no annoying consequences, or one who avoids a pain that
-        produces no resultant pleasure?
-      &lt;/p&gt;
-      &lt;h3&gt;Part 3&lt;/h3&gt;
-      &lt;p&gt;
-        On the other hand, we denounce with righteous indignation and dislike men who are
-        so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
-        by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-        and equal blame belongs to those who fail in their duty through weakness of will,
-        which is the same as saying through shrinking from toil and pain.
-      &lt;/p&gt;
-      &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-      &lt;div id="extra"&gt;
-        &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
-        &lt;div class="ad"&gt;
-          &lt;h4&gt;Advertisement&lt;/h4&gt;
-          &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-          &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id="comments"&gt;
-      &lt;h4&gt;Comments&lt;/h4&gt;
-      &lt;div class="comment"&gt;
-        &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
-        &lt;p&gt;
-          I personally believe Lorem Ipsum is the most sensitive poem ever written
-          (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
-        &lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="comment"&gt;
-        &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
-        &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="footer"&gt;
-    &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
-      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
-      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div>
-            </li>
-            <li class="arrow">
-              this works, but <code>&lt;div&gt;</code> lacks semantic meaning
-            </li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>SECTIONS</h1>
-          <h2>Sectioning &mdash; new style</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Sections and headings</h2>
-          <ul>
-            <li>
-              a <em>section</em> is a part of the document with a heading
-            </li>
-            <li>
-              a <em>heading</em> (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>...) is the title of a section (not to be confused with header <code>&lt;header&gt;</code>, see later)
-            </li>
-            <li>
-              don't use a heading just because a text is large; from the <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
-              <blockquote style="margin-left: 0; width: auto">
-                h1–h6 elements must not be used to markup subheadings, subtitles, alternative titles and taglines 
-              </blockquote>
-            </li>
-            <li class="arrow" style="color: #900">
-              a section must contain exactly one heading, and vice versa
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Sectioning elements</h2>
-          <ul>
-            <li>
-              HTML5 comes with four new sectioning elements:<br>
-              <code>&lt;section&gt;</code><br>
-              <code>&lt;nav&gt;</code><br>
-              <code>&lt;article&gt;</code><br>
-              <code>&lt;aside&gt;</code>
-            </li>
-            <li>
-              The <code>&lt;body&gt;</code> element is also a sectioning element
-            </li>
-            <li class="arrow">
-              these elements should contain one heading each
-            </li>
-            <li class="arrow">
-              there's still a some debate on how to use them, but the latest <a href="https://w3c.github.io/html/sections.html#sections">W3C HTML5.3 editor draft</a> looks solid and usable enough
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Non-Sectioning elements</h2>
-          <ul>
-            <li>
-              Additional elements you can use to group content without creating a section:<br>
-              <code>&lt;div&gt;</code><br>
-              <code>&lt;header&gt;</code><br>
-              <code>&lt;footer&gt;</code><br>
-              <code>&lt;main&gt;</code>
-            </li>
-            <li class="arrow">
-              these elements do not correspond with a heading
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="&amp;lt;section&amp;gt;">
-          <h2>&lt;section&gt;</h2>
-          <ul>
-            <li>
-              marks a <em>thematic group</em> of content that <em>contains a heading</em>
-            </li>
-            <li>
-              use for:
-              <ul class="v-style">
-                <li>chapters of a tutorial</li>
-                <li>tabs of a tabbed content</li>
-                <li>introduction, news items and contact information areas on the homepage</li>
-                <li>comments area of an article</li>
-                <li>basically anything that contains (usually starts with) a heading</li>
-              </ul>
-            </li>
-            <li>
-              don't use:
-              <ul class="x-style">
-                <li>as hook for styling or scripting (use <code>&lt;div&gt;</code> instead)</li>
-                <li>if <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code> or <code>&lt;article&gt;</code> is more appropriate</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Quotes from the W3C:
-              </p>
-              <blockquote>
-                A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
-              </blockquote>
-              <blockquote>
-                The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;article&amp;gt;">
-          <h2>&lt;article&gt;</h2>
-          <ul>
-            <li>
-              is a special case of <code>&lt;section&gt;</code>
-            </li>
-            <li>
-              independent content <em>reusable in another context or website</em>
-            </li>
-            <li>
-              use for:
-              <ul class="v-style">
-                <li>a blogpost, tutorial or newspaper article</li>
-                <li>a tweet</li>
-                <li>a comment</li>
-                <li>an advertisement or banner</li>
-                <li>a widget: poll, calendar, latest comments...</li>
-              </ul>
-            </li>
-            <li>
-              don't use for:
-              <ul class="x-style">
-                <li>a part of a blogpost</li>
-                <li>a login form</li>
-                <li>content that loses its meaning without the surrounding content</li>
-              </ul>
-            </li>
-            <li>
-              if not sure, use <code>&lt;section&gt;</code>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;nav&amp;gt;">
-          <h2>&lt;nav&gt;</h2>
-          <ul>
-            <li>
-              is a special case of <code>&lt;section&gt;</code>
-            </li>
-            <li>
-              marks the <em>main navigation blocks</em> in a page
-            </li>
-            <li>
-              contains a group of links only: no single links, forms, filters...
-            </li>
-            <li>
-              use for:
-              <ul class="v-style">
-                <li>main and submenu</li>
-                <li>breadcrumb</li>
-                <li>paging</li>
-                <li>group of contextual links</li>
-              </ul>
-            </li>
-            <li>
-              don't use for:
-              <ul class="x-style">
-                <li>language menu</li>
-                <li>filters, facet navigation</li>
-                <li>search form</li>
-                <li>hash tags, tag clouds</li>
-                <li>footer links</li>
-                <li>calls to action</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
-              </blockquote>
-              <blockquote>
-                Not all groups of links on a page need to be in a nav element — the element is primarily intended for sections that consist of major navigation blocks.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;aside&amp;gt;">
-          <h2>&lt;aside&gt;</h2>
-          <ul>
-            <li>
-              is a special case of <code>&lt;section&gt;</code>
-            </li>
-            <li>
-              piece of <em>non-essential</em> content <em>related to the parenting section</em>
-            </li>
-            <li>
-              use for:
-              <ul class="v-style">
-                <li>related advertising, links or products</li>
-                <li>'recenty viewed' or 'others also recommend' sections</li>
-                <li>short background information or quick facts</li>
-                <li>a blogroll</li>
-                <li>a pull quote</li>
-              </ul>
-            </li>
-            <li>
-              don't use for:
-              <ul class="x-style">
-                <li>non-related advertising</li>
-                <li>major navigation blocks</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
-              </blockquote>
-              <blockquote>
-                The element can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content of the page.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;div&amp;gt;">
-          <h2>&lt;div&gt;</h2>
-          <ul>
-            <li>
-              <code>&lt;div&gt;</code> is still used, but for <em>layout, styling or scripting</em> only
-            </li>
-            <li>
-              use for:
-              <ul class="v-style">
-                <li>positioning and styling fragments: page or main content wrapper, cells in a grid layout...</li>
-                <li>container for scripts like google map</li>
-              </ul>
-            </li>
-            <li>
-              don't use:
-              <ul class="x-style">
-                <li>where another more semantic element would be more appropriate: <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>...
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="&amp;lt;header&amp;gt;">
-          <h2>&lt;header&gt;</h2>
-          <ul>
-            <li>
-              marks <em>introductory content at the top</em> of a section
-            </li>
-            <li>
-              may contain:
-              <ul class="v-style">
-                <li>a heading</li>
-                <li>navigation elements</li>
-                <li>a short introduction or summary</li>
-                <li>a logo</li>
-                <li>information about the writer, post date...</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The header element represents introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of introductory or navigational aids.
-              </blockquote>
-              <blockquote>
-                When the nearest ancestor sectioning content or sectioning root element is the body element, then it applies to the whole page.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;footer&amp;gt;">
-          <h2>&lt;footer&gt;</h2>
-          <ul>
-            <li>
-              marks <em>closing content</em> usually <em>at the bottom</em> of a section
-            </li>
-            <li>
-              may contain:
-              <ul class="v-style">
-                <li>paging, further reading and other navigation elements</li>
-                <li>short conclusion</li>
-                <li>information about the writer, copyright</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="&amp;lt;main&amp;gt;">
-          <h2>&lt;main&gt;</h2>
-          <ul>
-            <li>
-              specifies the <em>main content</em> of the document
-            </li>
-            <li>
-              may be used by blind browsers to skip navigation etc...
-            </li>
-            <li>
-              beware:
-              <ul class="x-style">
-                <li>not more than one <code>&lt;main&gt;</code> element per document</li>
-                <li>should not contain content repeated across pages, like menus, sidebars, search forms, copyright info...</li>
-                <li>
-                  cannot be nested in <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code> or <code>&lt;footer&gt;</code>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Literally from the W3C:
-              </p>
-              <blockquote>
-                The main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>SECTIONS</h1>
-          <h2>Sectioning &mdash; Howto</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section data-toc-title="Headings and sections">
-          <h2>Headings and sections</h2>
-          <ul>
-            <li>
-              remember:
-              <ul>
-                <li>
-                  <code>&lt;body&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> are sections
-                </li>
-                <li><code>&lt;div&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code> are not sections</li>
-                <li>a section should have a heading</li>
-                <li>a heading should correspond to a section</li>
-              </ul>
-              
-            </li>
-            <li>
-              at the end we should get a nice outline (<a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo">plugin</a> or <a href="http://gsnedders.html5.org/outliner/">online tool</a>):
-            </li>
-          </ul>
-          <img src="img/09_sections/outline_cropped.png" alt="screenshot outline" style="max-width: 600px">
-          <div class="tooltip">
-            <div>
-              <p>
-                Not all elements contribute to the outline: <code>&lt;blockquote&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;figure&gt;</code> and <code>&lt;td&gt;</code> are considered <i>sectioning roots</i> that have their own outlines.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section data-toc-title="">
-          <h2>Headings and sections</h2>
-          <ul>
-            <li>
-              Here's how to do proper sectioning:
-              <ul>
-                <li>
-                  step 1: create an outline for your document (on paper!)
-                  <ul>
-                    <li>the site title is the root of the outline</li>
-                    <li>if a heading is missing on the screenshot but you need it in the outline, choose a good one yourself (this is called a <em>structural</em> heading)</li>
-                  </ul>
-                </li>
-                <li>
-                  step 2: add <code>&lt;section&gt;</code> elements and headings to your HTML document
-                  <ul>
-                    <li>each outline entry corresponds to a <code>&lt;section&gt;</code> with a heading <code>&lt;hn&gt;</code></li>
-                    <li>the <code>&lt;body&gt;</code> is the root section with a <code>&lt;h1&gt;</code> (the logo) as heading</li>
-                    <li>the nesting of the <code>&lt;section&gt;</code> elements in HTML is the same as in the outline</li>
-                    <li>the heading number in HTML is the same as the outline indent level</li>
-                  </ul>
-                </li>
-                <li>
-                  step 3: where appropriate, change section to article, nav or aside
-                </li>
-              </ul>
-            </li>
-            <li>
-              Additional optional steps:
-              <ul>
-                <li>
-                  step 4: in external sections such as ads or FB comments, restart heading numbering from <code>&lt;h1&gt;</code>
-                </li>
-                <li>
-                  step 5: add <code>&lt;header&gt;</code> and/or <code>&lt;footer&gt;</code> to one or more sections
-                </li>
-                <li>
-                  step 6: mark the main content with <code>&lt;main&gt;</code>
-                </li>
-                <li>
-                  step 7: add <code>&lt;div&gt;</code>'s as CSS or Javascript hooks
-                </li>
-                <li>
-                  step 8: apply implicit sections (see further)
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Structural headings</h2>
-          <ul>
-            <li>
-              Headings that appear in the outline but not on the final design are called <em>structural</em>
-            </li>
-            <li>
-               They should be hidden with <a href="10_css_syntax.html">CSS</a>:
-              <pre class="bigger"><code class="language-html">...
-&lt;style&gt;
-  .structural {
-    position: absolute;
-    left: -9999px;
-  }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-...
-&lt;section&gt;
-  &lt;h2 class="structural"&gt;Submenu&lt;/h2&gt;
-  ...
-&lt;/section&gt;
-...
-</code></pre>
-            </li>
-            <li class="arrow" style="font-style: italic;">
-              tip: meaningful names like 'related', 'legal info' etc... are preferred over structural names like 'sidebar', 'footer' etc... 
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Example &mdash; screenshot</h2>
-          <ul>
-            <li>
-              Let's get back to a screenshot of our desired page:
-            </li>
-          </ul>
-          <img src="img/09_sections/full.png" alt="desired page screenshot" style="max-width: 600px">
-        </section>
-        <section>
-          <h2>Step 1 &mdash; outline</h2>
-          <ul>
-            <li>
-              Say you come up with this outline:
-            </li>
-          </ul>
-          <img src="img/09_sections/outline.png" alt="desired outline screenshot" style="width: 700px" class="border">
-        </section>
-        <section>
-          <h2>Step 2 &mdash; sections and headings</h2>
-          <ul>
-            <li>
-              Our example with sections and headings:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;body&gt;
-  &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-  ...
-  &lt;section&gt;
-    &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-  &lt;section&gt;
-    &lt;h2&gt;Recent posts&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-
-  &lt;section&gt;
-    &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-    &lt;section&gt;
-      &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-      &lt;section&gt;
-        &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-      &lt;section&gt;
-        &lt;h4&gt;Advertisement&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Turnip greens&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Nori grape&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Comments&lt;/h4&gt;
-      &lt;section&gt;
-        &lt;h4&gt;I love Lorem Ipsum&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-      &lt;section&gt;
-        &lt;h4&gt;Lorem Ipsum Sucks&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-    &lt;/section&gt;
-  &lt;/section&gt;
-  &lt;section&gt;
-    &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-&lt;/body&gt;
-</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Step 3 &mdash; nav, article, aside</h2>
-          <ul>
-            <li>
-              With <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> and <code>&lt;article&gt;</code>:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;body&gt;
-  &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-  ...
-  &lt;nav&gt;
-    &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-  &lt;nav&gt;
-    &lt;h2&gt;Recent posts&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-
-  &lt;section&gt;
-    &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-    &lt;aside&gt;
-      &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-      &lt;section&gt;
-        &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-      &lt;article&gt;
-        &lt;h4&gt;Advertisement&lt;/h4&gt;
-        ...
-      &lt;/article&gt;
-    &lt;/aside&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Turnip greens&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Nori grape&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Comments&lt;/h4&gt;
-      &lt;article&gt;
-        &lt;h4&gt;I love Lorem Ipsum&lt;/h4&gt;
-        ...
-      &lt;/article&gt;
-      &lt;article&gt;
-        &lt;h4&gt;Lorem Ipsum Sucks&lt;/h4&gt;
-        ...
-      &lt;/article&gt;
-    &lt;/section&gt;
-  &lt;/section&gt;
-  &lt;section&gt;
-    &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-&lt;/body&gt;</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Intermediate Result</h2>
-          <ul>
-            <li>
-              That's it! We now have a correct and working sectioning (<a href="demos/09_sections/result1.html">demo</a>).
-            </li>
-            <li>
-              Now let's do the optional steps...
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Step 4 &mdash; heading renumbering</h2>
-          <ul>
-            <li>
-              Heading numbering is difficult with content coming from different sources. Therefore, the W3C allows to restart numbering in sections, which we will apply to our external ad:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">...
-&lt;section&gt;
-  ...
-  &lt;aside&gt;
-    ...
-    &lt;article&gt;
-      &lt;h1&gt;Advertisement&lt;/h1&gt;
-      ...
-    &lt;/article&gt;
-  &lt;/aside&gt;
-  ...
-&lt;/section&gt;
-...</code></pre></div>
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                Some more <a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#headings-and-sections">quotes</a> from the W3C:
-              </p>
-              <blockquote>
-                Notice how the use of section means that the author can use h1 elements throughout, without having to worry about whether a particular section is at the top level, the second level, the third level, and so on.
-              </blockquote>
-              <blockquote>
-                Sections may contain headings of any rank, and authors are strongly encouraged to use headings of the appropriate rank for the section's nesting level.
-              </blockquote>
-              <p>
-                It must be said that search engines are rather vague about the effect of HTML5 header numbering on your ranking. An interesting read on <a href="http://html5doctor.com/html5-seo-search-engine-optimisation/">http://html5doctor.com/html5-seo-search-engine-optimisation/</a> and a Google comment on <a href="http://www.youtube.com/watch?v=GIn5qJKU8VM">http://www.youtube.com/watch?v=GIn5qJKU8VM</a>
-              </p>
-            </div>
-          </div>        
-        </section>
-        <section>
-          <h2>Step 5 &mdash; header, footer</h2>
-          <ul>
-            <li>
-              Wrap top and body parts of <code>&lt;body&gt;</code> in <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code>:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;body&gt;
-  &lt;header&gt;
-    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-  &lt;/header&gt;
-  ...
-  &lt;nav&gt;
-    &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-  &lt;nav&gt;
-    &lt;h2&gt;Recent posts&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-
-  &lt;section&gt;
-    &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-    &lt;aside&gt;
-      &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-      &lt;section&gt;
-        &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-        ...
-      &lt;/section&gt;
-      &lt;article&gt;
-        &lt;h1&gt;Advertisement&lt;/h1&gt;
-        ...
-      &lt;/article&gt;
-    &lt;/aside&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Turnip greens&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Nori grape&lt;/h3&gt;
-      ...
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;h3&gt;Comments&lt;/h4&gt;
-      &lt;article&gt;
-        &lt;h4&gt;I love Lorem Ipsum&lt;/h4&gt;
-        ...
-      &lt;/article&gt;
-      &lt;article&gt;
-        &lt;h4&gt;Lorem Ipsum Sucks&lt;/h4&gt;
-        ...
-      &lt;/article&gt;
-    &lt;/section&gt;
-  &lt;/section&gt;
-  &lt;footer&gt;
-    &lt;section&gt;
-      &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-      ...
-    &lt;/section&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Step 6 &mdash; main</h2>
-          <ul>
-            <li>
-              Wrap the main content in <code>&lt;main&gt;</code>:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;body&gt;
-  &lt;header&gt;
-    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-  &lt;/header&gt;
-  ...
-  &lt;nav&gt;
-    &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-  &lt;nav&gt;
-    &lt;h2&gt;Recent posts&lt;/h2&gt;
-    ...
-  &lt;/nav&gt;
-
-  &lt;main&gt;
-    &lt;section&gt;
-      &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-      &lt;aside&gt;
-        &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-        &lt;section&gt;
-          &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-          ...
-        &lt;/section&gt;
-        &lt;article&gt;
-          &lt;h1&gt;Advertisement&lt;/h1&gt;
-          ...
-        &lt;/article&gt;
-      &lt;/aside&gt;
-      &lt;section&gt;
-        &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-        ...
-      &lt;/section&gt;
-      &lt;section&gt;
-        &lt;h3&gt;Turnip greens&lt;/h3&gt;
-        ...
-      &lt;/section&gt;
-      &lt;section&gt;
-        &lt;h3&gt;Nori grape&lt;/h3&gt;
-        ...
-      &lt;/section&gt;
-      &lt;section&gt;
-        &lt;h3&gt;Comments&lt;/h4&gt;
-        &lt;article&gt;
-          &lt;h1&gt;I love Lorem Ipsum&lt;/h1&gt;
-          ...
-        &lt;/article&gt;
-        &lt;article&gt;
-          &lt;h1&gt;Lorem Ipsum Sucks&lt;/h1&gt;
-          ...
-        &lt;/article&gt;
-      &lt;/section&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;
-    &lt;section&gt;
-      &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-      ...
-    &lt;/section&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Step 7 &mdash; divisions</h2>
-          <ul>
-            <li>
-              Script and style hooks with <code>&lt;div&gt;</code>, e.g. as page wrapper:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;body&gt;
-  &lt;div id="wrapper"&gt;
-    &lt;header&gt;
-      &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-    &lt;/header&gt;
-    ...
-    &lt;nav&gt;
-      &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-      ...
-    &lt;/nav&gt;
-    &lt;nav&gt;
-      &lt;h2&gt;Recent posts&lt;/h2&gt;
-      ...
-    &lt;/nav&gt;
-
-    &lt;main&gt;
-      &lt;section&gt;
-        &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-        &lt;aside&gt;
-          &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-          &lt;section&gt;
-            &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-            ...
-          &lt;/section&gt;
-          &lt;article&gt;
-            &lt;h1&gt;Advertisement&lt;/h1&gt;
-            ...
-          &lt;/article&gt;
-        &lt;/aside&gt;
-        &lt;section&gt;
-          &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-          ...
-        &lt;/section&gt;
-        &lt;section&gt;
-          &lt;h3&gt;Turnip greens&lt;/h3&gt;
-          ...
-        &lt;/section&gt;
-        &lt;section&gt;
-          &lt;h3&gt;Nori grape&lt;/h3&gt;
-          ...
-        &lt;/section&gt;
-        &lt;section&gt;
-          &lt;h3&gt;Comments&lt;/h4&gt;
-          &lt;article&gt;
-            &lt;h4&gt;I love Lorem Ipsum&lt;/h4&gt;
-            ...
-          &lt;/article&gt;
-          &lt;article&gt;
-            &lt;h4&gt;Lorem Ipsum Sucks&lt;/h4&gt;
-            ...
-          &lt;/article&gt;
-        &lt;/section&gt;
-      &lt;/section&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;
-      &lt;section&gt;
-        &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-        ...
-      &lt;/section&gt;
-    &lt;/footer&gt;
-  &lt;/div&gt;
-&lt;/body&gt;</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="Implicit sections">
-          <h2>Step 8 &mdash; Implicit sections (1)</h2>
-          <ul>
-            <li>
-              Here's a little secret: you don't <i>have</i> to specify a <code>&lt;section&gt;</code> if you don't want to; a new heading autmatically starts a new section. This is called an <em>implicit section</em>. With this we can simplify a few things.
-            </li>
-            <li>
-              If a <code>&lt;section&gt;</code> is the only child of its parent for example:
-              <div><pre class="bigger"><code class="language-html">...
-&lt;footer&gt;
-  &lt;section&gt;
-    &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-&lt;/footer&gt;
-...
-</code></pre></div>
-              <div><pre class="bigger"><code class="language-html">...
-&lt;footer&gt;
-  &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-  ...
-&lt;/footer&gt;
-...
-</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Step 8 &mdash; Implicit sections (2)</h2>
-          <ul>
-            <li>
-              Or if sections are just small parts of a single content...
-              <div><pre class="bigger"><code class="language-html">...
-&lt;section&gt;
-  &lt;h4&gt;Veggies es bonus&lt;/h4&gt;
-  ...
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;h4&gt;Turnip greens&lt;/h4&gt;
-  ...
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;h4&gt;Nori grape&lt;/h4&gt;
-  ...
-&lt;/section&gt;
-...
-</code></pre></div>
-            </li>
-          </ul>
-        </section>        
-        <section data-toc-title="">
-          <h2>Step 8 &mdash; Implicit sections (3)</h2>
-          <ul>
-            <li>
-              ... you may simplify it to:
-              <div><pre class="bigger"><code class="language-html">...
-&lt;h4&gt;Veggies es bonus&lt;/h4&gt;
-...
-&lt;h4&gt;Turnip greens&lt;/h4&gt;
-...
-&lt;h4&gt;Nori grape&lt;/h4&gt;
-...
-</code></pre></div>
-            </li>
-            <li class="arrow">
-              general rule of thumb: if you don't need it as a future style hook, you may consider removing the <code>&lt;section&gt;</code>
-            </li>
-            <li class="arrow">
-              check if your outline is still correct! 
-            </li>
-          </ul>
-          <div class="tooltip">
-            <div>
-              <p>
-                It must be said that the W3C does not encourage implicit sections. A <a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#headings-and-sections">quote</a>:
-              </p>
-              <blockquote>
-                Authors are also encouraged to explicitly wrap sections in elements of sectioning content, instead of relying on the implicit sections generated by having multiple headings in one element of sectioning content.
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h2>Final result</h2>
-          <ul>
-            <li>
-              Our final code:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt; Sectioning demo &lt;/title&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;style&gt;
-    .structural {
-      position: absolute;
-      left: -9999px;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id="wrapper"&gt;
-    &lt;header&gt;
-      &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-      &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
-    &lt;/header&gt;
-    &lt;nav&gt;
-      &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-    &lt;nav&gt;
-      &lt;h2&gt;Recent posts&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-
-    &lt;main&gt;
-      &lt;section&gt;
-        &lt;h2&gt;Veggie Ipsum&lt;/h2&gt;
-        &lt;aside&gt;
-          &lt;h3 class="structural"&gt;Side notes&lt;/h3&gt;
-          &lt;section&gt;
-            &lt;h4 class="structural"&gt;Further reading&lt;/h4&gt;
-            &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
-          &lt;/section&gt;
-          &lt;article&gt;
-            &lt;h1&gt;Advertisement&lt;/h1&gt;
-            &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-            &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-          &lt;/article&gt;
-        &lt;/aside&gt;
-        &lt;h3&gt;Veggies es bonus&lt;/h3&gt;
-        &lt;p&gt;
-          Vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-        &lt;/p&gt;
-        &lt;p&gt;
-          Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot &lt;span class="highlight"&gt;ccourgette tatsoi&lt;/span&gt; pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
-        &lt;/p&gt;
-        &lt;h3&gt;Turnip greens&lt;/h3&gt;
-        &lt;p&gt;
-          Yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.
-        &lt;/p&gt;
-        &lt;h3&gt;Nori grape&lt;/h3&gt;
-        &lt;p&gt;
-          Silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jÃ­cama salsify.
-        &lt;/p&gt;
-        &lt;p&gt;
-          Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu &lt;span class="highlight"&gt;beetroot&lt;/span&gt; horseradish carrot squash brussels sprout chard.
-        &lt;/p&gt;
-        &lt;p&gt;Posted on &lt;time pubdate="pubdate" datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-        &lt;section&gt;
-          &lt;h3&gt;Comments&lt;/h4&gt;
-          &lt;article&gt;
-            &lt;h4&gt;I love Lorem Ipsum&lt;/h4&gt;
-            &lt;p&gt;
-              I personally believe Lorem Ipsum is the most sensitive poem ever written
-              (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
-            &lt;/p&gt;
-          &lt;/article&gt;
-          &lt;article&gt;
-            &lt;h4&gt;Lorem Ipsum Sucks&lt;/h4&gt;
-            &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
-          &lt;/article&gt;
-        &lt;/section&gt;
-      &lt;/section&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;
-      &lt;h2 class="structural"&gt;Footer&lt;/h2&gt;
-      &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/footer&gt;
-  &lt;/div&gt;
-&lt;/body&gt;</code></pre></div>
-              <div class="demolink"><a href="demos/09_sections/result2.html">demo</a></div>
-            </li>
-          </ul>
         </section>
       </section>
       <section>
@@ -1551,6 +275,678 @@ Tel: +3347892347&gt;br&gt;
             </li>
           </ul>
         </section>
+      </section>
+      <section>
+        <section>
+          <h1>SECTIONS</h1>
+          <h2>Creating sections</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Overview</h2>
+          <ul>
+            <li>
+              Before we're ready to design and layout our HTML page with CSS, we need a way to divide or document in sections. They will become the sidebar, header, colums, footer etc... of our page. 
+            </li>
+            <li>
+              All available elements in HTML:
+              <table class="no-borders-left">
+                <tr>
+                  <td><code>&lt;span&gt;</code></td>
+                  <td>part of a text</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;div&gt;</code></td>
+                  <td>part of a document</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;header&gt;</code></td>
+                  <td>introductory content</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;footer&gt;</code></td>
+                  <td>closing content</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;main&gt;</code></td>
+                  <td>main page content</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;section&gt;</code></td>
+                  <td>related content with a title</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;nav&gt;</code></td>
+                  <td>main navigation elements</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;aside&gt;</code></td>
+                  <td>related information</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;article&gt;</code></td>
+                  <td>independent content</td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>span</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;span&gt;</code></em> is an inline element, and marks a <strong>part of a text</strong>. It has no semantic meaning, and is only useful as a hook for CSS or Javascript. An example:
+              <div><pre class="bigger"><code class="language-html">&lt;p&gt;
+  By impossible of in &lt;span class="highlight"&gt;difficulty discovered&lt;/span&gt; 
+  celebrated ye. Justice joy manners boy met resolve produce. Bed head 
+  &lt;span class="highlight"&gt;loud&lt;/span&gt; next plan rent had easy add him. 
+&lt;/p&gt;
+</code></pre></div>
+            </li>
+            <li class="arrow" style="font-size: smaller">
+              note that in this case, an <code>&lt;em&gt;</code>, or even better <code>&lt;mark&gt;</code> element would have been correcter
+            </li>
+          </ul>
+        </section>         
+        <section>
+          <h2>div</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;div&gt;</code></em> is a general way to mark a <strong>part of the document</strong>. It has no semantic meaning, and is only useful as a hook for CSS or Javascript, e.g. for a page wrapper, text colums, container for scripted content like a map or calendar... Typical example:
+              <div><pre class="bigger"><code class="language-html">&lt;footer&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre></div>
+            </li>
+          </ul>
+        </section>         
+        <section>
+          <h2>header</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;header&gt;</code></em> marks <strong>introductory content</strong> at the top of a section. It may contain the title, navigation elements, logo, short introduction... The most common use is to mark the top of the page:
+              <div><pre class="bigger"><code class="language-html">&lt;body&gt;
+  &lt;header&gt;
+    ... &lt;!-- logo, search, menu etc... here --&gt;
+  &lt;/header&gt;
+  ...
+&lt;/body&gt;
+</code></pre></div>
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Quotes from the W3C:
+              </p>
+              <blockquote>
+                A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
+              </blockquote>
+              <blockquote>
+                The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>footer</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;footer&gt;</code></em> marks <strong>closing content</strong> at the bottom of a section. It may contain copyright information, short conclusion, bottom links, social media... The most common use is to mark the bottom of the page:
+              <div><pre class="bigger"><code class="language-html">&lt;body&gt;
+  ...
+  &lt;footer&gt;
+    ... &lt;!-- copyright, social media, bottom links etc... here --&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre></div>
+            </li>
+            <li class="arrow" style="font-size: smaller">
+              note that, although less common, you can use <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> for any section, not just for the whole page, e.g. in a comment, article, ...
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Literally from the W3C:
+              </p>
+              <blockquote>
+                The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>main</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;main&gt;</code></em> marks the <strong>main content</strong> of the page. This may be useful for screenreaders, so that they can skip navigation etc... and jump straigt to the important part. It should not contain parts that are repeated like navigation, menus, sidebars, search forms, copyright info... The most common use is to mark the page content:
+              <div><pre class="bigger"><code class="language-html">&lt;body&gt;
+  ...
+  &lt;main&gt;
+    ... &lt;!-- main page content here --&gt;
+  &lt;/main&gt;
+  ...
+&lt;/body&gt;
+</code></pre></div>
+            </li>
+            <li class="arrow" style="font-size: smaller">
+              you should have one <em><code>&lt;main&gt;</code></em> per page only
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Literally from the W3C:
+              </p>
+              <blockquote>
+                The main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>section</h2>
+          <ul>
+            <li>A <em><code>&lt;section&gt;</code></em> marks <strong>related content with a title</strong>:
+              <div><pre class="bigger"><code class="language-html">&lt;section&gt;
+  &lt;h3&gt;Part 1&lt;/h3&gt;
+  &lt;p&gt;
+    But I must explain to you how all this mistaken idea of denouncing pleasure
+    and praising pain was born and I will give you a complete account of the...
+  &lt;/p&gt;
+  &lt;p&gt;
+    On the other hand, we denounce with righteous indignation and dislike men who are
+    so beguiled and demoralized by the charms of pleasure of the moment, so...
+  &lt;/p&gt;
+&lt;/section&gt;  
+</code></pre></div>
+            </li>
+            <li class="arrow">
+              if it doesn't have a title or a content, it is not a section!
+            </li>
+            <li class="arrow">
+              if you're not sure, stick to <code>&lt;div&gt;</code>
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Quotes from the W3C:
+              </p>
+              <blockquote>
+                A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
+              </blockquote>
+              <blockquote>
+                The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>nav</h2>
+          <ul>
+            <li>
+              A <em><code>&lt;nav&gt;</code></em> marks <strong>major navigation elements</strong>. It is mainly used for menus; don't use it for filters, paging, search forms, footer links etc... Typical usage:
+              <div><pre class="bigger"><code class="language-html">&lt;nav&gt;
+  &lt;ul class="mainmenu"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="products.html"&gt;products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;about&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;  
+</code></pre></div>
+            </li>  
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Literally from the W3C:
+              </p>
+              <blockquote>
+                The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+              </blockquote>
+              <blockquote>
+                Not all groups of links on a page need to be in a nav element — the element is primarily intended for sections that consist of major navigation blocks.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>aside</h2>
+          <ul>
+            <li>
+              An <em><code>&lt;aside&gt;</code></em> contains <strong>related information</strong>, like author information, related links, products, advertisements, quick facts etc... Typical example:
+              <div><pre class="bigger"><code class="language-html">&lt;aside&gt;
+  &lt;h3&gt;About the author&lt;/h3&gt;
+  &lt;p&gt;Hi, I'm Dan!&lt;/p&gt;
+  &lt;img src="img/photo_dan.jpg" alt="a picture of me!"&gt;
+  &lt;h3&gt;Recent posts&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Firefighters are REAL Superheroes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Friends&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;  
+</code></pre></div>
+            </li>  
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Literally from the W3C:
+              </p>
+              <blockquote>
+                The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
+              </blockquote>
+              <blockquote>
+                The element can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content of the page.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>article</h2>
+          <ul>
+            <li>
+              An <em><code>&lt;article&gt;</code></em> contains reusable, independent, <strong>self-contained content</strong>. If you can copy paste it to another website, it is probably an article. Think of embedded tweets, widgets like polls or calendars... Typical example:
+              <div><pre class="bigger"><code class="language-html">&lt;article&gt;
+  &lt;h3&gt;About the author&lt;/h3&gt;
+  &lt;p&gt;Hi, I'm Dan!&lt;/p&gt;
+  &lt;img src="img/photo_dan.jpg" alt="a picture of me!"&gt;
+  &lt;h3&gt;Recent posts&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Firefighters are REAL Superheroes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Friends&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;  
+</code></pre></div>
+            </li>  
+            <li class="arrow">
+              if you're not sure, stick to <code>&lt;section&gt;</code> or <code>&lt;div&gt;</code>
+            </li>
+          </ul>
+          <div class="tooltip">
+            <div>
+              <p>
+                Literally from the W3C:
+              </p>
+              <blockquote>
+                The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>SECTIONS</h1>
+          <h2>Full example</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Screenshot</h2>
+          <ul>
+            <li class="no-style">
+              Let's say we'd like to create this page page:
+            </li>
+          </ul>
+          <img src="img/09_sections/full.png" alt="desired page screenshot" style="max-width: 500px; display: block; margin: 0 auto">
+          <div class="demolink"><a href="demos/09_sections/designed.html">demo with CSS</a> &mdash; <a href="demos/09_sections/unstructured.html">demo without CSS</a></div>
+        </section>
+        <section>
+          <h2>HTML without sections</h2>
+          <ul>
+            <li class="no-style">
+              The basic HTML, without sections:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Submenu&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+
+&lt;h3&gt;Part 1&lt;/h3&gt;
+&lt;p&gt;
+  But I must explain to you how all this mistaken idea of denouncing pleasure
+  and praising pain was born and I will give you a complete account of the system,
+  and expound the actual teachings of the great explorer of the truth, the
+  master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+  itself, because it is pleasure, but because those who do not know how to pursue
+  pleasure rationally encounter consequences that are extremely painful.
+&lt;/p&gt;
+
+&lt;h3&gt;Part 2&lt;/h3&gt;
+&lt;p&gt;
+  Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+  because it is pain, but because occasionally circumstances occur in which toil
+  and pain can procure him some great pleasure. To take a trivial example, which of
+  us ever undertakes laborious physical exercise, except to obtain some advantage
+  from it? But who has any right to find fault with a man who chooses to enjoy a
+  pleasure that has no annoying consequences, or one who avoids a pain that
+  produces no resultant pleasure?
+&lt;/p&gt;
+
+&lt;h3&gt;Part 3&lt;/h3&gt;
+&lt;p&gt;
+  On the other hand, we denounce with righteous indignation and dislike men who are
+  so beguiled and demoralized by the charms of pleasure of the moment, so blinded
+  by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+  and equal blame belongs to those who fail in their duty through weakness of will,
+  which is the same as saying through shrinking from toil and pain.
+&lt;/p&gt;
+
+&lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+&lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Advertisement&lt;/h4&gt;
+&lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+&lt;p&gt;&amp;copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Comments&lt;/h4&gt;
+&lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+&lt;p&gt;
+  I personally believe Lorem Ipsum is the most sensitive poem ever written
+  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+&lt;/p&gt;
+&lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+&lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+
+&lt;p&gt;&amp;copy; Rogier van der Linde, 2010&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+  &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+  &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+&lt;/ul&gt;
+</code></pre></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>HTML with div sections</h2>
+          <ul>
+            <li class="no-style">
+              Our page sectioned with <code>&lt;div&gt;</code> elements:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;div id="wrapper"&gt;
+  &lt;div id="header"&gt;
+    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id="mainmenu"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div id="submenu"&gt;
+    &lt;p&gt;Submenu&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div id="content"&gt;
+    &lt;div id="blogpost"&gt;
+      &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+      &lt;h3&gt;Part 1&lt;/h3&gt;
+      &lt;p&gt;
+        But I must explain to you how all this mistaken idea of denouncing pleasure
+        and praising pain was born and I will give you a complete account of the system,
+        and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
+        master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+        itself, because it is pleasure, but because those who do not know how to pursue
+        pleasure rationally encounter consequences that are extremely painful.
+      &lt;/p&gt;
+      &lt;h3&gt;Part 2&lt;/h3&gt;
+      &lt;p&gt;
+        Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+        because it is pain, but because occasionally circumstances occur in which toil
+        and pain can procure him some great pleasure. To take a trivial example, which of
+        us ever undertakes laborious physical exercise, except to obtain some advantage
+        from it? But who has any right to find fault with a man who chooses to enjoy a
+        pleasure that has no annoying consequences, or one who avoids a pain that
+        produces no resultant pleasure?
+      &lt;/p&gt;
+      &lt;h3&gt;Part 3&lt;/h3&gt;
+      &lt;p&gt;
+        On the other hand, we denounce with righteous indignation and dislike men who are
+        so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
+        by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+        and equal blame belongs to those who fail in their duty through weakness of will,
+        which is the same as saying through shrinking from toil and pain.
+      &lt;/p&gt;
+      &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+      &lt;div id="extra"&gt;
+        &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+        &lt;div class="ad"&gt;
+          &lt;h4&gt;Advertisement&lt;/h4&gt;
+          &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+          &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="comments"&gt;
+      &lt;h4&gt;Comments&lt;/h4&gt;
+      &lt;div class="comment"&gt;
+        &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+        &lt;p&gt;
+          I personally believe Lorem Ipsum is the most sensitive poem ever written
+          (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="comment"&gt;
+        &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+        &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="footer"&gt;
+    &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+            </li>
+            <li class="arrow">
+              this works, but <code>&lt;div&gt;</code> lacks semantic meaning
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>HTML with meaningful sections</h2>
+          <ul>
+            <li class="no-style">
+              Our page sectioned with meaningful elements:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;div id="wrapper"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;nav&gt;
+    &lt;p&gt;Submenu&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;main&gt;
+    &lt;section id="blogpost"&gt;
+      &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+      &lt;section&gt;
+        &lt;h3&gt;Part 1&lt;/h3&gt;
+        &lt;p&gt;
+          But I must explain to you how all this mistaken idea of denouncing pleasure
+          and praising pain was born and I will give you a complete account of the system,
+          and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
+          master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+          itself, because it is pleasure, but because those who do not know how to pursue
+          pleasure rationally encounter consequences that are extremely painful.
+        &lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h3&gt;Part 2&lt;/h3&gt;
+        &lt;p&gt;
+          Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil
+          and pain can procure him some great pleasure. To take a trivial example, which of
+          us ever undertakes laborious physical exercise, except to obtain some advantage
+          from it? But who has any right to find fault with a man who chooses to enjoy a
+          pleasure that has no annoying consequences, or one who avoids a pain that
+          produces no resultant pleasure?
+        &lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h3&gt;Part 3&lt;/h3&gt;
+        &lt;p&gt;
+          On the other hand, we denounce with righteous indignation and dislike men who are
+          so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
+          by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+          and equal blame belongs to those who fail in their duty through weakness of will,
+          which is the same as saying through shrinking from toil and pain.
+        &lt;/p&gt;
+      &lt;/section&gt;
+      &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+      &lt;aside&gt;
+        &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+        &lt;article&gt;
+          &lt;h4&gt;Advertisement&lt;/h4&gt;
+          &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+          &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+        &lt;/article&gt;
+      &lt;/aside&gt;
+    &lt;/section&gt;
+    &lt;div id="comments"&gt;
+      &lt;h4&gt;Comments&lt;/h4&gt;
+      &lt;div class="comment"&gt;
+        &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+        &lt;p&gt;
+          I personally believe Lorem Ipsum is the most sensitive poem ever written
+          (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="comment"&gt;
+        &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+        &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;
+</code></pre></div>
+            </li>
+            <li class="arrow">
+              much better and more meaningful
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Summary</h2>
+          <ul>
+            <li>
+              Don't overthink section too much. Generally using <code>&lt;div&gt;</code> elements is still ok, but try to get these right:
+              <ul>
+                <li>a <code>&lt;header&gt;</code> element to mark the top of the page</li>
+                <li>a <code>&lt;footer&gt;</code> element to mark the bottom of the page</li>
+                <li>a <code>&lt;main&gt;</code> to mark the page content</li>
+                <li>a <code>&lt;nav&gt;</code> around your main menu</li>
+              </ul>
+            </li>
+            <li>
+              If you feel more comfortable, you can try to:
+              <ul>
+                <li>use <code>&lt;section&gt;</code> where appropriate</li>
+                <li>use <code>&lt;aside&gt;</code> for the related page information</li>
+                <li>use <code>&lt;article&gt;</code> for advertisements and widgets</li>
+              </ul>
+            </li>
+          </ul>  
+        </section>
+
       </section>
 
     </div>

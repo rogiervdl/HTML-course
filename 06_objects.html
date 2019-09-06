@@ -39,283 +39,31 @@
       <section>
         <section>
           <h1>OBJECTS</h1>
-          <h2>Plugins</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section data-toc-title="Embedding Flash">
-          <h2>Embedding Flash</h2>
-          <ul>
-            <li>
-              Use <code>&lt;object&gt;</code>:
-                <pre class="bigger"><code class="language-html">&lt;object align="middle" width="700" height="520" data="index.swf"
-        type="application/x-shockwave-flash"&gt;
-  &lt;param name="quality" value="high"&gt;
-  &lt;param name="bgcolor" value="#006600"&gt;
-  &lt;param name="play" value="true"&gt;
-  &lt;param name="loop" value="true"&gt;
-  &lt;param name="wmode" value="window"&gt;
-  &lt;param name="scale" value="showall"&gt;
-  &lt;param name="menu" value="true"&gt;
-  ...
-&lt;/object&gt;
-</code></pre>
-            </li>
-            <li class="arrow">
-              <span class="warning">support is in decline; Flash is as dead as a dodo</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Embedding Applets</h2>
-          <ul>
-            <li>
-              Applets are written in Java; mostly used in technical/scientific situations
-            </li>
-            <li>
-              Use <code>&lt;object&gt;</code>:
-              <pre class="bigger"><code class="language-html verysmallpanel">&lt;object type="application/x-java-applet"
-        height="300" width="540" &gt;
-  &lt;param name="code" value="shm.class"&gt;
-  &lt;param name="yellow" value="yellow"&gt;
-  &lt;param name="blue" value="blue"&gt;
-  &lt;param name="bgColor" value="lightGray"&gt;
-  &lt;param name="Reset" value="Reset"&gt;
-  &lt;param name="Start" value="Start"&gt;
-  &lt;div&gt;
-    &lt;p&gt;
-      This applet requires Java 1.4.2 or higher.
-      &lt;a href="http://www.java.com/en/download/index.jsp"&gt;
-        Get the latest Java Plug-in.
-        Then you should see a result similar to this:
-        &lt;img src="img/applet.png"&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/object&gt;
-</code></pre>
-              <div class="demolink"><a href="demos/06_objects/applet.html">demo</a></div>
-            </li>
-            <li class="arrow">
-              <span class="warning">Oracle pulled the plug since JDK9</span>
-            </li>
-          </ul>
-        </section>
-        <section style="text-align:center">
-          <h2>10 disadvantages of Flash</h2>
-          (and in fact, all plugins)<br>
-          <img src="img/06_objects/flash.jpg" alt="man flashing">
-          <div class="tooltip">
-            <div>
-              <ol>
-                <li>Flash requires a plugin</li>
-                <li>Flash is often buggy and eats battery life</li>
-                <li>Flash is not supported on many mobile devices (iPad, iPhone, Firefox or Chrome mobile...)</li>
-                <li>Flash sites are generally bandwidth-heavier</li>
-                <li>Flash ignores browsing history, back button does not work</li>
-                <li>individual Flash pages cannot be bookmarked</li>
-                <li>coupling with a decent CMS or even design changes are virtually impossible</li>
-                <li>font sizes, which are often very small in Flash sites, are not adjustable by the user</li>
-                <li>Flash is not accessible for the blind, therefore it is forbidden for public sites</li>
-                <li>search engines do not like Flash</li>
-              </ol>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section>
-        <section>
-          <h1>OBJECTS</h1>
-          <h2>Audio &amp; video</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Audio and video</h2>
-          <ul>
-            <li>
-              These days still done with Flash based players
-            </li>
-            <li>
-              HTML5 provides <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags
-              <pre class="bigger"><code class="language-html">&lt;audio src="media/paoloconte.mp3"
-  controls
-  width="670"
-  style="border: solid 3px black; margin:200"&gt;
-  Your browser dows not support the audio tag
-&lt;/audio&gt;
-</code></pre>
-              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4"
-  controls
-  poster="img/meloYBratt.jpg"
-  width="320" height="240"&gt;
-  Your browser dows not support the video tag
-&lt;/video&gt;
-</code></pre>
-              <div class="demolink"><a href="demos/06_objects/audio_video.html">demo</a></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Formats</h2>
-          <ul>
-            <li>
-              Major media formats (but more exist): 
-              <ul>
-                <li>video: mp4, ogg, webm</li>
-                <li>audio: mp3, ogg, webm, wav</li>
-                <li>picture: jpg, png, gif, webp, svg</li>
-              </ul>
-            </li>
-            <li>
-              Different media for different systems:
-              <pre class="bigger"><code class="language-html">&lt;video poster="img/poster.jpg"&gt;
-  &lt;source src="media/video.3gp" type="video/3gpp" media="handheld"&gt;
-  &lt;source src="media/video.ogv" type="video/ogg; codecs=theora, vorbis"&gt;
-  &lt;source src="media/video.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-
-&lt;audio&gt;
-  &lt;source src="media/music.oga" type="audio/ogg"&gt;
-  &lt;source src="media/music.mp3" type="audio/mpeg"&gt;
-&lt;/audio&gt;
-</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Compatibility issues</h2>
-          <ul>
-            <li>
-              Compatibility problems:
-              <ul class="x-style">
-                <li>Firefox doesn't support mp3/aac/mp4 (patents!)</li>
-                <li>IE doesn't support oga/ogv/wav/webm</li>
-                <li>Safari doesn't support oga/ogv/webm</li>
-              </ul>
-            </li>
-            <li>
-              Several problems remain unsolved today:
-              <ul>
-                <li>no single format supported by all major browsers</li>
-                <li>&lt;audio&gt; and &lt;video&gt; elements support still has bugs in some browsers</li>
-                <li>Flash alternatives only work on Flash-supported devices</li>
-              </ul>
-            </li>
-            <li>
-              Solutions:
-              <ul class="arrow">
-                <li>use a specalized media library like <a href="http://mediaelementjs.com/">mediaElement</a></li>
-                <li>or, upload your video to Youtube and embed the code from there</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Custom controls]</h2>
-          <ul>
-            <li>
-              Build custom controls with Javascript:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt; HTML5 testpage &lt;/title&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;script&gt;
-    window.onload = function() {
-      var video = document.getElementById("video");
-      video.controls = false;
-      document.getElementById("lnkPlay").onclick = function() {
-        if (video.paused) video.play();
-        else video.pause();
-        return false;
-      }
-      document.getElementById("lnkMute").onclick = function() {
-        if (video.volume &gt; 0) video.volume = 0;
-        else video.volume = 1;
-        return false;
-      }
-      document.getElementById("inpSeek").onchange = function() {
-        video.currentTime = this.value;
-      }
-    }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;video src="media/tango.mp4" poster="img/meloYBratt.jpg"
-    width="320" height="240" id="video" controls&gt;
-    Your browser dows not support the video tag
-  &lt;/video&gt;
-  &lt;nav id="myControls"&gt;
-    &lt;a href="#" id="lnkPlay"&gt;play&lt;/a&gt;
-    &lt;a href="#" id="lnkMute"&gt;mute&lt;/a&gt;
-    &lt;input type="range" min="0" max="211" value="0" id="inpSeek" &gt;
-  &lt;/nav&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre></div>
-              <div class="demolink"><a href="demos/06_objects/audio_video_js.html">demo</a></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Styling]</h2>
-          <ul>
-            <li>
-              Even styling with CSS is possible:
-              <pre class="bigger"><code class="language-css">#testvideo {
-  transform: rotateZ(5deg);
-  -webkit-box-shadow: rgba(0, 0, 128, 0.25) 10px 10px 15px #990;
-}
-</code></pre>
-              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4" controls
-  poster="img/meloYBratt.jpg"
-  width="360" height="240" id="testvideo"&gt;
-  Your browser dows not support the video tag
-&lt;/video&gt;
-</code></pre>
-              <div class="demolink"><a href="demos/06_objects/audio_video_css.html">demo</a></div>
-            </li>
-            <li class="no-style">
-                → you could even <a href="http://www.ycoyacht.com/">use a video as a background</a><br>
-                → but: background video has become a terrible design cliché, really
-            </li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>OBJECTS</h1>
           <h2>Images</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
         </section>
-        <section data-toc-title="The &amp;lt;img /&amp;gt; tag">
-          <h2>The &lt;img&gt; tag</h2>
+        <section>
+          <h2>img</h2>
           <ul>
             <li>
-              Yes, images are objects too, for which browser support is not evident (patents!)
-            </li>
-            <li>
-              W3C briefly experimented with an <code>&lt;object&gt;</code> version, but the <code>&lt;img&gt;</code> tag survived:
-            </li>
-            <li>
-              Attribute <code>alt</code> with <i>relevant description</i> is required for the vision-impaired; the <code>title</code> attribute is optional and is often implemented as tooltip
-              <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/06_objects/photo.jpg"
-alt="picture of my brothers" title="these are my beloved brothers"&gt;
+              The basic way to include an image, is with the HTML &lt;img&gt; tag:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/06_objects/photo.jpg" alt="picture of my brothers"&gt;
 
 </code></pre>
+              <ul class="arrow">
+                <li>the <code>alt</code> attribute is <strong>required</strong> for the vision-impaired</li>
+                <li>provide a <i>relevant description</i>, not "IMG_20190605_175721.jpg" and alike</li>
+              </ul>
             </li>
           </ul>
         </section>
         <section>
-          <h2>Figure and figcaption</h2>
+          <h2>Figure</h2>
           <ul>
             <li>
-              Add a caption with <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> (introduced in HTML5):
+              If you wish to group an image with a caption, you can use <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>:
               <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
   &lt;img src="img/06_objects/photo.jpg"
     alt="picture of my two brothers"&gt;
@@ -324,11 +72,11 @@ alt="picture of my brothers" title="these are my beloved brothers"&gt;
 </code></pre>
             </li>
             <li>
-              A <code>&lt;figure&gt;</code> may contain multiple images:
+              It may also contain multiple images:
               <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
-  &lt;img src="img/10_html5/horseA.jpg" alt="drawing step1"&gt;
-  &lt;img src="img/10_html5/horseB.jpg" alt="drawing step2"&gt;
-  &lt;img src="img/10_html5/horseC.jpg" alt="drawing step3"&gt;
+  &lt;img src="img/06_objects/horseA.jpg" alt="drawing step1"&gt;
+  &lt;img src="img/06_objects/horseB.jpg" alt="drawing step2"&gt;
+  &lt;img src="img/06_objects/horseC.jpg" alt="drawing step3"&gt;
   &lt;figcaption&gt;how to draw a horse&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre>
@@ -343,14 +91,33 @@ alt="picture of my brothers" title="these are my beloved brothers"&gt;
             </div>
           </div>
         </section>
+        <section>
+          <h2>[picture]</h2>
+          <ul>
+            <li>
+              Use the &lt;picture&gt; if you wish to provide multiple sources for different media. The browser will choose the best match.
+              <pre class="bigger"><code class="language-html">&lt;picture&gt;
+  &lt;source media="(min-width: 8000px)" srcset="img/pink_flowers.jpg"&gt;
+  &lt;source media="(min-width: 600px)" srcset="img/white_flower.jpg"&gt;
+  &lt;img src="img/orange_flowers.jpg" alt="Flowers"&gt;
+&lt;/picture&gt;</code></pre>
+              <div class="demolink"><a href="demos/06_objects/picture.html">demo</a></div>
+              <ul class="arrow">
+                <li>it contains one or more &lt;source&gt; elements and a default &lt;img&gt; element</li>
+                <li>this allows you to serve different images for different media</li>
+                <li>you can specify device width, orientation, media type...</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
         <section data-toc-title="Design or content?">
           <h2>Design or content? (1)</h2>
           <ul>
             <li>
-              Caution! Images for design should be inserted by CSS, not by HTML
+              Caution! Purely design images should be inserted with <a href="https://rogiervdl.github.io/CSS-course/02_design.html#/ir_ir">CSS</a>, not with HTML
             </li>
             <li>
-              These images are independent of design, and should be coded:
+              These images are content, not design, and should be coded in HTML:
               <ul class="v-style">
                 <li>photo's illustrating an article</li>
                 <li>logo's of other companies</li>
@@ -359,7 +126,7 @@ alt="picture of my brothers" title="these are my beloved brothers"&gt;
               </ul>
             </li>
             <li>
-              These images are part of design, and should be ignored:
+              These images are design, not content, and should be ignored (coded in CSS):
               <ul class="x-style">
                 <li>graphic buttons</li>
                 <li>your own logo</li>
@@ -378,13 +145,13 @@ alt="picture of my brothers" title="these are my beloved brothers"&gt;
           <h2>Scalable Vector Graphics</h2>
           <ul>
             <li>
-              A different image type is <em>SVG</em> (Scalable Vector Graphics). It isn't <em>bitmapped</em> like jpg or png, i.e. described by pixels, but <em>vectorized</em>, i.e. described by curves and fills
+              <em>SVG</em> (Scalable Vector Graphics) is an image format that isn't <em>bitmapped</em> like jpg or png, i.e. with pixels, but <em>vectorized</em>, i.e. with curves and fills
             </li>
             <li>
-              SVG images cale endlessly without quality loss
+              SVG images remain <strong>razor sharp</strong>, no matter how much you scale them
             </li>
             <li>
-              Creating and editing SVG requires specialized software (e.g. Adobe Illustrator), but you can use it in webpages just like any other image:
+              Designers usually create logos, icons etc. with Adobe Illustrator or alike, in a format that can easily be exported to SVG. Use them like any other image:
               <pre class="bigger"><code class="language-html">&lt;img src="img/06_objects/svg-logo.svg" alt="SVG logo"&gt;
 </code></pre>
             </li>
@@ -537,6 +304,285 @@ alt="picture of my brothers" title="these are my beloved brothers"&gt;
           </ul>
         </section>
       </section>
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <h2>Audio &amp; video</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Audio and video in HTML</h2>
+          <ul>
+            <li>
+              HTML5 provides the <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags
+              <pre class="bigger"><code class="language-html">&lt;audio src="media/paoloconte.mp3"
+  controls
+  width="670"
+  style="border: solid 3px black; margin:200"&gt;
+  Your browser dows not support the audio tag
+&lt;/audio&gt;
+</code></pre>
+              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4"
+  controls
+  poster="img/meloYBratt.jpg"
+  width="320" height="240"&gt;
+  Your browser dows not support the video tag
+&lt;/video&gt;
+</code></pre>
+              <ul>
+                <li class="arrow">if the tag isn't supported, the nested text is shown</li>
+                <li class="arrow">usually it's better to upload your sound or video on services like Youtube, Vimeo or Soundcloud, and embed it from there, see this slide</li>
+              </ul>
+              <div class="demolink"><a href="demos/06_objects/audio_video.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[multiple sources]</h2>
+          <ul>
+            <li>
+              Just like with the &lt;picture&gt; element for images, you can define multiple sources for different systems:
+              <pre class="bigger"><code class="language-html">&lt;video poster="img/poster.jpg"&gt;
+  &lt;source src="media/video_small.mp4" type="video/mp4" media="handheld"&gt;
+  &lt;source src="media/video.mp4" type="video/mp4"&gt;
+  &lt;source src="media/video.ogv" type="video/ogg; codecs=theora, vorbis"&gt;
+&lt;/video&gt;
+
+&lt;audio&gt;
+  &lt;source src="media/music.oga" type="audio/ogg"&gt;
+  &lt;source src="media/music.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</code></pre>
+            </li>
+            <li class="arrow">
+              major media formats (but more exist): 
+              <ul>
+                <li>video: mp4, ogg, webm</li>
+                <li>audio: mp3, ogg, webm, wav</li>
+                <li>picture: jpg, png, gif, webp, svg</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[Compatibility issues]</h2>
+          <ul>
+            <li>
+              Compatibility problems:
+              <ul class="x-style">
+                <li>Firefox doesn't support mp3/aac/mp4 (patents!)</li>
+                <li>IE doesn't support oga/ogv/wav/webm</li>
+                <li>Safari doesn't support oga/ogv/webm</li>
+              </ul>
+            </li>
+            <li>
+              Several problems remain unsolved today:
+              <ul>
+                <li>no single format supported by all major browsers</li>
+                <li>&lt;audio&gt; and &lt;video&gt; elements support still has bugs in some browsers</li>
+                <li>Flash alternatives only work on Flash-supported devices</li>
+              </ul>
+            </li>
+            <li>
+              Solutions:
+              <ul class="arrow">
+                <li>use a specalized media library like <a href="http://mediaelementjs.com/">mediaElement</a></li>
+                <li>or, upload your video to Youtube and embed the code from there</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[with Javascript]</h2>
+          <ul>
+            <li>
+              Build custom controls with Javascript:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt; HTML5 testpage &lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;script&gt;
+    window.onload = function() {
+      var video = document.getElementById("video");
+      video.controls = false;
+      document.getElementById("lnkPlay").onclick = function() {
+        if (video.paused) video.play();
+        else video.pause();
+        return false;
+      }
+      document.getElementById("lnkMute").onclick = function() {
+        if (video.volume &gt; 0) video.volume = 0;
+        else video.volume = 1;
+        return false;
+      }
+      document.getElementById("inpSeek").onchange = function() {
+        video.currentTime = this.value;
+      }
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;video src="media/tango.mp4" poster="img/meloYBratt.jpg"
+    width="320" height="240" id="video" controls&gt;
+    Your browser dows not support the video tag
+  &lt;/video&gt;
+  &lt;nav id="myControls"&gt;
+    &lt;a href="#" id="lnkPlay"&gt;play&lt;/a&gt;
+    &lt;a href="#" id="lnkMute"&gt;mute&lt;/a&gt;
+    &lt;input type="range" min="0" max="211" value="0" id="inpSeek" &gt;
+  &lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+              <div class="demolink"><a href="demos/06_objects/audio_video_js.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[with CSS]</h2>
+          <ul>
+            <li>
+              Even styling with CSS is possible:
+              <pre class="bigger"><code class="language-css">#testvideo {
+  transform: rotateZ(5deg);
+  -webkit-box-shadow: rgba(0, 0, 128, 0.25) 10px 10px 15px #990;
+}
+</code></pre>
+              <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4" controls
+  poster="img/meloYBratt.jpg"
+  width="360" height="240" id="testvideo"&gt;
+  Your browser dows not support the video tag
+&lt;/video&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/06_objects/audio_video_css.html">demo</a></div>
+            </li>
+            <li class="no-style">
+                → you could even <a href="http://www.ycoyacht.com/">use a video as a background</a><br>
+                → but: background video has become a terrible design cliché, really
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>OBJECTS</h1>
+          <h2>Embedding</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Youtube videos</h2>
+          <ul>
+            <li>
+              Using <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> directly in HTML has two major problems:
+              <ul>
+                <li>audio and (especially) video files are usually too large to host locally</li>
+                <li>there are a lot of format to choose from (.mp4, .mov, ., .webm...) but practically none is supported by all browsers</li>
+              </ul>
+            </li>
+            <li>
+              The alternative is simple: upload the audio or video on services like Youtube or Soundcloud, and copy paste the &lt;iframe&gt; embed code to your HTML file:
+              <img src="img/06_objects/embed_youtube.jpg" alt="">
+              <div class="demolink"><a href="demos/06_objects/embed_youtube.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Google maps</h2>
+          <ul>
+            <li>
+              To include a basic Google map in your page, click "share" and copy paste the &lt;iframe&gt; embed code to your HTML file:
+              <img src="img/06_objects/embed_map.png" alt="" style="max-width: 400px; border: 1px solid #ccc; margin: 20px auto 0 auto; display: block;">
+              <div class="demolink"><a href="demos/06_objects/embed_map.html">demo</a></div>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="Embedding Flash">
+          <h2>[Flash]</h2>
+          <ul>
+            <li>
+              Use <code>&lt;object&gt;</code>:
+                <pre class="bigger"><code class="language-html">&lt;object align="middle" width="700" height="520" data="index.swf"
+        type="application/x-shockwave-flash"&gt;
+  &lt;param name="quality" value="high"&gt;
+  &lt;param name="bgcolor" value="#006600"&gt;
+  &lt;param name="play" value="true"&gt;
+  &lt;param name="loop" value="true"&gt;
+  &lt;param name="wmode" value="window"&gt;
+  &lt;param name="scale" value="showall"&gt;
+  &lt;param name="menu" value="true"&gt;
+  ...
+&lt;/object&gt;
+</code></pre>
+            </li>
+            <li class="arrow">
+              <span class="warning">support is in decline; Flash is as dead as a dodo</span>
+            </li>
+          </ul>
+        </section>
+<!--        
+        <section>
+          <h2>[Applets]</h2>
+          <ul>
+            <li>
+              Applets are written in Java; mostly used in technical/scientific situations
+            </li>
+            <li>
+              Use <code>&lt;object&gt;</code>:
+              <pre class="bigger"><code class="language-html verysmallpanel">&lt;object type="application/x-java-applet"
+        height="300" width="540" &gt;
+  &lt;param name="code" value="shm.class"&gt;
+  &lt;param name="yellow" value="yellow"&gt;
+  &lt;param name="blue" value="blue"&gt;
+  &lt;param name="bgColor" value="lightGray"&gt;
+  &lt;param name="Reset" value="Reset"&gt;
+  &lt;param name="Start" value="Start"&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      This applet requires Java 1.4.2 or higher.
+      &lt;a href="http://www.java.com/en/download/index.jsp"&gt;
+        Get the latest Java Plug-in.
+        Then you should see a result similar to this:
+        &lt;img src="img/applet.png"&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/object&gt;
+</code></pre>
+              <div class="demolink"><a href="demos/06_objects/applet.html">demo</a></div>
+            </li>
+            <li class="arrow">
+              <span class="warning">Oracle pulled the plug since JDK9</span>
+            </li>
+          </ul>
+        </section>
+        <section style="text-align:center">
+          <h2>10 disadvantages of Flash</h2>
+          (and in fact, all plugins)<br>
+          <img src="img/06_objects/flash.jpg" alt="man flashing">
+          <div class="tooltip">
+            <div>
+              <ol>
+                <li>Flash requires a plugin</li>
+                <li>Flash is often buggy and eats battery life</li>
+                <li>Flash is not supported on many mobile devices (iPad, iPhone, Firefox or Chrome mobile...)</li>
+                <li>Flash sites are generally bandwidth-heavier</li>
+                <li>Flash ignores browsing history, back button does not work</li>
+                <li>individual Flash pages cannot be bookmarked</li>
+                <li>coupling with a decent CMS or even design changes are virtually impossible</li>
+                <li>font sizes, which are often very small in Flash sites, are not adjustable by the user</li>
+                <li>Flash is not accessible for the blind, therefore it is forbidden for public sites</li>
+                <li>search engines do not like Flash</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+-->        
+      </section>
+
 
     </div>
 
