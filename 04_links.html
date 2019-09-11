@@ -289,13 +289,34 @@
           </ul>
         </section>
         <section>
-          <h2>Examples</h2>
+          <h2>Creating links</h2>
           <ul>
             <li>
-              Example (notice the <code>title</code> attribute):
-              <pre class="bigger"><code class="language-html overlayrun">&lt;a href="index.html"&gt;&lt;h1&gt;Site Title Here&lt;/h1&gt;&lt;/a&gt;
+              Some typical examples:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  Two before narrow not relied how except moment myself. Dejection assurance 
+  mrs led certainly. So gate at no only none open. Betrayed graceful gentleman
+  at &lt;a href="/politics/article-3289.html"&gt;properly it of&lt;/a&gt; dinner abroad. 
+&lt;/p&gt;
+
+&lt;a href="index.html"&gt;&lt;h1&gt;Site Title Here&lt;/h1&gt;&lt;/a&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;about us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+
+</pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Title attribute</h2>
+          <ul>
+            <li>
+              If the link content isn't self-descriptive (e.g. icons), add meaning with the <code>title</code> attribute to aid the visually impaired (plus: it will render as a tooltip):
+              <pre class="bigger"><code class="language-html overlayrun">&lt;ul&gt;
   &lt;li&gt;
     &lt;a href="page1.html" title="edit this item"&gt;
       &lt;img src="img/04_links/edit.gif" alt="edit icon"&gt;
@@ -311,19 +332,14 @@
           </ul>
           <ul>
             <li class="arrow">
-              the (optional) <code>title</code> attribute adds meaning to the link
+              don't use it if not necessary
             </li>
           </ul>
-          <div class="tooltip">
-            <div>
-              A good descriptive title attribute is especially important when linking an image, as screen readers (used by visually impaired) cannot read images.
-            </div>
-          </div>
         </section>
         <section>
-          <h2>Relative paths</h2>
+          <h2>Relative vs. absolute paths</h2>
           <ul>
-            <li>Make all your internal links relative:
+            <li>Use relative paths for internal links, absolute paths for external links:
               <pre class="bigger"><code class="language-html">&lt;!-- file 'index.html' --&gt;
   ...
   &lt;link rel="stylesheet" href="css/styles.css"&gt;
@@ -339,6 +355,26 @@ h1 {
   background-image: url(../img/logo.jpg);
   ...
 }</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Linking to email and apps</h2>
+          <ul>
+            <li>
+              Link to email with <code>mailto:</code>
+              <pre class="bigger"><code class="language-html overlayrun">Please contact me at &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
+
+</code></pre>
+            </li>
+            <li>
+              Links to open various apps (mostly mobile only):</code>
+              <pre class="bigger"><code class="language-html overlayrun">Please call me me at &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;, or 
+&lt;a href="sms:+6612345678?body=this is the text message to send"&gt;send me an 
+sms&lt;/a&gt;. Alternatively, you can reach me on &lt;a href="https://wa.me/32489223344"&gt;
+WhatsApp&lt;/a&gt; or &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;.
+
+</code></pre>
             </li>
           </ul>
         </section>
