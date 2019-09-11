@@ -39,7 +39,7 @@
       <section>
         <section>
           <h1>TEXT</h1>
-          <h2>Blocklevel elements</h2>
+          <h2>Blocks</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
@@ -113,6 +113,87 @@
           </ul>
         </section>
         <section>
+          <h2>Line breaks</h2>
+          <ul>
+            <li>
+              To end a line manually in a paragraph:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  hij kuste haar lippen&lt;br&gt;
+  weinig op zijn gemak&lt;br&gt;
+  zij kneep haar benen tesaam&lt;br&gt;
+  zodat zijn brilletje brak&lt;br&gt;
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="fragment">
+              Do not use to force a blank line:
+              <pre class="bigger"><code class="language-html wrong overlayrun">...
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+enim ad minim veniam, quis nostrud exercitation ullamco
+nisi ut aliquip ex ea commodo consequat.
+&lt;br&gt;&lt;br&gt;
+Duis aute irure dolor in reprehenderit in voluptate velit
+cillum dolore eu fugiat nulla pariatur. Excepteur sint
+cupidatat non proident, sunt in culpa qui officia deserunt
+anim id est laborum
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Blockquotes</h2>
+          <ul>
+            <li>
+              For long quotes:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;blockquote&gt;
+  O tempora, o mores!
+  Senatus haec intellegit. consul videt; hic tamen vivit.
+  Vivit? immo vero etiam in senatum venit, fit publici consilii
+  particeps, notat et designat oculis ad caedem unum quemque
+  nostrum.
+&lt;/blockquote&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Address</h2>
+          <ul>
+            <li>
+              To mark the main contact information:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;address&gt;
+  John Doe&lt;br&gt;
+  123 Main Street, NY&lt;br&gt; 
+  &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;&lt;br&gt; 
+  &lt;a href="tel:+32489223344">0489 22 33 44&lt;/a&gt;
+&lt;/address&gt;
+...</code></pre>
+            </li>
+            <li>
+              It doesn't have to contain a real address; any contact info will do:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;address&gt;
+  Hi! I am John Doe. You can mail me at &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;, or 
+  call me on &lt;a href="tel:+32489223344">0489 22 33 44&lt;/a&gt;
+&lt;/address&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <h2>Lists</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
           <h2>Unordered lists</h2>
           <ul>
             <li>
@@ -140,7 +221,24 @@
           </ul>
         </section>
         <section>
-          <h2>[Nested unordered lists]</h2>
+          <h2>Ordered lists</h2>
+          <ul>
+            <li>
+              For lists of similar items with numbering:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;Wie is de slimste van de familie?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;homer&lt;/li&gt;
+  &lt;li&gt;bart&lt;/li&gt;
+  &lt;li&gt;lisa&lt;/li&gt;
+  &lt;li&gt;maggie&lt;/li&gt;
+&lt;/ol&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>[Nested lists]</h2>
           <ul>
             <li>
               For menu's with submenu's use nested lists:
@@ -176,23 +274,6 @@
           </ul>
         </section>
         <section>
-          <h2>Ordered lists</h2>
-          <ul>
-            <li>
-              For lists of similar items with numbering:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;Wie is de slimste van de familie?&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;homer&lt;/li&gt;
-  &lt;li&gt;bart&lt;/li&gt;
-  &lt;li&gt;lisa&lt;/li&gt;
-  &lt;li&gt;maggie&lt;/li&gt;
-&lt;/ol&gt;
-...</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
           <h2>[Definition lists]</h2>
           <ul>
             <li>
@@ -213,99 +294,13 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Blockquotes</h2>
-          <ul>
-            <li>
-              For long quotes:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;blockquote&gt;
-  O tempora, o mores!
-  Senatus haec intellegit. consul videt; hic tamen vivit.
-  Vivit? immo vero etiam in senatum venit, fit publici consilii
-  particeps, notat et designat oculis ad caedem unum quemque
-  nostrum.
-&lt;/blockquote&gt;
-...</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="Details">
-          <h2>[Details]</h2>
-          <ul>
-            <li>
-              Details:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;details open&gt;
-  &lt;p&gt;
-    If your browser supports this element, you should be able to 
-    expand and collapse these details. Without any scripts!
-  &lt;/p&gt;
-  &lt;p&gt;
-    This allows you to hide content, e.g. a detailed explanation that
-    would otherwise hinder the reader.
-  &lt;/p&gt;
-&lt;/details&gt;</code></pre>
-            </li>
-            <li class="arrow">
-              <a href="https://caniuse.com/#search=details">unsupported by Edge</a>, but you can <a href="https://github.com/rstacruz/details-polyfill">use a polyfill</a> (Javascript backup)
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Dialog]</h2>
-          <ul>
-            <li>
-              Dialog:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;dialog id="dialog1" open&gt;
-  &lt;h1&gt;Hello World!&lt;/h1&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet. Earum, inventore!&lt;/p&gt;
-  &lt;button id="exit"&gt;Exit&lt;/button&gt;
-&lt;/dialog&gt;
-</code></pre>
-            </li>
-            <li class="arrow">
-              currently <a href="http://caniuse.com/#search=dialog">Chrome and Opera only</a>
-            </li>
-          </ul>
-          <div class="demolink"><a href="demos/03_text/dialog.html">dialog demo</a> (with css and javascript)</div>
-        </section>
       </section>
       <section>
         <section>
           <h1>TEXT</h1>
-          <h2>Inline elements</h2>
+          <h2>Emphasis</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Line break</h2>
-          <ul>
-            <li>
-              To end a line manually in a paragraph:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;
-  hij kuste haar lippen&lt;br&gt;
-  weinig op zijn gemak&lt;br&gt;
-  zij kneep haar benen tesaam&lt;br&gt;
-  zodat zijn brilletje brak&lt;br&gt;
-&lt;/p&gt;
-...</code></pre>
-            </li>
-            <li class="fragment">
-              Do not use to force a blank line:
-              <pre class="bigger"><code class="language-html wrong overlayrun">...
-Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-eiusmod tempor incididunt ut labore et dolore magna aliqua.
-enim ad minim veniam, quis nostrud exercitation ullamco
-nisi ut aliquip ex ea commodo consequat.
-&lt;br&gt;&lt;br&gt;
-Duis aute irure dolor in reprehenderit in voluptate velit
-cillum dolore eu fugiat nulla pariatur. Excepteur sint
-cupidatat non proident, sunt in culpa qui officia deserunt
-anim id est laborum
-...</code></pre>
-            </li>
           </ul>
         </section>
         <section data-toc-title="Strong and emphasize">
@@ -367,54 +362,13 @@ anim id est laborum
             </li>
           </ul>
         </section>
+      </section>
+      <section>
         <section>
-          <h2>[Citation]</h2>
-          <ul>
-            <li>
-              Indicates a title of a work (book, film...)
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;
-  His newest novel, &lt;cite&gt;I embrace you with thousand arms&lt;/cite&gt;
-  is, like his previous books, lighthearted literature, which has
-  not always been received positively by the public.
-&lt;/p&gt;
-...</code></pre>
-            </li>
-            <li class="arrow">
-              rarely used
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Inline quotes]</h2>
-          <ul>
-            <li>
-              For short quotes:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;
-  The original context of the saying &lt;q&gt;O tempora, o mores&lt;/q&gt;
-  is this:
-&lt;/p&gt;
-...</code></pre>
-            </li>
-            <li class="arrow">
-              rarely used
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Abbreviations]</h2>
-          <ul>
-            <li>
-              Title attribute is optional but useful as tooltip:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;
-  The &lt;abbr title="North Atlantic Treaty Organization"&gt;NATO&lt;/abbr&gt;
-  and the &lt;abbr title="European Union"&gt;EU&lt;/abbr&gt; both
-  have their headquarters in Brussels.
-&lt;/p&gt;
-...</code></pre>
-            </li>
+          <h1>TEXT</h1>
+          <h2>Scientific</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
           </ul>
         </section>
         <section>
@@ -486,7 +440,70 @@ class HelloServant extends _HelloImplBase {
           </ul>
         </section>
         <section>
-          <h2>[Meter, progress &amp; mark]</h2>
+          <h2>[Abbreviations]</h2>
+          <ul>
+            <li>
+              Title attribute is optional but useful as tooltip:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  The &lt;abbr title="North Atlantic Treaty Organization"&gt;NATO&lt;/abbr&gt;
+  and the &lt;abbr title="European Union"&gt;EU&lt;/abbr&gt; both
+  have their headquarters in Brussels.
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEXT</h1>
+          <h2>[HTML5 elements]</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section data-toc-title="Details">
+          <h2>Details</h2>
+          <ul>
+            <li>
+              Details:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;details open&gt;
+  &lt;p&gt;
+    If your browser supports this element, you should be able to 
+    expand and collapse these details. Without any scripts!
+  &lt;/p&gt;
+  &lt;p&gt;
+    This allows you to hide content, e.g. a detailed explanation that
+    would otherwise hinder the reader.
+  &lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </li>
+            <li class="arrow">
+              <a href="https://caniuse.com/#search=details">unsupported by Edge</a>, but you can <a href="https://github.com/rstacruz/details-polyfill">use a polyfill</a> (Javascript backup)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Dialog</h2>
+          <ul>
+            <li>
+              Dialog:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;dialog id="dialog1" open&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet. Earum, inventore!&lt;/p&gt;
+  &lt;button id="exit"&gt;Exit&lt;/button&gt;
+&lt;/dialog&gt;
+</code></pre>
+            </li>
+            <li class="arrow">
+              currently <a href="http://caniuse.com/#search=dialog">Chrome and Opera only</a>
+            </li>
+          </ul>
+          <div class="demolink"><a href="demos/03_text/dialog.html">dialog demo</a> (with css and javascript)</div>
+        </section>
+        <section>
+          <h2>Meter, progress &amp; mark</h2>
           <ul>
             <li>
               New since HTML5:
@@ -520,7 +537,7 @@ class HelloServant extends _HelloImplBase {
       <section>
         <section>
           <h1>TEXT</h1>
-          <h2>HTML character entities</h2>
+          <h2>Character entities</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
@@ -542,31 +559,6 @@ class HelloServant extends _HelloImplBase {
 &lt;p&gt;
   if p1<em>&amp;lt;&amp;lt;</em>p2 or p1<em>&amp;gt;&amp;gt;</em>p2 then...
 &lt;/p&gt;
-...</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Character substitution]</h2>
-          <ul>
-            <li>
-              <del>Prevent character substitution when viewing page on other platforms:</del>
-              <pre class="bigger"><code class="language-html">...
-&lt;ul&gt;
-  &lt;li&gt;Andreas Kl&ouml;den&lt;/li&gt;
-  &lt;li&gt;Jos&eacute; Azevedo&lt;/li&gt;
-  &lt;li&gt;&Ccedil;&eacute;dric Chavanel&lt;/li&gt;
-&lt;/ul&gt;
-...</code></pre>
-            </li>
-            <li class="no-style">
-              <del>corrected:</del> <span style="color: #900">&rarr; no longer necessary if you use UTF-8</span>
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;ul&gt;
-  &lt;li&gt;Andreas Kl<em>&amp;ouml;</em>den&lt;/li&gt;
-  &lt;li&gt;Jos<em>&amp;eacute;</em> Azevedo&lt;/li&gt;
-  &lt;li&gt;<em>&amp;Ccedil;&amp;eacute;</em>dric Chavanel&lt;/li&gt;
-&lt;/ul&gt;
 ...</code></pre>
             </li>
           </ul>
