@@ -258,8 +258,8 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Labels</h2>
+        <section data-toc-title="Labels">
+          <h2>Labels (1)</h2>
           <ul>
             <li>
               All controls should be preceded by their &lt;label&gt;:
@@ -279,6 +279,18 @@
             </li>
             <li class="no-style">
              &rarr; following these rules will help future layout with CSS
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Labels (2)</h2>
+          <ul>
+            <li>
+              Always provide labels, even if they aren't visible in the design:
+              <img src="img/07_forms/form-labels-example.png" class="bordered" style="display: block; margin: 10px; ">
+              <ul class="arrow">
+                <li>labels helps screen readers; we will hide them later with CSS</li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -389,37 +401,50 @@
           </ul>
         </section>
         <section>
-          <h2>Buttons</h2>
+          <h2>Simple buttons</h2>
           <ul>
             <li>
-              Submit button:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" value="Send"&gt;</code></pre>
+              A basic button:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="button" value="Click me"&gt;</code></pre>
             </li>
             <li class="no-style">
               Alternative syntax (offers more possibilities):
-              <pre class="bigger"><code class="language-html overlayrun">&lt;button type="submit"&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;button&gt;
   &lt;img src="img/07_forms/ok.png" alt="save icon"/&gt; Save
 &lt;/button&gt;
-&lt;button type="submit"&gt;
+&lt;button&gt;
   &lt;img src="img/07_forms/cancel.png" alt="cancel icon"/&gt; Cancel
 &lt;/button&gt;</code></pre>
             </li>
-            <li>
-              Buttons that do nothing are also possible:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="button" value="Click me"&gt;</code></pre>
-            </li>
             <li class="arrow smaller">
-              only useful with Javascript attached, and even then you'd better use a link
+              these buttons do nothing by default and are only useful with Javascript
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Submit buttons</h2>
+          <ul>
+            <li>
+              To make a submit button, use the <code>type="submit"</code> attribute:
+              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" value="Send"&gt;
+
+&lt;button type="submit"&gt;Confirm&lt;/button&gt;</code></pre>
+            </li>
+            <li>
+              Always provide a submit button, even if you don't see one on the design:
+              <img src="img/07_forms/form-submit-example.png" class="bordered" style="display: block; margin: 10px; max-width: 600px">
+              <ul class="arrow">
+                <li>submit buttons help screen readers; we will hide them later with CSS</li>
+              </ul>
             </li>
           </ul>
           <div class="tooltip">
             <div>
               If your <code>&lt;button&gt;</code> only contains an image, e.g.
               <pre><code>&lt;button type="submit"&gt;
-&lt;img src="img/icon_save.png" alt="save"/&gt;
+  &lt;img src="img/icon_save.png" alt="save"&gt;
 &lt;/button&gt;</code></pre>
-make sure to provide an <code>alt</code> attribute with the <i>same value as the text on the image</i>. This greatly helps screen readers.
-            </div>
+make sure to provide an <code>alt</code> attribute with the <i>same value as the text on the image</i>. This greatly helps screen readers.</div>
           </div>
         </section>
         <section data-toc-title="HTML5 input types">
