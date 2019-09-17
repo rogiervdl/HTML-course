@@ -163,22 +163,19 @@
               <pre class="bigger"><code class="language-html wrong overlayrun">...
 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 eiusmod tempor incididunt ut labore et dolore magna aliqua.
-enim ad minim veniam, quis nostrud exercitation ullamco
-nisi ut aliquip ex ea commodo consequat.
+enim ad minim veniam, quis nostrud exercitation ullamco.
 &lt;br&gt;&lt;br&gt;
 Duis aute irure dolor in reprehenderit in voluptate velit
 cillum dolore eu fugiat nulla pariatur. Excepteur sint
-cupidatat non proident, sunt in culpa qui officia deserunt
-anim id est laborum
 ...</code></pre>
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Blockquotes</h2>
+        <section data-toc-title="Blockquotes">
+          <h2>Blockquotes (1)</h2>
           <ul>
             <li>
-              For long quotes:
+              For quotes (= something someone else said):
               <pre class="bigger"><code class="language-html overlayrun">...
 &lt;blockquote&gt;
   O tempora, o mores!
@@ -191,11 +188,20 @@ anim id est laborum
             </li>
           </ul>
         </section>
+        <section data-toc-title="">
+          <h2>Blockquotes (2)</h2>
+          <ul>
+            <li>
+              Typical examples are tweets, comments, pull quotes:
+              <img src="img/03_text/pullquote.png" class="bordered" style="display: block; margin: 10px auto; ">
+            </li>
+          </ul>
+        </section>
         <section>
           <h2>Address</h2>
           <ul>
             <li>
-              To mark the main contact information:
+              To mark the main contact information (maximum one per page):
               <pre class="bigger"><code class="language-html overlayrun">...
 &lt;address&gt;
   John Doe&lt;br&gt;
@@ -209,7 +215,8 @@ anim id est laborum
               It doesn't have to contain a real address; any contact info will do:
               <pre class="bigger"><code class="language-html overlayrun">...
 &lt;address&gt;
-  Hi! I am John Doe. You can mail me at &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;, or 
+  Hi! I am John Doe. You can mail me at 
+  &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;, or 
   call me on &lt;a href="tel:+32489223344">0489 22 33 44&lt;/a&gt;
 &lt;/address&gt;
 ...</code></pre>
@@ -249,7 +256,7 @@ anim id est laborum
             <li>
               For lists of similar items with numbering:
               <pre class="bigger"><code class="language-html overlayrun">...
-&lt;p&gt;Wie is de slimste van de familie?&lt;/p&gt;
+&lt;p&gt;Who is the smartest of the family?&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;homer&lt;/li&gt;
   &lt;li&gt;bart&lt;/li&gt;
@@ -366,10 +373,10 @@ anim id est laborum
           <h2>Small, b and i</h2>
           <ul>
             <li>
-              Small:
+              The tag <code>&lt;small&gt;</code> is used for sidenotes, legal text, copyright info...:
             <pre class="bigger"><code class="language-html overlayrun">...
 &lt;p&gt;
-  &lt;small&gt;copyright 1999-2050 by Rogier van der linde&lt;/small&gt; incident
+  &lt;small&gt;copyright 1999-2050 by Rogier van der linde&lt;/small&gt;
 &lt;/p&gt;
 ...</code></pre>
             </li>
@@ -520,7 +527,7 @@ class HelloServant extends _HelloImplBase {
 </code></pre>
             </li>
             <li class="arrow">
-              currently <a href="http://caniuse.com/#search=dialog">Chrome and Opera only</a>
+              currently <a href="http://caniuse.com/#search=dialog">ill supported by browsers</a>
             </li>
           </ul>
           <div class="demolink"><a href="demos/03_text/dialog.html">dialog demo</a> (with css and javascript)</div>
