@@ -169,22 +169,28 @@
           <h2>Basic page structure (3)</h2>
           <ul>
             <li>
-              Essential parts:
+              Every HTML document requires at least following parts:
               <ul>
-                <li>Doctype declaration <code>&lt;!DOCTYPE html&gt;</code></li>
-                <li>Elements <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> </li>
-                <li>A relevant title in  <code>&lt;title&gt;...&lt;/title&gt;</code></li>
-                <li>Characterset declaration <code>&lt;meta charset="..."&gt;</code></li>
+                <li>
+                  <em>Doctype</em> declaration: this sets the document type and version<br>
+                  &rarr; for HTML5 it is <code>&lt;!DOCTYPE html&gt;</code>
+                </li>
+                <li>
+                  <em><code>&lt;html lang="..."&gt;</code></em> element: this is the actual HTML document; the lang attribute should contain a correct value (<code>en</code> for English, <code>nl</code> for Dutch...) to aid screen readers
+                </li>                         
+                <li>
+                  <em><code>&lt;head&gt;</code></em> element: contains all meta information (most of it is optional): title, characterset, meta information, author, description, keywords, linked CSS or Javascript files, favicon...<br> 
+                </li>                         
+                <li>
+                  <em><code>&lt;title&gt;</code></em> element inside the head: it should contain a relevant page title; it shows up on browser tabs and is important for search engines 
+                </li>                    
+                <li>
+                  <em><code>&lt;body&gt;</code></em> element: contains the page content with all the titles, texts, images, videos...
+                </li>                    
               </ul>
             </li>
-            <li>
-              Without doctype, the page might be displayed different
-            </li>
-            <li>
-              Without charset, some characters may display different
-            </li>
-            <li>
-              Check if your page validates on <a href="https://validator.w3.org/">https://validator.w3.org/</a>
+            <li class="arrow">
+              always check if your page validates on <a href="https://validator.w3.org/">https://validator.w3.org/</a>!
             </li>
           </ul>
         </section>

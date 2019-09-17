@@ -65,29 +65,61 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Headings</h2>
+        <section data-toc-title="headings">
+          <h2>Headings (1)</h2>
           <ul>
             <li>
               Are titles and subtitles of a page:
-              <pre class="bigger"><code class="language-html overlayrun">...
-&lt;h1&gt;Title level 1&lt;/h1&gt;
+              <pre class="bigger"><code class="language-html overlayrun" style="max-height: 150px">&lt;h1&gt;Title level 1&lt;/h1&gt;
+...
 &lt;h2&gt;Title level 2&lt;/h2&gt;
+...
 &lt;h3&gt;Title level 3&lt;/h3&gt;
+...
 &lt;h4&gt;Title level 4&lt;/h4&gt;
+...
 &lt;h5&gt;Title level 5&lt;/h5&gt;
+...
 &lt;h6&gt;Title level 6&lt;/h6&gt;
 ...</code></pre>
             </li>
-            <li class="fragment">
-              <code>&lt;h1&gt;</code> is normallly used for the site title, <code>&lt;h2&gt;</code> for the page title, <code>&lt;h3&gt;</code> for page chapters, <code>&lt;h4&gt;</code> is used for page subchapters
-              etc...
-            </li>
-            <li class="fragment">
-              don't use a heading just because a text is large; from the <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
+            <li>
+              a title <strong>should belong to a block of content</strong>; don't use a heading just because a text is large! from the <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
               <blockquote style="margin-left: 0; width: auto">
-                h1–h6 elements must not be used to markup subheadings, subtitles, alternative titles and taglines 
+                h1–h6 elements must not be used to markup subtitles, taglines... 
               </blockquote>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Headings (2)</h2>
+          <ul>
+            <li>
+              Usual heading numbering:
+              <ul>
+                <li><code>&lt;h1&gt;</code>: site title</li>
+                <li><code>&lt;h2&gt;</code>: page title</li>
+                <li><code>&lt;h3&gt;</code>: chapter titles</li>
+                <li><code>&lt;h3&gt;</code>: subchapter titles</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              The numbering of <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> etc... is less strict, but the <strong>site logo</strong> should always be the <code>&lt;h1&gt;</code> <i>and</i> it should be <strong>clickable</strong>, so:
+              <pre class="bigger"><code class="language-html">&lt;!-- preferred way to code a site logo --&gt;
+&lt;h1&gt;&lt;a href="..."&gt;My Company&lt;/a&gt;&lt;/h1&gt;
+
+&lt;!-- also ok, but provide a good alt description for the logo image --&gt;
+&lt;h1&gt;&lt;a href="..."&gt;&lt;img src="logo.svg" alt="My Company logo"&gt;&lt;/a&gt;&lt;/h1&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Headings (3)</h2>
+          <ul>
+            <li>
+              Exercise: identify the titles on this screenshot (<a href="img/03_text/identify-titles-01.png">large version</a> - <a href="img/03_text/identify-titles-01-solution.png">solution</a>)
+              <img src="img/03_text/identify-titles-01-small.png" class="bordered" style="display: block; margin: 10px auto; max-height: ">
             </li>
           </ul>
         </section>
@@ -126,7 +158,7 @@
 &lt;/p&gt;
 ...</code></pre>
             </li>
-            <li class="fragment">
+            <li>
               Do not use to force a blank line:
               <pre class="bigger"><code class="language-html wrong overlayrun">...
 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -207,7 +239,7 @@ anim id est laborum
 &lt;/ul&gt;
 ...</code></pre>
             </li>
-            <li class="fragment">
+            <li>
               Also used for menu's:
               <pre class="bigger"><code class="language-html overlayrun">...
 &lt;ul&gt;
