@@ -303,19 +303,10 @@
             <li>The HTML5 standard:
               <ul>
                 <li>is case insensitive, e.g. <code>&lt;img&gt;</code>, <code>&lt;IMG&gt;</code> or <code>&lt;Img&gt;</code> are the same</li>
-                <li>doesn't require some non-empty elements to be closed, e.g. <code>&lt;p&gt;...</code> is allowed instead of <code>&lt;p&gt;...&lt;/p&gt;</code></li>
-                <li>for historical reasons, a trailing slash is allowed in empty elements, e.g <code>&lt;img&gt;</code> is the same as <code>&lt;img&gt;</code></li>
+                <li>doesn't require some non-empty elements to be closed, e.g. <code>&lt;p&gt;...</code> is technically allowed instead of <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+                <li>allows for historical reasons an end slash in empty elements, e.g <code>&lt;img /&gt;</code> is the same as <code>&lt;img&gt;</code></li>
+                <li class="arrow">see our <a href="#/house-rules">house rules</a></li>
               </ul>
-            </li>
-            <li>House rules:
-              <ul>
-                <li><span class="warning">use lowercase for element names</span></li>
-                <li><span class="warning">always close non-empty elements</span></li>
-                <li><span>whether to use the trailing slash in empty elements is up to you</span></li>
-              </ul>
-            </li>
-            <li>
-              For an excellent overview see <a href="https://www.w3schools.com/tags/default.asp">w3schools.com</a>
             </li>
           </ul>
         </section>
@@ -347,12 +338,7 @@
               <ul>
                 <li>attributes are case insensitive</li>
                 <li>you may use single, double or even no quotes around attribute values</li>
-              </ul>
-            </li>
-            <li>House rules:
-              <ul>
-                <li><span class="warning">use lowercase for attribute names</span></li>
-                <li><span class="warning">use double qoutes around attribute value</span></li>
+                <li class="arrow">see our <a href="#/house-rules">house rules</a></li>
               </ul>
             </li>
           </ul>
@@ -406,6 +392,30 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
             </li>
+          </ul>
+        </section>
+        <section>
+          <h2>House rules</h2>
+          <ul>
+            <li>House rules allow consistent coding styles across team members. Being able to follow rules is an absolute necessity if you ever plan to work in a team. It's mostly a matter of personal taste; <strong>don't debate the rules, just follow them</strong>!</li>
+            <li>
+              House rules within this course:
+              <ul class="v-style">
+                <li>layout with <strong>tabs or spaces</strong>, not a mix of both (also see <a href="#/code-layout-1">code layout</a>)</li>
+                <li>use <strong>lowercase tag names</strong>, so &lt;img&gt;, not &lt;IMG&gt; or &lt;Img&gt;</li>
+                <li>use <strong>lowercase attributes</strong>, so &lt;a href="..."&gt;, not &lt;a HREF="..."&gt; or &lt;a Href="...&gt;</li>
+                <li>always put <strong>double quotes around attribute values</strong>, so &lt;textarea rows="5"&gt;, not &lt;textarea rows=5&gt; or &lt;textarea rows='5'&gt;</li>
+                <li>always <strong>close non-empty elements</strong>, so &lt;p&gt;...&lt;/p&gt;, not <code>&lt;p&gt;...</code></li>
+              </ul>
+            </li>
+            <li>
+              You may choose:
+              <ul>
+                <li>whether you prefer tabs or spaces</li>
+                <li>whether you close empty elements (&lt;br /&gt;) or not (&lt;br&gt;)</li>
+              </ul>
+            </li>
+            <li class="warning no-style">&rarr; above all: be consistent in your coding style!</li>
           </ul>
         </section>
       </section>
