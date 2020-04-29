@@ -246,7 +246,7 @@
             <li>Each control may have <code>value</code> and <code>id</code> attributes. Don't worry too much about their exact meaning. Just remember for now:
               <ul>
                 <li>basically, the <code>value</code> attribute is what will be sent with the form</li>
-                <li>a group of radiobuttons should have the same <code>value</code> attribute</li>
+                <li>a group of radiobuttons should have the same <code>name</code> attribute, with a unique <code>id</code> attribute for each radiobutton</li>
                 <li>the <code>value</code> attribute also sets the value of a field or text on a button</li>
                 <li>the <code>for</code> attribute of <code>&lt;label&gt;</code> should point to the <code>id</code> attribute of the corresponding control:</li>
               </ul>
@@ -270,7 +270,7 @@
 </code></pre>
             </li>
             <li>
-              Exception: radionbuttons and checkboxes can be nested in their <code>&lt;label&gt;</code>; <code>for</code> and <code>id</code> are not needed here:
+              Exception: radiobuttons and checkboxes can be nested in their <code>&lt;label&gt;</code>; <code>for</code> and <code>id</code> are not needed here:
               <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
   &lt;label&gt;&lt;input type="radio" name="gender" value="f" checked&gt; Female&lt;/label&gt;
   &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; Male&lt;/label&gt;
@@ -346,7 +346,7 @@
 &lt;label&gt;&lt;input type="checkbox" value="b"&gt; choice 2&lt;/label&gt;
 &lt;label&gt;&lt;input type="checkbox" value="c"&gt; choice 3&lt;/label&gt;
 </code></pre>
-             &rarr; note: checkboxes have identical <code>name</code> attributes
+             &rarr; note: checkboxes have unique <code>name</code> attributes
             </li>
           </ul>
         </section>
@@ -365,8 +365,8 @@
             </li>
             <li>
               [With <code>multiple</code> attribute]:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="edu"&gt;Education: &lt;/label&gt;
-&lt;select multiple&gt;
+              <pre class="bigger"><code class="language-html overlayrun">&lt;label for="desert"&gt;Desert: &lt;/label&gt;
+&lt;select id="desert" multiple&gt;
   &lt;option value="0"&gt;banana&lt;/option&gt;
   &lt;option value="1"&gt;apple&lt;/option&gt;
   &lt;option value="2"&gt;potato&lt;/option&gt;
@@ -391,7 +391,7 @@
             <li>
               The <code>multiple</code> attribute allows multiple file uploads:
               <pre class="bigger"><code class="language-html overlayrun">&lt;label for="photo"&gt;Profile picture:&lt;/label&gt;
-&lt;input type="file" multiple&gt;</code></pre>
+&lt;input type="file" id="photo" multiple&gt;</code></pre>
             </li>
             <li>
               The <code>accept</code> attribute limits file types:
