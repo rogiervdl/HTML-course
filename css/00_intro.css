@@ -10,6 +10,8 @@
 }
 
 #tblShortcuts th + th, 
-#tblShortcuts td:nth-child(2n) + td {
+#tblShortcuts th + td, 
+#tblShortcuts td + th, 
+#tblShortcuts td:nth-of-type(2n) + td {
  	border-left: 1px solid;
 }
