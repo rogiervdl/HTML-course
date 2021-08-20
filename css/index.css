@@ -31,7 +31,7 @@ h1, h1 + p {
 
 .wrapper > header h1 + p + p {
    color: #666;
-   font-family: Lato, Arial;
+   font-family: Roboto, Lato, Arial;
    font-size: 1rem;
    margin: 1rem auto 0 auto;
    max-width: 28rem;
@@ -53,11 +53,15 @@ h1, a h1 {
    font-size: 56px;
 }
 
+.wrapper > footer {
+   color: #8b743d;
+   font-family: Lato, TrebuchetMS, Times, 'Times New Roman', serif;
+   font-size: 110%;
+}
+
 .wrapper > footer a {
    color: #8b743d;
    text-decoration: none;
-   font-family: Lato, TrebuchetMS, Times, 'Times New Roman', serif;
-   font-size: 125%;
 }
 
 .wrapper > footer a:hover {
