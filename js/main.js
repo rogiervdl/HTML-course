@@ -444,7 +444,7 @@ window.addEventListener('load', function()
         // Add Run button
         var button = document.createElement('input');
         button.type = 'submit';
-        button.value = 'Show in overlay';
+        button.value = 'toon in popup';
         button.className = 'run';
         button.addEventListener('click', function()
         {
