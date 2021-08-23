@@ -27,7 +27,7 @@
       <section>
         <section>
           <h1>LINKS</h1>
-          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <small>gebruik pijltjestoetsen om te navigeren</small>
           <figure>
             <img src="img/04_links/icon.jpg" alt="" class="border">
           </figure>
@@ -39,394 +39,180 @@
       <section>
         <section>
           <h1>LINKS</h1>
-          <h2>[HTTP(S)]</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section data-toc-title="Anatomy of the URL">
-          <h2>Anatomy of the URL (1)</h2>
-          <ul>
-            <li>
-              A <em>hyperlink</em> (HTML link) points to a <em>URL</em> (Uniform Resource Locator). Possible parts of the URL:<br>
-            </li>
-            <li class="no-style">
-              <span style="font-size: smaller">protocol://username:password@subdomain.host:port/path/filename#anchor?parameters</span>
-            </li>
-            <li>
-              Description:
-              <ul>
-                <li><em>protocol</em>: way of data transport, e.g. http, https, mailto, tel... (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">full list here</a>)</li>
-                <li><em>username:password</em>: rarely used, allows immediate login on some pages</li>
-                <li><em>subdomain</em>: first part of the domain, e.g. www</li>
-                <li><em>host</em>: domain where site is hosted, e.g. gadgets.com</li>
-                <li><em>port</em>: rather technical, is a number the server listens to (default 80)</li>
-                <li><em>path</em>: where the resource is located, e.g. /products/jewelry/</li>
-                <li><em>filename</em>: file name of the resource, e.g. overview.html</li>
-                <li><em>anchor</em>: a link to a specific location on the page (see further)</li>
-                <li><em>parameters</em>: data added to the URL, e.g. category=men&amp;sort=price&amp;order=asc</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Anatomy of the URL (2)</h2>
-          <ul>
-            <li>
-              Spot the parts in these examples:
-            </li>
-            <li class="no-style">
-              <span style="font-size: smaller">http://www.gadgets.com/products/jewelry/list.php?category=men&amp;sort=price</span><br>
-              <span style="font-size: smaller">https://login.gadgets.com:8080/?returnto=jewelry</span><br>
-            </li>
-            <li>
-              For parts that aren't provided, default values are used:
-            </li>
-            <li class="no-style">
-              <span style="font-size: smaller">https://gadgets.com/shops/</span> &rarr; <span style="font-size: smaller">https://www.gadgets.com:80/shops/index.php</span><br>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Relative links</h2>
-          <ul>
-            <li>
-              If no domain is provided, the link is <em>relative</em>; otherwise it is <em>absolute</em>
-            </li>
-            <li>
-              What is the URL, if the link comes from <span style="font-size: smaller">https://www.gadgets.com/sales/details/view.php?id=328</span>?
-            </li>
-            <li class="no-style">
-              <span style="font-size: smaller">/images/icon.png</span><br>
-              <span style="font-size: smaller">images/icon.png</span><br>
-              <span style="font-size: smaller">../css/styles.css</span><br>
-            </li>
-            <li>
-              Answers:
-            </li>
-            <li class="no-style fragment">
-              <span style="font-size: smaller">https://www.gadgets.com/images/icon.png</span><br>
-              <span style="font-size: smaller">https://www.gadgets.com/sales/details/images/icon.png</span><br>
-              <span style="font-size: smaller">https://www.gadgets.com/sales/css/styles.css</span>
-            </li>
-            <li class="arrow">
-              <span class="warning">you should always use relative links for your own resources</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Aliases</h2>
-          <ul>
-            <li>
-              An <em>alias</em> is a link pointing to another link
-            </li>
-            <li>
-              An alias is created on the server, or online with a <em>URL shortener</em> (screenshot from <a href="https://goo.gl/">goo.gl</a>; other options are <a href="https://tinyurl.com/">tinyurl.com</a>, <a href="https://bitly.com/">bitly.com</a>...):
-            </li>
-          </ul>          
-          <p>
-            <img src="img/04_links/shortener.png" alt="" class="bordered" style="display: block; margin: 0 auto; max-height: 300px; margin-top: 20px;">
-          </p>
-        </section>
-        <section data-toc-title="Request / response">
-          <h2>Request / response (1)</h2>
-          <ul>
-            <li>
-              Web pages are usually delivered through HTTP (HyperText Transfer Protocol)
-              <ul>
-                <li>user clicks on a link 'index.html'</li>
-                <li>browser sends HTTP request to the server for the page</li>
-                <li>server returns HTTP response with the html code</li>
-                <li>browser scans html code for any linked resource:<br> images, css files, external scripts, fonts...</li>
-                <li>browser sends HTTP request for each resource</li>
-                <li>each received resource is inserted in the page</li>
-              </ul>
-            </li>
-          </ul>
-          <img src="img/04_links/HTTP.png" alt="http" style="border: 0">
-        </section>
-        <section data-toc-title="">
-          <h2>HTTP Request / response (2)</h2>
-          <ul>
-            <li>
-              Learn by analyzing traffic with a network tool, e.g. for Toledo home (<a href="img/04_links/toledo_homepage_1.jpg">1</a>, <a href="img/04_links/toledo_homepage_2.jpg">2</a>, <a href="img/04_links/toledo_homepage_3.jpg">3</a>, <a href="img/04_links/toledo_homepage_4.jpg">4</a>) and login (<a href="img/04_links/toledo_login_1.jpg">1</a>)
-            </li>
-            <li>
-              Provides information about:
-              <ul>
-                <li>status codes (200 ok, 304 not modified, 404 not found...)</li>
-                <li>MIME types (text/html, text/css, image/png...)</li>
-                <li>timeline with load times and latencies</li>
-                <li>request and response headers</li>
-                <li>request methods GET and POST</li>
-                <li>cookies</li>
-                <li>...</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Load times</h2>
-          <ul>
-            <li>
-              Observations:
-              <ul>
-                <li>first the html page is fully loaded</li>
-                <li>then other resources are loaded &plusmn; in order of appearance</li>
-                <li>
-                  number of parallel downloads is limited (usually 2 &ndash; 7)
-                </li>
-              </ul>
-            </li>
-            <li>
-              Too many resources is bad for page loading time and your Google ranking
-            </li>
-            <li>
-              Possible solutions:
-              <ul>
-                <li>concatenate scripts &amp; styles in large single files</li>
-                <li>use CSS sprite sheets for icons and other small images</li>
-                <li>ask your web hosting company to enable HTTP2 </li>
-              </ul>
-            </li>
-          </ul>
-          <img src="img/04_links/timeline.jpg" alt="timeline" style="position: absolute; right: 0; bottom: 30px">
-        </section>
-<!--         <section>
-          <h2>HTTP headers</h2>
-          <ul>
-            <li>
-              Request and response each start with a header
-            </li>
-            <li>
-              Request header contains
-              <ul>
-                <li>info about accepted MIME types, charset, encoding, language...</li>
-                <li>info about the browser and operation system ('User-agent')</li>
-                <li>URL where the request was made ('Referrer')</li>
-                <li>available cookies</li>
-              </ul>
-            </li>
-            <li>
-              Response header contains
-              <ul>
-                <li>info about the server</li>
-                <li>served content MIME type</li>
-              </ul>
-            </li>
-          </ul>
-          <img src="img/04_links/headers.jpg" alt="header" style="position: absolute; right: 0; bottom: 30px">
-        </section>
-        <section>
-          <h2>GET/POST</h2>
-          <ul>
-            <li>
-              Two possible request formats: GET and POST
-            </li>
-            <li>
-              GET:
-              <ul>
-                <li>default request format</li>
-                <li>extra parameters &mdash; e.g. from a <code>&lt;form&gt;</code> &mdash; are attached to the request URL; format <code>...?q=test&amp;lang=nl</code></li>
-                <li>page can be bookmarked with parameters</li>
-                <li>not safe: parameter values are visible in browser history</li>
-              </ul>
-            </li>
-            <li>
-              POST:
-              <ul>
-                <li>extra parameters are added to the request body</li>
-                <li>files upload is only possible with POST</li>
-                <li>page cannot be bookmarked with <br>parameters</li>
-                <li>little bit safer than GET: <br>parameters are more hidden <br>(but beware of network sniffers!)</li>
-              </ul>
-            </li>
-          </ul>
-          <img src="img/04_links/post.jpg" alt="post" style="position: absolute; right: 0; bottom: 30px">
-        </section>
-        <section>
-          <h2>Cookies</h2>
-          <ul>
-            <li>Name&ndash;value pairs</li>
-            <li>Contain information left behind by webpages for autologin, user preferences...</li>
-            <li>Browser limits number and size of cookies</li>
-            <li>User may block or remove cookies at any time</li>
-            <li>Likely to be replaced by more flexible<br> <em>localStorage</em> and <em>sessionStorage</em> <br>in HTML5</li>
-          </ul>
-          <img src="img/04_links/cookies.jpg" alt="cookies" style="position: absolute; right: 0; bottom: 30px">
-        </section>
- -->        <section>
-          <h2>HTTPS</h2>
-          <ul>
-            <li>secure HTTP: all requests and responses are <em>encrypted</em></li>
-            <li><em>server certificate</em> ensures you are communicating with this site and not with a malicious copy</li>
-            <li>requires handshake / public&amp;private keys / ... between server and browser (rather complex)</li>
-            <li>
-              today an <strong>absolute must</strong> for websites 
-              <ul>
-                <li>prevent stealing login credentials over plain HTTP with network sniffer</li>
-                <li>prevent MITM (Man In The Middle) attacks, injecting scripts etc.</li>
-                <li>plain HTTP sites are denied access to sensitive API's like webcam</li>
-                <li>HTTPS sites get a higher ranking in Google</li>
-                <li>performance loss is limited (a few %)</li>
-              </ul>
-            </li>
-          <img src="img/04_links/mitm.png" alt="mitm" style="float: right; max-width: 300px">
-          </ul>
-          <div class="tooltip">
-            <div>
-              A WIFI network with a shared key where everyone knows the key isn't any safer than an open WIFI network. An attacker might create a copy of the network (same SID, same password) and then inject content in any HTTP website you visit. With HTTPS however, the certificate makes sure you are communicating with the website you want and not a copy, and on top of that, it also encrypts all your traffic.
-            </div>
-          </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>LINKS</h1>
-          <h2>Links in HTML</h2>
+          <h2>De URL</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
         </section>
         <section>
-          <h2>Creating links</h2>
+          <h2>Delen van de URL</h2>
           <ul>
             <li>
-              Some typical examples:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
-  Two before narrow not relied how except moment myself. Dejection assurance 
-  mrs led certainly. So gate at no only none open. Betrayed graceful gentleman
-  at &lt;a href="/politics/article-3289.html"&gt;properly it of&lt;/a&gt; dinner abroad. 
-&lt;/p&gt;
-
-&lt;h1&gt;&lt;a href="index.html"&gt;Site Title Here&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="about.html"&gt;about us&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code>
-
-</pre>
+              Een <em>hyperlink</em> (HTML link) wijst naar een <em>URL</em> (Uniform Resource Locator), waarbij resource "bron" betekent. Dit kan vanalles zijn: een andere webpagina, een afbeelding, een script, een geluidsbestand...  
             </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Title attribute</h2>
-          <ul>
             <li>
-              If the link content isn't self-descriptive (e.g. icons), add meaning with the <code>title</code> attribute to aid the visually impaired (plus: it will render as a tooltip):
-              <pre class="bigger"><code class="language-html overlayrun">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;a href="page1.html" title="edit this item"&gt;
-      &lt;img src="img/04_links/edit.gif" alt="edit icon"&gt;
-    &lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a href="page1.html" title="delete this item"&gt;
-      &lt;img src="img/04_links/del.gif" alt="delete icon"&gt;
-    &lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+              Belangrijkste delen van de URL met een voorbeeld:
             </li>
-          </ul>
-          <ul>
-            <li class="arrow">
-              don't use it if not necessary
+            <li class="no-style">
+               <span style="font-size: smaller">protocol://subdomein.host/pad/bestandsnaam#anker?parameters</span>
+               <br><span style="font-size: smaller">https://personeel.odisee.be/dashboard/kalender/overzicht.aspx#events?weergave=week&amp;lang=nl</span>
             </li>
-          </ul>
+            <li>
+               Beschrijving van de delen:
+               <ul>
+                 <li><em>protocol</em>: transportwijze (http, https, mailto, tel...) (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">volledige lijst</a>), bv. https</li>
+                 <li><em>subdomein</em>: deel van het domein, bv. personeel</li>
+                 <li><em>host</em>: domein waar het gehost is, bv. odisee.be</li>
+                 <li><em>pad</em>: locatie van de bron, bv. /dashboard/kalender/</li>
+                 <li><em>bestandsnaam</em>: naam van de bron, bv. overzicht.aspx</li>
+                 <li><em>anker</em>: naam van een locatie op de pagina (zie verder), bv. events</li>
+                 <li><em>parameters</em>: extra opties , bv. weergave=week&amp;lang=nl</li>
+               </ul>
+             </li>
+            </ul>
         </section>
-        <section>
-          <h2>Relative vs. absolute paths</h2>
-          <ul>
-            <li>Use relative paths for internal links, absolute paths for external links:
-              <pre class="bigger"><code class="language-html">&lt;!-- file 'index.html' --&gt;
-  ...
-  &lt;link rel="stylesheet" href="css/styles.css"&gt;
-  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
-  &lt;script src="js/lib/require/require.js"&gt;&lt;/script&gt;
+       <section data-toc-title="Soorten URL's">
+         <h2>Soorten URL's (1)</h2>
+         <ul>
+            <li>
+               Een <em>absolute URL</em> verwijst altijd naar dezelfde plaats, waar je website of pagina ook staat
+               <br><span style="font-size: smaller">bv. https://fonts.googleapis.com/css?family=Lato</span>
+               <br>&rarr; gebruik voor <strong>externe resources</strong>
+            </li>
+            <li>
+               Een <em>relatieve URL</em> is een pad relatief t.o.v. de map van de huidige pagina
+               <br><span style="font-size: smaller">bv. https://domain.com/travels/index.html + img/photo1.jpg = https://domain.com/travels/img/photo1.jpg</span>
+               <br><span style="font-size: smaller">bv. https://domain.com/css + ../assets/logo.svg = https://domain.com/assets/logo.svg</span>
+               <br>&rarr; gebruik voor <strong>lokale resources</strong>
+            </li>
+            <li>
+              Een <em>root URL</em> is een pad relatief t.o.v. de root van het domein 
+              <br><span style="font-size: smaller">bv. https://domain.com/travels/index.html + /js/scripts.js = https://domain.com/js/scripts.js</span>
+              <br><span style="font-size: smaller">bv. https://domain.com/users/andy589/index.html + /js/scripts.js = https://domain.com/js/scripts.js</span>
+              <br>&rarr; als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
+              <br>&rarr; daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
+            </li>
+         </ul>
+       </section>
+       <section data-toc-title="">
+        <h2>Soorten URL's (2)</h2>
+        <ul>
+          <li>Identificeer de URL's in dit voorbeeld: absoluut, relatief of root?
+            <pre class="bigger"><code class="language-html smallfont">&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
+&lt;script src="/js/lib/require/require.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  ...
-  &lt;p&gt;&lt;img src="img/pictures/photo.jpg" alt="my picture"&gt;&lt;/p&gt;
-  ...</code></pre>
-              <pre class="bigger"><code class="language-css">/* file 'css/styles.css' */
-h1 {
-  background-image: url(../img/logo.jpg);
-  ...
-}</code></pre>
+ &lt;figure&gt;
+    &lt;img src="img/pictures/landscape.jpg" alt="some landscape"&gt;
+    &lt;figcaption&gt;credits: &lt;a href="https://www.shutterstock.com"&gt;Shutterstock&lt;/a&gt;&lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;Interesse? &lt;a href="contact.html"&gt;Contacteer mij&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;  
+&lt;/html&gt;  
+</code></pre>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h1>LINKS</h1>
+        <h2>Links in HTML</h2>
+        <ul class="chapterlist">
+          <!-- to be filled by Javascript -->
+        </ul>
+      </section>
+      <section>
+        <h2>Hyperlink</h2>
+        <ul>
+          <li>
+            Een hyperlink maak je met de <code>&lt;a&gt;</code> tag; de URL komt in het <code>href</code> attribuut. Het is een inline element, dus het mag in een zin staan:
+            <pre class="bigger"><code class="language-html overlayrun">Bezoek onze &lt;a href="https://odisee.be"&gt;Odisee homepagina&lt;/a&gt;</code></pre>
+          </li>
+          <li>
+            Let er op dat je een relevante tekst linkt. Vergelijk:
+            <pre class="bigger"><code class="language-html overlayrun wrong">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+Klik &lt;a href="https://odisee.be/info"&gt;hier&lt;/a&gt; voor onze infodagen.</code></pre>
+            <pre class="bigger"><code class="language-html overlayrun right">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></pre>
+          </li>
+        </ul>
+        <ul>
+           <li class="arrow">
+              de tekst die je linkt is belangrijk voor <strong>blinden</strong> en <strong>zoekmachines</strong>!
             </li>
           </ul>
-        </section>
-        <section>
-          <h2>Linking to email and apps</h2>
-          <ul>
-            <li>
-              Link to email with <code>mailto:</code>
-              <pre class="bigger"><code class="language-html overlayrun">Please contact me at &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
-
-</code></pre>
-            </li>
-            <li>
-              Links to open various apps (mostly mobile only):</code>
-              <pre class="bigger"><code class="language-html overlayrun">Please call me me at &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;, or 
-&lt;a href="sms:+6612345678?body=this is the text message to send"&gt;send me an 
-sms&lt;/a&gt;. Alternatively, you can reach me on &lt;a href="https://wa.me/32489223344"&gt;
-WhatsApp&lt;/a&gt; or &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;.
-
-</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Anchors</h2>
-          <ul>
-            <li>
-              Are internal links that jump to another location in the same page
-            </li>
-            <li>
-              Link to <code>id="someId"</code> with <code>href="#someId"</code>:
-              <pre class="bigger"><code class="language-html dontrun">...
-&lt;h2&gt;&lt;a id="top"&gt;Jump to a specific chapter:&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  ...
-  &lt;li&gt;&lt;a href="#chapter3"&gt;chapter 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-...
-&lt;h3&gt;&lt;a id="chapter3"&gt;Chapter 3&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-  &lt;a href="#top"&gt;back to top&lt;/a&gt;
-&lt;/p&gt;
-...
-</code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2><del>[Image maps]</del></h2>
-          <ul>
-            <li>
-              Define a map with clickable areas:
-              <pre class="bigger"><code class="language-html dontrun">&lt;map id="globe"&gt;
-  &lt;area shape="poly" coords="2,13,58,91,139,2" href="n-am.html"
-      alt="North America"&gt;
-  &lt;area shape="circle" coords="297,139,26" href="australia.html"
-      alt="Australia"&gt;
-   ...
-&lt;/map&gt;
-</code></pre>
-            </li>
-            <li>
-              Link to <code>id="mapId"</code> with <code>usemap="#mapId"</code>:
-              <pre class="bigger"><code class="language-html dontrun">&lt;img src="img/adventureMap.gif" usemap="#globe" alt="world map"&gt;
-</code></pre>
-              <div class="demolink"><a href="demos/04_links/imagemaps.html">demo (Firefox)</a></div>
-            </li>
-          </ul>
-          <ul>
+      </section>
+     <section>
+         <h2>Title attribuut</h2>
+         <ul>
+           <li>
+             Verduidelijk waarnaar de link verwijst met het <code>title</code> attribuut:
+             <pre class="bigger"><code class="language-html overlayrun">&lt;a href="https://odisee.be" title="ga naar de website van be.brussels"&gt;
+   &lt;img src="img/04_links/logo_brussel.jpg" alt="Brussel logo"&gt;
+&lt;/a&gt;</code></pre>
+           </li>
+         </ul>
+         <ul>
             <li class="arrow">
-              <span class="warning">most browsers dropped support; you shouldn't use image maps anymore</span>
+               zeker nodig als je link enkel een afbeelding bevat (denk weer aan <strong>blinden</strong> en <strong>zoekmachines</strong>!)
+             </li>
+             <li class="arrow">
+               als extra renderen browsers de beschrijving als <strong>tooltip</strong> van de link
+             </li>
+             </ul>
+       </section>
+       <section>
+          <h2>Media links</h2>
+          <ul>
+            <li>
+              Link naar een email adres met <code>mailto:</code>
+              <pre class="bigger"><code class="language-html overlayrun">Contacteer mij op &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
+
+</code></pre>
+            </li>
+            <li>
+              Andere media links (de meeste mobile only):
+              <pre class="bigger"><code class="language-html overlayrun">Bel me op via &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
+Stuur me &lt;a href="sms:+6612345678?body=het te verzenden bericht"&gt;een sms&lt;/a&gt;
+Contacteer me via : &lt;a href="https://wa.me/32489223344"&gt;WhatsApp&lt;/a&gt; 
+Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
+</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Ankers</h2>
+          <ul>
+            <li>
+              Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
+            </li>
+            <li>
+              Een anker definineer je met <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>, de link ernaar met <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
+              <pre class="bigger"><code class="language-html dontrun smallfont">...
+&lt;h2&gt;Veelgestelde vragen&lt;/h2&gt;
+&lt;ul&gt;
+   &lt;li&gt;&lt;a href="#qst1"&gt;wat zijn de leverkosten?&lt;/a&gt;&lt;/li&gt; &lt;!-- link naar anker qst1 --&gt;
+   &lt;li&gt;&lt;a href="#qst2"&gt;wat is de levertermijn?&lt;/a&gt;&lt;/li&gt; &lt;!-- link naar anker qst2 --&gt;
+   &lt;li&gt;&lt;a href="#qst3"&gt;kan ik mijn bestelling retourneren?&lt;/a&gt;&lt;/li&gt; &lt;!-- link naar anker qst3 --&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a id="qst1"&gt;wat zijn de leverkosten?&lt;/a&gt;&lt;/h3&gt; &lt;!-- definitie anker qst1 --&gt;
+&lt;p&gt;
+  De leverkosten hangen af van blablabla...
+&lt;/p&gt;
+&lt;h3&gt;&lt;a id="qst1"&gt;wat is de levertermijn?&lt;/a&gt;&lt;/h3&gt; &lt;!-- definitie anker qst2 --&gt;
+&lt;p&gt;
+  Wij garanderen levering blablabla...
+&lt;/p&gt;
+&lt;h3&gt;&lt;a id="qst1"&gt;kan ik mijn bestelling retourneren?&lt;/a&gt;&lt;/h3&gt; &lt;!-- definitie anker qst3 --&gt;
+&lt;p&gt;
+  Niet tevreden? Stuur dan...
+&lt;/p&gt;
+</code></pre>
             </li>
           </ul>
         </section>
@@ -435,7 +221,7 @@ WhatsApp&lt;/a&gt; or &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;.
     </div>
 
     <!-- odisee.be link -->
-    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee_logo.png" alt="Odisee logo"></a>
 
     <!-- Index Link -->
     <aside class="back">
