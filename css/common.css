@@ -61,6 +61,29 @@ body section .imgrow img {
  * TABLE STYLES
  *********************************************/
 
+/* orientation */
+
+.reveal table td.center-h {
+   text-align: center;
+}
+
+.reveal table th.vertical {
+   height: 135px;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   vertical-align: bottom;
+}
+
+.reveal table th.vertical > span {
+   display: inline-block;
+   margin: 0 0 0 12px;
+   text-align: left;
+   transform: rotate(-90deg);
+   transform-origin: left;
+   width: 15px;
+}
+
 /* scrollbar */
 
 .reveal .scrolltable {
@@ -70,30 +93,28 @@ body section .imgrow img {
 }
 
 .reveal .scrolltable tbody {
-  display: block;
   overflow: auto;
 }
 
-.reveal .scrolltable thead tr {
-  display: block
-}
-
-/* borders */
+/* blue table */
 
 .reveal .bluetable td, .reveal .bluetable th {
   border: 2px solid #fff;
   padding: 7px 5px;
 }
 
-.reveal .bluetable th {
-  border-bottom: 0;
-}
-
-.reveal .bluetable tr {
+.reveal .bluetable table {
+   margin-top: 20px;
+   width: 100%;
+ }
+ 
+ .reveal .bluetable th {
+   border-bottom: 0;
+ }
+ 
+ .reveal .bluetable tr {
   border: 0;
 }
-
-/* colors and fonts */
 
 .reveal .bluetable {
   font-size: 14px;
