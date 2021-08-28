@@ -27,8 +27,8 @@
       <!-- 0 : Title -->
       <section>
         <section>
-          <h1>STRUCTURING</h1>
-          <small>use the arrow keys to navigate; press space for slide overview</small>
+          <h1>STRUCTUREREN</h1>
+          <small>gebruik pijltjestoetsen om te navigeren</small>
           <figure>
             <img src="img/08_structuring/icon.jpg" alt="" class="border">
           </figure>
@@ -39,67 +39,67 @@
       </section>
       <section>
         <section>
-          <h1>STRUCTURING</h1>
-          <h2>Overview</h2>
+          <h1>STRUCTUREREN</h1>
+          <h2>Structureren in HTML</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
         </section>
         <section>
-          <h2>Available elements</h2>
+          <h2>Beschikbare elementen</h2>
           <ul>
             <li class="no-style">
-              Before we're ready to design and layout our HTML page with CSS, we need a way to structure our document. They will become the sidebar, header, columns, footer etc... of our page. 
+              Voor we onze HTML pagina kunnen beginnen opmaken met CSS, hebben we een manier nodig om meer structuur te brengen, door gebieden aan te duiden in de HTML die later de <strong>headers, kolommen, zijbalk, footer</strong> enz... zullen worden.
             </li>
             <li class="no-style">
-              All available structuring elements in HTML:
+              Alle beschikbare <em>structurele elementen</em> in HTML:
               <table class="no-borders-left">
                 <tr>
                   <td><code>&lt;span&gt;</code></td>
-                  <td>part of a text</td>
+                  <td>deel van een zin</td>
                 </tr>
                 <tr>
                   <td><code>&lt;div&gt;</code></td>
-                  <td>part of a document</td>
+                  <td>deel van het document</td>
                 </tr>
                 <tr>
                   <td><code>&lt;header&gt;</code></td>
-                  <td>introductory content</td>
+                  <td>inleidend gedeelte</td>
                 </tr>
                 <tr>
                   <td><code>&lt;footer&gt;</code></td>
-                  <td>closing content</td>
+                  <td>afsluitend gedeelte</td>
                 </tr>
                 <tr>
                   <td><code>&lt;main&gt;</code></td>
-                  <td>main page content</td>
+                  <td>hoofdinhoud</td>
                 </tr>
                 <tr>
-                  <td><code>&lt;section&gt;</code><sup>(*)</sup></td>
-                  <td>related content with a title</td>
+                  <td><code>&lt;section&gt;</code></td>
+                  <td>stuk met een titel</td>
                 </tr>
                 <tr>
-                  <td><code>&lt;nav&gt;</code><sup>(*)</sup></td>
-                  <td>main navigation elements</td>
+                  <td><code>&lt;nav&gt;</code></td>
+                  <td>hoofdnavigatie</td>
                 </tr>
                 <tr>
-                  <td><code>&lt;aside&gt;</code><sup>(*)</sup></td>
-                  <td>related information</td>
+                  <td><code>&lt;aside&gt;</code></td>
+                  <td>gerelateerde inhoud</td>
                 </tr>
                 <tr>
-                  <td><code>&lt;article&gt;</code><sup>(*)</sup></td>
-                  <td>independent content</td>
+                  <td><code>&lt;article&gt;</code></td>
+                  <td>onafhankelijke inhoud</td>
                 </tr>
               </table>
             </li>
           </ul>
-          <p style="font-size: smaller"><sup>(*)</sup> for reasons <a href="#/html-outline-sections">explained later</a>, these are also called sectioning elements.
+          <p style="font-size: smaller">&rarr; &lt;span&gt; is een <a href="02_syntax.html#/blocklevel-and-inline">inline</a> element, de rest is <a href="02_syntax.html#/blocklevel-and-inline">blocklevel</a>.
         </section>
         <section>
           <h2>span</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;span&gt;</code></em> is an inline element, and marks a <strong>part of a text</strong>. It has no semantic meaning, and is only useful as a hook for CSS or Javascript. An example:
+              De <em><code>&lt;span&gt;</code></em> is een inline element, en duidt een  <strong>deel van een zin</strong> aan. Het heeft verder geen betekenis, en is enkel nuttig om later met CSS of Javascript te gebruiken. Een voorbeeld:
               <div><pre class="bigger"><code class="language-html">&lt;p&gt;
   By impossible of in &lt;span class="highlight"&gt;difficulty discovered&lt;/span&gt; 
   celebrated ye. Justice joy manners boy met resolve produce. Bed head 
@@ -108,7 +108,7 @@
 </code></pre></div>
             </li>
             <li class="arrow" style="font-size: smaller">
-              note that in this case, an <code>&lt;em&gt;</code>, or even better <code>&lt;mark&gt;</code> element would have been more correct
+              merk op dat in dit geval <code>&lt;em&gt;</code> of nog beter <code>&lt;mark&gt;</code> correcter zou zijn
             </li>
           </ul>
         </section>         
@@ -116,7 +116,7 @@
           <h2>div</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;div&gt;</code></em> is a general way to mark a <strong>part of the document</strong>. It has no semantic meaning, and is only useful as a hook for CSS or Javascript, e.g. for a page wrapper, text columns, container for scripted content like a map or calendar... Typical example:
+              Een <em><code>&lt;div&gt;</code></em> is een algemene manier om een <strong>deel van het document</strong> aan te duiden. Het heeft verder geen betekenis, en is enkel zinvol om later met CSS of Javascript te gebruiken, b.v. een pagina wrapper, tekstkolommen, container voor scripted content als een map or kalender... Typisch voorbeeld:
               <div><pre class="bigger"><code class="language-html">&lt;footer&gt;
   &lt;div class="col"&gt;
     ...
@@ -130,16 +130,19 @@
 &lt;/footer&gt;
 </code></pre></div>
             </li>
+            <li class="arrow" style="font-size: smaller">
+              als de kolommen titels bevatten, zou <a href="#/section"><code>&lt;section&gt;</code></a> beter zijn (zie verder)
+            </li>
           </ul>
         </section>         
         <section>
           <h2>header</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;header&gt;</code></em> marks <strong>introductory content</strong> at the top of a section. It may contain the title, navigation elements, logo, short introduction... The most common use is to mark the top of the page:
+              De <em><code>&lt;header&gt;</code></em> markeert een <strong>inleidend gedeelte</strong>. De meest klassieke toepassing is aanduiding van de bovenkant van de pagina, waar het typisch zaken bevat als de paginatitel, navigatie elementen, het logo, de slagzin, het zoekvenster...
               <div><pre class="bigger"><code class="language-html">&lt;body&gt;
   &lt;header&gt;
-    ... &lt;!-- logo, search, menu etc... here --&gt;
+    ... &lt;!-- logo, zoeken, menu enz... hier --&gt;
   &lt;/header&gt;
   ...
 &lt;/body&gt;
@@ -149,7 +152,7 @@
           <div class="tooltip">
             <div>
               <p>
-                Quotes from the W3C:
+                Quotes van het W3C:
               </p>
               <blockquote>
                 A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
@@ -164,23 +167,23 @@
           <h2>footer</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;footer&gt;</code></em> marks <strong>closing content</strong> at the bottom of a section. It may contain copyright information, short conclusion, bottom links, social media... The most common use is to mark the bottom of the page:
+              De <em><code>&lt;footer&gt;</code></em> markeert <strong>afsluitende inhoud</strong>. De meest klassieke toepassing is aanduiding van de onderkant van de pagina, waar het typisch zaken bevat als copyright informatie, kleine links, sociale media...
               <div><pre class="bigger"><code class="language-html">&lt;body&gt;
   ...
   &lt;footer&gt;
-    ... &lt;!-- copyright, social media, bottom links etc... here --&gt;
+    ... &lt;!-- copyright, sociale media, kleine links enz... hier --&gt;
   &lt;/footer&gt;
 &lt;/body&gt;
 </code></pre></div>
             </li>
             <li class="arrow" style="font-size: smaller">
-              note that, although less common, you can use <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> for any section, not just for the whole page, e.g. in a comment, article, ...
+              merk op: hoewel <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> meestal gebruikt worden voor een hele pagina, kan je ze in principe ook gebruiken om de boven- en onderkant van andere dingen aan te duiden, zoals een productomschrijving op een webshop, een review... 
             </li>
           </ul>
           <div class="tooltip">
             <div>
               <p>
-                Literally from the W3C:
+                Letterlijk van het W3C:
               </p>
               <blockquote>
                 The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
@@ -192,24 +195,28 @@
           <h2>main</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;main&gt;</code></em> marks the <strong>main content</strong> of the page. This may be useful for screenreaders, so that they can skip navigation etc... and jump straight to the important part. It should not contain parts that are repeated like navigation, menus, sidebars, search forms, copyright info... The most common use is to mark the page content:
+              De <em><code>&lt;main&gt;</code></em> markeert de <strong>hoofdinhoud</strong> van een pagina. Dit is nuttig voor screenreaders, die dan meteen naar de content kunnen springen zonder telkens weer alles in de <code>&lt;header&gt;</code> voor te lezen. Een typische pagina opbouw wordt dan:
               <div><pre class="bigger"><code class="language-html">&lt;body&gt;
-  ...
+  &lt;header&gt;
+    ... 
+  &lt;/header&gt;
   &lt;main&gt;
-    ... &lt;!-- main page content here --&gt;
+    ... &lt;!-- hoofdinhoud pagina hier --&gt;
   &lt;/main&gt;
-  ...
+  &lt;footer&gt;
+    ... 
+  &lt;/footer&gt;
 &lt;/body&gt;
 </code></pre></div>
             </li>
             <li class="arrow" style="font-size: smaller">
-              you should have one <em><code>&lt;main&gt;</code></em> per page only
+              er is bijgevolg maar één <em><code>&lt;main&gt;</code></em> per pagina mogelijk
             </li>
           </ul>
           <div class="tooltip">
             <div>
               <p>
-                Literally from the W3C:
+                Letterlijk van het W3C:
               </p>
               <blockquote>
                 The main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
@@ -221,7 +228,7 @@
           <h2>section</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;section&gt;</code></em> marks <strong>related content with a title</strong>:
+              Een <em><code>&lt;section&gt;</code></em> markeert een <strong>titel met bijhorende inhoud</strong>:
               <div><pre class="bigger"><code class="language-html">&lt;section&gt;
   &lt;h3&gt;Part 1&lt;/h3&gt;
   &lt;p&gt;
@@ -235,17 +242,20 @@
 &lt;/section&gt;  
 </code></pre></div>
             </li>
-            <li class="arrow">
-              if it doesn't have a title or a content, it is not a section!
+            <li class="arrow" style="font-size: smaller">
+              geen titel? dan is het geen sectie!
             </li>
-            <li class="arrow">
-              if you're not sure, stick to <code>&lt;div&gt;</code>
+            <li class="arrow" style="font-size: smaller">
+              geen inhoud? dan is het geen sectie!
+            </li>
+            <li class="arrow" style="font-size: smaller">
+              als je niet zeker bent, gebruik je best gewoon een <code>&lt;div&gt;</code>
             </li>
           </ul>
           <div class="tooltip">
             <div>
               <p>
-                Quotes from the W3C:
+                Quotes van het W3C:
               </p>
               <blockquote>
                 A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
@@ -260,7 +270,7 @@
           <h2>nav</h2>
           <ul>
             <li class="no-style">
-              A <em><code>&lt;nav&gt;</code></em> marks <strong>major navigation elements</strong>. It is mainly used for menus; don't use it for filters, paging, search forms, footer links etc... Typical usage:
+              De <em><code>&lt;nav&gt;</code></em> markeert de <strong>hoofdnavigatie</strong>. Gebruik het dus enkel voor menus; niet voor filters, paginering, zoekformulieren, kleine links in de footer enz... Typisch voorbeeld:
               <div><pre class="bigger"><code class="language-html">&lt;nav&gt;
   &lt;ul class="mainmenu"&gt;
     &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
@@ -275,7 +285,7 @@
           <div class="tooltip">
             <div>
               <p>
-                Literally from the W3C:
+                Letterlijk van het W3C:
               </p>
               <blockquote>
                 The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
@@ -287,28 +297,31 @@
           </div>
         </section>
         <section>
-          <h2>aside</h2>
+          <h2>aside <sup>[O]</sup></h2>
           <ul>
             <li class="no-style">
-              An <em><code>&lt;aside&gt;</code></em> contains <strong>extra information</strong>, like author information, related links, products, advertisements, quick facts etc... Typical example:
+              De <em><code>&lt;aside&gt;</code></em> bevat <strong>bijkomende informatie</strong>, zoals gerelateerde links, product suggesties, reclame, quick facts, auteur informatie enz... Een typisch voorbeeld:
               <div><pre class="bigger"><code class="language-html">&lt;aside&gt;
-  &lt;h3&gt;About the author&lt;/h3&gt;
-  &lt;p&gt;Hi, I'm Dan!&lt;/p&gt;
-  &lt;img src="img/photo_dan.jpg" alt="a picture of me!"&gt;
-  &lt;h3&gt;Recent posts&lt;/h3&gt;
+  &lt;h3&gt;Over de auteur&lt;/h3&gt;
+  &lt;p&gt;Hi, ik ben Dan!&lt;/p&gt;
+  &lt;img src="img/photo_dan.jpg" alt="een foto van Dan!"&gt;
+  &lt;h3&gt;Recente posts&lt;/h3&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href="..."&gt;Firefighters are REAL Superheroes&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Friends&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Firefighters zijn ECHTE Superheroes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Vrienden&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/aside&gt;  
 </code></pre></div>
             </li>  
+            <li class="arrow" style="font-size: smaller">
+              als je niet zeker bent, gebruik je best gewoon een <code>&lt;section&gt;</code> of <code>&lt;div&gt;</code>
+            </li>
           </ul>
           <div class="tooltip">
             <div>
               <p>
-                Literally from the W3C:
+                Letterlijk van het W3C:
               </p>
               <blockquote>
                 The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
@@ -321,31 +334,31 @@
         </section>
 
         <section>
-          <h2>article</h2>
+          <h2>article <sup>[O]</sup></h2>
           <ul>
             <li class="no-style">
-              An <em><code>&lt;article&gt;</code></em> contains reusable, independent, <strong>self-contained content</strong>. If you can copy paste it to another website, it is probably an article. Think of embedded tweets, widgets like polls or calendars... Typical example:
+              De <em><code>&lt;article&gt;</code></em> bevat <strong>onafhankelijke en herbruikbare content</strong>. Als je het integraal kan kopiëren naar een andere website, dan is het waarschijnlijk een article. Denk aan embedded tweets, widgets als polls, kalenders of weersvoorspelling... Typisch voorbeeld:
               <div><pre class="bigger"><code class="language-html">&lt;article&gt;
-  &lt;h3&gt;About the author&lt;/h3&gt;
-  &lt;p&gt;Hi, I'm Dan!&lt;/p&gt;
-  &lt;img src="img/photo_dan.jpg" alt="a picture of me!"&gt;
-  &lt;h3&gt;Recent posts&lt;/h3&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="..."&gt;Firefighters are REAL Superheroes&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Friends&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/aside&gt;  
+  &lt;h1&gt;Weersvoorspelling&lt;/h1&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;maandag&lt;/dt&gt;
+    &lt;dd&gt;Regen, af en toe een opklaring&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;dinsdag&lt;/dt&gt;
+    &lt;dd&gt;Zonnig, maar fris voor de tijd van het jaar&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/article&gt;
 </code></pre></div>
             </li>  
-            <li class="arrow">
-              if you're not sure, stick to <code>&lt;section&gt;</code> or <code>&lt;div&gt;</code>
+            <li class="arrow" style="font-size: smaller">
+              als je niet zeker bent, gebruik je best gewoon een <code>&lt;section&gt;</code> of <code>&lt;div&gt;</code>
             </li>
           </ul>
           <div class="tooltip">
             <div>
               <p>
-                Literally from the W3C:
+                Letterlijk van het W3C:
               </p>
               <blockquote>
                 The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
@@ -356,8 +369,8 @@
       </section>
       <section>
         <section>
-          <h1>STRUCTURING</h1>
-          <h2>Full example</h2>
+          <h1>STRUCTUREREN</h1>
+          <h2>Praktijkvoorbeeld</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
@@ -366,22 +379,22 @@
           <h2>Screenshot</h2>
           <ul>
             <li class="no-style">
-              Let's say we'd like to create this page page:
+              Laat ons zeggen dat we deze pagina willen maken:
             </li>
           </ul>
           <img src="img/08_structuring/full.png" alt="desired page screenshot" style="max-width: 500px; display: block; margin: 0 auto">
           <div class="demolink">
-            <a href="demos/08_structuring/unstructured.html">demo without CSS</a>
+            <a href="demos/08_structuring/unstructured.html">demo zonder CSS</a>
             &mdash;
-            <a href="demos/08_structuring/designed.html">demo with CSS</a>  
+            <a href="demos/08_structuring/designed.html">demo met CSS</a>  
           </div>
         </section>
         <section>
-          <h2>HTML without structuring</h2>
+          <h2>HTML</h2>
           <ul>
             <li class="no-style">
-              The basic HTML, without structuring:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+              De basis HTML, zonder structureren:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html smallfont smallpanel">&lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
 
@@ -470,11 +483,11 @@
           </ul>
         </section>
         <section>
-          <h2>HTML with divs</h2>
+          <h2>HTML met divs</h2>
           <ul>
             <li class="no-style">
-              Our page structured with <code>&lt;div&gt;</code> elements:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;div id="wrapper"&gt;
+              Gestructureerd met <code>&lt;div&gt;</code> elementen:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html  smallfont smallpanel">&lt;div id="wrapper"&gt;
   &lt;div id="header"&gt;
     &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
     &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
@@ -513,7 +526,8 @@
       &lt;p&gt;
         But I must explain to you how all this mistaken idea of denouncing pleasure
         and praising pain was born and I will give you a complete account of the system,
-        and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
+        and expound the actual teachings of the
+        &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
         master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
         itself, because it is pleasure, but because those who do not know how to pursue
         pleasure rationally encounter consequences that are extremely painful.
@@ -531,7 +545,8 @@
       &lt;h3&gt;Part 3&lt;/h3&gt;
       &lt;p&gt;
         On the other hand, we denounce with righteous indignation and dislike men who are
-        so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
+        so beguiled and demoralized by the 
+        &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
         by desire, that they cannot foresee the pain and trouble that are bound to ensue;
         and equal blame belongs to those who fail in their duty through weakness of will,
         which is the same as saying through shrinking from toil and pain.
@@ -572,17 +587,17 @@
 &lt;/div&gt;
 </code></pre></div>
             </li>
-            <li class="arrow">
-              this works, but <code>&lt;div&gt;</code> lacks semantic meaning
+            <li class="arrow" style="font-size: smaller;">
+              dit werkt, maar <code>&lt;div&gt;</code> heeft geen semantische betekenis
             </li>
           </ul>
         </section>
         <section>
-          <h2>meaningful structuring</h2>
+          <h2>HTML met structurele elementen</h2>
           <ul>
             <li class="no-style">
-              Our page structured with meaningful elements:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;div id="wrapper"&gt;
+              Gestructureerd met betekenisvolle elementen <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> enz...:
+              <div class="codescrollpanel"><pre class="bigger"><code class="language-html smallfont smallpanel">&lt;div id="wrapper"&gt;
   &lt;header&gt;
     &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
     &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
@@ -686,29 +701,29 @@
 &lt;/div&gt;
 </code></pre></div>
             </li>
-            <li class="arrow">
-              much better and more meaningful
+            <li class="arrow" style="font-size: smaller;">
+              veel betere semantische HTML markup
             </li>
           </ul>
         </section>
         <section>
-          <h2>Summary</h2>
+          <h2>Samenvatting</h2>
           <ul>
             <li class="no-style">
-              Don't overthink structuring too much. Generally using <code>&lt;div&gt;</code> elements is still ok, but try to get these right:
+              Probeer het niet te overdenken. Over het algemeen zijn <code>&lt;div&gt;</code> elementen nog steeds ok, maar probeer deze zeker goed te krijgen:
               <ul>
-                <li>a <code>&lt;header&gt;</code> element to mark the top of the page</li>
-                <li>a <code>&lt;footer&gt;</code> element to mark the bottom of the page</li>
-                <li>a <code>&lt;main&gt;</code> to mark the page content</li>
-                <li>a <code>&lt;nav&gt;</code> around your main menu</li>
+                <li>een <code>&lt;header&gt;</code> rond het bovenste van de pagina</li>
+                <li>een <code>&lt;main&gt;</code> rond het midden van de pagina</li>
+                <li>een <code>&lt;footer&gt;</code> rond het einde van de pagina</li>
+                <li>een <code>&lt;nav&gt;</code> rond je hoofdmenu</li>
               </ul>
             </li>
             <li class="no-style">
-              If you feel more comfortable, you can try to:
+              Als je je comfortabel voelt, probeer dan:
               <ul>
-                <li>use <code>&lt;section&gt;</code> where appropriate</li>
-                <li>use <code>&lt;aside&gt;</code> for the related page information</li>
-                <li>use <code>&lt;article&gt;</code> for advertisements and widgets</li>
+                <li>een <code>&lt;section&gt;</code> te gebruiken als je een titel hebt</li>
+                <li>een <code>&lt;aside&gt;</code> te gebruiken voor gerelateerde pagina informatie</li>
+                <li>een <code>&lt;article&gt;</code> te gebruiken voor advertenties en widgets</li>
               </ul>
             </li>
           </ul>  
@@ -717,277 +732,100 @@
       </section>
       <section>
         <section>
-          <h1>STRUCTURING</h1>
-          <h2>[Outline &amp; sections]</h2>
+          <h1>STRUCTUREREN</h1>
+          <h2>Content groeperen</h2>
           <ul class="chapterlist">
             <!-- to be filled by Javascript -->
           </ul>
         </section>
-        <section>
-          <h2>Document outline &amp; sections</h2>
-          <ul>
-            <li class="no-style">
-              A <em>document outline</em> is the table of content, i.e. the document structure in titles and chapters, often used in reports and scientific papers: 
-              <ul style="list-style: square;">
-                <li>
-                  a <em>section</em> is defined as a <strong>title</strong> and associated <strong>content</strong>  
-                </li>
-                <li>
-                  sections can be <strong>nested</strong>
-                </li>
-                <li>
-                  nesting is reflected in the <strong>section number</strong>, e.g. 5.3.1 is a section nested two levels deep
-                </li>
-              </ul>
-
-            </li>
-          </ul>
-          <div style="display:flex; justify-content: space-between;">
-            <figure style="display: block; width: 38% ">
-              <img src="img/08_structuring/doc_outline.png" class="bordered" alt="" style="width: 100%">
-              <figcaption>example of a document outline</figcaption>
-            </figure>
-            <figure style="display: block; width: 50%">
-            <img src="img/08_structuring/doc_outline2.png" class="bordered" alt="" style="max-width: 100%">
-              <figcaption>nesting example: sections 5.1, 5.2... are nested in section 5</figcaption>
-            </figure>
-          </div>
-        </section>
-        <section>
-          <h2>HTML outline &amp; sections</h2>
-          <ul>
-            <li class="no-style">
-              An HTML page also has titles and sections:
-              <ul>
-                <li>titles are defined by the elements <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>...</li>
-                <li>sections are marked by one of these five elements: <code>&lt;body&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code></li>
-              </ul>
-            </li>
-            <li class="no-style">
-              Rules for sections in HTML:
-              <ul>
-                <li>a <strong>title</strong> indicates the <strong>start of a new section</strong></li>
-                <li>a <strong>section must have a title</strong> (usually at the top)</li>
-                <li><strong>nesting depth</strong> reflects the <strong>heading number</strong>, i.e. <code>&lt;h1&gt;</code> is used for <code>&lt;body&gt;</code>, <code>&lt;h2&gt;</code> is used for nested sections, <code>&lt;h3&gt;</code> for nested nested sections etc...</li>
-              </ul>
-            </li>
-            <li class="no-style">
-              Note: 
-              <ul>
-                <li>
-                  the other structuring elements <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> <strong>do not mark a section</strong> and have no influence on the HTML outline
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>HTML5 outliner plugin</h2>
-          <ul>
-            <li class="no-style">
-              You can inspect the current HTML outline with the <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en">HTML5 Outliner plugin</a> (view the page through a webserver for the plugin to work).  
-            </li>
-          </ul>
-          <img src="img/08_structuring/full_no_outline.png" class="bordered" alt="desired page screenshot" style="display: block; margin: 10px auto; max-width: 80%">
-          <ul class="arrow" style="font-size: smaller;">
-            <li>
-              note that it contains two errors: an <i>Untitled NAV</i> and an <i>Untitled ASIDE</i>
-            </li>
-          </ul>
-          <div class="demolink">
-            <a href="demos/08_structuring/designed.html">demo</a>  
-          </div>
-        </section>
-        <section>
-          <h2>Structural titles</h2>
-          <ul>
-            <li class="no-style">
-              We can't just fix the errors by adding two titles: they will show up in our design. We want titles that show up in the outline, but that are hidden in the design. These are <em>structural titles</em>. They are hidden with CSS:
-              <pre class="bigger"><code class="language-html">&lt;style&gt;
-  .structural {
-    position: absolute;
-    left: -9999px;
-  }
-&lt;/style&gt;
-</code></pre>
-              <pre class="bigger"><code class="language-html">&lt;nav id="mainmenu"&gt;
-  &lt;h2 class="structural"&gt;Main menu&lt;/h2&gt; &lt;!-- structural title for NAV --&gt;
-  ...
-&lt;/nav&gt;
-</code></pre>
-              <pre class="bigger"><code class="language-html">&lt;nav id="aside"&gt;
-  &lt;h2 class="structural"&gt;Side notes&lt;/h2&gt; &lt;!-- structural title for ASIDE --&gt;
-  ...
-&lt;/aside&gt;
-</code></pre>
-            </li>
-            <li class="arrow" style="font-style: italic; font-size: smaller;">
-              tip: use meaningful names ('related', 'legal info'...), not structural names ('sidebar', 'footer'...) 
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Correctly outlined HTML</h2>
-          <ul>
-            <li class="no-style">
-              We now have a correct outline. Advantages:
-              <ul>
-                <li>it reflects a correct use of HTML sections and titles</li>
-                <li>it is easier for screen readers to understand the page structure</li>
-                <li>it is easier for the blind to navigate</li>
-                <li>it is easier for Google and other search engines to correctly index your page</li>
-              </ul>  
-            </li>
-          </ul>
-          <img src="img/08_structuring/full_outline.png" class="bordered" alt="desired page screenshot" style="display: block; margin: 10px auto; max-width: 80%">
-          <div class="demolink">
-            <a href="demos/08_structuring/outlined.html">demo</a>  
-          </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>STRUCTURING</h1>
-          <h2>Recap: Grouping content</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section data-toc-title="General rule">
-          <h2>General rule (1)</h2>
-          <blockquote style="width: 42%; margin-top: 3em; margin-bottom: 1em; padding: 0.5em 1em; text-align: center">
-            things that belong together, should be grouped together
+        <section data-toc-title="Algemene regel">
+          <h2>Algemene regel (1)</h2>
+          <blockquote style="width: 45%; margin-top: 3em; margin-bottom: 1em; padding: 0.5em 1em; text-align: center; background-color: #eeffee66; border: 3px dashed #999; font-size: larger;">
+            content die bij elkaar hoort, moet samen in een HTML element zitten 
           </blockquote>
         </section>
         <section data-toc-title="">
-          <h2>General rule (2)</h2>
+          <h2>Algemene regel (2)</h2>
           <ul>
             <li>
-              Examples of things that belong together:
+              Voorbeelden van dingen die bij elkaar horen in een groep:
               <ul>
-                <li>controls, title, help texts etc.. of a single form</li>
-                <li>group of social media icons</li>
-                <li>avatar, title, date, text etc... of a single comment</li>
-                <li>picture and caption</li>
-                <li>contact information</li>
-                <li>introductory content: logo, top menu, login...</li>
+                <li>controls, titel, help teksten enz... van eenzelfde formulier</li>
+                <li>sociale media iconen</li>
+                <li>avatar, titel, datum, tekst enz... van eenzelfde commentaar</li>
+                <li>contact informatie</li>
+                <li>afbeelding en bijschrift</li>
+                <li>inleidende inhoud: logo, topmenu, login...</li>
               </ul>
             </li>
             <li>
-              They should be wrapped in a common parent:
+              Deze zouden in een gemeenschappelijk element moeten zitten, respectievelijk:
               <ul>
                 <li><code>&lt;form&gt;</code></li>
                 <li><code>&lt;ul&gt;</code></li>
                 <li><code>&lt;article&gt;</code></li>
+                <li><code>&lt;address&gt;</code></li>
                 <li><code>&lt;figure&gt;</code></li>
-                <li><code>&lt;dl&gt;</code>, <code>&lt;p&gt;</code> or <code>&lt;address&gt;</code></li>
                 <li><code>&lt;header&gt;</code></li>
               </ul>
             </li>
           </ul>
         </section>
         <section>
-          <h2>Example: bottom menu</h2>
+          <h2>Voorbeeld: formulier</h2>
           <ul>
             <li>
-              wrong:
-              <div><pre class="bigger"><code class="language-html wrong">&lt;a href="#"&gt;about&lt;/a&gt; | &lt;a href="#"&gt;disclaimer&lt;/a&gt; | &lt;a href="#"&gt;contact&lt;/a&gt;
+              fout:
+              <div><pre class="bigger"><code class="language-html wrong">&lt;h3&gt;Registratie&lt;/h3&gt;
+&lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
+&lt;form&gt;
+  &lt;p&gt;
+    ...
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
+&lt;/form&gt;
 </code></pre></div>
             </li>
             <li>
-              better:
-              <div><pre class="bigger"><code class="language-html right">#bottommenu li + li:before {
-  content: "|";
-  margin: 0.5em;
-}
-</code></pre></div>
-              <div><pre class="bigger"><code class="language-html right">&lt;ul id="bottommenu"&gt;
-  &lt;li&gt;&lt;a href="#"&gt;about&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;&lt;/li&gt;
-&lt;ul&gt;
+              goed:
+              <div><pre class="bigger"><code class="language-html right">&lt;form&gt;
+  &lt;h3&gt;Registratie&lt;/h3&gt;
+  &lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
+  &lt;p&gt;
+    ...
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;
+&lt;/form&gt;
 </code></pre></div>
             </li>
           </ul>
         </section>
         <section>
-          <h2>Example: form</h2>
+          <h2>Voorbeeld: sociale media</h2>
           <ul>
             <li>
-              wrong:
-              <div><pre class="bigger"><code class="language-html wrong">&lt;h3&gt;Registration form&lt;/h3&gt;
-&lt;p&gt;Fields with * are required&lt;/p&gt;
-&lt;form action="#"&gt;
-  &lt;dl&gt;
-    ...
-  &lt;/dl&gt;
-  &lt;p&gt;&lt;input type="submit" value="register"&gt;
-&lt;/form&gt;
+              fout:
+              <div><pre class="bigger"><code class="language-html wrong smallfont">&lt;a href="#" title="like ons op facebook"&gt;&lt;img src="img/icn_fb.png" alt="facebook icon"&gt;&lt;/a&gt;
+&lt;a href="#" title="volg ons op twitter"&gt;&lt;img src="img/icn_tw.png" alt="twitter icon"&gt;&lt;/a&gt;
+&lt;a href="#" title="bekijk ons op youtube"&gt;&lt;img src="img/icn_yt.png" alt="youtube icon"&gt;&lt;/a&gt;
 </code></pre></div>
             </li>
             <li>
-              better:
-              <div><pre class="bigger"><code class="language-html right">&lt;form action="#"&gt;
-  &lt;h3&gt;Registration form&lt;/h3&gt;
-  &lt;p&gt;Fields with * are required&lt;/p&gt;
-  &lt;dl&gt;
-    ...
-  &lt;/dl&gt;
-  &lt;p&gt;&lt;input type="submit" value="register"&gt;
-&lt;/form&gt;
-</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="Example: social media icons">
-          <h2>Example: social media icons (1)</h2>
-          <ul>
-            <li>
-              wrong:
-              <div><pre class="bigger"><code class="language-html wrong">&lt;a href="#" title="like us on facebook"&gt;&lt;img src="img/icon_fb.png"
-alt="facebook icon"&gt;&lt;/a&gt;
-&lt;a href="#" title="follow us on twitter"&gt;&lt;img src="img/icon_tw.png"
-alt="twitter icon"&gt;&lt;/a&gt;
-&lt;a href="#" title="watch us on youtube"&gt;&lt;img src="img/icon_yt.png"
-alt="youtube icon"&gt;&lt;/a&gt;
-</code></pre></div>
-            </li>
-            <li>
-              acceptable:
-              <div><pre class="bigger"><code class="language-html">&lt;p&gt;
-  &lt;a href="#" title="like us on facebook"&gt;&lt;img src="img/icon_fb.png"
-    alt="facebook icon"&gt;&lt;/a&gt;
-  &lt;a href="#" title="follow us on twitter"&gt;&lt;img src="img/icon_tw.png"
-    alt="twitter icon"&gt;&lt;/a&gt;
-  &lt;a href="#" title="watch us on youtube"&gt;&lt;img src="img/icon_yt.png"
-    alt="youtube icon"&gt;&lt;/a&gt;
-&lt;/p&gt;
-</code></pre></div>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Example: social media icons (2)</h2>
-          <ul>
-            <li>
-              better:
-              <div><pre class="bigger"><code class="language-html right">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#" title="like us on facebook"&gt;&lt;img src="img/icon_fb.png"
-    alt="facebook icon"&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#" title="follow us on twitter"&gt;&lt;img src="img/icon_tw.png"
-    alt="twitter icon"&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#" title="watch us on youtube"&gt;&lt;img src="img/icon_yt.png"
-    alt="youtube icon"&gt;&lt;/a&gt;&lt;/li&gt;
+              goed:
+              <div><pre class="bigger"><code class="language-html right smallfont">&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#" title="like ons op facebook"&gt;&lt;img src="img/icn_fb.png" alt="facebook icon"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" title="volg ons op twitter"&gt;&lt;img src="img/icn_tw.png" alt="twitter icon"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" title="bekijk ons op youtube"&gt;&lt;img src="img/icn_yt.png" alt="youtube icon"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre></div>
             </li>
           </ul>
         </section>
-        <section data-toc-title="Example: comments">
-          <h2>Example: comments (1)</h2>
+        <section data-toc-title="Voorbeeld: commentaar">
+          <h2>Voorbeeld: commentaar (1)</h2>
           <ul>
             <li>
-              wrong:
+              fout:
               <div><pre class="bigger"><code class="language-html wrong">...
 &lt;h3&gt;Worst movie ever&lt;/h3&gt;
 &lt;p&gt;
@@ -1006,10 +844,10 @@ alt="youtube icon"&gt;&lt;/a&gt;
           </ul>
         </section>
         <section data-toc-title="">
-          <h2>Example: comments (2)</h2>
+          <h2>Voorbeeld: commentaar (2)</h2>
           <ul>
             <li>
-              better:
+              goed:
               <div><pre class="bigger"><code class="language-html right">  ...
   &lt;h1&gt;Worst movie ever&lt;/h1&gt;
   &lt;p&gt;
@@ -1033,52 +871,25 @@ alt="youtube icon"&gt;&lt;/a&gt;
             </li>
           </ul>
         </section>
-        <section data-toc-title="Example: address">
-          <h2>Example: address (1)</h2>
+        <section>
+          <h2>Voorbeeld: contact info</h2>
           <ul>
             <li>
-              wrong:
-              <div><pre class="bigger"><code class="language-html wrong">&lt;h3&gt;Contact me!&lt;/h3&gt;
-Name: John Doe&lt;br&gt;
-Email: john.doe@gmail.com&lt;br&gt;
-Tel: +3347892347&gt;br&gt;
-</code></pre></div>
-            </li>
-            <li>
-              wrong:
-              <div><pre class="bigger"><code class="language-html wrong">&lt;h3&gt;Contact me!&lt;/h3&gt;
+              fout:
+              <div><pre class="bigger"><code class="language-html wrong">&lt;h3&gt;Contacteer me!&lt;/h3&gt;
 &lt;p&gt;Name: John Doe&lt;/p&gt;
 &lt;p&gt;Email: john.doe@gmail.com&lt;/p&gt;
 &lt;p&gt;Tel: +3347892347&lt;/p&gt;
 </code></pre></div>
             </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Example: address (2)</h2>
-          <ul>
             <li>
-              better:
-              <div><pre class="bigger"><code class="language-html right">&lt;section&gt;
-  &lt;h3&gt;Contact me!&lt;/h3&gt;
-  &lt;p&gt;
-    Name: John Doe&lt;br&gt;
-    Email: john.doe@gmail.com&lt;br&gt;
-    Tel: +3347892347
-  &lt;/p&gt;
-&lt;/section&gt;
-</code></pre></div>
-            </li>
-            <li>
-              for site contact information, you can also use <code>&lt;address&gt;</code>:
-              <div><pre class="bigger"><code class="language-html right">&lt;section&gt;
-  &lt;h3&gt;Contact me!&lt;/h3&gt;
-  &lt;address&gt;
-    Name: John Doe&lt;br&gt;
-    Email: john.doe@gmail.com&lt;br&gt;
-    Tel: +3347892347
-  &lt;/address&gt;
-&lt;/section&gt;
+              goed:
+              <div><pre class="bigger"><code class="language-html right">&lt;address&gt;
+  &lt;h3&gt;Contacteer me!&lt;/h3&gt;
+  &lt;p&gt;Name: John Doe&lt;/p&gt;
+  &lt;p&gt;Email: john.doe@gmail.com&lt;/p&gt;
+  &lt;p&gt;Tel: +3347892347&lt;/p&gt;
+&lt;/address&gt;
 </code></pre></div>
             </li>
           </ul>
