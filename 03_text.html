@@ -71,7 +71,7 @@
           <ul>
             <li>
               Gebruik <code>&lt;h1&gt;</code> t.e.m. <code>&lt;h6&gt;</code> voor de hiërarchie van titels en ondertitles van een pagina:
-              <pre class="bigger"><code class="language-html overlayrun" style="max-height: 150px">&lt;h1&gt;Titel niveau 1&lt;/h1&gt; 
+              <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel">&lt;h1&gt;Titel niveau 1&lt;/h1&gt; 
 ...
 &lt;h2&gt;Titel niveau 2&lt;/h2&gt; 
 ...
@@ -86,7 +86,7 @@
             </li>
             <li>
               Titels horen altijd bij de <strong>inhoud die eronder staat</strong>; gebruik dus geen titel enkel omdat een tekst er groot uitziet (zoals een slagzin)! Uit de <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
-               <blockquote style="margin-left: 0; width: auto">
+               <blockquote>
                   h1–h6 elements must not be used to markup subtitles, taglines... 
                </blockquote>
             </li>
@@ -120,13 +120,10 @@
          <ul>
             <li>
                Welke teksten in deze screenshot stellen titels voor?
-               (klik om te vergroten)
+               (klik om te vergroten) &mdash; <a href="img/03_text/identify-titles-01-solution.png">oplossing</a>
              </li>
              <li class="no-style">
-               <a href="img/03_text/identify-titles-01.png" data-fancybox><img src="img/03_text/identify-titles-01-small.png" class="bordered" style="display: block; margin: 10px auto; " alt=""></a>
-             </li>
-             <li class="arrow">
-               bekijk de <a href="img/03_text/identify-titles-01-solution.png">oplossing</a>           
+               <a href="img/03_text/identify-titles-01.png" data-fancybox><img src="img/03_text/identify-titles-01-small.png" class="shadowbox" alt=""></a>
              </li>
           </ul>
         </section>
@@ -177,7 +174,7 @@
           <ul>
             <li>
               Typische voorbeelden zijn tweets, commentaren, pull quotes:
-              <img src="img/03_text/pullquote.png" class="bordered" style="display: block; margin: 10px auto; " alt="">
+              <img src="img/03_text/pullquote.png" class="shadowbox" alt="">
             </li>
           </ul>
         </section>
@@ -221,7 +218,7 @@
             </li>
             <li>
               Ook menu's worden gezien als ongenummerde lijsten (items = links):
-              <img src="img/03_text/menu.png" class="bordered" style="display: block; margin: 10px auto;" alt="">
+              <img src="img/03_text/menu.png" class="shadowbox" alt="" style="width: 80%;">
             </li>
           </ul>
         </section>
@@ -531,19 +528,19 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
          <ul>
            <li>
               Deze karakters staan vaak niet rechtstreeks op je toetsenbord; hoe kan je ze dan gebruiken? Het eenvoudigste is je karakter zoeken via Google, bv. <a href="https://www.google.com/search?q=UTF+bullet">UTF bullet</a>, en het kopiëren van één van de resultatenpagina's:  
-              <div style="display: flex;justify-content: space-between;align-items: flex-start;">
-               <img src="img/03_text/utf-8.png" class="shadowbox" alt="utf-8 karakters" style="width: 45%;"> 
+              <div class="flex-1-1">
+               <img src="img/03_text/utf-8.png" class="shadowbox" alt="utf-8 karakters"> 
 
-            <pre class="bigger" style="width: 50%;"><code class="language-html overlayrun">&lt;h3&gt;▣ hoofdstuk 1&lt;/h3&gt;
+            <pre class="bigger"><code class="language-html overlayrun">&lt;h3&gt;▣ hoofdstuk 1&lt;/h3&gt;
 &lt;p&gt;...&lt;/p&gt;               
 &lt;h3&gt;▣ hoofdstuk 2&lt;/h3&gt;               
 &lt;p&gt;...&lt;/p&gt;</code></pre>
             </div>
            </li>
-           <li class="arrow" style="margin-top: 10px;">
+           <li class="arrow smallfont">
               dit kan voor alle "speciale" tekens als &euro;, &copy;, &rarr;...
             </li>
-           </ul>
+         </ul>
        </section>
        <section>
          <h2>Karaktercodering <sup>[O]</sup></h2>
@@ -561,7 +558,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
          <ul>
            <li>
               UTF-8 bevat ook <em>emoji's</em>: druk op Windowstoets-puntkomma (PC) of Ctrl-Cmd-Space (Mac) om het emojivenster op te roepen, en <i>off you go</i>.  
-              <div style="display: flex;justify-content: space-between;align-items: flex-start;">
+              <div class="flex-1-1">
                <img src="img/03_text/emojis.png" class="shadowbox" alt="emoji panel" style="width: 45%;"> 
 
             <pre class="bigger" style="width: 50%;"><code class="language-html overlayrun">&lt;p&gt;
@@ -573,7 +570,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
 &lt;/p&gt;</code></pre>
             </div>
            </li>
-           <li class="arrow" style="margin-top: 10px;">
+           <li class="arrow smallfont">
             in theorie kan je zelfs emoji's gebruiken in links en URL's, zoals deze <a href="https://😻🍕.ws">https://😻🍕.ws</a>
             </li>
            </ul>
@@ -594,10 +591,10 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                      zoek het gewenste icoon op <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
                   </li>
                   <li>
-                     kopieer de <code>&lt;span&gt;</code> code
+                     kopieer voor elk icoon de <code>&lt;span&gt;</code> code naar jouw HTML
                   </li>
                </ul> 
-              <pre class="bigger"><code class="language-html smallpanel overlayrun">&lt;!DOCTYPE html&gt;
+              <pre class="bigger"><code class="language-html smallpanel smallfont overlayrun">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
    &lt;title&gt;Basispagina&lt;/title&gt;

@@ -73,95 +73,6 @@ body {
    color: #fff;
 }
 
-/*********************************************
- * LISTS
- *********************************************/
-
-/* general */
-
-.reveal ol {
-   list-style: decimal;
-}
-
-.reveal ul {
-   list-style: disc;
-}
-
-.reveal li {
-   padding-bottom: 10px;
-}
-
-/* nested */
-
-.reveal ol ol, .reveal ol ul, .reveal ul ul, .reveal ul ol {
-   font-size: 80%;
-   line-height: 1.4em;
-   list-style: square;
-   margin-left: 40px;
-   margin-top: 5px;
-}
-
-.reveal li li {
-   padding-bottom: 0;
-}
-
-/* styles */
-
-.reveal .v-style {
-   list-style-image: url('../img/list_style_check.png');
-}
-
-.reveal .plus-style {
-   list-style-image: url('../img/list_style_plus.png');
-}
-
-.reveal .x-style {
-   list-style-image: url('../img/list_style_uncheck.png');
-}
-
-.reveal ul.arrow {
-   list-style-type: none;
-   font-size: 80%;
-   margin: 0;
-   margin-left: 1.25em;
-   padding: 0;
-}
-
-.reveal ul.arrow li {
-   line-height: 1.2em;
-   margin: 0;
-   padding-bottom: 0;
-}
-
-.reveal ul.arrow li:before {
-   color: black;
-   content: '→  ';
-}
-
-.reveal ul.arrow li:first-letter {
-   margin-left: -1.25em;
-}
-
-.reveal li.arrow {
-   list-style-type: none;
-   margin: 0;
-   margin-left: 1.25em;
-   padding: 0;
-}
-
-.reveal li.arrow:before {
-   color: black;
-   content: '→  ';
-}
-
-.reveal li.arrow:first-letter {
-   margin-left: -1.25em;
-}
-
-.reveal .no-style {
-   list-style-type: none;
-}
-
 /***********************************************
  * NAV
  ***********************************************/
@@ -194,7 +105,7 @@ aside.back nav>p:first-child {
    opacity: 1;
 }
 
-.reveal nav>p {
+.reveal nav > p {
    background-color: #eee;
    color: #006;
    cursor: pointer;
@@ -204,7 +115,10 @@ aside.back nav>p:first-child {
    padding: 2px 10px;
 }
 
-.reveal nav ul, .reveal nav ol {
+.reveal nav ul, 
+.reveal nav ol,
+.reveal nav ul ul, 
+.reveal nav ul ol {
    list-style: none;
    margin: 0;
    padding: 0;
