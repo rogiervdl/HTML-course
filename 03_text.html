@@ -110,8 +110,11 @@
               <pre class="bigger"><code class="language-html">&lt;!-- optie 1 --&gt;
 &lt;h1&gt;&lt;a href="..."&gt;My Company&lt;/a&gt;&lt;/h1&gt;
 
-&lt;!-- optie 2 (vergeet alt niet in te vullen voor zoekmachines en blinden!) --&gt;
+&lt;!-- optie 2 --&gt;
 &lt;h1&gt;&lt;a href="..."&gt;&lt;img src="logo.svg" alt="My Company logo"&gt;&lt;/a&gt;&lt;/h1&gt;</code></pre>
+            </li>
+            <li class="arrow smallfont">
+               de tweede optie maakt gebruik van het <code>&lt;img&gt;</code> element voor afbeeldingen, zie <a href="06_media.html#/img">later</a>
             </li>
           </ul>
         </section>
@@ -240,7 +243,7 @@
           </ul>
         </section>
         <section>
-          <h2>Definitielijsten <sup>[O]</sup></h2>
+          <h2>Definitielijsten</h2>
           <ul>
             <li>
               Voor term-definitie paren:
@@ -255,7 +258,7 @@
 &lt;/dl&gt;
 ...</code></pre>
             </li>
-            <li class="arrow">
+            <li class="arrow smallfont">
               weinig gebruikt
             </li>
           </ul>
@@ -291,8 +294,8 @@
 </code></pre>
             <div class="demolink"><a href="demos/03_text/dialog.html">dialog demo</a> (met css en javascript)</div>
            </li>
-           <li class="arrow">
-             momenteel <a href="http://caniuse.com/#search=dialog">slecht ondersteund door browsers</a>
+           <li class="arrow smallfont">
+             momenteel <a href="http://caniuse.com/#search=dialog">slechte ondersteuning door browsers</a>
            </li>
          </ul>
        </section>
@@ -365,7 +368,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint
                   </li>
                </ul>
               <pre class="bigger"><code class="language-html overlayrun wrong">...
-&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;&lt;/p&gt; &lt;!-- fout! &lt;strong&gt; als opmaak gebruikt (moet h3 zijn) --&gt;
 &lt;p&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -373,7 +376,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint
   nisi ut aliquip ex ea commodo consequat.
   ...
 &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;published March 2001&lt;/em&gt;&lt;/p&gt;</code></pre>
+&lt;p&gt;&lt;em&gt;published March 2001&lt;/em&gt;&lt;/p&gt; &lt;!-- fout! &lt;em&gt; als opmaak gebruikt --&gt;</code></pre>
             </li>
           </ul>
         </section>
@@ -384,8 +387,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint
              Voorbeeld:
              <pre class="bigger"><code class="language-html overlayrun">...
 &lt;p&gt;
- H&lt;sub&gt;2&lt;/sub&gt;S0&lt;sub&gt;4&lt;/sub&gt; is de formule van zwavelzuur. Een kernbom is gebaseerd op de formule
- E = m.c&lt;sup&gt;2&lt;/sup&gt;
+ H&lt;sub&gt;2&lt;/sub&gt;S0&lt;sub&gt;4&lt;/sub&gt; is de formule van zwavelzuur. 
+ Een kernbom is gebaseerd op de formule E = m.c&lt;sup&gt;2&lt;/sup&gt;
 &lt;/p&gt;
 ...</code></pre>
            </li>
@@ -415,15 +418,14 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
 &lt;/p&gt;
 ...</code></pre>
             </li>
-            <li>
-              The tags <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> used to mean 'bold' and 'italic'. This is presentational and not allowed in HTML, so they got a different meaning in HTML5: 
-              <ul>
-                <li><em><code>&lt;b&gt;</code></em> now means 'stylistically offset' (if extra importance: use <code>&lt;em&gt;</code>)</li>
-                <li><em><code>&lt;i&gt;</code></em> now means 'alternate voice or mood' (if extra importance: use <code>&lt;strong&gt;</code>)</li>
-              </ul>
+            <li class="arrow smallfont warning">
+               gebruik <code>&lt;small&gt;</code> niet omdat een tekst klein is!
+             </li>
+             <li>
+              De tags <code>&lt;b&gt;</code> en <code>&lt;i&gt;</code> betekenden vroeger 'bold' (vet) en 'italic' (schuin). Dit is opmaak, geen structuur, en dus gebruiken we vandaag deze elementen niet meer. 
             </li>
-            <li class="arrow">
-              <span class="warning">since this causes confusion, <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> is not allowed in this course</span>
+            <li class="arrow smallfont warning">
+              <code>&lt;b&gt;</code> en <code>&lt;i&gt;</code> zijn niet toegelaten in deze cursus
             </li>
           </ul>
         </section>
@@ -469,7 +471,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
 &lt;/p&gt;
 </code></pre>
             </li>
-            <li class="arrow">
+            <li class="arrow smallfont">
               verder zijn ze weinig nuttig 
             </li>
           </ul>
@@ -515,10 +517,10 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
  ...
 &lt;/head&gt;</code></pre>
            </li>
-           <li class="arrow">
+           <li class="arrow smallfont">
               concreet betekent dit dat je alle karakters kan gebruiken uit de UTF-8 karakterset
             </li>
-            <li class="arrow">
+            <li class="arrow smallfont">
               UTF-8 is ontworpen voor max. 2.164.864 karakters; vandaag bevat het zowat <strong>alle talen ter wereld + emoji's, symbolen en andere tekens</strong>
             </li>
            </ul>
@@ -543,7 +545,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
          </ul>
        </section>
        <section>
-         <h2>Karaktercodering <sup>[O]</sup></h2>
+         <h2>Karaktercodering</h2>
          <ul>
            <li>
              Je kan UTF-8 karakters ook met de hand coderen als je de code kent:
@@ -551,7 +553,10 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
   &amp;rarr; koop de Samsung<em>&amp;reg;</em> Galaxy vandaag &amp;mdash; voor <em>&amp;euro;</em>499!
 &lt;/p&gt;</code></pre>
            </li>
-         </ul>
+           <li class="arrow smallfont">
+            voor de exacte codes je vindt genoeg referenties online, zoals <a href="https://www.rapidtables.com/web/html/html-codes.html">RapidTables</a> 
+          </li>
+       </ul>
        </section>
        <section>
          <h2>Emoji's</h2>

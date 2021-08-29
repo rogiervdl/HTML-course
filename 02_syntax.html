@@ -136,8 +136,8 @@ Een tuturial vind je op w3schools.com/html.
                      </div>
                      <div class="demolink"><a href="demos/02_syntax/samplepage.html">demo</a></div>
                   </li>
-                  <li class="arrow">de HTML codes rond de tekst noemt men <em>markup</em></li>
-                  <li class="arrow">probeer het zelf uit! maak een nieuw tekstbestand, kopieer deze code, sla het op als <i>test.html</i>, en open het in de browser</li>
+                  <li class="arrow smallfont">de HTML codes rond de tekst noemt men <em>markup</em></li>
+                  <li class="arrow smallfont">probeer het zelf uit! maak een nieuw tekstbestand, kopieer deze code, sla het op als <i>test.html</i>, en open het in de browser</li>
                </ul>
             </section>
             <section>
@@ -147,12 +147,12 @@ Een tuturial vind je op w3schools.com/html.
                      Dankzij de HTML markup weet de browser hoe de pagina weergegeven moet worden. Merk op hoe de content zich aanpast aan de breedte van het venster:
                   </li>
                </ul>
-               <div class="flex-1-1" style="justify-content: left;">
-                  <img src="img/02_syntax/page-browser-wide.png" class="shadowbox" alt="" style="max-width: 50%;">
-                  <img src="img/02_syntax/page-browser-small.png" class="shadowbox" alt="" style="max-width: 35%;margin-left: 30px;">
+               <div class="flex-1-1" style="justify-content: left;margin-bottom: 10px;">
+                  <img src="img/02_syntax/page-browser-wide.png" class="shadowbox" alt="" style="width: 45%;">
+                  <img src="img/02_syntax/page-browser-small.png" class="shadowbox" alt="" style="width: 30%;margin-left: 30px;">
                </div>
                <ul>
-                  <li class="arrow">de opmaak is nog erg beperkt; dit lossen we later op in de <a href="https://rogiervdl.github.io/CSS-course/index.html">cursus CSS</a></li>
+                  <li class="arrow smallfont">de opmaak is nog erg beperkt; dit lossen we later op in de <a href="https://rogiervdl.github.io/CSS-course/index.html">cursus CSS</a></li>
                </ul>
             </section>
             <section>
@@ -283,7 +283,7 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
                      </ul>
                   </li>
                   <li class="no-style">
-                     <pre class="bigger"><code class="language-html smallfont">&lt;xxx&gt;...&lt;/xxx&gt;
+                     <pre class="bigger"><code class="language-html">&lt;xxx&gt;...&lt;/xxx&gt;
 
 &lt;xxx&gt;
   ...
@@ -291,8 +291,8 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
   ...
 &lt;/xxx&gt;</code></pre>
                   </li>
-                  <li class="arrow">tip: in VS Code kan je alle layout in één keer goedzetten met de <strong>Shift-Alt-F</strong> shortcut</li>
-                  <li class="arrow warning">bovenal: wees consistent in je codestijl!</li>
+                  <li class="arrow smallfont">tip: in VS Code kan je alle layout in één keer goedzetten met de <strong>Shift-Alt-F</strong> shortcut</li>
+                  <li class="arrow smallfont warning">bovenal: wees consistent in je codestijl!</li>
                </ul>
             </section>
          </section>
@@ -348,7 +348,7 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
 &lt;/html&gt;</code></pre>
                   </li>
                </ul>
-               <ul class="arrow">
+               <ul class="arrow smallfont">
                   <li>gebruik altijd de HTML5 versie op vorige slide</li>
                </ul>
                <div class="tooltip">
@@ -405,11 +405,9 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
   &lt;meta name="keywords" content="HTML, CSS"&gt;
   &lt;meta name="author" content="Rogier van der Linde"&gt;
 &lt;/head&gt;</code></pre>
-                     <ul class="arrow">
-                        <li>er bestaan zeer veel van dergelijke metatags; in feite mag je zelf eender welke naa/waarde paar bedenken</li>
-                        <li>description en keywords waren vroeger nuttig voor zoekmachines, maar worden vandaag volledig genegeerd</li>
-                     </ul>
                   </li>
+                  <li class="arrow smallfont">er bestaan zeer veel van dergelijke metatags; in feite mag je zelf eender welke naam/waarde paar bedenken</li>
+                  <li class="arrow smallfont">description en keywords waren vroeger nuttig voor zoekmachines, maar worden vandaag genegeerd</li>
                </ul>
             </section>
             <section>
@@ -445,11 +443,11 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
                   <li>
                      Tags vormen <em>elementen</em>: 
                      <ul>
-                        <li><em>leeg</em> element: <code>&lt;xxx&gt;</code>, e.g. <code>&lt;img&gt;</code>; <i>voegt content toe</i>
+                        <li><em>leeg</em> element: <code>&lt;xxx&gt;</code>, e.g. <code>&lt;img&gt;</code>; content <strong>toevoegen</strong>
                         </li>
                         <li>
                            <em>niet-leeg</em> element: <code>&lt;xxx&gt;...&lt;/xxx&gt;</code>; 
-                           <i>markeert content</i>
+                           content <strong>markeren</strong>
                         </li>
                         <li class="arrow">
                            de meeste elementen zijn niet-lege elementen
@@ -513,7 +511,7 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
                         <li class="v-style">een link <code>&lt;a&gt;</code> kan een <code>&lt;img&gt;</code> bevatten</li>
                      </ul>
                   </li>
-                  <li class="arrow">volg je gezond verstand, en gebruik de <a href="https://validator.w3.org/#validate_by_input">W3C HTML validator</a></li>
+                  <li class="arrow smallfont">volg je gezond verstand, en gebruik de <a href="https://validator.w3.org/#validate_by_input">W3C HTML validator</a></li>
                </ul>
             </section>
             <section>

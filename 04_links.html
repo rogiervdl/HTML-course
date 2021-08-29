@@ -80,8 +80,8 @@
             <li class="smallfont no-style">
                bv. https://fonts.googleapis.com/css?family=Lato
             </li>
-            <li class="no-style">
-               &rarr; gebruik voor <strong>externe resources</strong>
+            <li class="arrow smallfont">
+               gebruik voor <strong>externe resources</strong>
             </li>
             <li>
                Een <em>relatieve URL</em> is een pad relatief t.o.v. de map van de huidige pagina
@@ -90,8 +90,8 @@
                bv. https://domain.com/travels/index.html + img/photo1.jpg = https://domain.com/travels/img/photo1.jpg</span>
                <br>bv. https://domain.com/css + ../assets/logo.svg = https://domain.com/assets/logo.svg
             </li>
-            <li class="no-style">
-               &rarr; gebruik voor <strong>lokale resources</strong>
+            <li class="arrow smallfont">
+               gebruik voor <strong>lokale resources</strong>
             </li>
             <li>
                Een <em>root URL</em> is een pad relatief t.o.v. de root van het domein 
@@ -100,9 +100,11 @@
                bv. https://domain.com/travels/index.html + /js/scripts.js = https://domain.com/js/scripts.js
                <br>bv. https://domain.com/users/andy589/index.html + /js/scripts.js = https://domain.com/js/scripts.js
              </li>
-             <li class="no-style">
-               &rarr; als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
-               <br>&rarr; daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
+             <li class="arrow smallfont">
+               als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
+            </li>
+            <li class="arrow smallfont">
+              daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
              </li>
            </ul>
        </section>
@@ -110,17 +112,17 @@
         <h2>Soorten URL's (2)</h2>
         <ul>
           <li>Identificeer de URL's in dit voorbeeld: absoluut, relatief of root?
-            <pre class="bigger"><code class="language-html smallfont">&lt;!DOCTYPE html&gt;
+            <pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="nl"&gt;
 &lt;head&gt;
-&lt;link rel="stylesheet" href="css/styles.css"&gt;
-&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
-&lt;script src="/js/lib/require/require.js"&gt;&lt;/script&gt;
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
+  &lt;script src="/js/lib/require/require.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
  &lt;figure&gt;
     &lt;img src="img/pictures/landscape.jpg" alt="some landscape"&gt;
-    &lt;figcaption&gt;credits: &lt;a href="https://www.shutterstock.com"&gt;Shutterstock&lt;/a&gt;&lt;/figcaption&gt;
+    &lt;figcaption&gt;credits: &lt;a href="https://shutterstock.com"&gt;Shutterstock&lt;/a&gt;&lt;/figcaption&gt;
  &lt;/figure&gt;
  &lt;p&gt;Interesse? &lt;a href="contact.html"&gt;Contacteer mij&lt;/a&gt;&lt;/p&gt;
 &lt;/body&gt;  
@@ -153,7 +155,7 @@ Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></
           </li>
         </ul>
         <ul>
-           <li class="arrow">
+           <li class="arrow smallfont">
               de tekst die je linkt is belangrijk voor <strong>blinden</strong> en <strong>zoekmachines</strong>!
             </li>
           </ul>
@@ -169,10 +171,10 @@ Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></
            </li>
          </ul>
          <ul>
-            <li class="arrow">
+            <li class="arrow smallfont">
                zeker nodig als je link enkel een afbeelding bevat (denk weer aan <strong>blinden</strong> en <strong>zoekmachines</strong>!)
              </li>
-             <li class="arrow">
+             <li class="arrow smallfont">
                als extra renderen browsers de beschrijving als <strong>tooltip</strong> van de link
              </li>
              </ul>
@@ -203,7 +205,15 @@ Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
               Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
             </li>
             <li>
-              Een anker definineer je met <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>, de link ernaar met <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
+              Je hebt twee dingen nodig:
+              <ul>
+               <li>
+                  een anker waarnaar gelinkt kan worden: <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>
+               </li>
+               <li>
+                  een link naar dit anker: <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
+               </li>
+             </ul>
               <pre class="bigger"><code class="language-html dontrun smallfont">...
 &lt;h2&gt;Veelgestelde vragen&lt;/h2&gt;
 &lt;ul&gt;

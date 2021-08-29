@@ -87,8 +87,8 @@ body section .img-8 figure {
   list-style: disc;
 }
 
-.reveal li {
-  padding-bottom: 10px;
+.reveal li + li {
+  padding-top: 10px;
 }
 
 /* nested */
@@ -109,7 +109,7 @@ body section .img-8 figure {
 }
 
 .reveal li li {
-  padding-bottom: 0;
+  padding-top: 0;
 }
 
 /* styles */
@@ -141,13 +141,14 @@ body section .img-8 figure {
 
 .reveal ul.arrow li:first-child,
 .reveal ul li.arrow {
-  padding-top: 0.3em;
-}
-
-.reveal ul li.arrow + li.arrow {
+   margin-top: 0.3em;
+ }
+ 
+.reveal ul li.arrow + li.arrow  {
+  margin-top: 0;
   padding-top: 0;
 }
-
+ 
 .reveal ul.arrow li {
   line-height: 1.2em;
   margin: 0;
@@ -166,9 +167,7 @@ body section .img-8 figure {
 
 .reveal li.arrow {
   list-style-type: none;
-  margin: 0;
   margin-left: 1.25em;
-  padding: 0;
 }
 
 .reveal ul.smallfont,
@@ -179,6 +178,17 @@ body section .img-8 figure {
 /*********************************************
  * BOXES & LAYOUT
  *********************************************/
+
+blockquote.greenbig {
+   background-color: #eeffee66; 
+   border: 3px dashed #999; 
+   font-size: larger;   
+   margin-bottom: 1em; 
+   margin-top: 3em; 
+   padding: 0.5em 1em; 
+   text-align: center; 
+   width: 45%; 
+}
 
 .reveal section .shadowbox {
   border: 1px solid #888;
@@ -501,7 +511,7 @@ td span.undertext {
 
 .reveal pre code {
   font-family: 'Droid Sans Mono', Courier, monospace;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.3;
   display: block;
   padding: 0.5em;
@@ -521,14 +531,14 @@ td span.undertext {
 }
 
 .reveal pre code.smallfont {
-  font-size: 13px;
-}
-
-.reveal pre code.verysmallfont {
-  font-size: 11px;
-}
-
-.reveal pre {
+   font-size: 12px;
+ }
+ 
+ .reveal pre code.verysmallfont {
+   font-size: 10px;
+ }
+ 
+ .reveal pre {
   display: block;
   position: relative;
   border: 2px solid gray;
