@@ -12,6 +12,10 @@
   color: #900;
 }
 
+.reveal .ok {
+   color: #060;
+ }
+ 
 .reveal .greenline {
   border-bottom: 2px solid #090;
 }
@@ -32,7 +36,7 @@ p.smallfont {
 }
 
 .reveal p.frontslide__subtext {
-   font-size: 14px;
+   font-size: 13px;
    margin-bottom: 0.5em;
 }
 
@@ -520,13 +524,18 @@ td span.undertext {
  * CODE
  ***********************************************/
 
-.reveal pre code {
+ .reveal pre code {
+  border: 2px solid gray;
   font-family: 'Droid Sans Mono', Courier, monospace;
   font-size: 14px;
   line-height: 1.3;
   display: block;
   padding: 0.5em;
   margin: 0;
+}
+
+.reveal pre code[contenteditable] {
+  border-style: dotted;
 }
 
 .reveal pre code.smallpanel {
@@ -552,7 +561,6 @@ td span.undertext {
  .reveal pre {
   display: block;
   position: relative;
-  border: 2px solid gray;
   width: 100%;
   margin: 10px 0;
   box-shadow: none;
