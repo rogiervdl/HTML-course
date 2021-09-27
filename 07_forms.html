@@ -508,22 +508,33 @@ let er dan op zeker een <code>alt</code> attribuut te voorzien met <i>dezelfde w
           </div>
         </section>
         <section>
-          <h2>Submitknop</h2>
-          <ul>
-            <li>
-              Een submitknop is een speciale knop die het versturen van het formulier triggert. Gebruik het <code>type="submit"</code> attribuut:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" value="Verzenden"&gt;
+         <h2>Submitknop</h2>
+         <ul>
+           <li>
+             Een submitknop is een speciale knop die het versturen van het formulier triggert. Gebruik het <code>type="submit"</code> attribuut. De twee mogelijke versies, met <code>&lt;input&gt;</code> of <code>&lt;button&gt;</code>:
+             <pre class="bigger"><code class="language-html overlayrun">&lt;input type="submit" value="Verzenden"&gt;
 &lt;button type="submit"&gt;Bevestigen&lt;/button&gt;</code></pre>
-            </li>
-            <li>
-              Geef elk formulier een submitknop, zelfs als het niet op het design staat. In volgend voorbeeld staat de submitknop niet in het design, maar wel in de HTML (code in het vet):
-              <img src="img/07_forms/form-submit-example.png" class="shadowbox" style="width: 60%" alt="">
-            </li>
-            <li class="arrow smallfont">submit knoppen helpen software als screen readers voor blinden</li>
-            <li class="arrow smallfont">we verbergen ze indien nodig later wel weer met CSS</li>
-          </ul>
-        </section>
-        <section>
+           </li>
+           <li>
+             Geef elk formulier een submitknop, zelfs als het niet op het design staat. In volgend voorbeeld staat de submitknop niet in het design, maar wel in de HTML (code in het vet):
+             <img src="img/07_forms/form-submit-example.png" class="shadowbox" style="width: 60%" alt="">
+           </li>
+           <li class="arrow smallfont">submit knoppen helpen software als screen readers voor blinden</li>
+           <li class="arrow smallfont">we verbergen ze indien nodig later wel weer met CSS</li>
+         </ul>
+       </section>
+       <section>
+         <h2>Resetknop</h2>
+         <ul>
+           <li>
+             Een resetknop is een speciale knop die het hele formulier herstelt naar de oorspronkelijke waarden. Dit kan nuttig zijn om bv. een lijst filters te wissen. Gebruik het <code>type="reset"</code> attribuut. De twee mogelijke versies, met <code>&lt;input&gt;</code> of <code>&lt;button&gt;</code>:
+             <pre class="bigger"><code class="language-html">&lt;input type="reset" value="Wissen"&gt;
+&lt;button type="reset"&gt;Wissen&lt;/button&gt;</code></pre>
+           </li>
+           <li class="arrow smallfont">submit knoppen helpen software als screen readers voor blinden</li>
+         </ul>
+       </section>
+      <section>
           <h2>Knop of gewone link?</h2>
           <ul>
             <li>
