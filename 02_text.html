@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>HTML &mdash; Tekst</title>
+  <meta name="author" content="Rogier van der Linde - odisee.be">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="fonts/droidsans/webfont.css">
+  <link rel="stylesheet" href="fonts/lato/webfont.css">
+  <link rel="stylesheet" href="fonts/leaguegothic/webfont.css">
+  <link rel="stylesheet" href="vendor/reveal/css/reveal.css">
+  <link rel="stylesheet" href="vendor/reveal/css/theme/beige.css">
+  <link rel="stylesheet" href="vendor/highlight/styles/vs.css">
+  <link rel="stylesheet" href="vendor/fancybox/fancybox.css">
+  <link rel="stylesheet" href="css/reveal-mods.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!-- SLIDES -->
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- 0 : Title -->
+      <section>
+        <section>
+          <h1>TEKST</h1>
+          <p class="frontslide__subtext">
+            tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
+          </p>
+          <p class="frontslide__subtext">
+            gebruik pijltjestoetsen om te navigeren<br>
+            dotted codepanels zijn editeerbaar
+    </p>
+          <figure>
+            <img src="img/02_text/icon.jpg" alt="" class="frontslide__icon">
+          </figure>
+          <footer>
+            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+          </footer>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEKST</h1>
+          <h2>Blocklevel elementen</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>Tekst structureren</h2>
+          <ul>
+            <li>
+              Vermijd naakte tekst zonder betekenis in de <code>&lt;body&gt;</code>:
+              <pre class="bigger"><code class="language-html wrong">...
+&lt;body&gt;
+  Hallo!
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+            <li class="no-style">
+              Beter:
+              <pre class="bigger"><code class="language-html right">...
+&lt;body&gt;
+  &lt;p&gt;Hallo!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="titels">
+          <h2>Titels</h2>
+          <ul>
+            <li>
+              Gebruik <code>&lt;h1&gt;</code> t.e.m. <code>&lt;h6&gt;</code> voor de hiërarchie van titels en ondertitles van een pagina:
+              <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel">&lt;h1&gt;Titel niveau 1&lt;/h1&gt; 
+...
+&lt;h2&gt;Titel niveau 2&lt;/h2&gt; 
+...
+&lt;h3&gt;Titel niveau 3&lt;/h3&gt; 
+...
+&lt;h4&gt;Titel niveau 4&lt;/h4&gt; 
+...
+&lt;h5&gt;Titel niveau 5&lt;/h5&gt; 
+...
+&lt;h6&gt;Titel niveau 6&lt;/h6&gt;
+...</code></pre>
+            </li>
+            <li>
+              Titels horen altijd bij de <strong>inhoud die eronder staat</strong>; gebruik dus geen titel enkel omdat een tekst er groot uitziet (zoals een slagzin)! Uit de <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
+               <blockquote>
+                  h1–h6 elements must not be used to markup subtitles, taglines... 
+               </blockquote>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Titels &mdash; nummering</h2>
+          <ul>
+            <li>
+              De titels worden genummerd in aflopende hiërarchische volgorde. Een vuistregel: 
+              <ul>
+                <li><code>&lt;h1&gt;</code>: bedrijfsnaam</li>
+                <li><code>&lt;h2&gt;</code>: titel pagina</li>
+                <li><code>&lt;h3&gt;</code>: titel hoofdstukken</li>
+                <li><code>&lt;h4&gt;</code>: titel onderhoofdstukken</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>
+              Het logo met de bedrijfsnaam linksboven moet dus <code>&lt;h1&gt;</code>, en bovendien zegt de regel dat het gelinkt moet zijn (naar de homepagina). De correcte HTML is dan:
+              <pre class="bigger"><code class="language-html">&lt;!-- optie 1 --&gt;
+&lt;h1&gt;&lt;a href="..."&gt;My Company&lt;/a&gt;&lt;/h1&gt;
+
+&lt;!-- optie 2 --&gt;
+&lt;h1&gt;&lt;a href="..."&gt;&lt;img src="logo.svg" alt="My Company logo"&gt;&lt;/a&gt;&lt;/h1&gt;</code></pre>
+            </li>
+            <li class="arrow smallfont">
+               de tweede optie maakt gebruik van het <code>&lt;img&gt;</code> element voor afbeeldingen, zie <a href="05_media.html#/img">later</a>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+         <h2>Titels &mdash; oefening</h2>
+         <ul>
+            <li>
+               Welke teksten in deze screenshot stellen titels voor?
+               (klik om te vergroten) &mdash; <a href="img/02_text/identify-titles-01-solution.png">oplossing</a>
+             </li>
+             <li class="no-style">
+               <a href="img/02_text/identify-titles-01.png" data-fancybox><img src="img/02_text/identify-titles-01-small.png" class="shadowbox" alt=""></a>
+             </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Paragrafen</h2>
+          <ul>
+            <li>
+              Gebruik <code>&lt;p&gt;</code> voor een blok doorlopende tekst:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat.
+&lt;/p&gt;
+&lt;p&gt;
+  Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="Blockquote">
+          <h2>Blockquote (1)</h2>
+          <ul>
+            <li>
+               Gebruik <code>&lt;blockquote&gt;</code> om een citaat aan te duiden:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;blockquote&gt;
+  &lt;p&gt;
+    O tempora, o mores!
+    Senatus haec intellegit. consul videt; hic tamen vivit.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Vivit? immo vero etiam in senatum venit, fit publici consilii
+    particeps, notat et designat oculis ad caedem unum quemque
+    nostrum.
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Blockquote (2)</h2>
+          <ul>
+            <li>
+              Typische voorbeelden zijn tweets, commentaren, pull quotes:
+              <img src="img/02_text/pullquote.png" class="shadowbox" alt="">
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Address</h2>
+          <ul>
+            <li>
+               Met <code>&lt;address&gt;</code> duid je de contact informatie op de pagina aan:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;address&gt;
+  John Doe&lt;br&gt;
+  123 Main Street, NY&lt;br&gt; 
+  &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;&lt;br&gt; 
+  &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
+&lt;/address&gt;
+...</code></pre>
+            </li>
+            <li class="no-style">
+              Het hoeft niet per se een echt adres te zijn; elke contact informatie volstaat:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;address&gt;
+  Hi! Ik ben John Doe. Je kan mailen naar 
+  &lt;a href="mailto:johndoe@rock.com"&gt;johndoe@rock.com&lt;/a&gt;, of bel me op 
+  &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
+&lt;/address&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Ongenummerde lijsten</h2>
+          <ul>
+            <li>
+              Gebruik <code>&lt;ul&gt;</code> (<b><u>u</u></b>nordered <b><u>l</u></b>ist) voor gelijkaardige items zonder nummering :
+              <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;Niet vergeten kopen:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;melk&lt;/li&gt;
+  &lt;li&gt;brood&lt;/li&gt;
+  &lt;li&gt;appels&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </li>
+            <li>
+              Ook menu's worden gezien als ongenummerde lijsten (items = links):
+              <img src="img/02_text/menu.png" class="shadowbox" alt="" style="width: 80%;">
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Genummerde lijsten</h2>
+          <ul>
+            <li>
+               Gebruik <code>&lt;ol&gt;</code> (<b><u>o</u></b>rdered <b><u>l</u></b>ist) voor gelijkaardige items met nummering :
+               <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;Wie is de slimste van de familie?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;homer&lt;/li&gt;
+  &lt;li&gt;bart&lt;/li&gt;
+  &lt;li&gt;lisa&lt;/li&gt;
+  &lt;li&gt;maggie&lt;/li&gt;
+&lt;/ol&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Definitielijsten</h2>
+          <ul>
+            <li>
+              Voor term-definitie paren:
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;dl&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Een simpele taal voor layout, kleuren enz...&lt;/dd&gt;
+  &lt;dt&gt;XHTML&lt;/dt&gt;
+  &lt;dd&gt;Een oude herformulering van HTML in XML&lt;/dd&gt;
+  &lt;dt&gt;XML&lt;/dt&gt;
+  &lt;dd&gt;Een flexibele en zelf uitbreidbare eenvoudige markup taal&lt;/dd&gt;
+&lt;/dl&gt;
+...</code></pre>
+            </li>
+            <li class="arrow smallfont">
+              weinig gebruikt
+            </li>
+          </ul>
+        </section>
+        <section>
+         <h2>[Details]</h2>
+         <ul>
+           <li>
+            Met <code>&lt;details&gt;</code> kan je een detailsectie in- en uitklappen: 
+             <pre class="bigger"><code class="language-html overlayrun">&lt;details open&gt;
+ &lt;p&gt;
+   Als je browser dit element ondersteunt, zou je de details moeten 
+   kunnen in- en uitklappen. Zonder extra scritps!
+ &lt;/p&gt;
+ &lt;p&gt;
+   Hiermee kan je content initieel verbergen, b.v. bijkomende uitleg 
+   die anders de lezer zou kunnen storen.
+ &lt;/p&gt;
+&lt;/details&gt;</code></pre>
+           </li>
+         </ul>
+       </section>
+       <section>
+         <h2>[Dialog]</h2>
+         <ul>
+           <li>
+            Met <code>&lt;dialog&gt;</code> kan je &mdash; met enige moeite &mdash; een dialoogvenster maken: 
+             <pre class="bigger"><code class="language-html overlayrun">&lt;dialog id="dialog1" open&gt;
+ &lt;h1&gt;Hallo Wereld!&lt;/h1&gt;
+ &lt;p&gt;Lorem ipsum dolor sit amet. Earum, inventore!&lt;/p&gt;
+ &lt;button id="exit"&gt;Sluiten&lt;/button&gt;
+&lt;/dialog&gt;
+</code></pre>
+            <div class="demolink"><a href="demos/02_text/dialog.html">dialog demo</a> (met css en javascript)</div>
+           </li>
+           <li class="arrow smallfont">
+             momenteel <a href="http://caniuse.com/#search=dialog">slechte ondersteuning door browsers</a>
+           </li>
+         </ul>
+       </section>
+     </section>
+      <section>
+        <section>
+          <h1>TEKST</h1>
+          <h2>Inline elementen</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+         <h2>Line breaks</h2>
+         <ul>
+           <li>
+              Gebruik <code>&lt;br&gt;</code> om een regel vroegtijdig af te breken:
+             <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+ hij kuste haar lippen&lt;br&gt;
+ weinig op zijn gemak&lt;br&gt;
+ zij kneep haar benen tesaam&lt;br&gt;
+ zodat zijn brilletje brak&lt;br&gt;
+&lt;/p&gt;
+...</code></pre>
+           </li>
+           <li>
+             Gebruik het nooit om paragrafen te maken:
+             <pre class="bigger"><code class="language-html wrong overlayrun">...
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+enim ad minim veniam, quis nostrud exercitation ullamco.
+&lt;br&gt;&lt;br&gt;
+Duis aute irure dolor in reprehenderit in voluptate velit
+cillum dolore eu fugiat nulla pariatur. Excepteur sint
+...</code></pre>
+           </li>
+         </ul>
+       </section>
+       <section data-toc-title="Strong en em">
+          <h2>Strong en em (1)</h2>
+          <ul>
+            <li>
+              Vergelijk <strong>strong</strong> met een luidere stem (belangrijke term), en <i>emphasize</i> met een tragere uitspraak (nieuwe term):
+              <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  Het Congolese woord &lt;em&gt;Ilunga&lt;/em&gt; betekent dat iemand
+  een &lt;strong&gt;eerste&lt;/strong&gt; incident kan vergeven,
+  een &lt;strong&gt;tweede&lt;/strong&gt; accepteren, maar
+  een &lt;strong&gt;derde&lt;/strong&gt; niet kan tolereren
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+          <h2>Strong en em (2)</h2>
+          <ul>
+            <li>
+               Gebruik <code>&lt;strong&gt;</code> of <code>&lt;em&gt;</code> niet als verkapte opmaak:
+               <ul>
+                  <li class="x-style">
+                     gebruik <code>&lt;strong&gt;</code> <strong>niet</strong> omdat iets er vet moet uitzien (dat doen we later met CSS)
+                  </li>
+                  <li class="x-style">
+                     gebruik <code>&lt;em&gt;</code> <strong>niet</strong> omdat iets er schuin moet uitzien (dat doen we later met CSS)
+                  </li>
+                  <li class="x-style">
+                     gebruik <code>&lt;strong&gt;</code> of <code>&lt;em&gt;</code> enkel voor één of hooguit een paar woorden in een zin, <strong>niet</strong> voor een <i>hele regel</i>
+                  </li>
+               </ul>
+              <pre class="bigger"><code class="language-html overlayrun wrong">...
+&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;&lt;/p&gt; &lt;!-- fout! &lt;strong&gt; als opmaak gebruikt (moet h3 zijn) --&gt;
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat.
+  ...
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;published March 2001&lt;/em&gt;&lt;/p&gt; &lt;!-- fout! &lt;em&gt; als opmaak gebruikt --&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+         <h2>Subscript en superscript</h2>
+         <ul>
+           <li>
+             Voorbeeld:
+             <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+ H&lt;sub&gt;2&lt;/sub&gt;S0&lt;sub&gt;4&lt;/sub&gt; is de formule van zwavelzuur. 
+ Een kernbom is gebaseerd op de formule E = m.c&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;
+...</code></pre>
+           </li>
+         </ul>
+       </section>
+       <section>
+         <h2>Markeren</h2>
+         <ul>
+           <li>
+             Markeer stukken tekst met <code>&lt;mark&gt;</code>, standaard in fluo geel:
+             <pre class="bigger"><code class="language-html overlayrun">Uitgegeven interesten vergissing nam der goa dal. Batoe telok kreeg in de. 
+Daaronder hanteeren vereenigd voorkomen. Arabische aangelegd 
+mei &lt;mark&gt;prachtige aankoopen&lt;/mark&gt; aan. Schuld zwavel francs nu 
+groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur 
+&lt;mark&gt;grooter gemaakt planter&lt;/mark&gt; de ik. Wiel wat zit veel met rang nam deel.</code></pre>
+           </li>
+         </ul>
+       </section>
+       <section>
+          <h2>[Small, b en i]</h2>
+          <ul>
+            <li>
+              De tag <code>&lt;small&gt;</code> wordt gebruikt voor juridische text, copyright info enz..., typisch onderaan de pagina:
+            <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+  &lt;small&gt;copyright 1999-2050 door Rogier van der linde&lt;/small&gt;
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="arrow smallfont warning">
+               gebruik <code>&lt;small&gt;</code> niet omdat een tekst klein is!
+             </li>
+             <li>
+              De tags <code>&lt;b&gt;</code> en <code>&lt;i&gt;</code> betekenden vroeger 'bold' (vet) en 'italic' (schuin). Dit is opmaak, geen structuur, en dus gebruiken we vandaag deze elementen niet meer. 
+            </li>
+            <li class="arrow smallfont warning">
+              <code>&lt;b&gt;</code> en <code>&lt;i&gt;</code> zijn niet toegelaten in deze cursus
+            </li>
+          </ul>
+        </section>
+       <section>
+         <h2>[Afkortingen]</h2>
+         <ul>
+           <li>
+             Gebruik <code>&lt;abbr&gt;</code> in combinatie met het <code>title</code> attribuut voor afkortingen:
+             <pre class="bigger"><code class="language-html overlayrun">...
+&lt;p&gt;
+ The &lt;abbr title="North Atlantic Treaty Organization"&gt;NATO&lt;/abbr&gt;
+ and the &lt;abbr title="European Union"&gt;EU&lt;/abbr&gt; both
+ have their headquarters in Brussels.
+&lt;/p&gt;
+...</code></pre>
+           </li>
+         </ul>
+       </section>
+       <section>
+          <h2>[Computertermen]</h2>
+          <ul>
+            <li>
+               De tags <code>&lt;code&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;var&gt;</code> en <code>&lt;pre&gt;</code> worden vooral bij programmeerblogs gebruikt: 
+              <pre class="bigger"><code class="language-html overlayrun smallpanel smallfont">...
+&lt;p&gt;
+  Als we regel 98 een &lt;code&gt;List&lt;/code&gt; gebruiken, vullen en meegeven als argument voor &lt;var&gt;someList&lt;/var&gt;
+  in de methode &lt;var&gt;CalcAverage&lt;/var&gt;
+  &lt;code&gt;&lt;pre&gt;
+    // create an array with test results
+    List&lt;int&gt; testList = new List&lt;int&gt;();
+
+    // define method
+    private int CalcAverage(List&lt;int&gt; someList) {
+       // ... method logic here
+    }
+    ...
+    &lt;/pre&gt;&lt;/code&gt;
+ en het programma opnieuw uitvoeren (druk &lt;kbd&gt;Ctrl-R&lt;/kbd&gt;), 
+ krijgen we volgend resultaat: 
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;samp&gt;the list average is: ...&lt;/samp&gt;
+&lt;/p&gt;
+</code></pre>
+            </li>
+            <li class="arrow smallfont">
+              verder zijn ze weinig nuttig 
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>TEKST</h1>
+          <h2>Karakters</h2>
+          <ul class="chapterlist">
+            <!-- to be filled by Javascript -->
+          </ul>
+        </section>
+        <section>
+          <h2>&amp;lt; en &amp;gt;</h2>
+          <ul>
+            <li>
+              Let op als je &lt; en &gt; in je tekst hebt staan:
+              <pre class="bigger"><code class="language-html wrong overlayrun">...
+&lt;p&gt;
+  if p1&lt;&lt;p2 or p1&gt;&gt;p2 then...
+&lt;/p&gt;
+...</code></pre>
+            </li>
+            <li class="no-style">
+              om verwarring met HTML code te vermijden, moet je ze coderen als <code>&amp;lt;</code> en <code>&amp;gt;</code>:
+              <pre class="bigger"><code class="language-html right overlayrun">...
+&lt;p&gt;
+  if p1<em>&amp;lt;&amp;lt;</em>p2 or p1<em>&amp;gt;&amp;gt;</em>p2 then...
+&lt;/p&gt;
+...</code></pre>
+            </li>
+          </ul>
+        </section>
+        <section data-toc-title="UTF-8 karakters">
+         <h2>UTF-8 karakters (1)</h2>
+         <ul>
+           <li>
+              Herinner je de &lt;meta charset="utf-8"&gt; declaratie in het HTML basisdocument (zie vorig hoofdstuk):
+              <pre class="bigger"><code class="language-html">&lt;head&gt;
+ ...
+ &lt;meta charset="utf-8"&gt;
+ ...
+&lt;/head&gt;</code></pre>
+           </li>
+           <li class="arrow smallfont">
+              concreet betekent dit dat je alle karakters kan gebruiken uit de UTF-8 karakterset
+            </li>
+            <li class="arrow smallfont">
+              UTF-8 is ontworpen voor max. 2.164.864 karakters; vandaag bevat het zowat <strong>alle talen ter wereld + emoji's, symbolen en andere tekens</strong>
+            </li>
+           </ul>
+       </section>
+       <section data-toc-title="">
+         <h2>UTF-8 karakters (2)</h2>
+         <ul>
+           <li>
+              Deze karakters staan vaak niet rechtstreeks op je toetsenbord; hoe kan je ze dan gebruiken? Het eenvoudigste is je karakter zoeken via Google, bv. <a href="https://www.google.com/search?q=UTF+bullet">UTF bullet</a>, en het kopiëren van één van de resultatenpagina's:  
+              <div class="flex-1-1">
+               <img src="img/02_text/utf-8.png" class="shadowbox" alt="utf-8 karakters"> 
+
+            <pre class="bigger"><code class="language-html overlayrun">&lt;h3&gt;▣ hoofdstuk 1&lt;/h3&gt;
+&lt;p&gt;...&lt;/p&gt;               
+&lt;h3&gt;▣ hoofdstuk 2&lt;/h3&gt;               
+&lt;p&gt;...&lt;/p&gt;</code></pre>
+            </div>
+           </li>
+           <li class="arrow smallfont">
+              dit kan voor alle "speciale" tekens als &euro;, &copy;, &rarr;...
+            </li>
+         </ul>
+       </section>
+       <section>
+         <h2>Karaktercodering</h2>
+         <ul>
+           <li>
+             Je kan UTF-8 karakters ook met de hand coderen als je de code kent:
+             <pre class="bigger"><code class="language-html overlayrun">&lt;p&gt;
+  &amp;rarr; koop de Samsung<em>&amp;reg;</em> Galaxy vandaag &amp;mdash; voor <em>&amp;euro;</em>499!
+&lt;/p&gt;</code></pre>
+           </li>
+           <li class="arrow smallfont">
+            voor de exacte codes je vindt genoeg referenties online, zoals <a href="https://www.rapidtables.com/web/html/html-codes.html">RapidTables</a> 
+          </li>
+       </ul>
+       </section>
+       <section>
+         <h2>Emoji's</h2>
+         <ul>
+           <li>
+              UTF-8 bevat ook <em>emoji's</em>: druk op Windowstoets-puntkomma (PC) of Ctrl-Cmd-Space (Mac) om het emojivenster op te roepen, en <i>off you go</i>.  
+              <div class="flex-1-1">
+               <img src="img/02_text/emojis.png" class="shadowbox" alt="emoji panel" style="width: 45%;"> 
+
+            <pre class="bigger" style="width: 50%;"><code class="language-html overlayrun">&lt;p&gt;
+   Water gets warmer 🏊🏻‍♀️&lt;br&gt; 
+   Drinks get colder 🍹❄&lt;br&gt; 
+   Music gets louder 🔊🎶&lt;br&gt; 
+   Nights get longer 🍻&lt;br&gt; 
+   Life gets better 👍🏻&lt;br&gt;               
+&lt;/p&gt;</code></pre>
+            </div>
+           </li>
+           <li class="arrow smallfont">
+            in theorie kan je zelfs emoji's gebruiken in links en URL's, zoals deze <a href="https://😻🍕.ws">https://😻🍕.ws</a>
+            </li>
+           </ul>
+       </section>
+      <section>
+          <h2>Icon fonts</h2>
+          <ul>
+            <li>
+              Een icon font is een speciaal lettertype met iconen in plaats van tekstkarakters. 
+            </li>
+            <li>
+               Er zijn er veel gratis te vinden: <a href="https://fonts.google.com/icons">Google Icons</a>, <a href="https://mfglabs.github.io/mfglabs-iconset/">MFG Labs...</a> Het gebruik is eenvoudig, bv. Google Icons:
+               <ul>
+                  <li>
+                     kopieer het <code>&lt;link&gt;</code> element uit onderstaand voorbeeld in de <code>&lt;head&gt;</code> van jouw HTML pagina
+                  </li>
+                  <li>
+                     zoek het gewenste icoon op <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
+                  </li>
+                  <li>
+                     kopieer voor elk icoon de <code>&lt;span&gt;</code> code naar jouw HTML
+                  </li>
+               </ul> 
+              <pre class="bigger"><code class="language-html smallpanel smallfont overlayrun">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Basispagina&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;                 
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;span class="material-icons"&gt;face&lt;/span&gt; Rogier van der Linde&lt;/li&gt;
+    &lt;li&gt;&lt;span class="material-icons"&gt;email&lt;/span&gt; rogier.vanderlinde@odisee.be&lt;/li&gt;
+    &lt;li&gt;&lt;span class="material-icons"&gt;phone_in_talk&lt;/span&gt; 0499/12.34.56&lt;/li&gt;   
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+
+    <!-- odisee.be link -->
+    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee_logo.png" alt="Odisee logo"></a>
+
+    <!-- index menu container -->
+    <aside class="back"></aside>
+
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/reveal/lib/js/head.min.js"></script>
+  <script src="vendor/reveal/js/reveal.js"></script>
+  <script src="vendor/highlight/highlight.pack.js"></script>
+  <script src="vendor/incrementable.js"></script>
+  <script src="vendor/css-snippets.js"></script>
+  <script src="vendor/css-edit.js"></script>
+  <script src="vendor/prefixfree.js"></script>
+  <script src="vendor/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
