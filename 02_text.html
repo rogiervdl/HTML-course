@@ -34,7 +34,7 @@
           <p class="frontslide__subtext">
             gebruik pijltjestoetsen om te navigeren<br>
             dotted codepanels zijn editeerbaar
-    </p>
+          </p>
           <figure>
             <img src="img/02_text/icon.jpg" alt="" class="frontslide__icon">
           </figure>
@@ -73,66 +73,61 @@
           </ul>
         </section>
         <section data-toc-title="titels">
-          <h2>Titels</h2>
+          <h2>Titels (1)</h2>
           <ul>
             <li>
-              Gebruik <code>&lt;h1&gt;</code> t.e.m. <code>&lt;h6&gt;</code> voor de hiërarchie van titels en ondertitles van een pagina:
-              <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel">&lt;h1&gt;Titel niveau 1&lt;/h1&gt; 
+              Gebruik <code>&lt;h1&gt;</code> t.e.m. <code>&lt;h6&gt;</code> voor de hiërarchie van titels en ondertitles van een pagina (h1 = belangrijkste titel, h6 = minst belangrijke titel):
+              <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel">&lt;h1&gt;Titel niveau 1 (paginatitel)&lt;/h1&gt; 
 ...
-&lt;h2&gt;Titel niveau 2&lt;/h2&gt; 
+&lt;h2&gt;Titel niveau 2 (subtitels)&lt;/h2&gt; 
 ...
-&lt;h3&gt;Titel niveau 3&lt;/h3&gt; 
+&lt;h3&gt;Titel niveau 3 (sub-subtitels)&lt;/h3&gt; 
 ...
-&lt;h4&gt;Titel niveau 4&lt;/h4&gt; 
+&lt;h4&gt;Titel niveau 4 (...)&lt;/h4&gt; 
 ...
-&lt;h5&gt;Titel niveau 5&lt;/h5&gt; 
+&lt;h5&gt;Titel niveau 5 (...)&lt;/h5&gt; 
 ...
-&lt;h6&gt;Titel niveau 6&lt;/h6&gt;
+&lt;h6&gt;Titel niveau 6 (...)&lt;/h6&gt;
 ...</code></pre>
             </li>
             <li>
-              Titels horen altijd bij de <strong>inhoud die eronder staat</strong>; gebruik dus geen titel enkel omdat een tekst er groot uitziet (zoals een slagzin)! Uit de <a href="http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">w3c website</a>:
-               <blockquote>
-                  h1–h6 elements must not be used to markup subtitles, taglines... 
-               </blockquote>
+              De titels zijn belangrijk voor zoekmachines om je pagina te classificeren. 
             </li>
           </ul>
         </section>
         <section data-toc-title="">
-          <h2>Titels &mdash; nummering</h2>
-          <ul>
-            <li>
-              De titels worden genummerd in aflopende hiërarchische volgorde. Een vuistregel: 
-              <ul>
-                <li><code>&lt;h1&gt;</code>: bedrijfsnaam</li>
-                <li><code>&lt;h2&gt;</code>: titel pagina</li>
-                <li><code>&lt;h3&gt;</code>: titel hoofdstukken</li>
-                <li><code>&lt;h4&gt;</code>: titel onderhoofdstukken</li>
-                <li>...</li>
-              </ul>
-            </li>
-            <li>
-              Het logo met de bedrijfsnaam linksboven moet dus <code>&lt;h1&gt;</code>, en bovendien zegt de regel dat het gelinkt moet zijn (naar de homepagina). De correcte HTML is dan:
-              <pre class="bigger"><code class="language-html">&lt;!-- optie 1 --&gt;
-&lt;h1&gt;&lt;a href="..."&gt;My Company&lt;/a&gt;&lt;/h1&gt;
-
-&lt;!-- optie 2 --&gt;
-&lt;h1&gt;&lt;a href="..."&gt;&lt;img src="logo.svg" alt="My Company logo"&gt;&lt;/a&gt;&lt;/h1&gt;</code></pre>
-            </li>
-            <li class="arrow smallfont">
-               de tweede optie maakt gebruik van het <code>&lt;img&gt;</code> element voor afbeeldingen, zie <a href="05_media.html#/img">later</a>
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-         <h2>Titels &mdash; oefening</h2>
+         <h2>Titels (2)</h2>
          <ul>
             <li>
-               Welke teksten in deze screenshot stellen titels voor?
-               (klik om te vergroten) &mdash; <a href="img/02_text/identify-titles-01-solution.png">oplossing</a>
-             </li>
+               Een titel beschrijft altijd een <strong>deel van de inhoud</strong>. Als er geen inhoud bij hoort, is het geen titel. Niet alles wat groot en/of vet is, is dus een titel! Zijn geen titels: slagzinnen, quotes, onderschriften...
+            </li>
              <li class="no-style">
-               <a href="img/02_text/identify-titles-01.png" data-fancybox><img src="img/02_text/identify-titles-01-small.png" class="shadowbox" alt=""></a>
+               <a href="img/02_text/titels01.png" data-fancybox><img src="img/02_text/titels01.png" class="shadowbox" alt="" style="display:block;margin:auto;max-width: 60%;"></a>
+             </li>
+          </ul>
+        </section>
+        <section data-toc-title="">
+         <h2>Titels (3)</h2>
+         <ul>
+            <li>
+               Het kiezen van de juiste titelnummer is niet altijd zo eenvoudig. Op deze screenshot ontbreekt b.v. de paginatitel, en is er dus geen <code>&lt;h1&gt;</code>. Ook over de keuze van <code>&lt;h4&gt;</code> voor de footertitels valt te discussiëren &mdash; moet dit geen <code>&lt;h3&gt;</code>, <code>&lt;h5&gt;</code> of zelfs <code>&lt;h2&gt;</code> zijn?
+            </li>
+             <li class="no-style">
+               <div style="display: flex; column-gap: 20px;">
+                  <div style="width: 25%;">
+                     <a href="img/02_text/titels02.png" data-fancybox><img src="img/02_text/titels02.png" class="shadowbox" alt=""></a>
+                     <p style="font-size: 10px;">(klik afbeelding voor vergroting)</p>
+                  </div>
+                  <div style="width: 75%;padding: 10px">
+                     <p>Vuistregels:</p>
+                     <ul>
+                        <li><strong>titel pagina</strong> (indien aanwezig): <code>&lt;h1&gt;</code> (er kan er dus maar één per pagina zijn!)</li>
+                        <li><strong>hoofdblokken</strong> van de pagina: <code>&lt;h2&gt;</code></li>
+                        <li>waar de structuur duidelijk is: naargelang <strong>hiërarchie</strong>, b.v. <code>&lt;h2&gt;</code> bevat <code>&lt;h3&gt;</code>'s</li>
+                        <li>waar de structuur niet duidelijk is: hoe <strong>belangrijker</strong> de titel, hoe <strong>lager</strong> het nummer</li>
+                     </ul>
+                  </div>
+               </div>
              </li>
           </ul>
         </section>

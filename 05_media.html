@@ -254,22 +254,35 @@
           </ul>
         </section>
         <section>
-          <h2>Img</h2>
-          <ul>
-            <li>
-              De standaardwijze om een afbeelding toe te voegen, is met de HTML &lt;img&gt; tag:
-              <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/05_media/schaakstukken.jpg" 
-     alt="Staunton schaakstukken, 1852 Morphy serie"&gt;&lt;!-- alt is verplicht! --&gt;
+         <h2>Img</h2>
+         <ul>
+           <li>
+             De standaardwijze om een afbeelding toe te voegen, is met de HTML &lt;img&gt; tag:
+             <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/05_media/schaakstukken.jpg" 
+    alt="Staunton schaakstukken, 1852 Morphy serie"&gt;&lt;!-- alt is verplicht! --&gt;
 
 </code></pre>
-            </li>
-            <li class="arrow smallfont">dit kan met alle afbeeldingsformaten, niet enkel jpg</li>
-            <li class="arrow smallfont">het <code>alt</code> attribuut is <strong>verplicht</strong> voor visueel beperkten, maar ook om
-              zoekmachines te helpen indexeren</li>
-            <li class="arrow smallfont">geef een <i>relevante beschrijving</i>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
-         </ul>
-        </section>
-        <section>
+           </li>
+           <li class="arrow smallfont">dit kan met alle afbeeldingsformaten, niet enkel jpg</li>
+           <li class="arrow smallfont">het <code>alt</code> attribuut is <strong>verplicht</strong> voor visueel beperkten, maar ook om
+             zoekmachines te helpen indexeren</li>
+           <li class="arrow smallfont">geef een <i>relevante beschrijving</i>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
+        </ul>
+       </section>
+       <section>
+         <h2>Logo</h2>
+         <ul>
+           <li>
+             Het logo van een site zal meestal een afbeelding zijn. Let op: het moet <strong>aanklikbaar</strong> zijn (gelinkt naar de home pagina). De juiste code is dan:
+             <pre class="bigger"><code class="language-html">&lt;a href=""&gt;&lt;img src="img/timmerwerkt-logo.png" alt="Timmerwerkt logo"&gt;&lt;/a&gt;
+
+</code></pre>
+            <img class="bordered" src="img/05_media/logo-click.png" alt="" style="max-width: 600px;">
+           </li>
+           <li class="arrow smallfont">er zijn nog andere manieren om logo's te coderen, maar die zijn vaak complexer; voorlopig houden we het bij deze syntax</li>
+        </ul>
+       </section>
+      <section>
           <h2>Figure</h2>
           <ul>
             <li>
@@ -342,7 +355,6 @@
               <ul class="x-style">
                 <li>grafische elementen</li>
                 <li>achtergrondfoto's</li>
-                <li>iconen</li>
                 <li>...</li>
               </ul>
             </li>
