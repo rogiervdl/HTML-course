@@ -546,7 +546,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                </ul>
             </section>
             <section>
-               <h2>&amp;lt; en &amp;gt;</h2>
+               <h2>&amp;lt;, &amp;gt; en &amp;amp;</h2>
                <ul>
                   <li>
                      Let op als je &lt; en &gt; in je tekst hebt staan:
@@ -562,6 +562,14 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                      <pre class="bigger"><code class="language-html right overlayrun">...
 &lt;p&gt;
   if p1<em>&amp;lt;&amp;lt;</em>p2 or p1<em>&amp;gt;&amp;gt;</em>p2 then...
+&lt;/p&gt;
+...</code></pre>
+                  </li>
+                  <li class="no-style">
+                     en om verwarring met karaktercodes te vermijden, moet je <code>&amp;</code> coderen als <code>&amp;amp;</code>:
+                     <pre class="bigger"><code class="language-html right overlayrun">...
+&lt;p&gt;
+  jack <em>&amp;amp;</em> jones
 &lt;/p&gt;
 ...</code></pre>
                   </li>
