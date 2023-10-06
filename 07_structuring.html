@@ -233,31 +233,35 @@
           </div>
         </section>
         <section>
-          <h2>Section</h2>
+         <h2>Section &mdash; strikte interpretatie</h2>
           <ul>
             <li class="no-style">
-              Een <em><code>&lt;section&gt;</code></em> markeert een <strong>titel met bijhorende inhoud</strong>:
-              <div><pre class="bigger"><code class="language-html">&lt;section&gt;
-  &lt;h3&gt;Part 1&lt;/h3&gt;
-  &lt;p&gt;
-    But I must explain to you how all this mistaken idea of denouncing pleasure
-    and praising pain was born and I will give you a complete account of the...
-  &lt;/p&gt;
-  &lt;p&gt;
-    On the other hand, we denounce with righteous indignation and dislike men who are
-    so beguiled and demoralized by the charms of pleasure of the moment, so...
-  &lt;/p&gt;
+              Volgens de strikte definitie markeren <em><code>&lt;section&gt;</code></em>'s de <strong>titels</strong> met bijhorende <strong>inhoud</strong>, waarbij sections genest worden volgens de hiërarchische documentstructuur:
+              <div><pre class="bigger"><code class="language-html" style="font-size: smaller;">&lt;section&gt;
+  &lt;h2&gt;Chapter 1&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+    &lt;p&gt;But I must explain to you how all this mistaken idea of denouncing pleasure...&lt;/p&gt;
+  &lt;/section&gt;    
+  &lt;section&gt;
+    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+    &lt;p&gt;On the other hand, we denounce with righteous indignation and dislike men who are...&lt;/p&gt;
+  &lt;/section&gt;    
+&lt;/section&gt;  
+&lt;section&gt;
+  &lt;h2&gt;Chapter 2&lt;/h2&gt;
+  ...
 &lt;/section&gt;  
 </code></pre></div>
             </li>
             <li class="arrow smallfont">
-               geen titel? dan is het geen sectie!
+               denk aan de inhoudsopgave van een rapport of boek
             </li>
             <li class="arrow smallfont">
-               geen inhoud? dan is het geen sectie!
+               een sectie moet <i>altijd</i> de titel en de volledige inhoud omvatten en omgekeerd
             </li>
             <li class="arrow smallfont">
-               als je niet zeker bent, gebruik je best gewoon een <code>&lt;div&gt;</code>
+               strikt gezien zijn er dus altijd exact evenveel sections als titels
             </li>
           </ul>
           <div class="tooltip">
@@ -275,6 +279,35 @@
           </div>
         </section>
         <section>
+         <h2>Section &mdash; losse interpretatie</h2>
+         <ul>
+           <li class="no-style">
+             Deze strikte definitie is niet altijd werkbaar. In praktijk hebben niet alle blokken altijd een titel, en de hiërarchische pagina opbouw is niet altijd even duidelijk. Daarom gebruiken we soms een lossere definitie voor section als gewoon een <strong>"visueel samenhanged stuk van de pagina"</strong> &mdash; met of zonder titel. De <code>&lt;main&gt;</code> is een goede kandidaat om in sections te verdelen:
+             <div><pre class="bigger"><code class="language-html">&lt;main&gt;
+  &lt;section&gt;
+    ...blok 1...
+  &lt;/section&gt;
+  &lt;section&gt;
+    ...blok 2...
+  &lt;/section&gt;
+  &lt;section&gt;
+    ...blok 3...
+  &lt;/section&gt;
+&lt;/main&gt;  
+</code></pre></div>
+         </li>
+         <li class="arrow smallfont">
+            gebruik het enkel om grote blokken aan te duiden; voor kleinere onderverdelingen of puur als grafisch of technisch hulpmiddel gebruik je best nog steeds <code>&lt;div&gt;</code>
+         </li>
+         <li class="arrow smallfont">
+            mix binnen één element geen sections met andere elementen: gebruik ofwel <code>&lt;section&gt;</code>, ofwel niet
+         </li>
+         <li class="arrow smallfont">
+            <i>vraag aan je docent welke interpretatie gebruikt wordt, strikt of los</i>
+         </li>
+      </ul>
+       </section>
+       <section>
           <h2>Nav</h2>
           <ul>
             <li class="no-style">
