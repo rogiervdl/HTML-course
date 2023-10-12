@@ -167,7 +167,7 @@ Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></
             </li>
           </ul>
       </section>
-     <section>
+      <section>
          <h2>Title attribuut</h2>
          <ul>
            <li>
@@ -179,12 +179,32 @@ Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></
          </ul>
          <ul>
             <li class="arrow smallfont">
-               zeker nodig als je link enkel een afbeelding bevat (denk weer aan <strong>blinden</strong> en <strong>zoekmachines</strong>!)
+               altijd nuttig, zeker als de gelinkte afbeelding of tekst niet heel duidelijk is
              </li>
              <li class="arrow smallfont">
-               als extra renderen browsers de beschrijving als <strong>tooltip</strong> van de link
+               browsers renderen de beschrijving als <strong>tooltip</strong> van de link
+               <img src="img/03_links/title.png" alt="" style="display: block; max-width: 300px;">
              </li>
-             </ul>
+         </ul>
+       </section>
+       <section>
+         <h2>Aria-label attribuut</h2>
+         <ul>
+           <li>
+             Voor blinden zijn gelinkte afbeeldingen en iconen niet "zichtbaar". Gebruik dan het aria-label attribuut om dit te verduidelijken:
+             <pre class="bigger"><code class="language-html smallpanel smallfont">&lt;a href="" <strong>aria-label</strong>="bekijk de Youtube channel"&gt;
+  &lt;span class="fa-brands fa-youtube"&gt;&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+            </li>
+         </ul>
+         <ul>
+            <li class="arrow smallfont">
+               ARIA: &ldquo;Accessible Rich Internet Applications&rdquo;
+             </li>
+             <li class="arrow smallfont">
+               <code>aria-*</code> attributen helpen blinden rich applications te gebruiken en te interpreteren
+             </li>
+         </ul>
        </section>
        <section>
           <h2>Media links</h2>

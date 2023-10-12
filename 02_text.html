@@ -652,13 +652,12 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                      </div>
                   </li>
                   <li class="arrow smallfont">
-                     in theorie kan je zelfs emoji's gebruiken in links en URL's, zoals deze <a
-                        href="https://😻🍕.ws">https://😻🍕.ws</a>
+                     in theorie kan je zelfs emoji's gebruiken in links en URL's, zoals deze <a href="https://😻🍕.ws">https://😻🍕.ws</a>
                   </li>
                </ul>
             </section>
             <section>
-               <h2>Icon fonts</h2>
+               <h2>Google Icons</h2>
                <ul>
                   <li>
                      Een icon font is een speciaal lettertype met iconen in plaats van tekstkarakters.
@@ -669,12 +668,10 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                      Google Icons:
                      <ul>
                         <li>
-                           kopieer het <code>&lt;link&gt;</code> element uit onderstaand voorbeeld in de
-                           <code>&lt;head&gt;</code> van jouw HTML pagina
+                           kopieer het <code>&lt;link&gt;</code> element uit onderstaand voorbeeld in de <code>&lt;head&gt;</code> van jouw HTML pagina
                         </li>
                         <li>
-                           zoek het gewenste icoon op <a
-                              href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
+                           zoek het gewenste icoon op <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
                         </li>
                         <li>
                            kopieer voor elk icoon de <code>&lt;span&gt;</code> code naar jouw HTML
@@ -685,16 +682,56 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
 &lt;head&gt;
   &lt;title&gt;Basispagina&lt;/title&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;                 
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"&gt;                 
 &lt;/head&gt;
 &lt;body&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;span class="material-icons"&gt;face&lt;/span&gt; Rogier van der Linde&lt;/li&gt;
-    &lt;li&gt;&lt;span class="material-icons"&gt;email&lt;/span&gt; rogier.vanderlinde@odisee.be&lt;/li&gt;
-    &lt;li&gt;&lt;span class="material-icons"&gt;phone_in_talk&lt;/span&gt; 0499/12.34.56&lt;/li&gt;   
+    &lt;li&gt;&lt;span class="material-icons-outlined"&gt;face&lt;/span&gt; Rogier van der Linde&lt;/li&gt;
+    &lt;li&gt;&lt;span class="material-icons-outlined"&gt;email&lt;/span&gt; rogier.vanderlinde@odisee.be&lt;/li&gt;
+    &lt;li&gt;&lt;span class="material-icons-outlined"&gt;phone_in_talk&lt;/span&gt; 0499/12.34.56&lt;/li&gt;   
   &lt;/ul&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>FontAwesome</h2>
+               <ul>
+                  <li>
+                     Google Icons voorziet geen iconen voor Facebook, Instagram enz... (dat zijn tenslotte concurrenten). Alternatief kan je commerciële fontsets gebruiken als <a href="https://fontawesome.com/">FontAwesome</a>, waarvoor een gratis versie bestaat. Gebruik:
+                     <ul>
+                        <li>
+                           download de <a href="assets/FontAwesome-webpack.zip">gratis webfont pack</a>, en pak het uit in de root van je site
+                        </li>
+                        <li>
+                           kopieer het <code>&lt;link&gt;</code> element uit onderstaand voorbeeld in de <code>&lt;head&gt;</code> van jouw HTML pagina
+                        </li>
+                        <li>
+                           zoek het gewenste icoon op <a href="https://fontawesome.com/icons">https://fontawesome.com/icons</a>
+                        </li>
+                        <li>
+                           kopieer voor elk icoon de <code>&lt;i&gt;</code> code naar jouw HTML, en verander <code>&lt;i&gt;</code> door <code>&lt;span&gt;</code>
+                        </li>
+                     </ul>
+                     <pre class="bigger"><code class="language-html smallpanel smallfont overlayrun">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Basispagina&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;link rel="stylesheet" href="fonts/fontawesome-free/css/all.css"&gt;                 
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;span class="fa-brands fa-youtube"&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="fa-brands fa-linkedin"&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="fa-brands fa-chrome"&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                  </li>
+                  <li class="arrow smallfont">
+                     let op als je iconen linkt, zie <a href="03_links.html#/arialabel-attribuut">deze slide</a>
                   </li>
                </ul>
             </section>
