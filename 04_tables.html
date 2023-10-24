@@ -1,105 +1,98 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-  <meta charset="utf-8">
-  <title>HTML &mdash; Tables</title>
-  <meta name="author" content="Rogier van der Linde - odisee.be">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="fonts/droidsans/webfont.css">
-  <link rel="stylesheet" href="fonts/lato/webfont.css">
-  <link rel="stylesheet" href="fonts/leaguegothic/webfont.css">
-  <link rel="stylesheet" href="vendor/reveal/css/reveal.css">
-  <link rel="stylesheet" href="vendor/reveal/css/theme/beige.css">
-  <link rel="stylesheet" href="vendor/highlight/styles/vs.css">
-  <link rel="stylesheet" href="css/reveal-mods.css">
-  <link rel="stylesheet" href="css/common.css">
+   <meta charset="utf-8">
+   <title>HTML &mdash; Tables</title>
+   <meta name="author" content="Rogier van der Linde - odisee.be">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- SLIDES -->
-  <div class="reveal">
+   <!-- SLIDES -->
+   <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
-      <!-- 0 : Title -->
-      <section>
-        <section>
-          <h1>TABELLEN</h1>
-          <p class="frontslide__subtext">
-            tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
-          </p>
-          <p class="frontslide__subtext">
-            gebruik pijltjestoetsen om te navigeren<br>
-            dotted codepanels zijn editeerbaar
-          </p>
-          <figure>
-            <img src="img/04_tables/icon.jpg" alt="" class="frontslide__icon">
-          </figure>
-          <footer>
-            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
-          </footer>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>TABELLEN</h1>
-          <h2>Wanneer gebruiken</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Tabellen</h2>
-          <ul>
-            <li>
-              Tabellen worden in HTML eigenlijk weinig gebruikt. Ze dienen <strong>enkel voor tabulaire data</strong>, dus voor gegevens die wanwege hun beketenis in rijen en kolommen moeten staan
-            </li>
-            <li>
-              Gebruik het <strong class="warning">nooit voor layout</strong>, dat doen we later met CSS!
-            </li>
-            <li class="arrow smallfont">
-              stel je dus de vraag: moeten de gegevens in deze rijen en kolommen staan (dan is het waarschijnlijk een tabel), of kan het ook anders (dan is het waarschijnlijk layout)?
-            </li>
-          </ul>
-        </section>
-        <section data-toc-title="Tabel of niet?">
-          <h2>Tabel of niet? (1)</h2>
-          <p><img src="img/04_tables/table1.jpg" alt="" class="shadowbox"></p>
-          <ul>
-            <li class="arrow smallfont">ja; zonder rijen en kolommen verliezen de gegevens hun betekenis</li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Tabel of niet? (2)</h2>
-          <p><img src="img/04_tables/table3.jpg" alt="" class="shadowbox"></p>
-          <ul>
-            <li class="arrow smallfont">nee; er zijn andere manieren om dit weer te geven</li>
-          </ul>
-        </section>
-        <section data-toc-title="">
-          <h2>Tabel of niet? (3)</h2>
-          <p><img src="img/04_tables/table4.jpg" alt="table or not?" class="shadowbox"></p>
-          <ul>
-            <li class="arrow smallfont">ja; een shopping cart is een soort rekenblad met rijen en kolommen</li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>TABELLEN</h1>
-          <h2>Tabellen in HTML</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Rijen en cellen</h2>
-          <ul>
-            <li>
-              Eenvoudigste versie met <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> en <code>&lt;td&gt;</code>:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+         <!-- 0 : Title -->
+         <section class="cover">
+            <section>
+               <h1>TABELLEN</h1>
+               <p>
+                  tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
+               </p>
+               <p>
+                  gebruik pijltjestoetsen om te navigeren<br>
+                  dotted codepanels zijn editeerbaar
+               </p>
+               <img src="img/04_tables/icon.jpg" alt="" class="cover__icon">
+               <footer class="cover__footer">
+                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+               </footer>
+            </section>
+         </section>
+         <section class="chapter">
+            <section>
+               <h1>TABELLEN</h1>
+               <h2>Wanneer gebruiken</h2>
+               <ul class="chapterlist">
+                  <!-- to be filled by Javascript -->
+               </ul>
+            </section>
+            <section>
+               <h2>Tabellen</h2>
+               <ul>
+                  <li>
+                     Tabellen worden in HTML eigenlijk weinig gebruikt. Ze dienen <strong>enkel voor tabulaire data</strong>, dus voor gegevens die wanwege hun beketenis in rijen en kolommen moeten staan
+                  </li>
+                  <li>
+                     Gebruik het <strong class="warning">nooit voor layout</strong>, dat doen we later met CSS!
+                  </li>
+                  <li class="arrow smallfont">
+                     stel je dus de vraag: moeten de gegevens in deze rijen en kolommen staan (dan is het waarschijnlijk een tabel), of kan het ook anders (dan is het waarschijnlijk layout)?
+                  </li>
+               </ul>
+            </section>
+            <section data-title="Tabel of niet?">
+               <h2>Tabel of niet? (1)</h2>
+               <p><img src="img/04_tables/table1.jpg" alt="" class="shadowbox"></p>
+               <ul>
+                  <li class="arrow smallfont">ja; zonder rijen en kolommen verliezen de gegevens hun betekenis</li>
+               </ul>
+            </section>
+            <section data-title="">
+               <h2>Tabel of niet? (2)</h2>
+               <p><img src="img/04_tables/table3.jpg" alt="" class="shadowbox"></p>
+               <ul>
+                  <li class="arrow smallfont">nee; er zijn andere manieren om dit weer te geven</li>
+               </ul>
+            </section>
+            <section data-title="">
+               <h2>Tabel of niet? (3)</h2>
+               <p><img src="img/04_tables/table4.jpg" alt="table or not?" class="shadowbox"></p>
+               <ul>
+                  <li class="arrow smallfont">ja; een shopping cart is een soort rekenblad met rijen en kolommen</li>
+               </ul>
+            </section>
+         </section>
+         <section class="chapter">
+            <section>
+               <h1>TABELLEN</h1>
+               <h2>Tabellen in HTML</h2>
+               <ul class="chapterlist">
+                  <!-- to be filled by Javascript -->
+               </ul>
+            </section>
+            <section>
+               <h2>Rijen en cellen</h2>
+               <ul>
+                  <li>
+                     Eenvoudigste versie met <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> en <code>&lt;td&gt;</code>:
+                     <div class="codescrollpanel">
+                        <pre class="bigger"><code class="language-html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Uur&lt;/td&gt;
     &lt;td&gt;Band&lt;/td&gt;
@@ -126,17 +119,19 @@
     &lt;td&gt;Souljazz&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-</code></pre></div>
-              <div class="demolink"><a href="demos/04_tables/table1.html">demo</a></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Caption en header cellen</h2>
-          <ul>
-            <li>
-              Uitgebreide versie met <code>&lt;caption&gt;</code> (bijschrift bovenaan) en <code>&lt;th&gt;</code> (headercellen bovenaan):
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;!-- table HTML code starts here --&gt;
+</code></pre>
+                     </div>
+                     <div class="demolink"><a href="demos/04_tables/table1.html">demo</a></div>
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>Caption en header cellen</h2>
+               <ul>
+                  <li>
+                     Uitgebreide versie met <code>&lt;caption&gt;</code> (bijschrift bovenaan) en <code>&lt;th&gt;</code> (headercellen bovenaan):
+                     <div class="codescrollpanel">
+                        <pre class="bigger"><code class="language-html">&lt;!-- table HTML code starts here --&gt;
 &lt;table&gt;
   &lt;caption&gt;Programma woensdag 20 juli 2022&lt;/caption&gt;
   &lt;tr&gt;
@@ -170,17 +165,19 @@
     &lt;td&gt;Souljazz&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-</code></pre></div>
-              <div class="demolink"><a href="demos/04_tables/table2.html">demo</a></div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Thead, tfoot and tbody]</h2>
-          <ul>
-            <li>
-              Nog uitgebreidere versie met onderverdeling in <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> en <code>&lt;tbody&gt;</code> secties:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+</code></pre>
+                     </div>
+                     <div class="demolink"><a href="demos/04_tables/table2.html">demo</a></div>
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>[Thead, tfoot and tbody]</h2>
+               <ul>
+                  <li>
+                     Nog uitgebreidere versie met onderverdeling in <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> en <code>&lt;tbody&gt;</code> secties:
+                     <div class="codescrollpanel">
+                        <pre class="bigger"><code class="language-html">&lt;table&gt;
   &lt;caption&gt;...table caption...&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -203,19 +200,21 @@
   &lt;tbody&gt;
       ...
   &lt;/tbody&gt;
-&lt;/table&gt;</code></pre></div>
-            </li>
-            <li class="arrow smallfont">
-              enkel handig als je bv. een vaste header en een apart scrollbare body wil
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>[Colspan en rowspan]</h2>
-          <ul>
-            <li>
-              Voeg cellen samen met <code>colspan</code> en <code>rowspan</code>:
-              <div class="codescrollpanel"><pre class="bigger"><code class="language-html">&lt;table&gt;
+&lt;/table&gt;</code></pre>
+                     </div>
+                  </li>
+                  <li class="arrow smallfont">
+                     enkel handig als je bv. een vaste header en een apart scrollbare body wil
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>[Colspan en rowspan]</h2>
+               <ul>
+                  <li>
+                     Voeg cellen samen met <code>colspan</code> en <code>rowspan</code>:
+                     <div class="codescrollpanel">
+                        <pre class="bigger"><code class="language-html">&lt;table&gt;
   &lt;caption&gt;Programma Gentse feesten 2005&lt;/caption&gt;
   &lt;tr&gt;
     &lt;td rowspan="2"&gt;&lt;/td&gt;
@@ -260,36 +259,34 @@
     &lt;td&gt;01:00&lt;/td&gt;
     &lt;td&gt;La Caravane Elektro&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</code></pre></div>
-              <div class="demolink"><a href="demos/04_tables/table3.html">demo</a></div>
-            </li>
-          </ul>
-        </section>
-      </section>
+&lt;/table&gt;</code></pre>
+                     </div>
+                     <div class="demolink"><a href="demos/04_tables/table3.html">demo</a></div>
+                  </li>
+               </ul>
+            </section>
+         </section>
 
-    </div>
+      </div>
 
-    <!-- odisee.be link -->
-    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee_logo.png" alt="Odisee logo"></a>
+      <!-- odisee.be link -->
+      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+      
+      <!-- index menu container -->
+      <nav id="navigator"></nav>
 
-    <!-- Index Link -->
-    <aside class="back">
-      <nav>
-        <p><a href="index.html">&larr; Back to index</a></p>
-      </nav>
-    </aside>
+   </div>
 
-  </div>
-
-  <script src="vendor/jquery.min.js"></script>
-  <script src="vendor/reveal/lib/js/head.min.js"></script>
-  <script src="vendor/reveal/js/reveal.js"></script>
-  <script src="vendor/highlight/highlight.pack.js"></script>
-  <script src="vendor/incrementable.js"></script>
-  <script src="vendor/css-snippets.js"></script>
-  <script src="vendor/css-edit.js"></script>
-  <script src="vendor/prefixfree.js"></script>
-  <script src="js/main.js"></script>
+   <script src="vendor/jquery.min.js"></script>
+   <script src="vendor/reveal/lib/js/head.min.js"></script>
+   <script src="vendor/reveal/js/reveal.js"></script>
+   <script src="vendor/highlight/highlight.pack.js"></script>
+   <script src="vendor/incrementable.js"></script>
+   <script src="vendor/prefixfree.js"></script>
+   <script src="vendor/css-snippets.js"></script>
+   <script src="vendor/css-edit.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
+
 </html>

@@ -6,15 +6,7 @@
    <title>HTML &mdash; Tekst</title>
    <meta name="author" content="Rogier van der Linde - odisee.be">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   <link rel="stylesheet" href="fonts/droidsans/webfont.css">
-   <link rel="stylesheet" href="fonts/lato/webfont.css">
-   <link rel="stylesheet" href="fonts/leaguegothic/webfont.css">
-   <link rel="stylesheet" href="vendor/reveal/css/reveal.css">
-   <link rel="stylesheet" href="vendor/reveal/css/theme/beige.css">
-   <link rel="stylesheet" href="vendor/highlight/styles/vs.css">
-   <link rel="stylesheet" href="vendor/fancybox/fancybox.css">
-   <link rel="stylesheet" href="css/reveal-mods.css">
-   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -26,26 +18,23 @@
       <div class="slides">
 
          <!-- 0 : Title -->
-         <section>
+         <section class="cover">
             <section>
                <h1>TEKST</h1>
-               <p class="frontslide__subtext">
+               <p>
                   tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
                </p>
-               <p class="frontslide__subtext">
+               <p>
                   gebruik pijltjestoetsen om te navigeren<br>
                   dotted codepanels zijn editeerbaar
                </p>
-               <figure>
-                  <img src="img/02_text/icon.jpg" alt="" class="frontslide__icon">
-               </figure>
-               <footer>
-                  <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a
-                     href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+               <img src="img/02_text/icon.jpg" alt="" class="cover__icon">
+               <footer class="cover__footer">
+                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
                </footer>
             </section>
          </section>
-         <section>
+         <section class="chapter">
             <section>
                <h1>TEKST</h1>
                <h2>Blocklevel elementen</h2>
@@ -74,7 +63,7 @@
                   </li>
                </ul>
             </section>
-            <section data-toc-title="titels">
+            <section data-title="titels">
                <h2>Titels (1)</h2>
                <ul>
                   <li>
@@ -98,7 +87,7 @@
                   </li>
                </ul>
             </section>
-            <section data-toc-title="">
+            <section data-title="">
                <h2>Titels (2)</h2>
                <ul>
                   <li>
@@ -176,7 +165,7 @@
                   </li>
                </ul>
             </section>
-            <section data-toc-title="Blockquote">
+            <section data-title="Blockquote">
                <h2>Blockquote (1)</h2>
                <ul>
                   <li>
@@ -197,7 +186,7 @@
                   </li>
                </ul>
             </section>
-            <section data-toc-title="">
+            <section data-title="">
                <h2>Blockquote (2)</h2>
                <ul>
                   <li>
@@ -350,7 +339,7 @@
                </ul>
             </section>
          </section>
-         <section>
+         <section class="chapter">
             <section>
                <h1>TEKST</h1>
                <h2>Inline elementen</h2>
@@ -385,7 +374,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint
                   </li>
                </ul>
             </section>
-            <section data-toc-title="Strong en em">
+            <section data-title="Strong en em">
                <h2>Strong en em (1)</h2>
                <ul>
                   <li>
@@ -402,7 +391,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint
                   </li>
                </ul>
             </section>
-            <section data-toc-title="">
+            <section data-title="">
                <h2>Strong en em (2)</h2>
                <ul>
                   <li>
@@ -537,7 +526,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                </ul>
             </section>
          </section>
-         <section>
+         <section class="chapter">
             <section>
                <h1>TEKST</h1>
                <h2>Karakters</h2>
@@ -575,7 +564,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                   </li>
                </ul>
             </section>
-            <section data-toc-title="UTF-8 karakters">
+            <section data-title="UTF-8 karakters">
                <h2>UTF-8 karakters (1)</h2>
                <ul>
                   <li>
@@ -596,7 +585,7 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
                   </li>
                </ul>
             </section>
-            <section data-toc-title="">
+            <section data-title="">
                <h2>UTF-8 karakters (2)</h2>
                <ul>
                   <li>
@@ -740,11 +729,10 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
       </div>
 
       <!-- odisee.be link -->
-      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee_logo.png"
-            alt="Odisee logo"></a>
-
+      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+      
       <!-- index menu container -->
-      <aside class="back"></aside>
+      <nav id="navigator"></nav>
 
    </div>
 
@@ -753,9 +741,9 @@ groeit kosten nu. Gebrachte er mengeling vervangen en arbeiders is. Bestuur
    <script src="vendor/reveal/js/reveal.js"></script>
    <script src="vendor/highlight/highlight.pack.js"></script>
    <script src="vendor/incrementable.js"></script>
+   <script src="vendor/prefixfree.js"></script>
    <script src="vendor/css-snippets.js"></script>
    <script src="vendor/css-edit.js"></script>
-   <script src="vendor/prefixfree.js"></script>
    <script src="vendor/fancybox/fancybox.umd.js"></script>
    <script src="js/main.js"></script>
 

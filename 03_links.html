@@ -1,124 +1,116 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-  <meta charset="utf-8">
-  <title>HTML &mdash; Links</title>
-  <meta name="author" content="Rogier van der Linde - odisee.be">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="fonts/droidsans/webfont.css">
-  <link rel="stylesheet" href="fonts/lato/webfont.css">
-  <link rel="stylesheet" href="fonts/leaguegothic/webfont.css">
-  <link rel="stylesheet" href="vendor/reveal/css/reveal.css">
-  <link rel="stylesheet" href="vendor/reveal/css/theme/beige.css">
-  <link rel="stylesheet" href="vendor/highlight/styles/vs.css">
-  <link rel="stylesheet" href="css/reveal-mods.css">
-  <link rel="stylesheet" href="css/common.css">
+   <meta charset="utf-8">
+   <title>HTML &mdash; Links</title>
+   <meta name="author" content="Rogier van der Linde - odisee.be">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- SLIDES -->
-  <div class="reveal">
+   <!-- SLIDES -->
+   <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
-      <!-- 0 : Title -->
-      <section>
-        <section>
-          <h1>LINKS</h1>
-          <p class="frontslide__subtext">
-            tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
-          </p>
-          <p class="frontslide__subtext">
-            gebruik pijltjestoetsen om te navigeren<br>
-            dotted codepanels zijn editeerbaar
-          </p>
-          <figure>
-            <img src="img/03_links/icon.jpg" alt="" class="frontslide__icon">
-          </figure>
-          <footer>
-            <a href="http://www.odisee.be/">odisee.be</a> &mdash; <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
-          </footer>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>LINKS</h1>
-          <h2>De URL</h2>
-          <ul class="chapterlist">
-            <!-- to be filled by Javascript -->
-          </ul>
-        </section>
-        <section>
-          <h2>Delen van de URL</h2>
-          <ul>
-            <li>
-              Een <em>hyperlink</em> (HTML link) wijst naar een <em>URL</em> (Uniform Resource Locator), waarbij resource "bron" betekent. Dit kan vanalles zijn: een andere webpagina, een afbeelding, een script, een geluidsbestand...  
-            </li>
-            <li>
-              Belangrijkste delen van de URL met een voorbeeld:
-            </li>
-            <li class="no-style smallfont">
-               protocol://subdomein.host/pad/bestandsnaam#anker?parameters
-               <br>https://personeel.odisee.be/dashboard/kalender/overzicht.aspx#events?weergave=week&amp;lang=nl
-            </li>
-            <li>
-               Beschrijving van de delen:
-               <ul>
-                 <li><em>protocol</em>: transportwijze (http, https, mailto, tel...) (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">volledige lijst</a>), bv. https</li>
-                 <li><em>subdomein</em>: deel van het domein, bv. personeel</li>
-                 <li><em>host</em>: domein waar het gehost is, bv. odisee.be</li>
-                 <li><em>pad</em>: locatie van de bron, bv. /dashboard/kalender/</li>
-                 <li><em>bestandsnaam</em>: naam van de bron, bv. overzicht.aspx</li>
-                 <li><em>anker</em>: naam van een locatie op de pagina (zie verder), bv. events</li>
-                 <li><em>parameters</em>: extra opties , bv. weergave=week&amp;lang=nl</li>
+         <!-- 0 : Title -->
+         <section class="cover">
+            <section>
+               <h1>LINKS</h1>
+               <p>
+                  tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
+               </p>
+               <p>
+                  gebruik pijltjestoetsen om te navigeren<br>
+                  dotted codepanels zijn editeerbaar
+               </p>
+               <img src="img/03_links/icon.jpg" alt="" class="cover__icon">
+               <footer class="cover__footer">
+                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
+               </footer>
+            </section>
+         </section>
+         <section class="chapter">
+            <section>
+               <h1>LINKS</h1>
+               <h2>De URL</h2>
+               <ul class="chapterlist">
+                  <!-- to be filled by Javascript -->
                </ul>
-             </li>
-            </ul>
-        </section>
-       <section data-toc-title="Soorten URL's">
-         <h2>Soorten URL's (1)</h2>
-         <ul>
-            <li>
-               Een <em>absolute URL</em> verwijst altijd naar dezelfde plaats, waar je website of pagina ook staat
-            </li>
-            <li class="smallfont no-style">
-               bv. https://fonts.googleapis.com/css?family=Lato
-            </li>
-            <li class="arrow smallfont">
-               gebruik voor <strong>externe resources</strong>
-            </li>
-            <li>
-               Een <em>relatieve URL</em> is een pad relatief t.o.v. de map van de huidige pagina
-            </li>
-            <li class="smallfont no-style">
-               bv. https://domain.com/travels/index.html + img/photo1.jpg = https://domain.com/travels/img/photo1.jpg
-               <br>bv. https://domain.com/css + ../assets/logo.svg = https://domain.com/assets/logo.svg
-            </li>
-            <li class="arrow smallfont">
-               gebruik voor <strong>lokale resources</strong>
-            </li>
-            <li>
-               Een <em>root URL</em> is een pad relatief t.o.v. de root van het domein 
-             </li>
-             <li class="smallfont no-style">
-               bv. https://domain.com/travels/index.html + /js/scripts.js = https://domain.com/js/scripts.js
-               <br>bv. https://domain.com/users/andy589/index.html + /js/scripts.js = https://domain.com/js/scripts.js
-             </li>
-             <li class="arrow smallfont">
-               als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
-            </li>
-            <li class="arrow smallfont">
-              daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
-             </li>
-           </ul>
-       </section>
-       <section data-toc-title="">
-        <h2>Soorten URL's (2)</h2>
-        <ul>
-          <li>Identificeer de URL's in dit voorbeeld: absoluut, relatief of root?
-            <pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
+            </section>
+            <section>
+               <h2>Delen van de URL</h2>
+               <ul>
+                  <li>
+                     Een <em>hyperlink</em> (HTML link) wijst naar een <em>URL</em> (Uniform Resource Locator), waarbij resource "bron" betekent. Dit kan vanalles zijn: een andere webpagina, een afbeelding, een script, een geluidsbestand...
+                  </li>
+                  <li>
+                     Belangrijkste delen van de URL met een voorbeeld:
+                  </li>
+                  <li class="no-style smallfont">
+                     protocol://subdomein.host/pad/bestandsnaam#anker?parameters
+                     <br>https://personeel.odisee.be/dashboard/kalender/overzicht.aspx#events?weergave=week&amp;lang=nl
+                  </li>
+                  <li>
+                     Beschrijving van de delen:
+                     <ul>
+                        <li><em>protocol</em>: transportwijze (http, https, mailto, tel...) (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">volledige lijst</a>), bv. https</li>
+                        <li><em>subdomein</em>: deel van het domein, bv. personeel</li>
+                        <li><em>host</em>: domein waar het gehost is, bv. odisee.be</li>
+                        <li><em>pad</em>: locatie van de bron, bv. /dashboard/kalender/</li>
+                        <li><em>bestandsnaam</em>: naam van de bron, bv. overzicht.aspx</li>
+                        <li><em>anker</em>: naam van een locatie op de pagina (zie verder), bv. events</li>
+                        <li><em>parameters</em>: extra opties , bv. weergave=week&amp;lang=nl</li>
+                     </ul>
+                  </li>
+               </ul>
+            </section>
+            <section data-title="Soorten URL's">
+               <h2>Soorten URL's (1)</h2>
+               <ul>
+                  <li>
+                     Een <em>absolute URL</em> verwijst altijd naar dezelfde plaats, waar je website of pagina ook staat
+                  </li>
+                  <li class="smallfont no-style">
+                     bv. https://fonts.googleapis.com/css?family=Lato
+                  </li>
+                  <li class="arrow smallfont">
+                     gebruik voor <strong>externe resources</strong>
+                  </li>
+                  <li>
+                     Een <em>relatieve URL</em> is een pad relatief t.o.v. de map van de huidige pagina
+                  </li>
+                  <li class="smallfont no-style">
+                     bv. https://domain.com/travels/index.html + img/photo1.jpg = https://domain.com/travels/img/photo1.jpg
+                     <br>bv. https://domain.com/css + ../assets/logo.svg = https://domain.com/assets/logo.svg
+                  </li>
+                  <li class="arrow smallfont">
+                     gebruik voor <strong>lokale resources</strong>
+                  </li>
+                  <li>
+                     Een <em>root URL</em> is een pad relatief t.o.v. de root van het domein
+                  </li>
+                  <li class="smallfont no-style">
+                     bv. https://domain.com/travels/index.html + /js/scripts.js = https://domain.com/js/scripts.js
+                     <br>bv. https://domain.com/users/andy589/index.html + /js/scripts.js = https://domain.com/js/scripts.js
+                  </li>
+                  <li class="arrow smallfont">
+                     als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
+                  </li>
+                  <li class="arrow smallfont">
+                     daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
+                  </li>
+               </ul>
+            </section>
+            <section data-title="">
+               <h2>Soorten URL's (2)</h2>
+               <ul>
+                  <li>Identificeer de URL's in dit voorbeeld: absoluut, relatief of root?
+                     <pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="nl"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="css/styles.css"&gt;
@@ -134,114 +126,114 @@
 &lt;/body&gt;  
 &lt;/html&gt;  
 </code></pre>
-         </li>
-        </ul>
-      </section>
-    </section>
-    <section>
-      <section>
-        <h1>LINKS</h1>
-        <h2>Links in HTML</h2>
-        <ul class="chapterlist">
-          <!-- to be filled by Javascript -->
-        </ul>
-      </section>
-      <section>
-        <h2>Hyperlink</h2>
-        <ul>
-          <li>
-            Een hyperlink maak je met de <code>&lt;a&gt;</code> tag; de URL komt in het <code>href</code> attribuut. Het is een inline element, dus het mag in een zin staan:
-            <pre class="bigger"><code class="language-html overlayrun">Bezoek onze &lt;a href="https://odisee.be"&gt;Odisee homepagina&lt;/a&gt;</code></pre>
-          </li>
-          <li>
-            Let er op dat je een relevante tekst linkt. Vergelijk:
-            <pre class="bigger"><code class="language-html overlayrun wrong">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+                  </li>
+               </ul>
+            </section>
+         </section>
+         <section class="chapter">
+            <section>
+               <h1>LINKS</h1>
+               <h2>Links in HTML</h2>
+               <ul class="chapterlist">
+                  <!-- to be filled by Javascript -->
+               </ul>
+            </section>
+            <section>
+               <h2>Hyperlink</h2>
+               <ul>
+                  <li>
+                     Een hyperlink maak je met de <code>&lt;a&gt;</code> tag; de URL komt in het <code>href</code> attribuut. Het is een inline element, dus het mag in een zin staan:
+                     <pre class="bigger"><code class="language-html overlayrun">Bezoek onze &lt;a href="https://odisee.be"&gt;Odisee homepagina&lt;/a&gt;</code></pre>
+                  </li>
+                  <li>
+                     Let er op dat je een relevante tekst linkt. Vergelijk:
+                     <pre class="bigger"><code class="language-html overlayrun wrong">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
 Klik &lt;a href="https://odisee.be/info"&gt;hier&lt;/a&gt; voor onze infodagen.</code></pre>
-            <pre class="bigger"><code class="language-html overlayrun right">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+                     <pre class="bigger"><code class="language-html overlayrun right">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
 Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></pre>
-          </li>
-        </ul>
-        <ul>
-           <li class="arrow smallfont">
-              de tekst die je linkt is belangrijk voor <strong>blinden</strong> en <strong>zoekmachines</strong>!
-            </li>
-          </ul>
-      </section>
-      <section>
-         <h2>Title attribuut</h2>
-         <ul>
-           <li>
-             Verduidelijk waarnaar de link verwijst met het <code>title</code> attribuut:
-             <pre class="bigger"><code class="language-html overlayrun">&lt;a href="https://odisee.be" title="ga naar de website van be.brussels"&gt;
+                  </li>
+               </ul>
+               <ul>
+                  <li class="arrow smallfont">
+                     de tekst die je linkt is belangrijk voor <strong>blinden</strong> en <strong>zoekmachines</strong>!
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>Title attribuut</h2>
+               <ul>
+                  <li>
+                     Verduidelijk waarnaar de link verwijst met het <code>title</code> attribuut:
+                     <pre class="bigger"><code class="language-html overlayrun">&lt;a href="https://odisee.be" title="ga naar de website van be.brussels"&gt;
    &lt;img src="img/03_links/logo_brussel.jpg" alt="Brussel logo"&gt;
 &lt;/a&gt;</code></pre>
-           </li>
-         </ul>
-         <ul>
-            <li class="arrow smallfont">
-               altijd nuttig, zeker als de gelinkte afbeelding of tekst niet heel duidelijk is
-             </li>
-             <li class="arrow smallfont">
-               browsers renderen de beschrijving als <strong>tooltip</strong> van de link
-               <img src="img/03_links/title.png" alt="" style="display: block; max-width: 300px;">
-             </li>
-         </ul>
-       </section>
-       <section>
-         <h2>Aria-label attribuut</h2>
-         <ul>
-           <li>
-             Voor blinden zijn gelinkte afbeeldingen en iconen niet "zichtbaar". Gebruik dan het aria-label attribuut om dit te verduidelijken:
-             <pre class="bigger"><code class="language-html smallpanel smallfont">&lt;a href="" <strong>aria-label</strong>="bekijk de Youtube channel"&gt;
+                  </li>
+               </ul>
+               <ul>
+                  <li class="arrow smallfont">
+                     altijd nuttig, zeker als de gelinkte afbeelding of tekst niet heel duidelijk is
+                  </li>
+                  <li class="arrow smallfont">
+                     browsers renderen de beschrijving als <strong>tooltip</strong> van de link
+                     <img src="img/03_links/title.png" alt="" style="display: block; max-width: 300px;">
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>Aria-label attribuut</h2>
+               <ul>
+                  <li>
+                     Voor blinden zijn gelinkte afbeeldingen en iconen niet "zichtbaar". Gebruik dan het aria-label attribuut om dit te verduidelijken:
+                     <pre class="bigger"><code class="language-html smallpanel smallfont">&lt;a href="" <strong>aria-label</strong>="bekijk de Youtube channel"&gt;
   &lt;span class="fa-brands fa-youtube"&gt;&lt;/span&gt;
 &lt;/a&gt;</code></pre>
-            </li>
-         </ul>
-         <ul>
-            <li class="arrow smallfont">
-               ARIA: &ldquo;Accessible Rich Internet Applications&rdquo;
-             </li>
-             <li class="arrow smallfont">
-               <code>aria-*</code> attributen helpen blinden rich applications te gebruiken en te interpreteren
-             </li>
-         </ul>
-       </section>
-       <section>
-          <h2>Media links</h2>
-          <ul>
-            <li>
-              Link naar een email adres met <code>mailto:</code>
-              <pre class="bigger"><code class="language-html overlayrun">Contacteer mij op &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
+                  </li>
+               </ul>
+               <ul>
+                  <li class="arrow smallfont">
+                     ARIA: &ldquo;Accessible Rich Internet Applications&rdquo;
+                  </li>
+                  <li class="arrow smallfont">
+                     <code>aria-*</code> attributen helpen blinden rich applications te gebruiken en te interpreteren
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>Media links</h2>
+               <ul>
+                  <li>
+                     Link naar een email adres met <code>mailto:</code>
+                     <pre class="bigger"><code class="language-html overlayrun">Contacteer mij op &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
 
 </code></pre>
-            </li>
-            <li>
-              Andere media links (de meeste mobile only):
-              <pre class="bigger"><code class="language-html overlayrun">Bel me op via &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
+                  </li>
+                  <li>
+                     Andere media links (de meeste mobile only):
+                     <pre class="bigger"><code class="language-html overlayrun">Bel me op via &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
 Stuur me &lt;a href="sms:+6612345678?body=het te verzenden bericht"&gt;een sms&lt;/a&gt;
 Contacteer me via : &lt;a href="https://wa.me/32489223344"&gt;WhatsApp&lt;/a&gt; 
 Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
 </code></pre>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Ankers</h2>
-          <ul>
-            <li>
-              Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
-            </li>
-            <li>
-              Je hebt twee dingen nodig:
-              <ul>
-               <li>
-                  een anker waarnaar gelinkt kan worden: <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>
-               </li>
-               <li>
-                  een link naar dit anker: <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
-               </li>
-             </ul>
-              <pre class="bigger"><code class="language-html dontrun smallfont">...
+                  </li>
+               </ul>
+            </section>
+            <section>
+               <h2>Ankers</h2>
+               <ul>
+                  <li>
+                     Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
+                  </li>
+                  <li>
+                     Je hebt twee dingen nodig:
+                     <ul>
+                        <li>
+                           een anker waarnaar gelinkt kan worden: <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>
+                        </li>
+                        <li>
+                           een link naar dit anker: <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
+                        </li>
+                     </ul>
+                     <pre class="bigger"><code class="language-html dontrun smallfont">...
 &lt;h2&gt;Veelgestelde vragen&lt;/h2&gt;
 &lt;ul&gt;
    &lt;li&gt;&lt;a href="#qst1"&gt;wat zijn de leverkosten?&lt;/a&gt;&lt;/li&gt; &lt;!-- link naar anker qst1 --&gt;
@@ -262,31 +254,32 @@ Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
   Niet tevreden? Stuur dan...
 &lt;/p&gt;
 </code></pre>
-               <div class="demolink"><a href="demos/03_links/anchors.html">uitgebreidere demo</a></div>
-            </li>
-          </ul>
-        </section>
-      </section>
+                     <div class="demolink"><a href="demos/03_links/anchors.html">uitgebreidere demo</a></div>
+                  </li>
+               </ul>
+            </section>
+         </section>
 
-    </div>
+      </div>
 
-    <!-- odisee.be link -->
-    <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee_logo.png" alt="Odisee logo"></a>
+      <!-- odisee.be link -->
+      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+      
+      <!-- index menu container -->
+      <nav id="navigator"></nav>
 
-    <!-- index menu container -->
-    <aside class="back"></aside>
+   </div>
 
-  </div>
-
-  <script src="vendor/jquery.min.js"></script>
-  <script src="vendor/reveal/lib/js/head.min.js"></script>
-  <script src="vendor/reveal/js/reveal.js"></script>
-  <script src="vendor/highlight/highlight.pack.js"></script>
-  <script src="vendor/incrementable.js"></script>
-  <script src="vendor/css-snippets.js"></script>
-  <script src="vendor/css-edit.js"></script>
-  <script src="vendor/prefixfree.js"></script>
-  <script src="js/main.js"></script>
+   <script src="vendor/jquery.min.js"></script>
+   <script src="vendor/reveal/lib/js/head.min.js"></script>
+   <script src="vendor/reveal/js/reveal.js"></script>
+   <script src="vendor/highlight/highlight.pack.js"></script>
+   <script src="vendor/incrementable.js"></script>
+   <script src="vendor/prefixfree.js"></script>
+   <script src="vendor/css-snippets.js"></script>
+   <script src="vendor/css-edit.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
+
 </html>

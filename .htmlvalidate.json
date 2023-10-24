@@ -1,30 +1,39 @@
 {
-   "extends": ["html-validate:recommended"],
+   "extends": [
+      "html-validate:recommended"
+   ],
    "elements": [
       "html5",
       {
          "figure": {
-            "permittedDescendants" : ["img", "figcaption"]
-          },
+            "permittedDescendants": [
+               "img",
+               "figcaption"
+            ]
+         },
+         "i": {
+            "deprecated": false
+         },
          "iframe": {
             "attributes": {
-              "frameborder": {
+               "frameborder": {
                   "deprecated": false
                },
                "title": {
                   "required": false
                }
             }
-          },
-          "th": {
+         },
+         "th": {
             "attributes": {
                "scope": {
                   "required": false
                }
             }
-          }
+         }
       }
-    ],
+   ],
+   "root": true,
    "rules": {
       "allowed-links": [
          "warn",
@@ -33,16 +42,15 @@
             "allowRelative": true,
             "allowAbsolute": false,
             "allowBase": true
-          }
+         }
       ],
       "no-missing-references": "error",
       "no-trailing-whitespace": "off",
       "prefer-button": "off",
-      "no-inline-style": "off", 
+      "no-inline-style": "off",
       "no-style-tag": "off",
       "no-unknown-elements": "error",
-      "prefer-tbody" : "off",
+      "prefer-tbody": "off",
       "wcag/h30": "off"
-   } 
-
+   }
 }
