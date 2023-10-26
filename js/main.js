@@ -493,7 +493,7 @@ function htmlMakeEditable() {
       // make incrementable
       new Incrementable(htmlBlock);
       htmlBlock.addEventListener('keydown', () => {
-         if (!this.dataset.subject) return;
+         if (!this.dataset?.subject) return;
          const subject = document.querySelector(this.dataset.subject);
          if (subject == null) return;
          let str = this.innerHTML;
