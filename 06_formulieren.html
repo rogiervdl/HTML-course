@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>Formulieren | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb active" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>06. HTML formulieren</h1>
+   <div id="toc"></div>
+   <main>
+
+      <!-- VIDEO -->
+      <h2>On Youtube: HTML formulieren</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/zCshW95Dr28?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=zCshW95Dr28"><img src="img/03_links/youtube-links.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=zCshW95Dr28">https://www.youtube.com/watch?v=zCshW95Dr28</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=26">0:26 form tag</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=40">0:40 labels/controls toevoegen</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=274">4:34 checked en selected attributen</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=295">4:55 radiobuttons: name attribuut</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=363">6:03 submit button</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=419">6:59 validatie met required attribuut</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=513">8:33 fieldset en legend tags</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=568">9:28 voorbeeld: zoekvenster</a></li>
+               <li><a href="https://www.youtube.com/watch?v=zCshW95Dr28&t=745">12:25 button of link?</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <h2>Overzicht</h2>
+      <h3>Elementen en attributen voor formulieren</h3>
+      <p>De elementen gebruikt in een formulier:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">element</th>
+               <th scope="col">betekenis</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>&lt;form&gt;</code></td>
+               <td>duidt de formulier aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;fieldset&gt;</code></td>
+               <td>deel van het formulier</td>
+            </tr>
+            <tr>
+               <td><code>&lt;legend&gt;</code></td>
+               <td>titel van een fieldset</td>
+            </tr>
+            <tr>
+               <td><code>&lt;label&gt;</code></td>
+               <td>label behorend bij een form control</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input&gt;</code></td>
+               <td>inputveld; dit kan een tekst, email, kleur, radiobutton enz... zijn</td>
+            </tr>
+            <tr>
+               <td><code>&lt;select&gt;</code></td>
+               <td>dropdown control</td>
+            </tr>
+            <tr>
+               <td><code>&lt;option&gt;</code></td>
+               <td>optie van een dropdown control</td>
+            </tr>
+            <tr>
+               <td><code>&lt;textarea&gt;</code></td>
+               <td>tekstvak (b.v. voor commentaar)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;button&gt;</code></td>
+               <td>form button (submit, reset of gewone button)</td>
+            </tr>
+         </tbody>
+      </table>
+      <p>Algemene attributen:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">attribuut</th>
+               <th scope="col">voorbeeld</th>
+               <th scope="col">waarden</th>
+               <th scope="col">betekenis</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>id</code></td>
+               <td><code>&lt;input type="text" id="inpNaam"&gt;</code></td>
+               <td>tekst (zonder spaties)</td>
+               <td>unieke id voor een control</td>
+            </tr>
+            <tr>
+               <td><code>for</code></td>
+               <td><code>&lt;label for="inpNaam"&gt;</code></td>
+               <td>control id</td>
+               <td>linkt een &lt;label&gt; aan een control</td>
+            </tr>
+            <tr>
+               <td><code>type</code></td>
+               <td><code>&lt;input type="email"&gt;</code></td>
+               <td><code>text</code>, <code>email</code>, <code>color</code>, <code>radio</code>, <code>checkbox</code>...</td>
+               <td>type form control</td>
+            </tr>
+            <tr>
+               <td><code>value</code></td>
+               <td><code>&lt;input type="text" value="Rogier"&gt;</code></td>
+               <td>tekst, getal, kleur...</td>
+               <td>waarde van de control</td>
+            </tr>
+            <tr>
+               <td><code>name</code></td>
+               <td><code>&lt;input type="radio" name="geslacht" value="m"&gt;<br>&lt;input type="radio" name="geslacht" value="v"&gt;</code></td>
+               <td>tekst (groepnaam)</td>
+               <td>naam van een radiobuttongroep</td>
+            </tr>
+            <tr>
+               <td><code>placeholder</code></td>
+               <td><code>&lt;input type="text" placeholder="jouw naam"&gt;</code></td>
+               <td>tekst</td>
+               <td>achtergrondtekst van de control</td>
+            </tr>
+            <tr>
+               <td><code>required</code></td>
+               <td><code>&lt;input type="text" required&gt;</code></td>
+               <td>-</td>
+               <td>vereist veld</td>
+            </tr>
+         </tbody>
+      </table>
+      <figure>
+         <img src="img/06_formulieren/ss-placeholder.png" alt="" class="bordered w-200">
+         <figcaption>een placeholder is een hulptekst die verdwijnt als je begint te typen</figcaption>
+      </figure>
+      <figure>
+         <img src="img/06_formulieren/ss-required.png" alt="" class="bordered w-300">
+         <figcaption>screenshot van het <code>required</code> attribuut in actie</figcaption>
+      </figure>
+      <p>Specifieke attributen:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">attribuut</th>
+               <th scope="col">voorbeeld</th>
+               <th scope="col">waarden</th>
+               <th scope="col">betekenis</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>min</code>, <code>max</code>, <code>step</code></td>
+               <td><code>&lt;input type="number" min="1" max="100" step="5"&gt;</code></td>
+               <td>getal</td>
+               <td>minimum, maximum en stap van een number control</td>
+            </tr>
+            <tr>
+               <td><code>rows</code>, <code>cols</code></td>
+               <td><code>&lt;textarea rows="5" cols="40"&gt;</code></td>
+               <td>getal</td>
+               <td>5 tekstrijen en 40 karakters per regel</td>
+            </tr>
+            <tr>
+               <td><code>accept</code></td>
+               <td><code>&lt;input type="file" accept=".jpeg,.jpg,.png"&gt;</code></td>
+               <td>tekst</td>
+               <td>beperking bestandstypes</td>
+            </tr>
+            <tr>
+               <td><code>multiple</code></td>
+               <td><code>&lt;input type="file" multiple&gt;</code></td>
+               <td>-</td>
+               <td>sta keuze van meerdere files toe</td>
+            </tr>
+            <tr>
+               <td><code>checked</code></td>
+               <td><code>&lt;input type="radio" checked&gt;</code></td>
+               <td>-</td>
+               <td>optie is aangevinkt</td>
+            </tr>
+            <tr>
+               <td><code>selected</code></td>
+               <td><code>&lt;option selected&gt;waarde&lt;/option&gt;</code></td>
+               <td>-</td>
+               <td>dropdown waarde is geselecteerd</td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h3>Lijst controls</h3>
+      <p>Controls voor het ingeven van waarden:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">type</th>
+               <th scope="col">voorbeeld</th>
+               <th scope="col"></th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>tekstveld</td>
+               <td><code>&lt;label for="fname"&gt;Voornaam:&lt;/label&gt;<br>&lt;input type="text" id="fname" placeholder="bv. Bob"&gt;</code></td>
+               <td><img src="img/06_formulieren/text.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>email</td>
+               <td><code>&lt;label for="email1"&gt;Email:&lt;/label&gt;<br>&lt;input type="email" id="email"&gt;</code></td>
+               <td><img src="img/06_formulieren/email.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>tel</td>
+               <td><code>&lt;label for="mobile"&gt;GSM:&lt;/label&gt;<br>&lt;input type="tel" id="mobile"&gt;</code></td>
+               <td><img src="img/06_formulieren/tel.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>url</td>
+               <td><code>&lt;label for="webpage"&gt;Webpagina:&lt;/label&gt;<br>&lt;input type="url" id="webpage"&gt;</code></td>
+               <td><img src="img/06_formulieren/url.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>password</td>
+               <td><code>&lt;label for="pw"&gt;Paswoord:&lt;/label&gt;<br>&lt;input type="password" id="pw"&gt;</code></td>
+               <td><img src="img/06_formulieren/password.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>bestand</td>
+               <td><code>&lt;label for="photo"&gt;Profielfoto: &lt;/label&gt;<br>&lt;input type="file" id="photo"&gt;</code></td>
+               <td><img src="img/06_formulieren/file.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>getal</td>
+               <td><code>&lt;label for="nr1"&gt;Even getal tussen 10 en 20:&lt;/label&gt;<br>&lt;input type="number" id="nr1" min="10" value="12" max="20" step="5"&gt;</code></td>
+               <td><img src="img/06_formulieren/number.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>dropdown</td>
+               <td><code>&lt;label for="edu"&gt;Opleiding: &lt;/label&gt;<br>&lt;select id="edu"&gt;<br><span class="indent"></span>&lt;option value="-1"&gt;selecteer...&lt;/option&gt;<br><span class="indent"></span>&lt;option value="0"&gt;basisschool&lt;/option&gt;<br><span class="indent"></span>&lt;option value="1"&gt;middelbare school&lt;/option&gt;<br><span class="indent"></span>&lt;option value="2"&gt;hoger onderwijs&lt;/option&gt;<br>&lt;/select&gt;</code></td>
+               <td><img src="img/06_formulieren/select.png" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>datum</td>
+               <td><code>&lt;label for="bdate"&gt;Geboortedatum:&lt;/label&gt;<br>&lt;input type="date" id="bdate"&gt;</code></td>
+               <td><img src="img/06_formulieren/date.png" alt="" class="bordered w-300"></td>
+            </tr>
+            <tr>
+               <td>kleur</td>
+               <td><code>&lt;label for="favcolor"&gt;Favoriete kleur:&lt;/label&gt;<br>&lt;input type="color" id="favcolor" value="#f789df"&gt;</code></td>
+               <td><img src="img/06_formulieren/color.png" alt="" class="bordered w-300"></td>
+            </tr>
+            <tr>
+               <td>tekstvak</td>
+               <td><code>&lt;label for="bio"&gt;Opmerkingen:&lt;/label&gt;<br>&lt;textarea id="bio" cols="40" rows="5"&gt;&lt;/textarea&gt;</code></td>
+               <td><img src="img/06_formulieren/textarea.png" alt="" class="bordered w-300"></td>
+            </tr>
+            <tr>
+               <td>slider</td>
+               <td><code>&lt;label for="rating"&gt;Tevredenheid (schaal van 1 tot 10): *&lt;/label&gt;<br>&lt;input type="range" min="1" max="10" step="1" value="5" id="rating"&gt;</code></td>
+               <td><img src="img/06_formulieren/range.png" alt="" class="bordered w-300"></td>
+            </tr>
+            <tr>
+               <td>checkboxes</td>
+               <td><code>&lt;label&gt;&lt;input type="checkbox" value="a"&gt; keuze 1&lt;/label&gt;<br>&lt;label&gt;&lt;input type="checkbox" value="b"&gt; keuze 2&lt;/label&gt;<br>&lt;label&gt;&lt;input type="checkbox" value="c"&gt; keuze 3&lt;/label&gt;</code></td>
+               <td><img src="img/06_formulieren/checkbox.gif" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>radiobuttons</td>
+               <td><code>&lt;label&gt;&lt;input type="radio" name="group1" value="a"&gt; optie a&lt;/label&gt;<br>&lt;label&gt;&lt;input type="radio" name="group1" value="b"&gt; optie b&lt;/label&gt;<br>&lt;label&gt;&lt;input type="radio" name="group1" value="c"&gt; optie c&lt;/label&gt;</code></td>
+               <td><img src="img/06_formulieren/radio.gif" alt="" class="bordered w-200"></td>
+            </tr>
+            <tr>
+               <td>submitbutton</td>
+               <td><code>&lt;button type="submit"&gt;verzenden&lt;/button&gt;</code></td>
+               <td><img src="img/06_formulieren/submit.png" alt="" class="bordered w-100"></td>
+            </tr>
+            <tr>
+               <td>resetbutton</td>
+               <td><code>&lt;button type="reset"&gt;wissen&lt;/button&gt;</code></td>
+               <td><img src="img/06_formulieren/reset.png" alt="" class="bordered w-100"></td>
+            </tr>
+            <tr>
+               <td>gewone button</td>
+               <td><code>&lt;button type="button"&gt;knop 1&lt;/button&gt;</code></td>
+               <td><img src="img/06_formulieren/button.png" alt="" class="bordered w-100"></td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h2>Voorbeelden</h2>
+      <h3>Loginformulier</h3>
+      <p>De code van een eenvoudig formulier, b.v. een login:</p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;form&gt;
+   &lt;div&gt;
+      &lt;label for="login"&gt;Login: *&lt;/label&gt;
+      &lt;input type="text" id="login" autofocus placeholder="b.v. rogiervdl" required&gt;
+   &lt;/div&gt;
+   &lt;div&gt;
+      &lt;label for="password"&gt;Paswoord: *&lt;/label&gt;
+      &lt;input type="password" id="password" required&gt;
+   &lt;/div&gt;
+   &lt;div&gt;
+      &lt;button type="submit"&gt;Verzenden&lt;/button&gt;
+      &lt;a href=""&gt;paswoord vergeten?&lt;/a&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+         <img src="img/06_formulieren/loginformulier.png" alt="" class="bordered w-250">
+      </div>
+      <ul class="arrow">
+         <li>we structureren het formulier met één <code>&lt;div&gt;</code> per label/control; dit vereenvoudigt latere layout en opmaak met CSS</li>
+         <li>let op dat <code>&lt;label for="..."&gt;</code> verwijst naar een <code>id</code>-attribuut van een bestaande control</li>
+      </ul>
+
+      <h3>Totaalformulier</h3>
+      <p>De code van een uitgebreid formulier (fieldsets/legends zijn niet verplicht en mag je altijd weglaten):</p>
+      <div class="codecompare top">
+         <pre data-demo class="h-600"><code>&lt;form&gt;
+   &lt;fieldset&gt;
+      &lt;legend&gt;Verplichte informatie&lt;/legend&gt;
+      &lt;div&gt;
+         &lt;label for="login"&gt;Login: *&lt;/label&gt;
+         &lt;input type="text" id="login" autofocus required&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="password"&gt;Paswoord: *&lt;/label&gt;
+         &lt;input type="password" id="password" required placeholder="minstens 8 karakters"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="email"&gt;Email: *&lt;/label&gt;
+         &lt;input type="email" id="email" required&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="birthdate"&gt;Geboortedatum: *&lt;/label&gt;
+         &lt;input type="date" id="birthdate"&gt;
+      &lt;/div&gt;
+   &lt;/fieldset&gt;
+   &lt;fieldset&gt;
+      &lt;legend&gt;Optionele informatie&lt;/legend&gt;
+      &lt;div&gt;
+         &lt;label for="profilepic"&gt;Profielfoto: *&lt;/label&gt;
+         &lt;input type="file" id="profilepic"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="mobile"&gt;GSM:&lt;/label&gt;
+         &lt;input type="tel" id="mobile"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="webpage"&gt;Webpagina: *&lt;/label&gt;
+         &lt;input type="url" id="webpage"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="favcol"&gt;Favoriete kleur:&lt;/label&gt;
+         &lt;input type="color" id="favcolor" value="#f789df"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="kids"&gt;Aantal kinderen:&lt;/label&gt;
+         &lt;input type="number" id="kids" value="0"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="happiness"&gt;Tevredenheid (schaal van 1 tot 10): *&lt;/label&gt;
+         &lt;input type="range" min="1" max="10" step="1" value="5" id="happiness"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label&gt;Geslacht&lt;/label&gt;:
+         &lt;label&gt;&lt;input type="radio" name="gender" value="f" checked&gt; vrouw&lt;/label&gt;
+         &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; man&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="education"&gt;Opleiding:&lt;/label&gt;
+         &lt;select id="education"&gt;
+            &lt;option value="-1"&gt;Select...&lt;/option&gt;
+            &lt;option value="0"&gt;lagere school&lt;/option&gt;
+            &lt;option value="1"&gt;middelbare school&lt;/option&gt;
+            &lt;option value="2"&gt;hoger onderwijs&lt;/option&gt;
+            &lt;option value="3"&gt;doctoraat&lt;/option&gt;
+         &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label&gt;Interesses&lt;/label&gt;:
+         &lt;label&gt;&lt;input type="checkbox" checked&gt; HTML&lt;/label&gt;
+         &lt;label&gt;&lt;input type="checkbox"&gt; Javascript&lt;/label&gt;
+         &lt;label&gt;&lt;input type="checkbox" checked&gt; CSS&lt;/label&gt;
+         &lt;label&gt;&lt;input type="checkbox"&gt; PHP&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;label for="desc"&gt;Opmerkingen:&lt;/label&gt;
+         &lt;textarea id="desc" cols="40" rows="5" required&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+   &lt;/fieldset&gt;
+   &lt;div&gt;
+      &lt;button type="reset"&gt;Wissen&lt;/button&gt;
+      &lt;button type="submit"&gt;Verzenden&lt;/button&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+         <img src="img/06_formulieren/totaalvoorbeeld.png" alt="" class="bordered w-400">
+      </div>
+      <div class="tips" data-caption="💡TIP">
+         <p>Als je een formulier nodig heb, kopieer simpelweg dit totaalvoorbeeld en pas het aan, zo vergeet je niks.</p>
+      </div>
+
+      <h2>Aandachtspunten</h2>
+      <h3>Opbouw van het formulier</h3>
+      <p>Elk formulier, klein of groot, bestaat uit volgende onderdelen:</p>
+      <ul>
+         <li>een <code>&lt;form&gt;</code> element</li>
+         <li><code>&lt;p&gt;</code> of <code>&lt;div&gt;</code> elementen met daarin <code>&lt;label&gt;</code> en de control</li>
+         <li>onderaan een <code>&lt;button type="submit"&gt;</code></li>
+      </ul>
+      <h3>Linken <code>&lt;label&gt;</code> aan control</h3>
+      <p>Er zijn twee manieren om labels aan een control te linken:</p>
+      <ol>
+         <li>door <code>&lt;label for="..."&gt;</code> te laten verwijzen naar het <code>id</code>-attribuut van de control</li>
+         <li>door de control te nesten in een <code>&lt;label&gt;</code>, zonder <code>for</code>-attribuut</li>
+      </ol>
+      <p>Vergelijken we de twee voor een tekstveld</p>
+      <div class="codecompare">
+         <pre class="right notoolbar"><code>&lt;!-- for/id syntax --&gt;
+&lt;div&gt;
+  &lt;label for="login"&gt;Login: *&lt;/label&gt;
+  &lt;input type="text" id="login"&gt;
+&lt;/div&gt;</code></pre>
+         <pre class="wrong notoolbar"><code>&lt;!-- geneste syntax --&gt;
+&lt;div&gt;
+   &lt;label&gt; Login: * &lt;input type="text" id="login"&gt;&lt;/label&gt;
+ &lt;/div&gt;
+
+</code></pre>
+      </div>
+      <p>De tweede syntax is wat korter en lijkt eenvoudiger; toch wordt de eerste syntax als de beste gezien omdat het <strong>meer flexibiliteit</strong> geeft qua opmaak met CSS later. De enige situaties waar we &mdash; alweer om praktische redenen bij layout &mdash; toch voor de tweede syntax kiezen is bij radiobuttons en checkboxes:</p>
+      <div class="codecompare">
+         <pre class="wrong notoolbar"><code>&lt;!-- for/id syntax --&gt;
+&lt;div&gt;
+   &lt;label&gt;Geslacht&lt;/label&gt;:
+   &lt;label for="genderF"&gt;vrouw&lt;/label&gt;
+   &lt;input type="radio" name="gender" value="f" id="genderF"&gt;
+   &lt;label for="genderM"&gt;man&lt;/label&gt;
+   &lt;input type="radio" name="gender" value="m" id="genderM"&gt;
+&lt;/div&gt;
+</code></pre>
+         <pre class="right notoolbar"><code>&lt;!-- geneste syntax --&gt;
+&lt;div&gt;
+   &lt;label&gt;Geslacht&lt;/label&gt;:
+   &lt;label&gt;&lt;input type="radio" name="gender" value="f"&gt; vrouw&lt;/label&gt;
+   &lt;label&gt;&lt;input type="radio" name="gender" value="m"&gt; man&lt;/label&gt;
+&lt;/div&gt;
+
+
+</code></pre>
+      </div>
+      <div class="tips" data-caption="☝️LET OP">
+         <p>Het is belangrijk labels correct te linken aan hun control:</p>
+         <ul>
+            <li>het is een <strong>hulpmiddel voor toepassingen</strong> als browsers (autofill), password managers e.d.</li>
+            <li>voor blinden is maakt het de <strong>betekenis van de control</strong> duidelijk en welke waarde verwacht wordt</li>
+            <li>als extra kan je dan op de <strong>label klikken</strong> om de control te activeren</li>
+         </ul>
+         <p>Je kan zelf controleren of het correct gelinkt is: als je op het label klikt, moet de control geactiveerd worden</p>
+         <img src="img/06_formulieren/ss-for-id.gif" alt="" class="bordered w-250">
+      </div>
+
+      <h3>Belang juist type van <code>&lt;input&gt;</code></h3>
+      <p>
+         Visueel zie je geen verschil tussen <code>&lt;input type="text"&gt;</code>, <code>&lt;input type="email"&gt;</code>, <code>&lt;input type="tel"&gt;</code> of <code>&lt;input type="url"&gt;</code>. Toch is de juiste keuze belangrijk om drie redenen:
+      </p>
+      <ol>
+         <li>voor <strong>blinden</strong> is het duidelijker welk type input verwacht wordt</li>
+         <li>voor <strong>validatie</strong> met het <code>required</code> attribuut moet het type kloppen</li>
+         <li>op mobiele devices past het <strong>toetsenbord</strong> zich aan naargelang het type</li>
+      </ol>
+      <figure>
+         <img src="img/06_formulieren/iphone1.jpg" alt="" class="bordered shadow w-200">
+         <img src="img/06_formulieren/iphone2.jpg" alt="" class="bordered shadow w-200">
+         <img src="img/06_formulieren/iphone3.jpg" alt="" class="bordered shadow w-200">
+      <figcaption>toetsenborden op mobiele devices voor telefoon, url en email</figcaption>
+      </figure>
+
+      <h3>Design vs. HTML</h3>
+      <h4>Verborgen labels</h4>
+      <p>
+         Designers houden van minimalisme, en laten graag al eens dingen weg. Op deze screenshot zie je b.v. zie je geen labels staan (wel placeholders), terwijl ze wél (altijd!) moeten gecodeerd worden in HTML:
+      </p>
+      <div class="codecompare top">
+         <img src="img/06_formulieren/insta-signup.png" alt="" class="shadow bordered w-300">
+         <div class="precontainer">
+            <pre data-demo><code>&lt;form id="frmSignup"&gt;
+  &lt;div&gt;
+    &lt;label for="email"&gt;Mobile Number or Email&lt;/label&gt;
+    &lt;input type="email" id="email" placeholder="Mobile Number or Email" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="fullname"&gt;Full Name&lt;/label&gt;
+    &lt;input type="text" id="fullname" placeholder="Full Name" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="username"&gt;Username&lt;/label&gt;
+    &lt;input type="text" id="username" placeholder="Username" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password" placeholder="Password" required&gt;
+  &lt;/div&gt;
+  &lt;p&gt;People who use our service... &lt;a href="#"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;By signing up, you agree to our &lt;a href="#"&gt;Terms&lt;/a&gt;...&lt;/p&gt;
+  &lt;button type="submit"&gt;Next&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            <div class="codemarker" data-text="&lt;label for=&quot;email&quot;&gt;Mobile Number or Email&lt;/label&gt;"></div>
+            <div class="codemarker" data-text="&lt;label for=&quot;fullname&quot;&gt;Full Name&lt;/label&gt;"></div>
+            <div class="codemarker" data-text="&lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;"></div>
+            <div class="codemarker" data-text="&lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;"></div>
+         </div>
+      </div>
+      <p>We zullen dan later deze labels weer onzichtbaar maken met CSS:</p>
+      <pre class="notoolbar"><code class="language-CSS">#frmSignup label { display: none; }</code></pre>
+      <h4>Verborgen submitknop</h4>
+      <p>Een ander voorbeeld is de submitbutton die vaak weggelaten wordt, maar wél in de HTML gecodeerd moet worden. Op volgende screenshot ontbreken zowel label als submitknop:</p>
+      <div class="codecompare top">
+         <img src="img/06_formulieren/ikea-search.png" alt="" class="shadow bordered w-400">
+         <div class="precontainer">
+            <pre data-demo class="notoolbar"><code>&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="search"&gt;Zoeken&lt;/label&gt;
+    &lt;input type="search" id="search" placeholder="Waar ben je naar op zoek?"&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Go&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            <div class="codemarker" data-text="&lt;label for=&quot;search&quot;&gt;Zoeken&lt;/label&gt;"></div>
+            <div class="codemarker" data-text="&lt;button type=&quot;submit&quot;&gt;Go&lt;/button&gt;"></div>
+         </div>
+      </div>
+
+      <h4>Button of gewone link?</h4>
+      <p>Buttons en links worden vaak verward, omdat links vaak zo opgemaakt zijn, dat ze er als buttons uitzien en omgekeerd. Het onderscheid is nochtans ondubbelzinnig:</p>
+      <ul>
+         <li>een <span class="em">button</span> is een actie op een een formulier: <strong>verzenden</strong> of <strong>wissen</strong></li>
+         <li>een <span class="em">link</span> dient voor navigatie, i.e. om <strong>content te openen</strong> (andere pagina, e-mail, sms...)</li>
+      </ul>
+      <p>
+         → waar gebruik je op volgende screenshot een knop, en waar een link?
+      </p>
+      <img src="img/06_formulieren/link-or-button.png" alt="" class="bordered shadow w-600">
+
+
+
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>

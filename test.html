@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        width: 100px; /* Set the desired width */
+        border: 1px solid #000;
+      }
+      td {
+        width: 100px; /* Set the desired width */
+      }
+      td + td {
+        width: calc(100% - 100px); /* Set the desired width */
+      }
+      pre {
+        white-space: pre-wrap;      /* Wraps text according to container width */
+        overflow-wrap: break-word;  /* Breaks long words to fit the container */
+        overflow: hidden;           /* Hides overflowed content */
+      }
+    </style>
+</head>
+<body>
+    
+    <table>
+      <tr>
+        <td><pre>This is some text inside a pre element. It should wrap and not overflow the td.</pre></td>
+        <td>Another cell</td>
+      </tr>
+      <tr>
+         <td><code>&lt;p&gt;</code></td>
+         <td>paragraaf</td>
+      </tr>
+      <tr>
+         <td><code>&lt;h1&gt;...&lt;h6&gt;</code></td>
+         <td>titles</td>
+      </tr>
+      <tr>
+         <td><code>&lt;blockquote&gt;</code></td>
+         <td>quote, pull quote</td>
+      </tr>
+      <tr>
+         <td>
+               <pre class="notoolbar"><code>&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+         </td>
+         <td>ongeordende lijst van gelijkaardige items (ook gebruikt voor menu's)</td>
+      </tr>
+</table>
+       
+</body>
+</html>

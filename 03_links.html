@@ -1,117 +1,178 @@
 <!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
 <html lang="nl">
 
 <head>
-   <meta charset="utf-8">
-   <title>HTML &mdash; Links</title>
-   <meta name="author" content="Rogier van der Linde - odisee.be">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Links | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb active" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>03. HTML links</h1>
+   <div id="toc"></div>
+   <main>
 
-   <!-- SLIDES -->
-   <div class="reveal">
+      <!-- VIDEO -->
+      <h2>Youtube: HTML links</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/higQhwN0K_g?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=higQhwN0K_g"><img src="img/03_links/youtube-links.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=higQhwN0K_g">https://www.youtube.com/watch?v=higQhwN0K_g</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=9">0:09 basislink</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=35">0:35 menu's</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=240">4:00 interne links (binnen de pagina)</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=366">6:06 link naar top</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=394">6:34 link naar email, gsm nummer...</a></li>
+               <li><a href="https://www.youtube.com/watch?v=higQhwN0K_g&t=456">7:36 title attribuut</a></li>
+            </ul>
+         </div>
+      </div>
 
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
+      <h2>De URL</h2>
+      <h3>Delen van de URL</h3>
 
-         <!-- 0 : Title -->
-         <section class="cover">
-            <section>
-               <h1>LINKS</h1>
-               <p>
-                  tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
-               </p>
-               <p>
-                  gebruik pijltjestoetsen om te navigeren<br>
-                  dotted codepanels zijn editeerbaar
-               </p>
-               <img src="img/03_links/icon.jpg" alt="" class="cover__icon">
-               <footer class="cover__footer">
-                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
-               </footer>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>LINKS</h1>
-               <h2>De URL</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>Delen van de URL</h2>
-               <ul>
-                  <li>
-                     Een <em>hyperlink</em> (HTML link) wijst naar een <em>URL</em> (Uniform Resource Locator), waarbij resource "bron" betekent. Dit kan vanalles zijn: een andere webpagina, een afbeelding, een script, een geluidsbestand...
-                  </li>
-                  <li>
-                     Belangrijkste delen van de URL met een voorbeeld:
-                  </li>
-                  <li class="no-style smallfont">
-                     protocol://subdomein.host/pad/bestandsnaam#anker?parameters
-                     <br>https://personeel.odisee.be/dashboard/kalender/overzicht.aspx#events?weergave=week&amp;lang=nl
-                  </li>
-                  <li>
-                     Beschrijving van de delen:
-                     <ul>
-                        <li><em>protocol</em>: transportwijze (http, https, mailto, tel...) (<a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">volledige lijst</a>), bv. https</li>
-                        <li><em>subdomein</em>: deel van het domein, bv. personeel</li>
-                        <li><em>host</em>: domein waar het gehost is, bv. odisee.be</li>
-                        <li><em>pad</em>: locatie van de bron, bv. /dashboard/kalender/</li>
-                        <li><em>bestandsnaam</em>: naam van de bron, bv. overzicht.aspx</li>
-                        <li><em>anker</em>: naam van een locatie op de pagina (zie verder), bv. events</li>
-                        <li><em>parameters</em>: extra opties , bv. weergave=week&amp;lang=nl</li>
-                     </ul>
-                  </li>
-               </ul>
-            </section>
-            <section data-title="Soorten URL's">
-               <h2>Soorten URL's (1)</h2>
-               <ul>
-                  <li>
-                     Een <em>absolute URL</em> verwijst altijd naar dezelfde plaats, waar je website of pagina ook staat
-                  </li>
-                  <li class="smallfont no-style">
-                     bv. https://fonts.googleapis.com/css?family=Lato
-                  </li>
-                  <li class="arrow smallfont">
-                     gebruik voor <strong>externe resources</strong>
-                  </li>
-                  <li>
-                     Een <em>relatieve URL</em> is een pad relatief t.o.v. de map van de huidige pagina
-                  </li>
-                  <li class="smallfont no-style">
-                     bv. https://domain.com/travels/index.html + img/photo1.jpg = https://domain.com/travels/img/photo1.jpg
-                     <br>bv. https://domain.com/css + ../assets/logo.svg = https://domain.com/assets/logo.svg
-                  </li>
-                  <li class="arrow smallfont">
-                     gebruik voor <strong>lokale resources</strong>
-                  </li>
-                  <li>
-                     Een <em>root URL</em> is een pad relatief t.o.v. de root van het domein
-                  </li>
-                  <li class="smallfont no-style">
-                     bv. https://domain.com/travels/index.html + /js/scripts.js = https://domain.com/js/scripts.js
-                     <br>bv. https://domain.com/users/andy589/index.html + /js/scripts.js = https://domain.com/js/scripts.js
-                  </li>
-                  <li class="arrow smallfont">
-                     als je de site in een submap plaatst, zullen de root URL's niet meer kloppen
-                  </li>
-                  <li class="arrow smallfont">
-                     daarom kun je in deze cursus root URL's beter <strong class="warning">niet gebruiken</strong>
-                  </li>
-               </ul>
-            </section>
-            <section data-title="">
-               <h2>Soorten URL's (2)</h2>
-               <ul>
-                  <li>Identificeer de URL's in dit voorbeeld: absoluut, relatief of root?
-                     <pre class="bigger"><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="nl"&gt;
+      <p>
+         Een <span class="em">hyperlink</span> (HTML link) wijst naar een <em>URL</em> (Uniform Resource Locator), waarbij resource "bron" betekent. Dit kan vanalles zijn: een andere webpagina, een afbeelding, een script, een geluidsbestand... Schematisceh opbouw:
+      </p>
+      <p><code>protocol://subdomein.host/pad/bestandsnaam#anker?parameters</code></p>
+      <p>
+         Voorbeeld:
+      </p>
+      <p>
+         <code>https://personeel.odisee.be/dashboard/kalender/overzicht.aspx#events?weergave=week&amp;lang=nl</code>
+      </p>
+      <p>Beschrijving van de delen:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">Deel</th>
+               <th scope="col">Benaming</th>
+               <th scope="col">Omschrijving</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>https://</code></td>
+               <td><span class="em">protocol</span></td>
+               <td>transportwijze (<code>https://</code>, <code>mailto:</code>, <code>tel:</code>, <code>file:///</code>...)</td>
+            </tr>
+            <tr>
+               <td><code>personeel</code></td>
+               <td><span class="em">subdomein</span></td>
+               <td>subsectie van het domein</td>
+            </tr>
+            <tr>
+               <td><code>odisee.be</code></td>
+               <td><span class="em">host</span></td>
+               <td>domein waar het gehost is</td>
+            </tr>
+            <tr>
+               <td><code>dashboard/kalender</code></td>
+               <td><span class="em">pad</span></td>
+               <td>locatie van de bron</td>
+            </tr>
+            <tr>
+               <td><code>overzicht.aspx</code></td>
+               <td><span class="em">bestandsnaam</span></td>
+               <td>naam van het bronbestand</td>
+            </tr>
+            <tr>
+               <td><code>events</code></td>
+               <td><span class="em">anker</span></td>
+               <td>naam van een locatie op de pagina (zie verder)</td>
+            </tr>
+            <tr>
+               <td><code>weergave=week&amp;lang=nl</code></td>
+               <td><span class="em">parameters</span></td>
+               <td>extra opties</td>
+            </tr>
+         </tbody>
+      </table>
+      
+
+      <h3>Soorten URL's</h3>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">Soort</th>
+               <th scope="col">Voorbeeld</th>
+               <th scope="col">Omschrijving</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><span class="em">absolute URL</span></td>
+               <td><code>https://fonts.googleapis.com/css?family=Lato</code></td>
+               <td>volledig pad; voor <strong>externe resources</strong></td>
+            </tr>
+            <tr>
+               <td><span class="em">relatieve URL</span></td>
+               <td>
+                  <code>img/logo.png</code>
+                  <br><code>../uploads/document.pdf</code>
+               </td>
+               <td>relatief t.o.v. de map van de huidige pagina; voor <strong>interne resources</strong></td>
+            </tr>
+            <tr>
+               <td><span class="em">root URL</span></td>
+               <td>
+                  <code>/website/photos/photo03.jpg</code>
+               </td>
+               <td>start met een '/'; relatief t.o.v. de root van het domein; <br>in deze cursus zullen we het <span class="error">nooit gebruiken</span></td>
+            </tr>
+         </tbody>
+      </table>
+      <p>Welke URL's in volgend fragment zijn absoluut, relatief, root?</p>
+      <pre class="notoolbar"><code>&lt;html lang="nl"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="css/styles.css"&gt;
   &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"&gt;
@@ -126,114 +187,89 @@
 &lt;/body&gt;  
 &lt;/html&gt;  
 </code></pre>
-                  </li>
-               </ul>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>LINKS</h1>
-               <h2>Links in HTML</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>Hyperlink</h2>
-               <ul>
-                  <li>
-                     Een hyperlink maak je met de <code>&lt;a&gt;</code> tag; de URL komt in het <code>href</code> attribuut. Het is een inline element, dus het mag in een zin staan:
-                     <pre class="bigger"><code class="language-html overlayrun">Bezoek onze &lt;a href="https://odisee.be"&gt;Odisee homepagina&lt;/a&gt;</code></pre>
-                  </li>
-                  <li>
-                     Let er op dat je een relevante tekst linkt. Vergelijk:
-                     <pre class="bigger"><code class="language-html overlayrun wrong">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+
+      <h2>Links in HTML</h2>
+      <h3>Hyperlink</h3>
+      <p>
+         Een <span class="em">hyperlink</span> maak je met de <code>&lt;a&gt;</code> tag; de URL komt in het <code>href</code> attribuut. 
+         Het is een <strong>inline element</strong>, het mag dus middenin een zin staan:
+      </p>
+      <div class="codecompare top">
+         <pre class="notoolbar w-500"><code>Bezoek onze &lt;a href="https://odisee.be"&gt;Odisee homepagina&lt;/a&gt;</code></pre>
+         <img src="img/03_links/hyperlink1.png" alt="" class="bordered w-200">
+      </div>
+      <p>
+         Let er op dat je een <strong>relevante tekst linkt</strong>. Vergelijk:
+      </p>
+      <div class="codecompare top">
+         <pre class="notoolbar w-500"><code>Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
 Klik &lt;a href="https://odisee.be/info"&gt;hier&lt;/a&gt; voor onze infodagen.</code></pre>
-                     <pre class="bigger"><code class="language-html overlayrun right">Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
+         <img src="img/03_links/hyperlink2.png" alt="" class="bordered w-300">
+      </div>
+      <div class="codecompare top">
+         <pre class="notoolbar w-500"><code>Heb je interesse in onze opleidingen? Breng ons dan een bezoekje! 
 Bekijk &lt;a href="https://odisee.be/info"&gt;onze infodagen&lt;/a&gt;.</code></pre>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="arrow smallfont">
-                     de tekst die je linkt is belangrijk voor <strong>blinden</strong> en <strong>zoekmachines</strong>!
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Title attribuut</h2>
-               <ul>
-                  <li>
-                     Verduidelijk waarnaar de link verwijst met het <code>title</code> attribuut:
-                     <pre class="bigger"><code class="language-html overlayrun">&lt;a href="https://odisee.be" title="ga naar de website van be.brussels"&gt;
+         <img src="img/03_links/hyperlink3.png" alt="" class="bordered w-300">
+      </div>
+      <div class="tips" data-caption="💡TIP">
+         <p>De tekst die je linkt is belangrijk voor <strong>blinden</strong> en indexering van je website door <strong>zoekmachines</strong>!</p>
+      </div>
+
+      <h3>Title attribuut</h3>
+      <p>Verduidelijk waarnaar de link verwijst met het <code  class="em">title</code> attribuut:</p>
+      <div class="codecompare top">
+         <pre data-demo><code>
+&lt;a href="https://odisee.be" <strong>title="ga naar de website van be.brussels"</strong>&gt;
    &lt;img src="img/03_links/logo_brussel.jpg" alt="Brussel logo"&gt;
 &lt;/a&gt;</code></pre>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="arrow smallfont">
-                     altijd nuttig, zeker als de gelinkte afbeelding of tekst niet heel duidelijk is
-                  </li>
-                  <li class="arrow smallfont">
-                     browsers renderen de beschrijving als <strong>tooltip</strong> van de link
-                     <img src="img/03_links/title.png" alt="" style="display: block; max-width: 300px;">
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Aria-label attribuut</h2>
-               <ul>
-                  <li>
-                     Voor blinden zijn gelinkte afbeeldingen en iconen niet "zichtbaar". Gebruik dan het aria-label attribuut om dit te verduidelijken:
-                     <pre class="bigger"><code class="language-html smallpanel smallfont">&lt;a href="" <strong>aria-label</strong>="bekijk de Youtube channel"&gt;
+         <img src="img/03_links/title.png" alt="" class="w-300">
+      </div>
+      <ul class="arrow">
+         <li>
+            altijd nuttig, zeker als de gelinkte afbeelding of tekst niet heel duidelijk is
+         </li>
+         <li>
+            browsers renderen de beschrijving als <strong>tooltip</strong> van de link
+          </li>
+      </ul>
+
+      <h3>Aria-label attribuut</h3>
+      <p>Voor blinden zijn gelinkte afbeeldingen en iconen niet "zichtbaar". Gebruik dan het aria-label attribuut om dit te verduidelijken:</p>
+      <pre class="notoolbar"><code>&lt;a href="" <strong>aria-label</strong>="bekijk de Youtube channel"&gt;
   &lt;span class="fa-brands fa-youtube"&gt;&lt;/span&gt;
 &lt;/a&gt;</code></pre>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="arrow smallfont">
-                     ARIA: &ldquo;Accessible Rich Internet Applications&rdquo;
-                  </li>
-                  <li class="arrow smallfont">
-                     <code>aria-*</code> attributen helpen blinden rich applications te gebruiken en te interpreteren
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Media links</h2>
-               <ul>
-                  <li>
-                     Link naar een email adres met <code>mailto:</code>
-                     <pre class="bigger"><code class="language-html overlayrun">Contacteer mij op &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;
+      <ul class="arrow">
+         <li>
+            <span class="em">ARIA</span>: &ldquo;Accessible Rich Internet Applications&rdquo;
+         </li>
+         <li>
+            <code>aria-*</code> attributen helpen blinden rich applications te gebruiken en te interpreteren
+         </li>
+      </ul>
 
-</code></pre>
-                  </li>
-                  <li>
-                     Andere media links (de meeste mobile only):
-                     <pre class="bigger"><code class="language-html overlayrun">Bel me op via &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
+      <h3>Media links</h3>
+      <p>Link naar een <strong>email</strong> adres met <code>mailto:</code></p>
+      <pre class="notoolbar"><code>Contacteer mij op &lt;a href="mailto:johndoe@rock.com"&gt;mailto:johndoe@rock.com&lt;/a&gt;</code></pre>
+      <p>Andere media links als <strong>sms, telefoon, whatsapp</strong>... (de meeste mobile only):</p>
+      <pre class="notoolbar"><code>Bel me op via &lt;a href="tel:+32489223344"&gt;0489 22 33 44&lt;/a&gt;
 Stuur me &lt;a href="sms:+6612345678?body=het te verzenden bericht"&gt;een sms&lt;/a&gt;
 Contacteer me via : &lt;a href="https://wa.me/32489223344"&gt;WhatsApp&lt;/a&gt; 
 Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
-</code></pre>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Ankers</h2>
-               <ul>
-                  <li>
-                     Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
-                  </li>
-                  <li>
-                     Je hebt twee dingen nodig:
-                     <ul>
-                        <li>
-                           een anker waarnaar gelinkt kan worden: <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>
-                        </li>
-                        <li>
-                           een link naar dit anker: <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
-                        </li>
-                     </ul>
-                     <pre class="bigger"><code class="language-html dontrun smallfont">...
+</code></pre>      
+      <h3>Ankers (interne links)</h3>
+      <p>
+         Een <em>anker</em> is een interne link, dus een link naar een ander deel binnen dezelfde pagina
+         <br>Je hebt twee dingen nodig:
+      </p>
+      <ul>
+         <li>
+            een anker waarnaar gelinkt kan worden: <code>&lt;a id="someId"&gt;...&lt;/a&gt;</code>
+         </li>
+         <li>
+            een link naar dit anker: <code>&lt;a href="#someId"&gt;...&lt;/a&gt;</code>:
+         </li>
+      </ul>
+      <pre data-demo="demos/03_links/anchors.html"><code>...
 &lt;h2&gt;Veelgestelde vragen&lt;/h2&gt;
 &lt;ul&gt;
    &lt;li&gt;&lt;a href="#qst1"&gt;wat zijn de leverkosten?&lt;/a&gt;&lt;/li&gt; &lt;!-- link naar anker qst1 --&gt;
@@ -254,41 +290,37 @@ Chat via &lt;a href="skype:+32489223344?call"&gt;Skype&lt;/a&gt;
   Niet tevreden? Stuur dan...
 &lt;/p&gt;
 </code></pre>
-                     <div class="demolink"><a href="demos/03_links/anchors.html">uitgebreidere demo</a></div>
-                  </li>
-               </ul>
-            </section>
-         </section>
 
+
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
       </div>
-
-      <!-- odisee.be link -->
-      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
-      
-      <!-- index menu container -->
-      <nav id="navigator"></nav>
-
    </div>
-
-   <script src="vendor/jquery.min.js"></script>
-   <script src="vendor/reveal/lib/js/head.min.js"></script>
-   <script src="vendor/reveal/js/reveal.js"></script>
-   <script src="vendor/highlight/highlight.pack.js"></script>
-   <script src="vendor/incrementable.js"></script>
-   <script src="vendor/prefixfree.js"></script>
-   <script src="vendor/css-snippets.js"></script>
-   <script src="vendor/css-edit.js"></script>
-   <script src="js/main.js"></script>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
    <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-   gtag('config', 'G-FFJVGYKCY8');
+      gtag('config', 'G-FFJVGYKCY8');
    </script>
-
 </body>
 
 </html>

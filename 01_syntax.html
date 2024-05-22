@@ -1,56 +1,96 @@
 <!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
 <html lang="nl">
 
 <head>
-   <meta charset="utf-8">
-   <title>HTML &mdash; Syntax</title>
-   <meta name="author" content="Rogier van der Linde - odisee.be">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Syntax | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb active" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>01. HTML syntax</h1>
+   <div id="toc"></div>
+   <main>
 
-   <!-- SLIDES -->
-   <div class="reveal">
+      <!-- VIDEO -->
+      <h2>Youtube: HTML Syntax</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378"
+         src="https://www.youtube.com/embed/uEcft3oEUkU?si=DNwXXN9z_kNAeV57" title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=uEcft3oEUkU"><img src="img/01_syntax/youtube-syntax.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=uEcft3oEUkU">https://www.youtube.com/watch?v=uEcft3oEUkU</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=65">1:05 hoe begin je aan een oefening</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=167">2:47 HTML bestand aanmaken</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=205">3:25 basisonderdelen van een HTML pagina</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=301">5:01 HTML elementen en attributen</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=485">8:05 code layout</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=623">10:23 code huisregels</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uEcft3oEUkU&t=729">12:09 code commentaar</a></li>
+            </ul>
+         </div>
+      </div>
 
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
+      <!-- COMMENTAAR -->
+      <h2>HTML markup</h2>
 
-         <!-- 0 : Title -->
-         <section class="cover">
-            <section>
-               <h1>SYNTAX</h1>
-               <p>
-                  tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
-               </p>
-               <p>
-                  gebruik pijltjestoetsen om te navigeren<br>
-                  dotted codepanels zijn editeerbaar
-               </p>
-               <img src="img/01_syntax/icon.jpg" alt="" class="cover__icon">
-               <footer class="cover__footer">
-                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
-               </footer>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>SYNTAX</h1>
-               <h2>HTML markup</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section data-title="HTML markup">
-               <h2>HTML markup (1)</h2>
-               <ul>
-                  <li>
-                     Met HTML geef je <strong>structuur en betekenis</strong> aan content zodat de browser weet hoe het weergegeven moet worden, en kan je extra <strong>niet-tekstuele inhoud invoegen</strong> als afbeeldingen, video... Nemen we deze platte tekst, zonder structuur: 
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html smallpanel">Over HTML
+      <h3>Markup</h3>
+      <p>
+         Met HTML geef je <strong>structuur</strong> en <strong>betekenis</strong> aan content zodat de browser weet hoe het weergegeven moet worden, 
+         en kan je extra <strong>niet-tekstuele inhoud invoegen</strong> als afbeeldingen, video... 
+         Nemen we deze platte tekst, zonder structuur:
+      </p>
+      <pre class="language-text h-500 w-700"><code>Over HTML
 
 Wat is HTML?
 
@@ -76,21 +116,9 @@ HTML tags worden in en rond content gebruikt. Enkele belangrijke:
 
 Een tuturial vind je op w3schools.com/html.
 
-© Rogier van der Linde, 2021
-</code></pre>
-                     </div>
-                  </li>
-               </ul>
-            </section>
-            <section data-title="">
-               <h2>HTML markup (2)</h2>
-               <ul>
-                  <li>
-                     Dezelfde tekst, maar dan met structuur en een afbeelding onderaan toegevoegd:
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html overlayrun smallpanel" contenteditable>&lt;!DOCTYPE html&gt;
+© Rogier van der Linde, 2021</code></pre>
+      <p>Dezelfde tekst, maar dan met structuur en een afbeelding onderaan toegevoegd:</p>
+      <pre class="h-500 w-700" data-demo="demos/01_syntax/markup.html"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="nl"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -130,35 +158,27 @@ Een tuturial vind je op w3schools.com/html.
   &lt;small&gt;© Rogier van der Linde, 2021&lt;/small&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                     </div>
-                     <div class="demolink"><a href="demos/01_syntax/samplepage.html">demo</a></div>
-                  </li>
-                  <li class="arrow smallfont">de HTML codes rond de tekst noemt men <em>markup</em></li>
-                  <li class="arrow smallfont">probeer het zelf uit! maak een nieuw tekstbestand, kopieer deze code, sla het op als <i>test.html</i>, en open het in de browser</li>
-               </ul>
-            </section>
-            <section>
-               <h2>Weergave in de browser</h2>
-               <ul>
-                  <li>
-                     Dankzij de HTML markup weet de browser hoe de pagina weergegeven moet worden. Merk op hoe de content zich aanpast aan de breedte van het venster:
-                  </li>
-               </ul>
-               <div class="flex-1-1" style="justify-content: left;margin-bottom: 10px;">
-                  <img src="img/01_syntax/page-browser-wide.png" class="shadowbox" alt="" style="width: 45%;">
-                  <img src="img/01_syntax/page-browser-small.png" class="shadowbox" alt="" style="width: 30%;margin-left: 30px;">
-               </div>
-               <ul>
-                  <li class="arrow smallfont">de opmaak is nog erg beperkt; dit lossen we later op in de <a href="https://rogiervdl.github.io/CSS-course/index.html">cursus CSS</a></li>
-               </ul>
-            </section>
-            <section>
-               <h2>Code layout</h2>
-               <ul>
-                  <li>Browsers negeren code layout: alle dubbele spaties, tabs, enters enz... worden omgezet naar <strong>enkele spaties</strong>. Voor browsers zijn volgende codes dus identiek:</li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel verysmallfont" contenteditable>&lt;!DOCTYPE html&gt;
+      <ul class="arrow">
+         <li>de HTML codes rond de tekst noemt men <mark>markup</mark></li>
+         <li>probeer het zelf uit! maak een nieuw tekstbestand, kopieer deze code, sla het op als test.html, en open het in de browser</li>
+      </ul>
+
+      <h3>Weergave in de browser</h3>
+      <p>
+         Dankzij de HTML markup weet de browser hoe de pagina weergegeven moet worden. Merk op hoe de content zich dynamisch aanpast aan de breedte van het venster:
+      </p>
+      <div class="codecompare top">
+         <img src="img/01_syntax/weergave-breed.png" alt="" class="w-500 bordered">
+         <img src="img/01_syntax/weergave-smal.png" alt="" class="w-400 bordered">
+      </div>
+
+      <h2>Code layout</h2>
+      <p>
+         Browsers negeren code layout: alle dubbele spaties, tabs, enters enz... worden omgezet naar <strong>enkele spaties</strong>. 
+         Voor browsers zijn volgende codes dus identiek:
+      </p>
+      <div class="codecompare top">
+      <pre class="h-500 w-700" data-demo="demos/01_syntax/markup.html"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="nl"&gt;
 &lt;head&gt;
   &lt;title&gt;Over HTML&lt;/title&gt;
@@ -201,11 +221,7 @@ Een tuturial vind je op w3schools.com/html.
   &lt;small&gt;© Rogier van der Linde, 2021&lt;/small&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                     </div>
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html overlayrun ultrasmallpanel verysmallfont" contenteditable>&lt;!DOCTYPE html&gt;&lt;html lang="nl"&gt; &lt;head&gt; &lt;title&gt;Over HTML&lt;/title&gt; &lt;meta charset="utf-8"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Over
+<pre class="h-500 w-700" data-demo="demos/01_syntax/markup.html"><code>&lt;!DOCTYPE html&gt;&lt;html lang="nl"&gt; &lt;head&gt; &lt;title&gt;Over HTML&lt;/title&gt; &lt;meta charset="utf-8"&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Over
 HTML&lt;/h1&gt; &lt;h2&gt;Wat is HTML?&lt;/h2&gt; &lt;p&gt; Met HTML &lt;em&gt;tags&lt;/em&gt; en &lt;em&gt;attributen&lt;/em&gt; kan je &lt;strong&gt;betekenis&lt;/strong&gt; 
 geven aan de verschillende tekstdelen: dit is een titel, dit is een link, dit is een nieuw woord enz... &lt;/p&gt; &lt;p&gt; 
 Probeer de functie van de verschillende tags die in de code van deze pagina voorkomen te begrijpen. De belangrijkste 
@@ -216,99 +232,56 @@ niveau's&lt;/li&gt; &lt;li&gt;paragrafen&lt;/li&gt; &lt;li&gt;benadrukte teksten
 ...&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Een tuturial vind je op &lt;a href="http://www.w3schools.com/"&gt;w3schools.com/html&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;&lt;img 
 src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogier van der Linde profile picture"&gt;
 &lt;/p&gt; &lt;small&gt;© Rogier van der Linde, 2021&lt;/small&gt; &lt;/body&gt; &lt;/html&gt;</code></pre>
-                     </div>
-                  </li></ul>
-            </section>
-            <section>
-               <h2>Hoofdlettergebruik</h2>
-               <ul>
-                  <li>Browsers maken ook geen onderscheid tussen hoofd- en kleine letters bij HTML. Voor browsers zijn volgende codes dus identiek:</li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;p&gt;&lt;img src="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
-                     </div>
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;P&gt;&lt;IMG SRC="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/P&gt;</code></pre>
-                     </div>
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;p&gt;&lt;Img Src="https://www.odisee.be/img/logo.png" ALT="Odisee logo"&gt;&lt;/P&gt;</code></pre>
-                     </div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Quotegebruik</h2>
-               <ul>
-                  <li>Rond attributen aanvaarden browsers dubbele quotes, enkele quotes of zelfs geen quotes (als de waarde geen spatie bevat). Voor browsers zijn volgende codes dus identiek:</li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;p&gt;&lt;img src="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
-                     </div>
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;p&gt;&lt;img src='https://www.odisee.be/img/logo.png' alt='Odisee logo'&gt;&lt;/p&gt;</code></pre>
-                     </div>
-                  </li>
-                  <li class="no-style">
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html">&lt;p&gt;&lt;img src=https://www.odisee.be/img/logo.png alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
-                     </div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Huisregels</h2>
-               <ul>
-                  <li>
-                     Een <strong>correcte layout</strong> en <strong>consequent quote- en hoofdlettergebruik</strong> van je code is dus niet voor de browser, maar voor de <strong>leesbaarheid</strong> van je code. 
-                  </li>
-                  <li>
-                     Welke regels je volgt is kwestie van smaak, dus discussiëren heeft geen zin, maar uniforme afspraken zijn nodig voor <strong>jezelf en je teamleden</strong>. In deze cursus (verplicht!):
-                     <ul class="v-style">
-                        <li>layout met <strong>tabs óf spaties</strong>, geen mix!</li>
-                        <li>gebruik <strong>kleine letters voor tags</strong>, dus <code>&lt;img&gt;</code> maar niet <code>&lt;IMG&gt;</code> of <code>&lt;Img&gt;</code>
-                        </li>
-                        <li>gebruik <strong>kleine letters voor attributen</strong>, dus <code>&lt;a href="..."&gt;</code> en niet <code>&lt;a HREF="..."&gt;</code>
-                           of <code>&lt;a Href="...&gt;</code></li>
-                        <li>zet <strong>double quotes rond attribuutwaarden</strong>, dus <code>&lt;a href="..."&gt;</code> en niet <code>&lt;a href='...'&gt;</code> of <code>&lt;a href=...&gt;</code></li>
-                        <li>verzorg je layout: ofwel open- en sluittag op dezelfde regel, ofwel op aparte regels met inhoud ingesprongen</li>
-                     </ul>
-                  </li>
-                  <li class="no-style">
-                     <pre class="bigger"><code class="language-html">&lt;xxx&gt;...&lt;/xxx&gt;
+   
+      </div>
+
+      <h3>Hoofdlettergebruik</h3>
+      <p>
+         Browsers maken ook geen onderscheid tussen hoofd- en kleine letters bij HTML. Voor browsers zijn volgende codes dus identiek:
+      </p>
+      <pre class="notoolbar"><code>&lt;p&gt;&lt;img src="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
+      <pre class="notoolbar"><code>&lt;P&gt;&lt;IMG SRC="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/P&gt;</code></pre>
+      <pre class="notoolbar"><code>&lt;p&gt;&lt;Img Src="https://www.odisee.be/img/logo.png" ALT="Odisee logo"&gt;&lt;/P&gt;</code></pre>
+
+      <h3>Quotes gebruik</h3>
+      <p>
+         Rond attributen aanvaarden browsers dubbele quotes, enkele quotes of zelfs geen quotes (als de waarde geen spatie bevat). Voor browsers zijn volgende codes dus identiek:
+      </p>
+      <pre class="notoolbar"><code>&lt;p&gt;&lt;img src="https://www.odisee.be/img/logo.png" alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
+      <pre class="notoolbar"><code>&lt;p&gt;&lt;img src='https://www.odisee.be/img/logo.png' alt='Odisee logo'&gt;&lt;/p&gt;</code></pre>
+      <pre class="notoolbar"><code>&lt;p&gt;&lt;img src=https://www.odisee.be/img/logo.png alt="Odisee logo"&gt;&lt;/p&gt;</code></pre>
+
+      <h3>Huisregels</h3>
+      <p>
+         Een <strong>correcte layout</strong> en <strong>consequent quote- en hoofdlettergebruik</strong> van je code is dus niet voor de browser, maar voor de <strong>leesbaarheid</strong> van je code.
+      </p>
+      <p>
+         Welke regels je volgt is kwestie van smaak, dus discussiëren heeft geen zin, maar uniforme afspraken zijn nodig voor <strong>jezelf en je teamleden</strong>. In deze cursus (verplicht!):
+      </p>
+      <ul class="right">
+         <li>layout met <strong>tabs óf spaties</strong>, geen mix!</li>
+         <li>gebruik <strong>kleine letters voor tags</strong>, dus <code>&lt;img&gt;</code> maar niet <code>&lt;IMG&gt;</code> of <code>&lt;Img&gt;</code>
+         </li>
+         <li>gebruik <strong>kleine letters voor attributen</strong>, dus <code>&lt;a href="..."&gt;</code> en niet <code>&lt;a HREF="..."&gt;</code>
+            of <code>&lt;a Href="...&gt;</code></li>
+         <li>zet <strong>double quotes rond attribuutwaarden</strong>, dus <code>&lt;a href="..."&gt;</code> en niet <code>&lt;a href='...'&gt;</code> of <code>&lt;a href=...&gt;</code></li>
+         <li>verzorg je layout: ofwel open- en sluittag op dezelfde regel, ofwel op aparte regels met inhoud ingesprongen</li>
+      </ul>
+      <pre class="notoolbar"><code>&lt;xxx&gt;...&lt;/xxx&gt;
 
 &lt;xxx&gt;
   ...
   ...
   ...
 &lt;/xxx&gt;</code></pre>
-                  </li>
-                  <li class="arrow smallfont">tip: in VS Code kan je alle layout in één keer goedzetten met de <strong>Shift-Alt-F</strong> shortcut</li>
-                  <li class="arrow smallfont warning">bovenal: wees consistent in je codestijl!</li>
-               </ul>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>SYNTAX</h1>
-               <h2>HTML basisdocument</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>Basisdocument</h2>
-               <ul>
-                  <li>
-                     Elke HTML pagina heeft minimaal deze structuur:
-                  </li>
-                  <li class="no-style">
-                     <pre class="bigger"><code class="language-html right">&lt;!DOCTYPE html&gt;
+      <div class="tips" data-caption="💡TIP">
+         <p>In VS Code kan je alle layout in één keer goedzetten met de <strong>Shift-Alt-F</strong> shortcut</p>
+      </div>
+
+      <h2>HTML basisdocument</h2>
+      <h3>Minimale structuur</h3>
+      <p>Elke HTML pagina heeft minimaal deze structuur:</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -319,199 +292,125 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
    &lt;p&gt;...hier komt de rest van de HTML...&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                     <div class="demolink"><a href="demos/01_syntax/html5.html">demo</a></div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>[Oudere versies]</h2>
-               <ul>
-                  <li>
-                     Soms kom je nog oudere, nodeloos complexe versies tegen, zoals deze XHTML1.1:
-                  </li>
-                  <li class="no-style">
-                     <pre class="bigger"><code class="language-html wrong">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-&quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl"&gt;
-&lt;head&gt;
-   &lt;title&gt;Basispagina&lt;/title&gt;
-   &lt;meta http-equiv="Content-Type" content="text/html;
-      charset=ISO-8859-1"&gt;
-   &lt;script type="text/javascript" src="js/scripts.js"&gt;&lt;/script&gt;
-   &lt;link type="text/css" rel="stylesheet" href="css/styles.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-   &lt;p&gt;...hier komt de rest van de HTML...&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                  </li>
-               </ul>
-               <ul class="arrow smallfont">
-                  <li>gebruik altijd de HTML5 versie op vorige slide</li>
-               </ul>
-            </section>
-            <section>
-               <h2>Verplichte onderdelen</h2>
-               <ul>
-                  <li>
-                     De door de HTML standaard verplichten onderdelen met hun betekenis:
-                     <ul>
-                        <li>
-                           <em><code>&lt;!DOCTYPE html&gt;</code></em>: HTML <strong>document type</strong> declaratie
-                           en versie<br>
-                           &rarr; voor HTML5 is dit <code>&lt;!DOCTYPE html&gt;</code>
-                        </li>
-                        <li>
-                           <em><code>&lt;html lang="..."&gt;</code></em> element: het <strong>eigenlijke HTML
-                              document</strong>; het <code>lang</code> bevat de <strong>taal</strong> van de pagina
-                           (<code>en</code> / <code>nl</code> / <code>fr</code>...), o.a. voor screen readers en
-                           zoekmachines
-                        </li>
-                        <li>
-                           <em><code>&lt;head&gt;</code></em>: bevat alle <strong>metadata</strong> van de pagina
-                           (meestal optioneel): titel, karakterset, meta information, auteur, beschrijving, trefwoorden,
-                           links naar CSS
-                           en scripts, favicon...<br>
-                        </li>
-                        <li>
-                           <em><code>&lt;title&gt;</code></em>: <strong>pagina titel</strong> gebruikt op browser
-                           tabbladen en resultaten van zoekmachines
-                        </li>
-                        <li>
-                           <em><code>&lt;body&gt;</code></em>: bevat alle <strong>zichtbare inhoud</strong> van de
-                           pagina with all the titles,
-                           texts, images, videos...
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>[Metatags]</h2>
-               <ul>
-                  <li>Voorziet bijkomende informatie of <em>metadata</em> over het HTML document.</li>
-                  <li>Bestaat in regel uit naam/waarde paren:
-                     <pre class="bigger"><code class="language-html dontrun">&lt;head&gt;
+   <div class="tips" data-caption="💡TIP">
+      <p>In VS Code je de <strong>html5 + TAB</strong> shortcut gebruiken om een basisdocument te genereren</p>
+      <img src="img/01_syntax/shortcut-html5.gif" class="w-500" alt="">
+   </div>
+   Verplicht aanwezige onderdelen met hun betekenis:
+      <ul>
+         <li>
+            <code>&lt;!DOCTYPE html&gt;</code>: declareert <strong>document type</strong> (HTML document); deze regel <em>moet</em> als eerste in het document staan 
+            en versie
+         </li>
+         <li>
+            <code>&lt;html lang="..."&gt;</code>: het eigenlijke <strong>HTML document</strong>; het <code>lang</code> attribuut bevat de <strong>taal</strong> van de pagina
+            (<code>en</code> / <code>nl</code> / <code>fr</code>...), o.a. voor screen readers en zoekmachines
+         </li>
+         <li>
+            <code>&lt;head&gt;</code>: bevat alle <strong>metadata</strong> van de pagina
+            (meestal optioneel): titel, karakterset, meta information, auteur, beschrijving, trefwoorden,
+            links naar CSS en scripts, favicon...<br>
+         </li>
+         <li>
+            <code>&lt;title&gt;</code>: <strong>pagina titel</strong> gebruikt op browser tabbladen en resultaten van zoekmachines
+         </li>
+         <li>
+            <code>&lt;body&gt;</code>: bevat alle <strong>zichtbare inhoud</strong> van de pagina met alle titels, teksten, afbeeldingen, videos...
+         </li>
+      </ul>
+      <h3>Metatags</h3>
+      <p>Metatages bevatten bijkomende informatie of <em class="em">metadata</em> over het HTML document. Het bestaat meestal uit naam/waarde paren:</p>
+      <pre class="notoolbar"><code>&lt;head&gt;
   ...
   &lt;meta name="description" content="Slides voor Basic Web Development"&gt;
   &lt;meta name="keywords" content="HTML, CSS"&gt;
   &lt;meta name="author" content="Rogier van der Linde"&gt;
 &lt;/head&gt;</code></pre>
-                  </li>
-                  <li class="arrow smallfont">er bestaan zeer veel van dergelijke metatags; in feite mag je zelf eender welke naam/waarde paar bedenken</li>
-                  <li class="arrow smallfont">description en keywords waren vroeger nuttig voor zoekmachines, maar worden vandaag genegeerd</li>
-               </ul>
-            </section>
-            <section>
-               <h2>[Link relaties]</h2>
-               <ul>
-                  <li>Koppelt bijkomende bronnen aan het document:
-                     <pre class="bigger"><code class="language-html dontrun">&lt;head&gt;
+      <ul class="arrow">
+         <li>er bestaan zeer veel van dergelijke metatags; in feite mag je zelf eender welke naam/waarde paar bedenken</li>
+         <li>description en keywords waren vroeger nuttig voor zoekmachines, maar worden vandaag genegeerd</li>
+      </ul>
+
+      <h3>Link relaties</h3>
+      <p>Met <code>&lt;link&gt;</code> elementen worden bijkomende bronnen gekoppeld aan het document:</p>
+      <pre class="notoolbar"><code>&lt;head&gt;
   ...
   &lt;link rel="icon" href="favicon.ico"&gt;&lt;!-- link een icoon aan de pagina --&gt;
   &lt;link rel="stylesheet" href="css/main.css"&gt;&lt;!-- link een CSS bestand --&gt;
 &lt;/head&gt;</code></pre>
-                  </li>
-               </ul>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>SYNTAX</h1>
-               <h2>HTML syntax</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>Tag, Element, Attribuut</h2>
-               <ul>
-                  <li>Alle HTML codes samen noemt men de <em>markup</em> van een pagina.
-                  </li>
-                  <li>De markup bestaat uit <em>tags</em> die aan de tekst toegevoegd worden, bijvoorbeeld <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;p&gt;</code>...
-                  </li>
-                  <li>Aan tags kunnen <em>attributen</em> toegevoegd worden met de eigenschappen van de tags, bijvoorbeeld <code>&lt;img src="..." alt="..."&gt;</code>, <code>&lt;a href="..."&gt;</code>...
-                  </li>
-                  <li>
-                     Tags vormen <em>elementen</em>: 
-                     <ul>
-                        <li><em>leeg</em> element: <code>&lt;xxx&gt;</code>, e.g. <code>&lt;img&gt;</code>; content <strong>toevoegen</strong>
-                        </li>
-                        <li>
-                           <em>niet-leeg</em> element: <code>&lt;xxx&gt;...&lt;/xxx&gt;</code>; 
-                           content <strong>markeren</strong>
-                        </li>
-                        <li class="arrow">
-                           de meeste elementen zijn niet-lege elementen
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Blocklevel and inline</h2>
-               <ul>
-                  <li>
-                     Sommige elementen als titels, paragrafen, lijstjes e.d. worden door de browser op aparte regels <strong>onder elkaar</strong>  getoond; dit zijn <em>blocklevel</em> elementen. Andere elementen als hyperlinks mogen in een tekstregel staan en worden <strong>naast elkaar</strong> getoond, en heten <em>inline</em> elementen. 
-                  </li>
-                  <li>
-                     Blocklevel of inline?<br> <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>,
-                     <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>,
-                     <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Nesten van elementen</h2>
-               <ul>
-                  <li>
-                     <strong>Lege elementen</strong> kunnen (uiteraard) geen andere elementen bevatten:
-                     <ul>
-                        <li class="x-style">een afbeelding <code>&lt;img&gt;</code> kan geen andere elementen bevatten</li>
-                     </ul>
-                  </li>
-                  <li>
-                     <strong>Blocklevel elementen</strong> kunnen meestal geen blocklevel elementen bevatten:
-                     <ul>
-                        <li class="x-style">een titel <code>&lt;h1&gt;</code> of <code>&lt;h2&gt;</code>kan geen paragraaf <code>&lt;p&gt;</code>of lijstje <code>&lt;ul&gt;</code>bevatten</li>
-                        <li class="x-style">een paragraaf <code>&lt;p&gt;</code> kan geen lijstje <code>&lt;ul&gt;</code>bevatten</li>
-                        <li class="arrow">zet ze onder elkaar i.p.v. genest</li>
-                     </ul>
-                  </li>
-                  <li class="no-style">
-                     Er zijn echter redelijk wat uitzonderingen:
-                     <ul>
-                        <li class="v-style">een quote <code>&lt;blockquote&gt;</code> mag paragrafen <code>&lt;p&gt;</code>bevatten</li>
-                        <li class="v-style">een artikelblok <code>&lt;article&gt;</code> mag zowat alles bevatten: titels <code>&lt;h1&gt;</code>, lijstjes <code>&lt;ul&gt;</code>, paragrafen <code>&lt;p&gt;...</code></li>
-                     </ul>
-                  </li>
-                  <li class="no-style">
-                     Ze kunnen wel inline elementen bevatten:
-                     <ul>
-                        <li class="v-style">een titel <code>&lt;h1&gt;</code> kan een link <code>&lt;a&gt;</code> bevatten</li>
-                     </ul>
-                  </li>
-                  <li>
-                     <strong>Inline elementen</strong> kunnen geen blocklevel elementen bevatten:
-                     <ul>
-                        <li class="x-style">een benadrukte tekst <code>&lt;strong&gt;</code> kan geen paragraaf <code>&lt;p&gt;</code> bevatten</li>
-                     </ul>
-                  </li>
-                  <li class="no-style">
-                     Ze kunnen wel inline elementen bevatten:
-                     <ul>
-                        <li class="v-style">een link <code>&lt;a&gt;</code> kan een <code>&lt;img&gt;</code> bevatten</li>
-                     </ul>
-                  </li>
-                  <li class="arrow smallfont">volg je gezond verstand, en gebruik de <a href="https://validator.w3.org/#validate_by_input">W3C HTML validator</a></li>
-               </ul>
-            </section>
-            <section>
-               <h2>HTML commentaar</h2>
-               <ul>
-                  <li>Alles tussen <code>&lt;!--</code> and <code>--&gt;</code> wordt genegeerd</li>
-                  <li>Code verduidelijken met commentaar is een goede gewoonte, niet alleen voor jezelf maar ook voor je teamleden (en docent!). Je kan het ook gebruiken om een stuk code tijdelijk uit te schakelen (bv. tijdens het debuggen):
-                     <pre class="bigger"><code class="language-html dontrun">    ...
+      <h2>HTML syntax</h2>
+      <h3>Tag, Element, Attribuut</h3>
+      <p>Enkele termen:</p>
+      <ul class="arrow">
+         <li>Alle <strong>HTML codes</strong> samen noemt men de <mark>markup</mark> van een pagina. </li>
+         <li>De markup bestaat uit <mark>tags</mark> die aan de tekst toegevoegd worden, bijvoorbeeld <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;p&gt;</code>...</li>
+         <li>Aan tags kunnen <mark>attributen</mark> toegevoegd worden met de eigenschappen van de tags, bijvoorbeeld <code>&lt;img src="..." alt="..."&gt;</code>, <code>&lt;a href="..."&gt;</code>... </li>
+         <li>
+            Tags vormen <mark>elementen</mark>: 
+            <ul>
+               <li><em>leeg</em> element: <code>&lt;xxx&gt;</code>, e.g. <code>&lt;img&gt;</code> &mdash; content <strong>toevoegen</strong></li>
+               <li><em>niet-leeg</em> element: <code>&lt;xxx&gt;...&lt;/xxx&gt;</code>e.g. <code>&lt;p&gt;...&lt;/p&gt;</code> &mdash; content <strong>markeren</strong></li>
+            </ul>
+         </li>
+      </ul>
+      <h3>Blocklevel en inline</h3>
+      <p>
+         Sommige elementen als titels, paragrafen, lijstjes e.d. worden door de browser op aparte regels <strong>onder elkaar</strong>  getoond; dit zijn <em>blocklevel</em> elementen. Andere elementen als hyperlinks mogen in een tekstregel staan en worden <strong>naast elkaar</strong> getoond, en heten <em>inline</em> elementen. 
+      </p>
+      <p>
+         Blocklevel of inline? <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>,
+         <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>,
+         <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>
+      </p>
+      <h3>Nesten in elementen</h3>
+      <p>Je kan niet zomaar eender welk element in eender welk ander element nesten: het spreekt voor zich dat je geen paragraaf in een afbeelding, of een titel in een opsommingslijstje kan nesten. Enkele regels:</p>
+      <h4>lege elementen</h4>
+      <p>
+         <strong>Lege elementen</strong> kunnen (uiteraard) geen andere elementen bevatten:
+      </p>
+      <ul class="wrong">
+         <li>een afbeelding <code>&lt;img&gt;</code> kan geen andere elementen bevatten</li>
+      </ul>
+      <h4>blocklevel elementen</h4>
+
+      <p><strong>Blocklevel elementen</strong> kunnen meestal geen andere blocklevel elementen bevatten:</p>
+      <ul class="wrong">
+         <li>een titel <code>&lt;h1&gt;</code> of <code>&lt;h2&gt;</code>kan geen paragraaf <code>&lt;p&gt;</code>of lijstje <code>&lt;ul&gt;</code>bevatten</li>
+         <li>een paragraaf <code>&lt;p&gt;</code> kan geen lijstje <code>&lt;ul&gt;</code>bevatten</li>
+      </ul>
+      <ul class="arrow">
+         <li>zet ze onder elkaar i.p.v. genest</li>
+      </ul>
+      <p>Er zijn echter redelijk wat uitzonderingen:</p>
+      <ul class="right">
+         <li>een quote <code>&lt;blockquote&gt;</code> mag paragrafen <code>&lt;p&gt;</code>bevatten</li>
+         <li>een artikelblok <code>&lt;article&gt;</code> mag zowat alles bevatten: titels <code>&lt;h1&gt;</code>, lijstjes <code>&lt;ul&gt;</code>, paragrafen <code>&lt;p&gt;...</code></li>
+      </ul>
+      <p>Blocklevel elementen kunnen wel inline elementen bevatten:</p>
+      <ul class="right">
+         <li>een titel <code>&lt;h1&gt;</code> kan een link <code>&lt;a&gt;</code> bevatten</li>
+      </ul>
+
+      <h4>inline elementen</h4>
+      <p><strong>Inline elementen</strong> kunnen geen blocklevel elementen bevatten:</p>
+      <ul class="wrong">
+         <li>een benadrukte tekst <code>&lt;strong&gt;</code> kan geen paragraaf <code>&lt;p&gt;</code> bevatten</li>
+      </ul>
+      <p>Inline elementen kunnen wel andere inline elementen bevatten:</p>
+      <ul class="right">
+         <li>een link <code>&lt;a&gt;</code> kan een <code>&lt;img&gt;</code> bevatten</li>
+      </ul>
+
+      <div class="tips" data-caption="💡TIP">
+         <p>volg je gezond verstand, en gebruik de <a href="https://validator.w3.org/#validate_by_input">W3C HTML validator</a></p>
+      </div>
+
+      <h3>HTML commentaar</h3>
+      <p>Alles tussen <code>&lt;!--</code> en <code>--&gt;</code> wordt genegeerd</p>
+      <p>
+         Code verduidelijken met commentaar is een goede gewoonte, niet alleen voor jezelf maar ook voor je teamleden (en docent!). Je kan het ook gebruiken om een stuk code tijdelijk uit te schakelen (bv. tijdens het debuggen):
+      </p>
+      <pre class="notoolbar"><code>    ...
     &lt;li&gt;boter&lt;/li&gt;
     &lt;li&gt;kaas&lt;/li&gt;
     &lt;li&gt;eieren&lt;/li&gt;
@@ -524,38 +423,34 @@ src="https://www.gravatar.com/avatar/074c8b6380f34a37df72aa657e97be90" alt="Rogi
   --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                  </li>
-               </ul>
-            </section>
-         </section>
-
+       
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
       </div>
-
-      <!-- odisee.be link -->
-      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
-      
-      <!-- index menu container -->
-      <nav id="navigator"></nav>
-
    </div>
-
-   <script src="vendor/jquery.min.js"></script>
-   <script src="vendor/reveal/lib/js/head.min.js"></script>
-   <script src="vendor/reveal/js/reveal.js"></script>
-   <script src="vendor/highlight/highlight.pack.js"></script>
-   <script src="vendor/incrementable.js"></script>
-   <script src="vendor/prefixfree.js"></script>
-   <script src="vendor/css-snippets.js"></script>
-   <script src="vendor/css-edit.js"></script>
-   <script src="js/main.js"></script>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
    <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-   gtag('config', 'G-FFJVGYKCY8');
+      gtag('config', 'G-FFJVGYKCY8');
    </script>
 </body>
 

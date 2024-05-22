@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>Tabellen | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb active" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>04. HTML tabellen</h1>
+   <div id="toc"></div>
+   <main>
+
+      <!-- VIDEO -->
+      <h2>Youtube: HTML tabellen</h2>
+      <p><em>Let op: deze Youtube video is nog een oudere versie, zonder elementen <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code>, en het <code>scope</code> attribuut.</em></p>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/uqkCF5ka1TM?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=uqkCF5ka1TM"><img src="img/04_tabellen/youtube-tabellen.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM">https://www.youtube.com/watch?v=uqkCF5ka1TM</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM&t=22">0:22 table of niet?</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM&t=103">1:43 table in HTML</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM&t=176">2:56 colspan en rowspan</a></li>
+               <li><a href="https://www.youtube.com/watch?v=uqkCF5ka1TM&t=214">3:34 caption</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <h2>Wel of geen tabel?</h2>
+      <p>
+         Tabellen worden in HTML eigenlijk weinig gebruikt. Ze dienen <strong>enkel voor tabulaire data</strong>, dus voor gegevens die wanwege hun beketenis in rijen en kolommen moeten staan
+         Gebruik het <strong class="error">nooit voor layout</strong>, dat doen we later met CSS!
+      </p>
+      <p>De vraag is dus: lijkt het op een <strong>spreadsheet</strong> waarin cellen hun betekenis krijgen door de rij en de kolom waarin ze zitten (tabel), of is het eerder een <strong>gridweergave</strong> die ook anders kan (geen tabel)?</p>
+      <p>Dit is <strong>een tabel</strong>; zonder rijen en kolommen verliezen de gegevens hun betekenis:</p>
+      <p><img src="img/04_tabellen/table1.jpg" alt="" class="bordered shadow w-400"></p>
+      <p>Dit is <strong>geen tabel</strong>; er zijn andere manieren te bedenken om dit weer te geven:</p>
+      <img src="img/04_tabellen/table3.jpg" alt="" class="bordered shadow w-500">
+      <p>Een shopping cart is dan weer wel <strong>een tabel</strong>, een soort rekenblad met rijen en kolommen:</p>
+      <img src="img/04_tabellen/table4.jpg" alt="" class="bordered shadow w-400">
+
+      <h2>Elementen en attributen voor tabellen in HTML</h2>
+      <p>De elementen gebruikt in een tabel, min of meer in volgorde van verschijning:</p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">element</th>
+               <th scope="col">betekens</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>&lt;table&gt;</code></td>
+               <td>duidt de tabel aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;caption&gt;</code></td>
+               <td>bijschrijft, dus een tekst die de tabel beschrijft</td>
+            </tr>
+            <tr>
+               <td><code>&lt;colgroup&gt;</code></td>
+               <td>optioneel: hiermee kan je kolommen in groepen onderverdelen</td>
+            </tr>
+            <tr>
+               <td><code>&lt;col&gt;</code></td>
+               <td>gebruikt in <code>&lt;colgroup&gt;</code>: duidt een groep kolommen aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;thead&gt;</code></td>
+               <td>optioneel: duidt het bovenste deel van de tabel aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;tbody&gt;</code></td>
+               <td>duidt het middelste deel van de tabel aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;tfoot&gt;</code></td>
+               <td>duidt het onderste deel van de tabel aan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;tr&gt;</code></td>
+               <td>"table row", een rij dus</td>
+            </tr>
+            <tr>
+               <td><code>&lt;th&gt;</code></td>
+               <td>"table header", dus een titelcel bovenaan</td>
+            </tr>
+            <tr>
+               <td><code>&lt;td&gt;</code></td>
+               <td>"table data", een gewone tabelcel</td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">attribuut</th>
+               <th scope="col">voorbeeld</th>
+               <th scope="col">waarden</th>
+               <th scope="col">betekenis</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>scope</code></td>
+               <td><code>&lt;th scope="col"&gt;</code></td>
+               <td><code>row</code>, <code>col</code></td>
+               <td>beschrijft deze header cell een rij of een kolom?</td>
+            </tr>
+            <tr>
+               <td><code>colspan</code></td>
+               <td><code>&lt;td colspan="2"&gt;</code></td>
+               <td>getal</td>
+               <td>cel overspant meerdere kolommen</td>
+            </tr>
+            <tr>
+               <td><code>rowspan</code></td>
+               <td><code>&lt;td rowspan="2"&gt;</code></td>
+               <td>getal</td>
+               <td>cel overspant meerdere rijen</td>
+            </tr>
+         </tbody>
+      </table>
+
+      <h2>Voorbeeld</h2>
+
+      <h3>Basisversie met <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> en <code>&lt;td&gt;</code>:</h3>
+      <p>Omdat tabellen zonder opmaak er niet uitzien, zullen we alvast een stukje opmaak met CSS voorzien, al komt dit pas later aan bod. </p>
+      <div class="codecompare top">
+         <pre class="w-700" data-demo><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }  /* geen ruimte tussen cellen */ 
+   td, th { border: 1px solid black; padding: 5px; } /* rand en ruimte rond cellen */  
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Ayoub&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;88&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Bryan&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Chee&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel1.png" alt="" class="w-150">
+      </div>
+
+      <h3>Uitbreiding met <code>&lt;caption&gt;</code> en <code>&lt;th scope="..."&gt;</code></h3>
+      <p>Het <code>&lt;th&gt;</code> element duidt een header cel aan, het <code>scope</code> attribuut duidt aan of het om een rij of een kolom gaat:</p>
+      <div class="codecompare top">
+         <pre data-demo class="w-700"><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }  
+   td, th { border: 1px solid black; padding: 5px; } 
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;tr&gt;
+      &lt;th scope="col"&gt;student&lt;/th&gt;
+      &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
+      &lt;th scope="col"&gt;fysica&lt;/th&gt;
+      &lt;th scope="col"&gt;nederlands&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;88&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Bryan&lt;/th&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Chee&lt;/th&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel2.png" alt="" class="w-300">
+      </div>
+
+      <h3>Uitbreiding met <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> en <code>&lt;tfoot&gt;</code></h3>
+      <p>
+         Met deze elementen kan je je tabel onderverdelen in een bovenste, middelste en onderste gedeelte.
+         Op zich zul je geen verschil zien, maar het is wel handig om b.v. de header een achtergrondkleur te geven, en de footer in schuin te zetten:
+      </p>
+      <div class="codecompare top">
+        <pre class="w-700" data-demo><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }  
+   td, th { border: 1px solid black; padding: 5px; }       
+   thead { background-color: #f0f0f0 } /* grijze achtergrond header */ 
+   tfoot { font-style: italic; } /* schuingedrukt in footer */ 
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th scope="col"&gt;student&lt;/th&gt;
+         &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
+         &lt;th scope="col"&gt;fysica&lt;/th&gt;
+         &lt;th scope="col"&gt;nederlands&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+         &lt;td&gt;90&lt;/td&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;88&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
+         &lt;td&gt;78&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;80&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Chee&lt;/th&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;89&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
+         &lt;td&gt;84.33&lt;/td&gt;
+         &lt;td&gt;88.67&lt;/td&gt;
+         &lt;td&gt;86.67&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel3.png" alt="" class="w-350">
+
+      </div>
+
+      <h3>Uitbreiding met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code></h3>
+      <p>
+         Met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code> kun je kolommen groeperen.
+         Dit is kan zinvol zijn om b.v. in dit voorbeeld wetenschapsvakken een andere achtergrondkleur te geven dan taalvakken:
+      </p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }  
+   td, th { border: 1px solid black; padding: 5px; }       
+   thead { background-color: #f0f0f0 } 
+   tfoot { font-style: italic; }  
+   col {background-color: #f0f0f0;} /* grijze achtergrondkleur */
+   col.wetenschapsvakken { background-color: #f0fff0; } /* lichtgroene achtergrondkleur */
+   col.taalvakken { background-color: #f0f0ff; } /* lichtblauwe achtergrondkleur */
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;colgroup&gt;
+      &lt;col&gt;
+      &lt;col class="wetenschapsvakken" span="2"&gt;
+      &lt;col class="taalvakken"&gt;
+   &lt;/colgroup&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th scope="col"&gt;student&lt;/th&gt;
+         &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
+         &lt;th scope="col"&gt;fysica&lt;/th&gt;
+         &lt;th scope="col"&gt;nederlands&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+         &lt;td&gt;90&lt;/td&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;88&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
+         &lt;td&gt;78&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;80&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Chee&lt;/th&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;89&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
+         &lt;td&gt;84.33&lt;/td&gt;
+         &lt;td&gt;88.67&lt;/td&gt;
+         &lt;td&gt;86.67&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel4.png" alt="" class="w-350">
+      </div>
+
+      <h3>Uitbreiding met <code>rowspan</code> en <code>colspan</code></h3>
+      <p>Met <code>rowspan</code> en <code>colspan</code> kan je cellen samenvoegen. </p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
+   &lt;style&gt;
+   table { border-collapse: collapse; }  
+   td, th { border: 1px solid black; padding: 5px; }       
+   thead { background-color: #f0f0f0 } 
+   tfoot { font-style: italic; }  
+   col {background-color: #f0f0f0;} /* grijze achtergrondkleur */
+   col.wetenschapsvakken { background-color: #f0fff0; } /* lichtgroene achtergrondkleur */
+   col.taalvakken { background-color: #f0f0ff; } /* lichtblauwe achtergrondkleur */
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;colgroup&gt;
+      &lt;col&gt;
+      &lt;col class="wetenschapsvakken" span="2"&gt;
+      &lt;col class="taalvakken"&gt;
+   &lt;/colgroup&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th scope="col" rowspan="2"&gt;Student&lt;/th&gt;
+         &lt;th scope="col" colspan="3"&gt;Vakken&lt;/th&gt;
+         &lt;th scope="col" rowspan="2"&gt;Aanwezigheid&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="col"&gt;Wiskunde&lt;/th&gt;
+         &lt;th scope="col"&gt;Fysica&lt;/th&gt;
+         &lt;th scope="col"&gt;Nederlands&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+         &lt;td&gt;90&lt;/td&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;88&lt;/td&gt;
+         &lt;td&gt;hoog&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Brian&lt;/th&gt;
+         &lt;td&gt;78&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;80&lt;/td&gt;
+         &lt;td&gt;gemiddeld&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Chee&lt;/th&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;89&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;laag&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;David&lt;/th&gt;
+         &lt;td colspan="3"&gt;vrijgesteld&lt;/td&gt;
+         &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
+         &lt;td&gt;84.33&lt;/td&gt;
+         &lt;td&gt;88.67&lt;/td&gt;
+         &lt;td&gt;86.67&lt;/td&gt;
+         &lt;td&gt;&nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel5.png" alt="" class="w-400">
+
+      </div>
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>

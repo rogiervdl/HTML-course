@@ -5,15 +5,6 @@
    "elements": [
       "html5",
       {
-         "figure": {
-            "permittedDescendants": [
-               "img",
-               "figcaption"
-            ]
-         },
-         "i": {
-            "deprecated": false
-         },
          "iframe": {
             "attributes": {
                "frameborder": {

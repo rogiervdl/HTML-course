@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>Samenvatting | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="css/summary.css">
+</head>
+
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb active" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>08. HTML samenvatting</h1>
+   <div id="toc"></div>
+   <main>
+
+      <!-- VIDEO -->
+      <h2>Op Youtube: praktijkdemo</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/kIJbahdQqcI?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=kIJbahdQqcI"><img src="img/03_links/youtube-links.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=kIJbahdQqcI">https://www.youtube.com/watch?v=kIJbahdQqcI</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=40">0:40 opzetten bestanden en mappen</a></li>
+               <li>
+                  <a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=91">1:31 header</a>
+                  <ul>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=91">1:31 logo</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=121">2:01 taalmenu</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=153">2:33 zoekformulier</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=227">3:47 navigatiemenu</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=292">4:52 banner</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=337">5:37 main linkerkolom</a>
+                  <ul>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=377">6:17 ongenummerde lijst</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=554">9:14 genummerde lijst</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=646">10:46 superscript en subscript</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=777">12:57 afbeelding met onderschrift</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=901">15:01 UTF-8 karakters</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1090">18:10 definitielijst</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1151">19:11 horizontale lijn</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1205">20:05 Youtube video</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1273">21:13 contactformulier</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1548">25:48 sociale media links</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1682">28:02 main rechterkolom</a>
+                  <ul>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1713">&nbsp;&nbsp;&nbsp;28:33 advertentie 1</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1795">&nbsp;&nbsp;&nbsp;29:05 advertentie 2</a></li>
+                     <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1831">&nbsp;&nbsp;&nbsp;30:31 zijmenu</a></li>
+                  </ul>
+               </li>
+               <li><a href="https://www.youtube.com/watch?v=kIJbahdQqcI&t=1959">32:39 footer</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <section>
+         <h2>Blocklevel tekst</h2>
+         <table>
+            <colgroup>
+               <col style="width: 300px">
+               <col>
+               <col>
+            </colgroup>
+            <tbody>
+               <tr>
+                  <td><code>&lt;p&gt;</code></td>
+                  <td>paragraaf</td>
+                  <td><img src="img/02_tekst/paragrafen.png" alt="" class="bordered"></td>
+               </tr>
+               <tr>
+                  <td><code>&lt;h1&gt;...&lt;h6&gt;</code></td>
+                  <td>titels</td>
+                  <td><img src="img/02_tekst/titels.png" alt="" class="bordered w-200"></td>
+               </tr>
+               <tr>
+                  <td><code>&lt;blockquote&gt;</code></td>
+                  <td>quote, pull quote</td>
+                  <td><img src="img/02_tekst/blockquote.png" alt="" class="bordered"></td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;ul&gt;
+   &lt;li&gt;...&lt;/li&gt;
+   &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                  </td>
+                  <td>ongeordende lijst van gelijkaardige items (ook gebruikt voor menu's)</td>
+                  <td><img src="img/02_tekst/ul.png" alt="" class="bordered w-100"></td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;ol&gt;
+   &lt;li&gt;...&lt;/li&gt;
+   &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+                  </td>
+                  <td>geordende lijst van gelijkaardige items</td>
+                  <td><img src="img/02_tekst/ol.png" alt="" class="bordered w-150"></td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;dl&gt;
+   &lt;dt&gt;...&lt;/dt&gt;&lt;dd&gt;...&lt;/dd&gt;
+   &lt;dt&gt;...&lt;/dt&gt;&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+                  </td>
+                  <td>definitielijst met term/data paren</td>
+                  <td><img src="img/02_tekst/dl.png" alt="" class="bordered w-250"></td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>
+&lt;table&gt;
+   &lt;caption&gt;...&lt;/caption&gt;
+   &lt;colgroup&gt;
+      &lt;col&gt;
+      &lt;col span="2"&gt;
+   &lt;/colgroup&gt;
+   &lt;tr&gt;
+      &lt;th scope="col"&gt;...&lt;/th&gt;
+      &lt;th scope="col"&gt;...&lt;/th&gt;
+      &lt;th scope="col"&gt;...&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                  </td>
+                  <td>basisstructuur tabel</td>
+                  <td></td>
+               </tr>
+
+            </tbody>
+         </table>
+
+      </section>
+      <section>
+         <h2>Inline tekst</h2>
+         <table>
+            <colgroup>
+               <col style="width: 300px">
+               <col>
+            </colgroup>
+            <tbody>
+               <tr>
+                  <td><code>&lt;em&gt;</code></td>
+                  <td>nieuwe term, spreek trager uit</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;strong&gt;</code></td>
+                  <td>belangrijke term, spreek luider uit</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;small&gt;</code></td>
+                  <td>meestal in footer: "kleine lettertjes" (voorwaarden, copyright info...)</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;sup&gt;</code></td>
+                  <td>superscript, b.v. m<sup>2</sup></td>
+               </tr>
+               <tr>
+                  <td><code>&lt;sub&gt;</code></td>
+                  <td>subscript, b.v. H<sub>2</sub>O</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;cite&gt;</code></td>
+                  <td>referentie naar een werk: schilderij, boek, publicatie...</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;code&gt;</code></td>
+                  <td>code blok, b.v. in programmeerblogs</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;abbr&gt;</code></td>
+                  <td>afkorting</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;br&gt;</code></td>
+                  <td>line break</td>
+               </tr>
+               <tr>
+                  <td>&amp;lt; &amp;gt; &amp;copy; &amp;mdash; ...</td>
+                  <td>karakter entiteiten: &lt; &gt; &copy; &mdash; ...</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;address&gt;</code></td>
+                  <td>primaire contactinformatie (hoeft geen fysiek adres te zijn)</td>
+               </tr>
+            </tbody>
+
+         </table>
+
+      </section>
+      <section>
+         <h2>Links</h2>
+         <table>
+            <colgroup>
+               <col style="width: 450px">
+               <col style="width: calc(100% - 450px)">
+            </colgroup>
+            <tbody>
+               <tr>
+                  <td><code>&lt;a href="..."&gt;...&lt;/a&gt;</code></td>
+                  <td>hyperlink</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;a href="..." title="..."&gt;...&lt;/a&gt;</code></td>
+                  <td>hyperlink met beschrijving</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;a href="mailto:..."&gt;...&lt;/a&gt;</code></td>
+                  <td>email link</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;a href="tel:..."&gt;...&lt;/a&gt;</code></td>
+                  <td>telefoon of gsm link</td>
+               </tr>
+               <tr>
+                  <td>
+                     <code> &lt;a href="#ref1"&gt;...&lt;/a&gt;</code>
+                     <br><code>&lt;p id="ref1"&gt;...&lt;/p&gt;</code>
+                  </td>
+                  <td>anker (interne link in de pagina)</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;a href=""&gt;company name&lt;/a&gt;
+
+&lt;a href=""&gt;&lt;img src="img/logo.png" alt="logo"&gt;&lt;/a&gt;</code></pre>
+                  </td>
+                  <td>typische code voor logo</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;ul&gt;
+   &lt;li&gt;&lt;a href=""&gt;home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=""&gt;projects&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=""&gt;contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                  </td>
+                  <td>typische code voor menu</td>
+               </tr>
+            </tbody>
+
+
+         </table>
+
+      </section>
+      <section>
+         <h2>Media</h2>
+         <table>
+            <colgroup>
+               <col style="width: 600px">
+               <col>
+            </colgroup>
+            <tbody>
+               <tr>
+                  <td><code>&lt;img src="..." alt="..."&gt;</code></td>
+                  <td>image</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;figure&gt;
+   &lt;img src="..." alt="..."&gt;
+   &lt;img src="..." alt="..."&gt;
+   &lt;img src="..." alt="..."&gt;
+   &lt;figcaption&gt;...&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                  </td>
+                  <td>one or more images with caption</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;picture&gt;
+   &lt;source media="..." srcset="..."&gt;
+   &lt;source media="..." srcset="..."&gt;
+   &lt;img src=-"..." alt=-"..."&gt;
+&lt;/picture&gt;</code></pre>
+                  </td>
+                  <td>image with alternative sources</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;audio src="tune.mp3"&gt;
+   audio not supported
+&lt;/audio&gt;</code></pre>
+                  </td>
+                  <td>audio element</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;audio src="tune.mp3"&gt;
+   &lt;source src="music.oga" type="audio/ogg"&gt;
+   &lt;source src="music.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                  </td>
+                  <td>audio with alternative sources</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;video src="myvideo.mp4"&gt;
+   video not supported
+&lt;/video&gt;</code></pre>
+                  </td>
+                  <td>video element</td>
+               </tr>
+               <tr>
+                  <td>
+                     <pre><code>&lt;video src="media/myvideo.mp4"&gt;
+   &lt;source src="video_small.mp4" type="video/mp4" media="handheld"&gt;
+   &lt;source src="video.mp4" type="video/mp4"&gt;
+   &lt;source src="video.ogv" type="video/ogg; codecs=theora, vorbis"&gt;
+&lt;/video&gt;</code></pre>
+                  </td>
+                  <td>video with alternative sources</td>
+               </tr>
+            </tbody>
+
+         </table>
+
+      </section>
+      <section>
+         <h2>Structural</h2>
+         <h3>document</h3>
+         <table>
+            <colgroup>
+               <col style="width: 300px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;!DOCTYPE html&gt;</code></td>
+               <td>HTML document type</td>
+            </tr>
+            <tr>
+               <td><code>&lt;html&gt;</code></td>
+               <td>HTML document</td>
+            </tr>
+            <tr>
+               <td><code>&lt;head&gt;</code></td>
+               <td>invisible meta content</td>
+            </tr>
+            <tr>
+               <td><code>&lt;title&gt;</code></td>
+               <td>document title</td>
+            </tr>
+            <tr>
+               <td><code>&lt;meta charset="utf-8"&gt;</code></td>
+               <td>UTF8 characterset declaration</td>
+            </tr>
+            <tr>
+               <td><code>&lt;style&gt;...&lt;/style&gt;</code></td>
+               <td>internal stylesheet</td>
+            </tr>
+            <tr>
+               <td><code>&lt;link rel="stylesheet" href="..."&gt;</code></td>
+               <td>linked stylesheet</td>
+            </tr>
+            <tr>
+               <td><code>&lt;script&gt;&lt;/script&gt;</code></td>
+               <td>internal script</td>
+            </tr>
+            <tr>
+               <td><code>&lt;script src=""&gt;&lt;/script&gt;</code></td>
+               <td>linked script</td>
+            </tr>
+            <tr>
+               <td><code>&lt;head&gt;</code></td>
+               <td>invisible meta content</td>
+            </tr>
+            <tr>
+               <td><code>&lt;body&gt;</code></td>
+               <td>visible content</td>
+            </tr>
+         </table>
+         <h3>divisions</h3>
+         <table>
+            <colgroup>
+               <col style="width: 300px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;div&gt;</code></td>
+               <td>blocklevel division (part of document)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;span&gt;</code></td>
+               <td>inline span (part of text)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;section&gt;</code></td>
+               <td>groups a title and content</td>
+            </tr>
+            <tr>
+               <td><code>&lt;nav&gt;</code></td>
+               <td>main navigation block</td>
+            </tr>
+            <tr>
+               <td><code>&lt;article&gt;</code></td>
+               <td>self-contained independent content</td>
+            </tr>
+            <tr>
+               <td><code>&lt;main&gt;</code></td>
+               <td>main page content</td>
+            </tr>
+            <tr>
+               <td><code>&lt;header&gt;</code></td>
+               <td>introductory content (page or section)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;aside&gt;</code></td>
+               <td>related content (page or section)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;footer&gt;</code></td>
+               <td>closing content (page or section)</td>
+            </tr>
+         </table>
+      </section>
+      <section>
+         <h2>Forms</h2>
+         <h3>form structure</h3>
+         <table>
+            <colgroup>
+               <col style="width: 500px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;form action="..."&gt;...&lt;/form&gt;</code></td>
+               <td>basic form</td>
+            </tr>
+            <tr>
+               <td>
+                  <pre><code>&lt;div&gt;
+   &lt;label for="inp1"&gt;...&lt;/label&gt;
+   &lt;input id="inp1" type="..."&gt;
+&lt;/div&gt;</code></pre>
+               </td>
+               <td>control group</td>
+            </tr>
+            <tr>
+               <td>
+                  <pre><code>&lt;div&gt;
+   &lt;label&gt;...&lt;/label&gt;
+   &lt;label&gt;&lt;input type="checkbox"&gt; option A&lt;/label&gt;
+   &lt;label&gt;&lt;input type="checkbox"&gt; option B&lt;/label&gt;
+   &lt;label&gt;&lt;input type="checkbox"&gt; option C&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+               </td>
+               <td>checkboxlist</td>
+            </tr>
+            <tr>
+               <td>
+                  <pre><code>&lt;div&gt;
+   &lt;label&gt;...&lt;/label&gt;
+   &lt;label&gt;&lt;input name="grp1" type="radio"&gt; option A&lt;/label&gt;
+   &lt;label&gt;&lt;input name="grp1" type="radio"&gt; option B&lt;/label&gt;
+   &lt;label&gt;&lt;input name="grp1" type="radio"&gt; option C&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+               </td>
+               <td>radiobutton group</td>
+            </tr>
+
+         </table>
+         <h3>controls</h3>
+         <table>
+            <colgroup>
+               <col style="width: 350px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;input type="text"&gt;</code></td>
+               <td>text field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;textarea&gt;...&lt;/textarea&gt;</code></td>
+               <td>text area</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="passwoord"&gt;</code></td>
+               <td>password field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="email"&gt;</code></td>
+               <td>email field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="tel"&gt;</code></td>
+               <td>telephone field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="url"&gt;</code></td>
+               <td>url field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="date"&gt;</code></td>
+               <td>datepicker field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="color"&gt;</code></td>
+               <td>colorpicker field</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="range" min="1" max="10"&gt;</code></td>
+               <td>slider field</td>
+            </tr>
+            <tr>
+               <td>
+                  <pre><code>&lt;select&gt;
+   &lt;option&gt;value A&lt;/option&gt;
+   &lt;option&gt;value B&lt;/option&gt;
+   &lt;option&gt;value C&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+               </td>
+               <td>dropdown list</td>
+            </tr>
+
+         </table>
+         <h3>buttons</h3>
+         <table>
+            <colgroup>
+               <col style="width: 350px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;input type="submit" value="send"&gt;</code></td>
+               <td>submit button</td>
+            </tr>
+            <tr>
+               <td><code>&lt;button type="submit"&gt;send&lt;/button&gt;</code></td>
+               <td>submit button, alternative syntax</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input type="reset" value="clear form"&gt;</code></td>
+               <td>reset button</td>
+            </tr>
+         </table>
+         <h3>attributes</h3>
+         <table>
+            <colgroup>
+               <col style="width: 350px">
+               <col>
+            </colgroup>
+            <tr>
+               <td><code>&lt;input ... placeholder="..."&gt;</code></td>
+               <td>set watermark text</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input ... value="..."&gt;</code></td>
+               <td>set input value</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input ... disabled&gt;</code></td>
+               <td>control is disabled</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input ... autofocus&gt;</code></td>
+               <td>autofocus on this control</td>
+            </tr>
+            <tr>
+               <td><code>&lt;input ... required&gt;</code></td>
+               <td>value is required</td>
+            </tr>
+            <tr>
+               <td>
+                  <code>
+                  &lt;input type="radio" checked&gt;
+                  <br>&lt;input type="checkbox" checked&gt;
+               </code>
+               </td>
+               <td>radiobutton is aangevinkt</td>
+            </tr>
+            <tr>
+               <td><code>&lt;option selected&gt;...&lt;/option&gt;</code></td>
+               <td>optie is aangevinkt</td>
+            </tr>
+         </table>
+      </section>
+
+
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>

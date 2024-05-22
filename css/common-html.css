@@ -1,0 +1,32 @@
+pre[class*="language-"] {
+   background: #f5f2f0;
+}
+
+pre.notoolbar {
+   padding: 0.5em 1em;
+}
+
+pre.notoolbar + .toolbar .toolbar-item {
+   display: none !important;
+}
+
+.greenline {
+   border-bottom: 2px solid #090;
+}
+
+.redline {
+   border-bottom: 2px solid #900;
+}
+
+blockquote.greenbig {
+   background-color: #eeffee66;
+   border: 3px dashed #999;
+   font-size: larger;
+   margin-bottom: 1em;
+   padding: 0.5em 2em;
+   text-align: center;
+   width: fit-content;
+}
+.xl {
+   font-size: 1.5em;
+}

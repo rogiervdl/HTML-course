@@ -3,57 +3,66 @@
 
 <head>
    <meta charset="utf-8">
-   <title>HTML &mdash; introductie voor beginners</title>
+   <title>HTML cheat sheets</title>
    <meta name="author" content="Rogier van der Linde - odisee.be">
    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
    <link rel="stylesheet" href="fonts/droidsans/webfont.css">
    <link rel="stylesheet" href="fonts/lato/webfont.css">
    <link rel="stylesheet" href="fonts/leaguegothic/webfont.css">
+   <link rel="stylesheet" href="css/switch.css">
    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
    <header class="site__header">
       <a class="header__logo" href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
       <h1 class="header__title">HTML</h1>
-      <p class="header__tagline">introductie voor beginners</p>
+      <p class="header__tagline">cheat sheets</p>
    </header>
-   <main class="site__main">
-      <a href="01_syntax.html" class="main__thumb">
-         <h3 class="thumb__title">01. HTML SYNTAX</h3>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <h3 class="thumb__title">01. syntax</h3>
          <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
       </a>
-      <a href="02_text.html" class="main__thumb">
-         <h3 class="thumb__title">02. HTML TEKST</h3>
-         <img class="thumb__visual" src="img/02_text/icon.jpg" alt="">
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <h3 class="thumb__title">02. tekst</h3>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
       </a>
-      <a href="03_links.html" class="main__thumb">
-         <h3 class="thumb__title">03. HTML LINKS</h3>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <h3 class="thumb__title">03. links</h3>
          <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
       </a>
-      <a href="04_tables.html" class="main__thumb">
-         <h3 class="thumb__title">04. HTML TABELLEN</h3>
-         <img class="thumb__visual" src="img/04_tables/icon.jpg" alt="">
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <h3 class="thumb__title">04. tabellen</h3>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
       </a>
-      <a href="05_media.html" class="main__thumb">
-         <h3 class="thumb__title">05. HTML MEDIA</h3>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <h3 class="thumb__title">05. media</h3>
          <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
       </a>
-      <a href="06_forms.html" class="main__thumb">
-         <h3 class="thumb__title">06. HTML FORMULIEREN</h3>
-         <img class="thumb__visual" src="img/06_forms/icon.jpg" alt="">
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <h3 class="thumb__title">06. formulieren</h3>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
       </a>
-      <a href="07_structuring.html" class="main__thumb">
-         <h3 class="thumb__title">07. HTML STRUCTUREREN</h3>
-         <img class="thumb__visual" src="img/07_structuring/icon.jpg" alt="">
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <h3 class="thumb__title">07. structuren</h3>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
       </a>
-      <a href="cheatsheet.html" class="main__thumb">
-         <h3 class="thumb__title">HTML CHEATSHEET</h3>
-         <img class="thumb__visual" src="img/cheatsheet/icon.png" alt="">
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <h3 class="thumb__title">08. samenvatting</h3>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
       </a>
-   </main>
+   </nav>
    <footer class="site__footer">
-      <p>zie ook de cursus <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> en <a href="https://rogiervdl.github.io/JS-course/">Javascript</a></p>
+      <p>Rogier van der Linde</p>
    </footer>
    <aside>
       <p>Dit materiaal werd ontwikkeld door Rogier van der Linde, docent Toegepaste Informatica op Odisee.</p>
@@ -61,7 +70,8 @@
       <p>Suggesties en opmerkingen zijn welkom per mail naar <a href="mailto:rogier.vanderlinde@odisee.be">Rogier</a>, of via een <a href="https://github.com/rogiervdl/HTML-course">a pull request op GitHub</a>.</p>
       <img src="img/me.jpg" alt="foto Rogier van der Linde">
    </aside>
-   </body>
-   
-   </html>
+   <script src="js/mode.js"></script>
+</body>
+
+</html>
 

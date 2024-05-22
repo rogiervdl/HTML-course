@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>Structureren | C# cheat sheets</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb active" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>07. HTML structureren</h1>
+   <div id="toc"></div>
+   <main>
+
+      <!-- VIDEO -->
+      <h2>Youtube: HTML structureren</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/yTwx0BXX1k0?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=yTwx0BXX1k0"><img src="img/03_links/youtube-links.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0">https://www.youtube.com/watch?v=yTwx0BXX1k0</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=30">0:30 &lt;div&gt; element</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=146">2:26 &lt;header&gt;, &lt;nav&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;section&gt;, &lt;article&gt;</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=346">5:46 &lt;span&gt;</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=366">6:06 link naar top</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=445">7:25 wat wanneer gebruiken</a></li>
+               <li><a href="https://www.youtube.com/watch?v=yTwx0BXX1k0&t=541">9:01 correct groeperen</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <h2>Overzicht elementen</h2>
+      <p>
+         Voor we onze HTML pagina kunnen opmaken met CSS, hebben we een manier nodig om meer structuur te brengen, door gebieden aan te duiden in de HTML die later de <strong>headers, kolommen, zijbalk, footer</strong> enz... zullen worden. 
+         Alle beschikbare <mark>structurele elementen</mark> in HTML:
+      </p>
+      <table class="light">
+         <thead>
+            <tr>
+               <th scope="col">element</th>
+               <th scope="col">betekens</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><code>&lt;span&gt;</code></td>
+               <td>deel van een zin</td>
+            </tr>
+            <tr>
+               <td><code>&lt;div&gt;</code></td>
+               <td>deel van het document</td>
+            </tr>
+            <tr>
+               <td><code>&lt;header&gt;</code></td>
+               <td>inleidend gedeelte</td>
+            </tr>
+            <tr>
+               <td><code>&lt;footer&gt;</code></td>
+               <td>afsluitend gedeelte</td>
+            </tr>
+            <tr>
+               <td><code>&lt;main&gt;</code></td>
+               <td>hoofdinhoud (één per pagina)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;section&gt;</code></td>
+               <td>stuk met een titel (cfr. hoofdstuk in een boek)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;nav&gt;</code></td>
+               <td>hoofdnavigatie (één per pagina)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;aside&gt;</code></td>
+               <td>gerelateerde inhoud (cfr. gerelateerde links)</td>
+            </tr>
+            <tr>
+               <td><code>&lt;article&gt;</code></td>
+               <td>onafhankelijke inhoud (cfr. widget)</td>
+            </tr>
+         </tbody>
+      </table>
+      <p>
+         → &lt;span&gt; is een <a href="01_syntax.html#blocklevel-en-inline">inline</a> element, de rest is <a href="01_syntax.html#blocklevel-en-inline">blocklevel</a>
+      </p>
+
+      <h3>span</h3>
+      <p>De <span class="em"><code>&lt;span&gt;</code></span> is een inline element, en duidt een <strong>deel van een zin</strong> aan. Het heeft verder geen betekenis, en is enkel nuttig om later met CSS of Javascript te gebruiken. Een voorbeeld:</p>
+      <div>
+         <pre><code>&lt;p&gt;
+   By impossible of in &lt;span class="highlight"&gt;difficulty discovered&lt;/span&gt; 
+   celebrated ye. Justice joy manners boy met resolve produce. Bed head 
+   &lt;span class="highlight"&gt;loud&lt;/span&gt; next plan rent had easy add him. 
+&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+         → merk op dat in dit geval <code>&lt;em&gt;</code> of nog beter <code>&lt;mark&gt;</code> correcter zou zijn
+      </p>
+
+      <h3>div</h3>
+      <p>Een <span class="em"><code>&lt;div&gt;</code></span> is een algemene manier om een <strong>deel van het document</strong> aan te duiden. Het heeft verder geen betekenis, en is enkel zinvol om later met CSS of Javascript te gebruiken, b.v. een pagina wrapper, tekstkolommen, container voor scripted content als een map or kalender... Typisch voorbeeld:</p>
+      <div>
+         <pre><code>&lt;footer&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+      </div>
+      <p>
+         → als de kolommen titels bevatten, zou <a href="#/section"><code>&lt;section&gt;</code></a> beter zijn (zie verder)
+      </p>
+
+      <h3>header</h3>
+      <p>De <span class="em"><code>&lt;header&gt;</code></span> markeert een <strong>inleidend gedeelte</strong>. De meest klassieke toepassing is aanduiding van de bovenkant van de pagina, waar het typisch zaken bevat als de paginatitel, navigatie elementen, het logo, de slagzin, het zoekvenster...</p>
+      <div>
+         <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    ... &lt;!-- logo, zoeken, menu enz... hier --&gt;
+  &lt;/header&gt;
+  ...
+&lt;/body&gt;</code></pre>
+      </div>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
+         </blockquote>
+         <blockquote>
+            The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+         </blockquote>
+      </div>
+
+      <h3>footer</h3>
+      <p>De <span class="em"><code>&lt;footer&gt;</code></span> markeert <strong>afsluitende inhoud</strong>. De meest klassieke toepassing is aanduiding van de onderkant van de pagina, waar het typisch zaken bevat als copyright informatie, kleine links, sociale media...</p>
+      <div>
+         <pre><code>&lt;body&gt;
+  ...
+  &lt;footer&gt;
+    ... &lt;!-- copyright, sociale media, kleine links enz... hier --&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      <p>
+         → merk op: hoewel <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> meestal gebruikt worden voor een hele pagina, kan je ze in principe ook gebruiken om de boven- en onderkant van andere dingen aan te duiden, zoals een productomschrijving op een webshop, een review...
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+         </blockquote>
+      </div>
+
+      <h3>main</h3>
+      <p>De <span class="em"><code>&lt;main&gt;</code></span> markeert de <strong>hoofdinhoud</strong> van een pagina. Dit is nuttig voor screenreaders, die dan meteen naar de content kunnen springen zonder telkens weer alles in de <code>&lt;header&gt;</code> voor te lezen. Een typische pagina opbouw wordt dan:</p>
+      <div>
+         <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    ... 
+  &lt;/header&gt;
+  &lt;main&gt;
+    ... &lt;!-- hoofdinhoud pagina hier --&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    ... 
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      <p>
+         → er is bijgevolg maar één <code>&lt;main&gt;</code> per pagina mogelijk
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            The main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
+         </blockquote>
+      </div>
+
+      <h3>section</h3>
+      <h4>strikte interpretatie</h4>
+      <p>Volgens de strikte definitie markeren <span class="em"><code>&lt;section&gt;</code></span>'s de <strong>titels</strong> met bijhorende <strong>inhoud</strong>, waarbij sections genest worden volgens de hiërarchische documentstructuur:</p>
+      <div>
+         <pre><code>&lt;section&gt;
+  &lt;h2&gt;Chapter 1&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+    &lt;p&gt;But I must explain to you how all this mistaken idea of denouncing pleasure...&lt;/p&gt;
+  &lt;/section&gt;    
+  &lt;section&gt;
+    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+    &lt;p&gt;On the other hand, we denounce with righteous indignation and dislike men who are...&lt;/p&gt;
+  &lt;/section&gt;    
+&lt;/section&gt;  
+&lt;section&gt;
+  &lt;h2&gt;Chapter 2&lt;/h2&gt;
+  ...
+&lt;/section&gt;</code></pre>
+      </div>
+      <p>
+         → denk aan de inhoudsopgave van een rapport of boek
+         <br>→ een sectie moet <i>altijd</i> de titel en de volledige inhoud omvatten en omgekeerd
+         <br>→ strikt gezien zijn er dus altijd exact evenveel sections als titels
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
+         </blockquote>
+         <blockquote>
+            The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+         </blockquote>
+      </div>
+      <h4>losse interpretatie</h4>
+      <p>Deze strikte definitie is niet altijd werkbaar. In praktijk hebben niet alle blokken altijd een titel, en de hiërarchische pagina opbouw is niet altijd even duidelijk. Daarom gebruiken we soms een lossere definitie voor section als gewoon een <strong>"visueel samenhanged stuk van de pagina"</strong> &mdash; met of zonder titel. De <code>&lt;main&gt;</code> is een goede kandidaat om in sections te verdelen:</p>
+      <div>
+         <pre><code>&lt;main&gt;
+  &lt;section&gt;
+    ...blok 1...
+  &lt;/section&gt;
+  &lt;section&gt;
+    ...blok 2...
+  &lt;/section&gt;
+  &lt;section&gt;
+    ...blok 3...
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+      </div>
+      <p>
+         → gebruik het enkel om grote blokken aan te duiden; voor kleinere onderverdelingen of puur als grafisch of technisch hulpmiddel gebruik je best nog steeds <code>&lt;div&gt;</code>
+         <br>→ mix binnen één element geen sections met andere elementen: gebruik ofwel <code>&lt;section&gt;</code>, ofwel niet
+         <br>→ <i>vraag aan je docent welke interpretatie gebruikt wordt, strikt of los</i>
+      </p>
+
+      <h3>nav</h3>
+      <p>De <span class="em"><code>&lt;nav&gt;</code></span> markeert de <strong>hoofdnavigatie</strong>. Gebruik het dus enkel voor menus; niet voor filters, paginering, zoekformulieren, kleine links in de footer enz... Typisch voorbeeld:</p>
+      <div>
+         <pre><code>&lt;nav&gt;
+  &lt;ul class="mainmenu"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="products.html"&gt;products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;about&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+      <p>
+         → er is bijgevolg maar één <code>&lt;main&gt;</code> per pagina mogelijk
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+         </blockquote>
+         <blockquote>
+            Not all groups of links on a page need to be in a nav element — the element is primarily intended for sections that consist of major navigation blocks.
+         </blockquote>
+      </div>
+
+      <h3>aside</h3>
+      <p>De <span class="em"><code>&lt;aside&gt;</code></span> is een speciaal geval van <code>&lt;section&gt;</code>, en bevat <strong>bijkomende informatie</strong>, zoals gerelateerde links, product suggesties, reclame, quick facts, auteur informatie enz... Een typisch voorbeeld:</p>
+      <div>
+         <pre><code>&lt;aside&gt;
+  &lt;h3&gt;Over de auteur&lt;/h3&gt;
+  &lt;p&gt;Hi, ik ben Dan!&lt;/p&gt;
+  &lt;img src="img/photo_dan.jpg" alt="een foto van Dan!"&gt;
+  &lt;h3&gt;Recente posts&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Firefighters zijn ECHTE Superheroes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Vrienden&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+      </div>
+      <p>
+         → als je niet zeker bent, gebruik je best gewoon een <code>&lt;section&gt;</code> of <code>&lt;div&gt;</code>
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
+         </blockquote>
+         <blockquote>
+            The element can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content of the page.
+         </blockquote>
+      </div>
+
+      <h3>article</h3>
+      <p>De <span class="em"><code>&lt;article&gt;</code></span> bevat <strong>onafhankelijke en herbruikbare content</strong>. Als je het integraal kan kopiëren naar een andere website, dan is het waarschijnlijk een article. Denk aan embedded tweets, widgets als polls, kalenders of weersvoorspelling... Typisch voorbeeld:</p>
+      <div>
+         <pre><code>&lt;article&gt;
+  &lt;h1&gt;Weersvoorspelling&lt;/h1&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;maandag&lt;/dt&gt;
+    &lt;dd&gt;Regen, af en toe een opklaring&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;dinsdag&lt;/dt&gt;
+    &lt;dd&gt;Zonnig, maar fris voor de tijd van het jaar&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/article&gt;</code></pre>
+      </div>
+      <p>
+         → als je niet zeker bent, gebruik je best gewoon een <code>&lt;section&gt;</code> of <code>&lt;div&gt;</code>
+      </p>
+      <div class="tips" data-caption="📜W3C QUOTES">
+         <blockquote>
+            The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+         </blockquote>
+      </div>
+
+      <h2>Praktijkvoorbeeld</h2>
+      <p>Laat ons zeggen dat we deze pagina willen maken:</p>
+      <figure>
+         <img src="img/07_structureren/full.png" alt="" class="shadow w-600">
+         <figcaption>
+            zie <a href="demos/07_structuring/unstructured.html">demo zonder CSS</a>
+            &mdash;
+            <a href="demos/07_structuring/designed.html">demo met CSS</a>
+         </figcaption>
+      </figure>
+
+      <h3>Ongestructureerd</h3>
+      <p>De basis HTML, zonder structureren:</p>
+      <div class="codecompare">
+         <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Testpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+
+   &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+   &lt;p&gt;Submenu&lt;/p&gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+   &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+
+   &lt;h3&gt;Part 1&lt;/h3&gt;
+   &lt;p&gt;
+      But I must explain to you how all this mistaken idea of denouncing pleasure
+      and praising pain was born and I will give you a complete account of the system,
+      and expound the actual teachings of the great explorer of the truth, the
+      master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+      itself, because it is pleasure, but because those who do not know how to pursue
+      pleasure rationally encounter consequences that are extremely painful.
+   &lt;/p&gt;
+
+   &lt;h3&gt;Part 2&lt;/h3&gt;
+   &lt;p&gt;
+      Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+      because it is pain, but because occasionally circumstances occur in which toil
+      and pain can procure him some great pleasure. To take a trivial example, which of
+      us ever undertakes laborious physical exercise, except to obtain some advantage
+      from it? But who has any right to find fault with a man who chooses to enjoy a
+      pleasure that has no annoying consequences, or one who avoids a pain that
+      produces no resultant pleasure?
+   &lt;/p&gt;
+
+   &lt;h3&gt;Part 3&lt;/h3&gt;
+   &lt;p&gt;
+      On the other hand, we denounce with righteous indignation and dislike men who are
+      so beguiled and demoralized by the charms of pleasure of the moment, so blinded
+      by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+      and equal blame belongs to those who fail in their duty through weakness of will,
+      which is the same as saying through shrinking from toil and pain.
+   &lt;/p&gt;
+
+   &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+   &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+
+   &lt;h4&gt;Advertisement&lt;/h4&gt;
+   &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+   &lt;p&gt;&amp;copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+
+   &lt;h4&gt;Comments&lt;/h4&gt;
+   &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+   &lt;p&gt;
+      I personally believe Lorem Ipsum is the most sensitive poem ever written
+      (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+   &lt;/p&gt;
+   &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+   &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+
+   &lt;p&gt;&amp;copy; Rogier van der Linde, 2010&lt;/p&gt;
+
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+   &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <h3>Gestructureerd met div's</h3>
+      <p>Met <code>&lt;div&gt;</code> elementen:</p>
+      <div class="codecompare">
+         <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Testpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id="wrapper"&gt;
+      &lt;div id="header"&gt;
+         &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+         &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="mainmenu"&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div id="submenu"&gt;
+         &lt;p&gt;Submenu&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div id="content"&gt;
+         &lt;div id="blogpost"&gt;
+            &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+            &lt;h3&gt;Part 1&lt;/h3&gt;
+            &lt;p&gt;
+               But I must explain to you how all this mistaken idea of denouncing pleasure
+               and praising pain was born and I will give you a complete account of the system,
+               and expound the actual teachings of the
+               &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
+               master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+               itself, because it is pleasure, but because those who do not know how to pursue
+               pleasure rationally encounter consequences that are extremely painful.
+            &lt;/p&gt;
+            &lt;h3&gt;Part 2&lt;/h3&gt;
+            &lt;p&gt;
+               Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+               because it is pain, but because occasionally circumstances occur in which toil
+               and pain can procure him some great pleasure. To take a trivial example, which of
+               us ever undertakes laborious physical exercise, except to obtain some advantage
+               from it? But who has any right to find fault with a man who chooses to enjoy a
+               pleasure that has no annoying consequences, or one who avoids a pain that
+               produces no resultant pleasure?
+            &lt;/p&gt;
+            &lt;h3&gt;Part 3&lt;/h3&gt;
+            &lt;p&gt;
+               On the other hand, we denounce with righteous indignation and dislike men who are
+               so beguiled and demoralized by the 
+               &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
+               by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+               and equal blame belongs to those who fail in their duty through weakness of will,
+               which is the same as saying through shrinking from toil and pain.
+            &lt;/p&gt;
+            &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+            &lt;div id="extra"&gt;
+               &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+               &lt;div class="ad"&gt;
+                  &lt;h4&gt;Advertisement&lt;/h4&gt;
+                  &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+                  &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id="comments"&gt;
+            &lt;h4&gt;Comments&lt;/h4&gt;
+            &lt;div class="comment"&gt;
+               &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+               &lt;p&gt;
+                  I personally believe Lorem Ipsum is the most sensitive poem ever written
+                  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+               &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="comment"&gt;
+               &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+               &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id="footer"&gt;
+         &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <p>
+         → dit werkt, maar <code>&lt;div&gt;</code> heeft geen semantische betekenis
+         <br>→ het is daardoor moeilijk om te zien wat de structuur is
+      </p>
+      <h3>Met structurele elementen</h3>
+      <p>Gestructureerd met betekenisvolle elementen <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> enz...:</p>
+      <div class="codecompare">
+         <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Testpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div id="wrapper"&gt;
+      &lt;header&gt;
+         &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
+         &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+      &lt;/header&gt;
+      &lt;nav&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/nav&gt;
+      &lt;div&gt;
+         &lt;p&gt;Submenu&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;main&gt;
+         &lt;section id="blogpost"&gt;
+            &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+            &lt;section&gt;
+               &lt;h3&gt;Part 1&lt;/h3&gt;
+               &lt;p&gt;
+                  But I must explain to you how all this mistaken idea of denouncing pleasure
+                  and praising pain was born and I will give you a complete account of the system,
+                  and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt; 
+                  of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids 
+                  pleasure itself, because it is pleasure, but because those who do not know how to pursue
+                  pleasure rationally encounter consequences that are extremely painful.
+               &lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+               &lt;h3&gt;Part 2&lt;/h3&gt;
+               &lt;p&gt;
+                  Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+                  because it is pain, but because occasionally circumstances occur in which toil
+                  and pain can procure him some great pleasure. To take a trivial example, which of
+                  us ever undertakes laborious physical exercise, except to obtain some advantage
+                  from it? But who has any right to find fault with a man who chooses to enjoy a
+                  pleasure that has no annoying consequences, or one who avoids a pain that
+                  produces no resultant pleasure?
+               &lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+            &lt;h3&gt;Part 3&lt;/h3&gt;
+            &lt;p&gt;
+               On the other hand, we denounce with righteous indignation and dislike men who are
+               so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; 
+               of the moment, so blinded by desire, that they cannot foresee the pain and trouble that 
+               are bound to ensue; and equal blame belongs to those who fail in their duty through 
+               weakness of will, which is the same as saying through shrinking from toil and pain.
+            &lt;/p&gt;
+            &lt;/section&gt;
+            &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
+            &lt;aside&gt;
+               &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+               &lt;article&gt;
+                  &lt;h4&gt;Advertisement&lt;/h4&gt;
+                  &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
+                  &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+               &lt;/article&gt;
+            &lt;/aside&gt;
+         &lt;/section&gt;
+         &lt;div id="comments"&gt;
+            &lt;h4&gt;Comments&lt;/h4&gt;
+            &lt;div class="comment"&gt;
+               &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+               &lt;p&gt;
+                  I personally believe Lorem Ipsum is the most sensitive poem ever written
+                  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+               &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="comment"&gt;
+               &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
+               &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/main&gt;
+      &lt;footer&gt;
+         &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+         &lt;/ul&gt;
+      &lt;/footer&gt;
+   &lt;/div&gt;   
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <p>
+         → veel betere semantische HTML markup
+      </p>
+
+      <h3>Samengevat</h3>
+      <p>Probeer het niet te overdenken. Over het algemeen zijn <code>&lt;div&gt;</code> elementen nog steeds ok, maar probeer deze zeker goed te krijgen:</p>
+      <ul>
+         <li>een <code>&lt;header&gt;</code> rond het bovenste van de pagina</li>
+         <li>een <code>&lt;main&gt;</code> rond het midden van de pagina</li>
+         <li>een <code>&lt;footer&gt;</code> rond het einde van de pagina</li>
+         <li>een <code>&lt;nav&gt;</code> rond je hoofdmenu</li>
+      </ul>
+      <p>Als je je comfortabel voelt, probeer dan:</p>
+      <ul>
+         <li>een <code>&lt;section&gt;</code> te gebruiken als je een titel hebt</li>
+         <li>een <code>&lt;aside&gt;</code> te gebruiken voor gerelateerde pagina informatie</li>
+         <li>een <code>&lt;article&gt;</code> te gebruiken voor advertenties en widgets</li>
+      </ul>
+
+      <h2>Uitsmijter: groeperen van content</h2>
+      <h3>Vuistregel</h3>
+      <blockquote class="greenbig"><span class="xl">✊</span>content die bij elkaar hoort, moet samen in een HTML element zitten</blockquote>
+      <p>Voorbeelden van dingen die bij elkaar horen in een groep:</p>
+      <ul>
+         <li>controls, titel, help teksten enz... van eenzelfde formulier zitten in een <code>&lt;form&gt;</code></li>
+         <li>sociale media iconen steek je in een <code>&lt;ul&gt;</code></li>
+         <li>avatar, titel, datum, tekst enz... van eenzelfde commentaar hoort in een <code>&lt;article&gt;</code> of <code>&lt;section&gt;</code></li>
+         <li>contact informatie zit in <code>&lt;address&gt;</code></li>
+         <li>afbeelding en bijschrift steek je in <code>&lt;article&gt;</code></li>
+         <li>inleidende inhoud: logo, topmenu, login... hoort in een <code>&lt;footer&gt;</code></li>
+      </ul>
+
+      <h3>Voorbeeld: formulier</h3>
+      <div class="codecompare">
+         <pre class="wrong notoolbar"><code>&lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
+&lt;form&gt;
+  &lt;p&gt;
+    ...
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+         <pre class="right notoolbar"><code>&lt;form&gt;
+   &lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
+  &lt;p&gt;
+    ...
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+
+      <h3>Voorbeeld: sociale media</h3>
+      <div class="codecompare">
+         <pre class="wrong notoolbar"><code>&lt;a href="#" title="like ons op facebook"&gt;&lt;img src="img/icn_fb.png" alt="facebook icon"&gt;&lt;/a&gt;
+&lt;a href="#" title="volg ons"&gt;&lt;img src="img/icn_tw.png" alt="twitter icon"&gt;&lt;/a&gt;
+&lt;a href="#" title="bekijk ons"&gt;&lt;img src="img/icn_yt.png" alt="youtube icon"&gt;&lt;/a&gt;
+
+
+</code></pre>
+         <pre class="right notoolbar"><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#" title="like ons"&gt;&lt;img src="img/icn_fb.png" alt="facebook icon"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" title="volg ons"&gt;&lt;img src="img/icn_tw.png" alt="twitter icon"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" title="bekijk ons"&gt;&lt;img src="img/icn_yt.png" alt="youtube icon"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </div>
+
+      <h3>Voorbeeld: commentaar</h3>
+      <div class="codecompare">
+         <pre class="wrong notoolbar"><code>...
+&lt;h3&gt;Worst movie ever&lt;/h3&gt;
+&lt;p&gt;
+  Gumbo beet greens corn soko endive gumbo gourd...
+&lt;/p&gt;
+&lt;img src="img/users/avatar080450.png" alt="avatar Bob"&gt;
+&lt;p&gt;posted on 11/09/2014 12:45 by &lt;em&gt;Bob&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Great movie&lt;/h3&gt;
+&lt;p&gt;
+  Turnip greens yarrow ricebean rutabaga endive cauliflower...
+&lt;/p&gt;
+&lt;img src="img/users/avatar059458.png" alt="avatar Alice"&gt;
+&lt;p&gt;posted on 10/09/2014 16:23 by &lt;em&gt;Alice&lt;/em&gt;&lt;/p&gt;
+...
+
+
+
+
+
+
+</code></pre>
+         <pre class="right notoolbar"><code>...
+  &lt;h1&gt;Worst movie ever&lt;/h1&gt;
+  &lt;p&gt;
+    Gumbo beet greens corn soko endive gumbo gourd...
+  &lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+  &lt;img src="img/users/avatar080450.png" alt="avatar Bob"&gt;
+  &lt;p&gt;posted on 11/09/2014 12:45 by &lt;em&gt;Bob&lt;/em&gt;&lt;/p&gt;
+  &lt;h1&gt;Great movie&lt;/h1&gt;
+  &lt;p&gt;
+    Turnip greens yarrow ricebean rutabaga endive cauliflower...
+  &lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+  &lt;img src="img/users/avatar059458.png" alt="avatar Alice"&gt;
+  &lt;p&gt;posted on 10/09/2014 16:23 by &lt;em&gt;Alice&lt;/em&gt;&lt;/p&gt;
+  ...</code></pre>
+      </div>
+
+      <h3>Voorbeeld: contact info</h3>
+      <div class="codecompare">
+         <pre class="wrong notoolbar"><code>&lt;h3&gt;Contacteer me!&lt;/h3&gt;
+&lt;p&gt;Name: John Doe&lt;/p&gt;
+&lt;p&gt;Email: john.doe@gmail.com&lt;/p&gt;
+&lt;p&gt;Tel: +3347892347&lt;/p&gt;
+
+
+</code></pre>
+         <pre class="right notoolbar"><code>&lt;h3&gt;Contacteer me!&lt;/h3&gt;
+&lt;address&gt;
+  &lt;p&gt;Name: John Doe&lt;/p&gt;
+  &lt;p&gt;Email: john.doe@gmail.com&lt;/p&gt;
+  &lt;p&gt;Tel: +3347892347&lt;/p&gt;
+&lt;/address&gt;</code></pre>
+      </div>
+
+   </main>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>

@@ -1,194 +1,265 @@
 <!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
 <html lang="nl">
 
 <head>
-   <meta charset="utf-8">
-   <title>HTML &mdash; Media</title>
-   <meta name="author" content="Rogier van der Linde - odisee.be">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Media | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="vendor/fancybox/fancybox.css">
    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="language-html showpro">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb active" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structuren">
+         <p class="thumb__title">07. structuren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>05. HTML media</h1>
+   <div id="toc"></div>
+   <main>
 
-   <!-- SLIDES -->
-   <div class="reveal">
+      <!-- VIDEO -->
+      <h2>Youtube: HTML media</h2>
+      <div class="flexcontainer youtubecontainer">
+         <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/Od6uUfY1KbM?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <figure class="print">
+            <a href="https://www.youtube.com/watch?v=Od6uUfY1KbM"><img src="img/03_links/youtube-links.png" alt="" class="w-500"></a>
+            <figcaption><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM">https://www.youtube.com/watch?v=Od6uUfY1KbM</a></figcaption>
+         </figure>
+         <div class="youtube_toc">
+            <ul>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM">0:00 intro</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=25">0:25 img tag</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=50">0:50 figure tag</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=106">1:46 picture tag</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=214">3:34 afbeelding of design?</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=273">4:33 SVG</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=362">6:02 audio en video tags</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=436">7:16 (optioneel) combinatie met Javascript en CSS</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=559">9:19 embedding Youtube</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=621">10:21 embedding Google Maps</a></li>
+               <li><a href="https://www.youtube.com/watch?v=Od6uUfY1KbM&t=654">10:54 image gallery met Javascript library</a></li>
+            </ul>
+         </div>
+      </div>
 
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
+      <h2>Afbeeldingen</h2>
+      <h3>Inhoud of design?</h3>
+      <p>
+         Let op! Niet alle afbeeldingen van webpagina's worden in de HTML gecodeerd. Sommige worden latern met <a href="https://rogiervdl.github.io/CSS-course/02_design.html">CSS</a> toegevoegd (zie later). 
+         Kort gezegd: <strong>design</strong> hoort thuis in <strong>CSS</strong>, <strong>inhoud</strong> hoort thuis in <strong>HTML</strong>. Vuistregels:
+      </p>
+      <ul class="arrow">
+         <li>
+            deze <strong>grafische effecten</strong> kunnen zuiver met <strong>CSS</strong>, zonder afbeeldingen:
+            <ul class="wrong">
+               <li>kaders</li>
+               <li>achtergrondkleuren</li>
+               <li>gradiënten</li>
+               <li>schaduw</li>
+               <li>...</li>
+            </ul>
+         </li>
+         <li>
+            deze afbeeldingen zijn <strong>design</strong>, en horen dus niet in de HTML maar in de <strong>CSS</strong>:
+            <ul class="wrong">
+               <li>grafische elementen</li>
+               <li>achtergrondfoto's</li>
+               <li>...</li>
+            </ul>
+         </li>
+         <li>
+            deze afbeeldingen zijn <strong>inhoud</strong>, en horen dus wel in de <strong>HTML</strong>:
+            <ul class="right">
+               <li>foto's als illustratie bij een artikel, gallerij, carousel...</li>
+               <li>logo's</li>
+               <li>reclame</li>
+               <li>banners</li>
+               <li>thumbnails</li>
+               <li>...</li>
+            </ul>
+         </li>
+      </ul>
+      <div class="tips" data-caption="💡TIP">
+         <p>probeer je voor te stellen hoe een pagina er zou uitzien zonder design &mdash; afbeeldingen die blijven, <span class="greenline">codeer je in HTML</span>, de <span class="redline">andere niet</span>.</p>
+      </div>
+      <p>Een voorbeeld (klik om te vergroten):</p>
+      <div class="flexcontainer">
+         <img src="img/05_media/content-or-design-1-kaders.png" data-fancybox alt="webpage screenshot" class="shadow bordered w-400">
+         <img src="img/05_media/content-or-design-2-kaders.png" data-fancybox alt="webpage screenshot" class="shadow bordered w-250">
+      </div>
 
-         <!-- 0 : Title -->
-         <section class="cover">
-            <section>
-               <h1>MEDIA</h1>
-               <p>
-                  tussen []: optioneel, sterk aanbevolen voor wie wil verdergaan in web
-               </p>
-               <p>
-                  gebruik pijltjestoetsen om te navigeren<br>
-                  dotted codepanels zijn editeerbaar
-               </p>
-               <img src="img/05_media/icon.jpg" alt="" class="cover__icon">
-               <footer class="cover__footer">
-                  <img src="img/me.jpg" alt="" class="cover__me"> <a href="mailto:rogier.vanderlinde@odisee.be">rogier.vanderlinde@odisee.be</a>
-               </footer>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>MEDIA</h1>
-               <h2>Afbeeldingen</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section data-title="Bestandsformaten">
-               <h2>Bestandsformaten (1)</h2>
-               <ul>
-                  <li>
-                     Volgende formaten zijn gangbaar voor het web:
-                     <div class="bluetable scrolltable">
-                        <table>
-                           <thead>
-                              <tr>
-                                 <th scope="col" class="horizontal"><span>type</span></th>
-                                 <th scope="col" class="vertical"><span>lossless</span></th>
-                                 <th scope="col" class="vertical"><span>lossy</span></th>
-                                 <th scope="col" class="vertical"><span>transparantie</span></th>
-                                 <th scope="col" class="vertical"><span>animaties</span></th>
-                                 <th scope="col" class="vertical"><span>compressie</span></th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>.jpg/.jpeg<br><span class="undertext">Joint
-                                       Pictures Expert Group</span></td>
-                                 <td class="center-h"></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h"></td>
-                                 <td class="center-h"></td>
-                                 <td>zeer goede compressie voor <strong>foto's</strong>; instelbare compressiefactor</td>
-                              </tr>
-                              <tr>
-                                 <td>.gif<br><span class="undertext">Graphics
-                                       Image File</span></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h"></td>
-                                 <td class="center-h">V <sup>(*)</sup></td>
-                                 <td class="center-h">V</td>
-                                 <td>
-                                    goede compressie voor <strong>vlakken en lijnen</strong>; slechts 256 kleuren<br> <sup>(*)</sup>
-                                    transparatie enkel 0 of 1 (dus geen echt alfakanaal)
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>.png<br><span class="undertext">Portable
-                                       Network Graphics</span></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h"></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h"></td>
-                                 <td>
-                                    zeer goede compressie voor <strong>vlakken en lijnen</strong>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>.svg<br><span class="undertext">Scalable
-                                       Vector Graphics</span></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h"></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h">V <sup></sup></td>
-                                 <td>
-                                    vectorieel: onbeperkt schaalbaar zonder kwaliteitsverlies, ideaal voor <strong>iconen en
-                                       logo's</strong>; kan Javascript bevatten, dus mogelijke veiligheidsrisico's
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>.webp<br><span class="undertext">Web
-                                       Picture</span></td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h">V</td>
-                                 <td class="center-h">V</td>
-                                 <td>uitstekende compressie voor <strong>alle soorten afbeeldingen</strong><br>nieuw formaat;
-                                    ondersteuning door grafische programma's is beperkt</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </li>
-                  <li class="arrow smallfont">
-                     beperk bestandsgrootte! herschaal / comprimeer / converteer met tools als <a href="https://squoosh.app/">squoosh.app</a>
-                  </li>
-               </ul>
-            </section>
-            <section data-title="">
-               <h2>Bestandsformaten (2)</h2>
-               <ul>
-                  <li>
-                     Welk formaat is nu het meest geschikte? Bestaat je afbeelding vooral uit vlakken en lijnen (denk aan
-                     iconen en logo's):
-                     <ul>
-                        <li><em>SVG</em> is het beste voor <strong>schaalbare afbeeldingen</strong>, al is het <strong>niet
-                              eenvoudig te bewerken</strong> en heb je gespecialiseerde programma's als Adobe Illustrator nodig om
-                           het te bewerken. Ook kan SVG Javascript bevatten, waardoor sommigen het als een veiligheidsrisico zien
-                           (Wordpress bv.).</li>
-                        <li><em>WebP</em> is een recent formaat met <strong>uitstekende lossless compressie</strong> en
-                           mogelijkheid tot <strong>transparantie</strong> en <strong>animaties</strong>, al is de
-                           <strong>ondersteuning door grafische programma's beperkt</strong> (denk ook aan foto-apps enz...)
-                        </li>
-                        <li><em>PNG</em> kan je gebruiken als <strong>transparantie</strong> belangrijk is en WebP geen optie is
-                        </li>
-                        <li><em>GIF</em> kan je gebruiken als je <strong>animatie</strong> wil en WebP geen optie is</li>
-                     </ul>
-                  </li>
-                  <li class="no-style">
-                     Bestaat je afbeelding vooral uit graduele kleurovergangen (denk aan foto's):
-                     <ul>
-                        <li><em>WebP</em> is een recent formaat met <strong>uitstekende lossy compressie</strong> en
-                           mogelijkheid tot <strong>transparantie</strong> en <strong>animaties</strong>, al is de
-                           <strong>ondersteuning door grafische programma's beperkt</strong> (denk ook aan foto-apps enz...)
-                        </li>
-                        <li><em>JPG</em> voldoet nog steeds met een <strong>prima compressie</strong> zolang je geen
-                           transparantie of animaties wil, en is het <strong>makkelijkste om mee te werken</strong></li>
-                     </ul>
-                  </li>
-               </ul>
-               <div class="imgrow img-5">
-                  <figure>
-                     <img src="img/05_media/type-jpeg.jpg" alt="" class="shadowbox">
-                     <figcaption>typische jpg</figcaption>
-                  </figure>
-                  <figure>
-                     <img src="img/05_media/type-gif.gif" alt="" class="shadowbox">
-                     <figcaption>typische gif</figcaption>
-                  </figure>
-                  <figure>
-                     <img src="img/05_media/type-png.png" alt="" class="shadowbox">
-                     <figcaption>typische png</figcaption>
-                  </figure>
-                  <figure>
-                     <img src="img/05_media/type-svg.svg" alt="" class="shadowbox">
-                     <figcaption>typische svg</figcaption>
-                  </figure>
-                  <figure>
-                     <img src="img/05_media/type-webp.webp" alt="" class="shadowbox">
-                     <figcaption>allround webp</figcaption>
-                  </figure>
-               </div>
-            </section>
-            <section>
-               <h2>[SVG]</h2>
-               <ul>
-                  <li>
-                     <em>SVG</em> (Scalable Vector Graphics) is een buitenbeentje: het bevat geen pixel informatie, maar <strong>code</strong> die o.a. lijnen, curves, vlakken enz... beschrijft. Dit noemt men <em>vectorieel</em>.
-                     Daardoor is het <strong>eindeloos schaalbaar</strong> zonder kwaliteitsverlies, ideaal voor bv. logo's. Codevoorbeeld:
-                     <pre class="bigger"><code contenteditable class="language-html smallfont verysmallpanel overlayrun">&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195 82"&gt;
+      <h3>Bestandsformaten</h3>
+      <p>Volgende formaten zijn gangbaar voor het web:</p>
+      <table class="blue">
+         <thead>
+            <tr>
+               <th scope="col" class="horizontal"><span>type</span></th>
+               <th scope="col" class="vertical"><span>lossless</span></th>
+               <th scope="col" class="vertical"><span>lossy</span></th>
+               <th scope="col" class="vertical"><span>transparantie</span></th>
+               <th scope="col" class="vertical"><span>animaties</span></th>
+               <th scope="col" class="vertical"><span>compressie</span></th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>.jpg/.jpeg<br><span class="undertext">Joint Pictures Expert Group</span></td>
+               <td class="center-h"></td>
+               <td class="center-h">V</td>
+               <td class="center-h"></td>
+               <td class="center-h"></td>
+               <td>zeer goede compressie voor <strong>foto's</strong>; instelbare compressiefactor</td>
+            </tr>
+            <tr>
+               <td>.gif<br><span class="undertext">Graphics Image File</span></td>
+               <td class="center-h">V</td>
+               <td class="center-h"></td>
+               <td class="center-h">V <sup>(*)</sup></td>
+               <td class="center-h">V</td>
+               <td>
+                  goede compressie voor <strong>vlakken en lijnen</strong>; slechts 256 kleuren<br> <sup>(*)</sup>
+                  transparatie enkel 0 of 1 (dus geen echt alfakanaal)
+               </td>
+            </tr>
+            <tr>
+               <td>.png<br><span class="undertext">Portable Network Graphics</span></td>
+               <td class="center-h">V</td>
+               <td class="center-h"></td>
+               <td class="center-h">V</td>
+               <td class="center-h"></td>
+               <td>
+                  zeer goede compressie voor <strong>vlakken en lijnen</strong>
+               </td>
+            </tr>
+            <tr>
+               <td>.svg<br><span class="undertext">Scalable Vector Graphics</span></td>
+               <td class="center-h">V</td>
+               <td class="center-h"></td>
+               <td class="center-h">V</td>
+               <td class="center-h">V <sup></sup></td>
+               <td>
+                  vectorieel: onbeperkt schaalbaar zonder kwaliteitsverlies, ideaal voor <strong>iconen en
+                     logo's</strong>; kan Javascript bevatten, dus mogelijke veiligheidsrisico's
+               </td>
+            </tr>
+            <tr>
+               <td>.webp<br><span class="undertext">Web Picture</span></td>
+               <td class="center-h">V</td>
+               <td class="center-h">V</td>
+               <td class="center-h">V</td>
+               <td class="center-h">V</td>
+               <td>uitstekende compressie voor <strong>alle soorten afbeeldingen</strong><br>nieuw formaat;
+                  ondersteuning door grafische programma's is beperkt</td>
+            </tr>
+         </tbody>
+      </table>
+      <ul class="arrow">
+         <li>beperk bestandsgrootte! herschaal / comprimeer / converteer met tools als <a href="https://squoosh.app/">squoosh.app</a></li>
+      </ul>
+      <h3>Keuze formaat</h3>
+      <p>
+         Welk formaat is nu het meest geschikte? 
+         Bestaat je afbeelding vooral uit <mark>vlakken en lijnen</mark> (denk aan iconen en logo's):
+      </p>
+      <ul>
+         <li>
+            <span class="em">SVG</span> is het beste voor <strong>schaalbare afbeeldingen</strong>, al is het <strong>niet eenvoudig te bewerken</strong> en heb je gespecialiseerde programma's als Adobe Illustrator nodig om
+            het te bewerken. Ook kan SVG Javascript bevatten, waardoor sommigen het als een veiligheidsrisico zien (Wordpress bv.).
+         </li>
+         <li>
+            <span class="em">WebP</span> is een recent formaat met <strong>uitstekende lossless compressie</strong> en
+            mogelijkheid tot <strong>transparantie</strong> en <strong>animaties</strong>, al is de
+            <strong>ondersteuning door grafische programma's beperkt</strong> (denk ook aan foto-apps enz...)
+         </li>
+         <li>
+            <span class="em">PNG</span> kan je gebruiken als <strong>transparantie</strong> belangrijk is en WebP geen optie is
+         </li>
+         <li>
+            <span class="em">GIF</span> kan je gebruiken als je <strong>animatie</strong> wil en WebP geen optie is
+         </li>
+      </ul>
+      <p>Bestaat je afbeelding vooral uit <mark>graduele kleurovergangen</mark> (denk aan foto's):</p>
+      <ul>
+         <li><span class="em">WebP</span> is een recent formaat met <strong>uitstekende lossy compressie</strong> en
+            mogelijkheid tot <strong>transparantie</strong> en <strong>animaties</strong>, al is de
+            <strong>ondersteuning door grafische programma's beperkt</strong> (denk ook aan foto-apps enz...)
+         </li>
+         <li><span class="em">JPG</span> voldoet nog steeds met een <strong>prima compressie</strong> zolang je geen
+            transparantie of animaties wil, en is het <strong>makkelijkste om mee te werken</strong></li>
+      </ul>
+      <div class="flexcontainer">
+         <figure>
+            <img src="img/05_media/type-jpeg.jpg" alt="" class="shadow bordered w-200">
+            <figcaption>typische jpg</figcaption>
+         </figure>
+         <figure>
+            <img src="img/05_media/type-gif.gif" alt="" class="shadow bordered w-200">
+            <figcaption>typische gif</figcaption>
+         </figure>
+         <figure>
+            <img src="img/05_media/type-png.png" alt="" class="shadow bordered w-200">
+            <figcaption>typische png</figcaption>
+         </figure>
+         <figure>
+            <img src="img/05_media/type-svg.svg" alt="" class="shadow bordered w-200">
+            <figcaption>typische svg</figcaption>
+         </figure>
+         <figure>
+            <img src="img/05_media/type-webp.webp" alt="" class="shadow bordered w-200">
+            <figcaption>allround webp</figcaption>
+         </figure>
+      </div>
+
+      <h3>SVG formaat</h3>
+      <p>
+         <span class="em">SVG</span> (Scalable Vector Graphics) is een buitenbeentje: het bevat geen pixel informatie, maar <strong>code</strong> die o.a. lijnen, curves, vlakken enz... beschrijft. Dit noemt men <em>vectorieel</em>.
+         Daardoor is het <strong>eindeloos schaalbaar</strong> zonder kwaliteitsverlies, ideaal voor bv. logo's. Codevoorbeeld:
+      </p>
+      <div class="codecompare top">
+         <pre class="h-300 w-700" data-demo><code class="smaller">
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195 82"&gt;
   &lt;title&gt;SVG logo combined with the W3C logo, set horizontally&lt;/title&gt;
   &lt;desc&gt;The logo combines three entities displayed horizontally: the W3C logo with the text 'W3C'; the drawing of a flower or star shape with eight arms; and the text 'SVG'. These three entities are set horizontally.&lt;/desc&gt;
-  
   &lt;metadata&gt;
     &lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:cc="http://creativecommons.org/ns#" xmlns:xhtml="http://www.w3.org/1999/xhtml/vocab#" xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
       &lt;cc:Work rdf:about=""&gt;
@@ -233,327 +304,141 @@
     &lt;/g&gt;
   &lt;/g&gt;
 &lt;/svg&gt;</code></pre>
-                     <div class="demolink"><a href="img/05_media/svg-logo.svg">demo</a></div>
-                  </li>
-                  <li class="arrow smallfont">
-                     SVG kan ook <strong>Javascript bevatten</strong>, wat interactie met de afbeelding en complexe bewerkingen als filters mogelijk maakt, zie dit <a
-                        href="demos/05_media/svg_filters.html">filter demo</a>.
-                  </li>
-                  <li class="arrow smallfont">
-                     meer voorbeelden: <a
-                        href="demos/05_media/svg_tiger.svg">tiger</a>, <a href="demos/05_media/svg_text.svg">trazy text</a>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Img</h2>
-               <ul>
-                  <li>
-                     De standaardwijze om een afbeelding toe te voegen, is met de HTML &lt;img&gt; tag:
-                     <pre class="bigger"><code class="language-html overlayrun">&lt;img src="img/05_media/schaakstukken.jpg" 
-    alt="Staunton schaakstukken, 1852 Morphy serie"&gt;&lt;!-- alt is verplicht! --&gt;
+         <img src="img/05_media/svg.png" alt="" class="w-250">
+      </div>
+      <ul class="arrow">
+         <li>
+            SVG kan ook <strong>Javascript bevatten</strong>, wat interactie met de afbeelding en complexe bewerkingen als filters mogelijk maakt, zie dit <a href="demos/05_media/svg_filters.html">filter demo</a>.
+         </li>
+         <li>
+            meer voorbeelden: <a href="demos/05_media/svg_tiger.svg">tiger</a>, <a href="demos/05_media/svg_text.svg">trazy text</a>
+         </li>
+      </ul>
 
+      <h3>&lt;img&gt;   </h3>
+      <p>De standaardwijze om een afbeelding toe te voegen, is met de HTML &lt;img&gt; tag:</p>
+      <div class="codecompare top">
+         <pre><code>&lt;img src="img/05_media/schaakstukken.jpg" 
+     alt="Staunton schaakstukken, 1852 Morphy serie"&gt;&lt;!-- alt is verplicht! --&gt;
 </code></pre>
-                  </li>
-                  <li class="arrow smallfont">dit kan met alle afbeeldingsformaten, niet enkel jpg</li>
-                  <li class="arrow smallfont">het <code>alt</code> attribuut is <strong>verplicht</strong> voor visueel beperkten, maar ook om
-                     zoekmachines te helpen indexeren</li>
-                  <li class="arrow smallfont">geef een <i>relevante beschrijving</i>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
-               </ul>
-            </section>
-            <section>
-               <h2>Logo</h2>
-               <ul>
-                  <li>
-                     Het logo van een site zal meestal een afbeelding zijn. Let op: het moet <strong>aanklikbaar</strong> zijn (gelinkt naar de home pagina). De juiste code is dan:
-                     <pre class="bigger"><code class="language-html">&lt;a href=""&gt;&lt;img src="img/timmerwerkt-logo.png" alt="Timmerwerkt logo"&gt;&lt;/a&gt;
 
-</code></pre>
-                     <img class="bordered" src="img/05_media/logo-click.png" alt="" style="max-width: 600px;">
-                  </li>
-                  <li class="arrow smallfont">er zijn nog andere manieren om logo's te coderen, maar die zijn vaak complexer; voorlopig houden we het bij deze syntax</li>
-               </ul>
-            </section>
-            <section>
-               <h2>Figure</h2>
-               <ul>
-                  <li>
-                     Als je een afbeelding met een bijschrift wil groeperen, kan je ook <code>&lt;figure&gt;</code> en
-                     <code>&lt;figcaption&gt;</code> gebruiken:
-                     <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
+      </div>
+      <ul class="arrow">
+         <li>dit kan met alle afbeeldingsformaten, niet enkel jpg</li>
+         <li>het <code>alt</code> attribuut is <strong>verplicht</strong> voor visueel beperkten, maar ook om zoekmachines te helpen indexeren</li>
+         <li>geef een <i>relevante beschrijving</i>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
+      </ul>
+
+      <h3>&lt;figure&gt; en &lt;figcaption&gt;</h3>
+      <p>Als je een <strong>afbeelding met een bijschrift</strong> wil groeperen, kan je ook <code>&lt;figure&gt;</code> en <code>&lt;figcaption&gt;</code> gebruiken</p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;figure&gt;
   &lt;img src="img/05_media/schaakstukken.jpg"
     alt="Staunton schaakstukken, 1852 Morphy serie"&gt;
   &lt;figcaption&gt;&amp;copy; Rogier van der Linde, 2020&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre>
-                  </li>
-                  <li>
-                     Het kan ook meerdere afbeeldingen bevatten (denk aan een kleine fotogallerij):
-                     <pre class="bigger"><code class="language-html overlayrun">&lt;figure&gt;
+         <img src="img/05_media/figure1.png" alt="" class="w-300">
+      </div>
+      <p>Het kan ook meerdere afbeeldingen bevatten (denk aan een kleine fotogallerij):</p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;figure&gt;
   &lt;img src="img/05_media/horseA.jpg" alt="paard tekenen stap 1"&gt;
   &lt;img src="img/05_media/horseB.jpg" alt="paard tekenen stap 2"&gt;
   &lt;img src="img/05_media/horseC.jpg" alt="paard tekenen stap 3"&gt;
   &lt;figcaption&gt;hoe teken ik een paard&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre>
-                  </li>
-               </ul>
-               <div class="tooltip">
-                  <div>
-                     Een <code>figure</code> kan in feite alles bevatten dat buiten de hoofdtekst staat: een grafiek, een video...
-                     Letterlijk door het W3C:
-                     <blockquote>
-                        The figure element represents a unit of content, optionally with a caption, that is self-contained, that
-                        is typically referenced as a single unit from the main flow of the document, and that can be moved away
-                        from the main flow of the document without affecting the document’s meaning.
-                     </blockquote>
-                  </div>
-               </div>
-            </section>
-            <section>
-               <h2>[Picture]</h2>
-               <ul>
-                  <li>
-                     Je kan &lt;picture&gt; gebruiken als je meerdere versies wil voorzien voor verschillende media. De browser zal de beste match kiezen.
-                     <pre class="bigger"><code class="language-html">&lt;picture&gt;
-  &lt;source media="(min-width: 800px)" srcset="img/pink_flowers.jpg"&gt;
-  &lt;source media="(min-width: 600px)" srcset="img/white_flower.jpg"&gt;
-  &lt;img src="img/orange_flowers.jpg" alt="Flowers"&gt;
-&lt;/picture&gt;</code></pre>
-                     <div class="demolink"><a href="demos/05_media/picture.html">demo</a></div>
-                  </li>
-                  <li class="arrow smallfont">bevat één of meer &lt;source&gt; elementen en een standaard &lt;img&gt; element</li>
-                  <li class="arrow smallfont">je kan differentiëren naargelang schermbreedte, oriëntatie, device type...</li>
-               </ul>
-            </section>
-            <section data-title="Inhoud of design?">
-               <h2>Inhoud of design? (1)</h2>
-               <ul>
-                  <li>
-                     Let op! Sommige afbeeldingen horen niet in de HTML, maar in de <a href="https://rogiervdl.github.io/CSS-course/02_design.html">CSS</a> (zie later). Vuistregels:
-                  </li>
-                  <li class="arrow">
-                     deze effecten kunnen zuiver met CSS, zonder afbeeldingen:
-                     <ul class="x-style">
-                        <li>kaders</li>
-                        <li>achtergrondkleuren</li>
-                        <li>gradiënten</li>
-                        <li>schaduw</li>
-                        <li>...</li>
-                     </ul>
-                  </li>
-                  <li class="arrow">
-                     deze afbeeldingen zijn <strong>design</strong>, en horen dus niet in de HTML maar <strong>in de CSS</strong>:
-                     <ul class="x-style">
-                        <li>grafische elementen</li>
-                        <li>achtergrondfoto's</li>
-                        <li>...</li>
-                     </ul>
-                  </li>
-                  <li class="arrow">
-                     deze afbeeldingen zijn <strong>inhoud</strong>, en horen dus <strong>wel in de HTML</strong>:
-                     <ul class="v-style">
-                        <li>foto's als illustratie bij een artikel, gallerij, carousel...</li>
-                        <li>logo's</li>
-                        <li>reclame</li>
-                        <li>banners</li>
-                        <li>thumbnails</li>
-                        <li>...</li>
-                     </ul>
-                  </li>
-               </ul>
-            </section>
-            <section data-title="">
-               <h2>Inhoud of design? (2)</h2>
-               <p>Tip: probeer je voor te stellen hoe een pagina er zou uitzien zonder design &mdash; afbeeldingen die blijven, <span class="greenline">codeer je in HTML</span>, de <span class="redline">andere niet</span>. Een voorbeeld (klik om te vergroten):</p>
-               <div class="flex-1-1" style="justify-content: left;">
-                  <img src="img/05_media/content-or-design-1-kaders.png" data-fancybox alt="webpage screenshot" class="shadowbox" style="width: 38%; margin-right: 20px;">
-                  <img src="img/05_media/content-or-design-2-kaders.png" data-fancybox alt="webpage screenshot" class="shadowbox" style="width: 22%;">
-               </div>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>MEDIA</h1>
-               <h2>[Audio &amp; video]</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>[Audio en video in HTML]</h2>
-               <ul>
-                  <li>
-                     HTML5 voorziet <code>&lt;audio&gt;</code> en <code>&lt;video&gt;</code> tags
-                     <pre class="bigger"><code class="language-html">&lt;audio src="media/paoloconte.mp3" controls&gt;
-  Jouw browser ondersteunt het &amp;lt;audio&amp;gt; element niet
-&lt;/audio&gt;
-</code></pre>
-                     <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4" controls poster="img/meloYBratt.jpg"&gt;
-  Jouw browser ondersteunt het &amp;lt;video&amp;gt; element niet
-&lt;/video&gt;
-</code></pre>
-                     <div class="demolink"><a href="demos/05_media/audio_video.html">demo</a></div>
-                  </li>
-                  <li class="arrow smallfont">de geneste tekst is voor browsers die het element niet onderteunen</li>
-                  <li class="arrow smallfont">in praktijk upload je beter je audio of video naar diensten als Youtube, Vimeo or
-                     Soundcloud, om het van daar te embedden (zie later): betere compressie, betere ondersteuning, minder belasting voor je webspace...</li>
-               </ul>
-            </section>
-            <section>
-               <h2>[Met Javascript]</h2>
-               <ul>
-                  <li>
-                     Het voordeel van een eigen <code>&lt;video&gt;</code> of <code>&lt;audio&gt;</code> element in je HTML i.p.v. embedden via Youtube of Soundcloud is wel dat je het zelf kan stylen en scripten met CSS en Javascript.
-                     Een voorbeeld van custom controls met Javascript:
-                     <div class="codescrollpanel">
-                        <pre class="bigger"><code class="language-html smallpanel">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt; HTML5 testpage &lt;/title&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;script&gt;
-    window.onload = function() {
-      var video = document.getElementById("video");
-      video.controls = false;
-      document.getElementById("lnkPlay").onclick = function() {
-        if (video.paused) video.play();
-        else video.pause();
-        return false;
-      }
-      document.getElementById("lnkMute").onclick = function() {
-        if (video.volume &gt; 0) video.volume = 0;
-        else video.volume = 1;
-        return false;
-      }
-      document.getElementById("inpSeek").onchange = function() {
-        video.currentTime = this.value;
-      }
-    }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;video src="media/tango.mp4" poster="img/meloYBratt.jpg"
-    width="320" height="240" id="video" controls&gt;
-    Your browser dows not support the video tag
-  &lt;/video&gt;
-  &lt;nav id="myControls"&gt;
-    &lt;a href="#" id="lnkPlay"&gt;play&lt;/a&gt;
-    &lt;a href="#" id="lnkMute"&gt;mute&lt;/a&gt;
-    &lt;input type="range" min="0" max="211" value="0" id="inpSeek" &gt;
-  &lt;/nav&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                     </div>
-                     <div class="demolink"><a href="demos/05_media/audio_video_js.html">demo</a></div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>[Met CSS]</h2>
-               <ul>
-                  <li>
-                     Een voorbeeld van stijlen met CSS:
-                     <pre class="bigger"><code class="language-css">#testvideo {
-  transform: rotateZ(5deg);
-  -webkit-box-shadow: rgba(0, 0, 128, 0.25) 10px 10px 15px #990;
-}
-</code></pre>
-                     <pre class="bigger"><code class="language-html">&lt;video src="media/tango.mp4" controls
-  poster="img/meloYBratt.jpg"
-  width="360" height="240" id="testvideo"&gt;
-  Your browser dows not support the video tag
-&lt;/video&gt;
-</code></pre>
-                     <div class="demolink"><a href="demos/05_media/audio_video_css.html">demo</a></div>
-                  </li>
-                  <li class="arrow smallfont">
-                     je kan zelfs <a href="http://www.ycoyacht.com/">een video als achtergrond</a> gebruiken (al is het een vreselijk designcliché)<br>
-                  </li>
-               </ul>
-            </section>
-         </section>
-         <section class="chapter">
-            <section>
-               <h1>MEDIA</h1>
-               <h2>Embedding</h2>
-               <ul class="chapterlist">
-                  <!-- to be filled by Javascript -->
-               </ul>
-            </section>
-            <section>
-               <h2>Youtube videos</h2>
-               <ul>
-                  <li>
-                     Het gebruik <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> in HTML heeft twee grote problemen:
-                     <ul>
-                        <li>audio- en (vooral) videobestanden zijn over het algemeen veel te groot om zelf te hosten</li>
-                        <li>er zijn veel formaten om uit de kiezen (.mp4, .mov, ., .webm...) maar weinigen zijn ondersteund door alle browsers</li>
-                     </ul>
-                  </li>
-                  <li>
-                     Het alternatief is simpel: upload je audio of video op diensten als Youtube of Soundcloud, en kopieer de &lt;iframe&gt; embed code naar jouw HTML:
-                     <img src="img/05_media/embed_youtube.jpg" alt="" class="shadowbox">
-                     <div class="demolink"><a href="demos/05_media/embed_youtube.html">demo</a></div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Google maps</h2>
-               <ul>
-                  <li>
-                     Ook Google maps kan je embedden op je pagina. Klik "delen" en kopieer de &lt;iframe&gt; embed code naar jouw HTML:
-                     <br><img src="img/05_media/embed_map.png" alt="" class="shadowbox" style="max-width: 400px;">
-                     <div class="demolink"><a href="demos/05_media/embed_map.html">demo</a></div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <h2>Andere</h2>
-               <ul>
-                  <li>
-                     Veel andere sites bieden eveneens de optie om hun code te embedden, zoals <a
-                        href="https://trends.google.com/trends/explore?date=all&geo=US&q=minecraft,fortnite,warcraft">Google Trends</a>:
-                  </li>
-                  <li class="no-style">
-                     <script src="https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"></script>
-                     <script> trends.embed.renderExploreWidget("TIMESERIES", { "comparisonItem": [{ "keyword": "minecraft", "geo": "US", "time": "2004-01-01 2020-04-29" }, { "keyword": "fortnite", "geo": "US", "time": "2004-01-01 2020-04-29" }, { "keyword": "warcraft", "geo": "US", "time": "2004-01-01 2020-04-29" }], "category": 0, "property": "" }, { "exploreQuery": "date=all&geo=US&q=minecraft,fortnite,warcraft", "guestPath": "https://trends.google.com:443/trends/embed/" });</script>
-                  </li>
-               </ul>
-            </section>
-         </section>
-
-
+         <img src="img/05_media/figure2.png" alt="" class="w-400">
       </div>
 
-      <!-- odisee.be link -->
-      <a href="http://www.odisee.be/" title="odisee.be" id="odisee"><img src="img/odisee.png" alt="Odisee logo"></a>
+      <div class="tips" data-caption="💡TIP">
+         <p>
+            Een <code>figure</code> kan in feite alles bevatten dat buiten de hoofdtekst staat: een grafiek, een video, een codefragment...
+            Letterlijk door het W3C:
+         </p>
+         <blockquote>
+            The figure element represents a unit of content, optionally with a caption, that is self-contained, that
+            is typically referenced as a single unit from the main flow of the document, and that can be moved away
+            from the main flow of the document without affecting the document’s meaning.
+         </blockquote>
+      </div>
 
-      <!-- index menu container -->
-      <nav id="navigator"></nav>
+      <div class="pro">
+         <h3>&lt;picture&gt;</h3>
+         <p>Je kan &lt;picture&gt; gebruiken als je meerdere versies wil voorzien voor verschillende media. De browser zal de beste match kiezen.</p>
+         <div class="codecompare top">
+            <div>
+               <pre data-demo="demos/05_media/picture.html"><code>&lt;picture&gt;
+   &lt;source media="(min-width: 800px)" srcset="img/pink_flowers.jpg"&gt;
+   &lt;source media="(min-width: 600px)" srcset="img/white_flower.jpg"&gt;
+   &lt;img src="img/orange_flowers.jpg" alt="Flowers"&gt;
+&lt;/picture&gt;</code></pre>
+               <ul class="arrow">
+                  <li>bevat één of meer &lt;source&gt; elementen en een standaard &lt;img&gt; element</li>
+                  <li>je kan differentiëren naargelang schermbreedte, oriëntatie, device type...</li>
+               </ul>
+            </div>
+            <img src="img/05_media/picture.gif" alt="" class="w-500 bordered">
+         </div>
+      </div>
 
+      <h2>Embedding</h2>
+
+      <h3>Youtube videos</h3>
+      <p>Het gebruik <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> in HTML heeft twee grote problemen:</p>
+      <ul>
+         <li>audio- en (vooral) videobestanden zijn over het algemeen veel te groot om zelf te hosten</li>
+         <li>er zijn veel formaten om uit de kiezen (.mp4, .mov, ., .webm...) maar weinigen zijn ondersteund door alle browsers</li>
+      </ul>
+
+      <p>Het alternatief is simpel: upload je audio of video op diensten als Youtube of Soundcloud, en kopieer de &lt;iframe&gt; embed code naar jouw HTML:</p>
+      <img src="img/05_media/embed_youtube.jpg" alt="" class="shadow bordered">
+      <div class="demolink"><a href="demos/05_media/embed_youtube.html">demo</a></div>
+
+      <h3>Google maps</h3>
+      <p>Ook Google maps kan je embedden op je pagina. Klik "delen" en kopieer de &lt;iframe&gt; embed code naar jouw HTML:</p>
+      <br><img src="img/05_media/embed_map.png" alt="" class="shadow bordered" style="max-width: 400px;">
+      <div class="demolink"><a href="demos/05_media/embed_map.html">demo</a></div>
+
+      <h3>Andere</h3>
+      <p>
+         Veel andere sites bieden eveneens de optie om hun code te embedden, zoals <a href="https://trends.google.com/trends/explore?date=all&geo=US&q=minecraft,fortnite,warcraft">Google Trends</a>:
+      </p>
+      <div class="w-800">
+         <script src="https://ssl.gstatic.com/trends_nrtr/3728_RC01/embed_loader.js"></script> 
+         <script> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"minecraft","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"fortnite","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"warcraft","geo":"US","time":"2004-01-01 2024-05-19"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=minecraft,fortnite,warcraft","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>      
+      </div>
+   </main>
+   <footer>
+      <img src="img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
    </div>
-
-   <script src="vendor/jquery.min.js"></script>
-   <script src="vendor/reveal/lib/js/head.min.js"></script>
-   <script src="vendor/reveal/js/reveal.js"></script>
-   <script src="vendor/highlight/highlight.pack.js"></script>
-   <script src="vendor/incrementable.js"></script>
-   <script src="vendor/prefixfree.js"></script>
-   <script src="vendor/css-snippets.js"></script>
-   <script src="vendor/css-edit.js"></script>
+   <!-- scripts -->
+   <script src="vendor/prism/prism.js"></script>
+   <script src="vendor/hystmodal/hystmodal.min.js"></script>
    <script src="vendor/fancybox/fancybox.umd.js"></script>
-   <script src="js/main.js"></script>
+   <script src="js/mode.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
    <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-   gtag('config', 'G-FFJVGYKCY8');
+      gtag('config', 'G-FFJVGYKCY8');
    </script>
-
 </body>
 
 </html>
