@@ -44,8 +44,8 @@
          <p class="thumb__title">06. formulieren</p>
          <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
       </a>
-      <a href="07_structureren.html" class="main__thumb active" title="07. structuren">
-         <p class="thumb__title">07. structuren</p>
+      <a href="07_structureren.html" class="main__thumb active" title="07. structureren">
+         <p class="thumb__title">07. structureren</p>
          <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
       </a>
       <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
@@ -151,15 +151,15 @@
       <p>Een <span class="em"><code>&lt;div&gt;</code></span> is een algemene manier om een <strong>deel van het document</strong> aan te duiden. Het heeft verder geen betekenis, en is enkel zinvol om later met CSS of Javascript te gebruiken, b.v. een pagina wrapper, tekstkolommen, container voor scripted content als een map or kalender... Typisch voorbeeld:</p>
       <div>
          <pre><code>&lt;footer&gt;
-  &lt;div class="col"&gt;
-    ...
-  &lt;/div&gt;
-  &lt;div class="col"&gt;
-    ...
-  &lt;/div&gt;
-  &lt;div class="col"&gt;
-    ...
-  &lt;/div&gt;
+   &lt;div class="col"&gt;
+      ...
+   &lt;/div&gt;
+   &lt;div class="col"&gt;
+      ...
+   &lt;/div&gt;
+   &lt;div class="col"&gt;
+      ...
+   &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
       </div>
       <p>
@@ -170,10 +170,10 @@
       <p>De <span class="em"><code>&lt;header&gt;</code></span> markeert een <strong>inleidend gedeelte</strong>. De meest klassieke toepassing is aanduiding van de bovenkant van de pagina, waar het typisch zaken bevat als de paginatitel, navigatie elementen, het logo, de slagzin, het zoekvenster...</p>
       <div>
          <pre><code>&lt;body&gt;
-  &lt;header&gt;
-    ... &lt;!-- logo, zoeken, menu enz... hier --&gt;
-  &lt;/header&gt;
-  ...
+   &lt;header&gt;
+      ... &lt;!-- logo, zoeken, menu enz... hier --&gt;
+   &lt;/header&gt;
+   ...
 &lt;/body&gt;</code></pre>
       </div>
       <div class="tips" data-caption="📜W3C QUOTES">
@@ -189,10 +189,10 @@
       <p>De <span class="em"><code>&lt;footer&gt;</code></span> markeert <strong>afsluitende inhoud</strong>. De meest klassieke toepassing is aanduiding van de onderkant van de pagina, waar het typisch zaken bevat als copyright informatie, kleine links, sociale media...</p>
       <div>
          <pre><code>&lt;body&gt;
-  ...
-  &lt;footer&gt;
-    ... &lt;!-- copyright, sociale media, kleine links enz... hier --&gt;
-  &lt;/footer&gt;
+   ...
+   &lt;footer&gt;
+      ... &lt;!-- copyright, sociale media, kleine links enz... hier --&gt;
+   &lt;/footer&gt;
 &lt;/body&gt;</code></pre>
       </div>
       <p>
@@ -208,15 +208,15 @@
       <p>De <span class="em"><code>&lt;main&gt;</code></span> markeert de <strong>hoofdinhoud</strong> van een pagina. Dit is nuttig voor screenreaders, die dan meteen naar de content kunnen springen zonder telkens weer alles in de <code>&lt;header&gt;</code> voor te lezen. Een typische pagina opbouw wordt dan:</p>
       <div>
          <pre><code>&lt;body&gt;
-  &lt;header&gt;
-    ... 
-  &lt;/header&gt;
-  &lt;main&gt;
-    ... &lt;!-- hoofdinhoud pagina hier --&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;
-    ... 
-  &lt;/footer&gt;
+   &lt;header&gt;
+      ... 
+   &lt;/header&gt;
+   &lt;main&gt;
+      ... &lt;!-- hoofdinhoud pagina hier --&gt;
+   &lt;/main&gt;
+   &lt;footer&gt;
+      ... 
+   &lt;/footer&gt;
 &lt;/body&gt;</code></pre>
       </div>
       <p>
@@ -233,19 +233,19 @@
       <p>Volgens de strikte definitie markeren <span class="em"><code>&lt;section&gt;</code></span>'s de <strong>titels</strong> met bijhorende <strong>inhoud</strong>, waarbij sections genest worden volgens de hiërarchische documentstructuur:</p>
       <div>
          <pre><code>&lt;section&gt;
-  &lt;h2&gt;Chapter 1&lt;/h2&gt;
-  &lt;section&gt;
-    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
-    &lt;p&gt;But I must explain to you how all this mistaken idea of denouncing pleasure...&lt;/p&gt;
-  &lt;/section&gt;    
-  &lt;section&gt;
-    &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
-    &lt;p&gt;On the other hand, we denounce with righteous indignation and dislike men who are...&lt;/p&gt;
-  &lt;/section&gt;    
+   &lt;h2&gt;Chapter 1&lt;/h2&gt;
+   &lt;section&gt;
+      &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+      &lt;p&gt;But I must explain to you how all this mistaken idea of denouncing pleasure...&lt;/p&gt;
+   &lt;/section&gt;    
+   &lt;section&gt;
+      &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
+      &lt;p&gt;On the other hand, we denounce with righteous indignation and dislike men who are...&lt;/p&gt;
+   &lt;/section&gt;    
 &lt;/section&gt;  
 &lt;section&gt;
-  &lt;h2&gt;Chapter 2&lt;/h2&gt;
-  ...
+   &lt;h2&gt;Chapter 2&lt;/h2&gt;
+   ...
 &lt;/section&gt;</code></pre>
       </div>
       <p>
@@ -265,15 +265,15 @@
       <p>Deze strikte definitie is niet altijd werkbaar. In praktijk hebben niet alle blokken altijd een titel, en de hiërarchische pagina opbouw is niet altijd even duidelijk. Daarom gebruiken we soms een lossere definitie voor section als gewoon een <strong>"visueel samenhanged stuk van de pagina"</strong> &mdash; met of zonder titel. De <code>&lt;main&gt;</code> is een goede kandidaat om in sections te verdelen:</p>
       <div>
          <pre><code>&lt;main&gt;
-  &lt;section&gt;
-    ...blok 1...
-  &lt;/section&gt;
-  &lt;section&gt;
-    ...blok 2...
-  &lt;/section&gt;
-  &lt;section&gt;
-    ...blok 3...
-  &lt;/section&gt;
+   &lt;section&gt;
+      ...blok 1...
+   &lt;/section&gt;
+   &lt;section&gt;
+      ...blok 2...
+   &lt;/section&gt;
+   &lt;section&gt;
+      ...blok 3...
+   &lt;/section&gt;
 &lt;/main&gt;</code></pre>
       </div>
       <p>
@@ -286,12 +286,12 @@
       <p>De <span class="em"><code>&lt;nav&gt;</code></span> markeert de <strong>hoofdnavigatie</strong>. Gebruik het dus enkel voor menus; niet voor filters, paginering, zoekformulieren, kleine links in de footer enz... Typisch voorbeeld:</p>
       <div>
          <pre><code>&lt;nav&gt;
-  &lt;ul class="mainmenu"&gt;
-    &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="products.html"&gt;products&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="about.html"&gt;about&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+   &lt;ul class="mainmenu"&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="products.html"&gt;products&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;about&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="contact.html"&gt;contact&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
       </div>
       <p>
@@ -310,15 +310,15 @@
       <p>De <span class="em"><code>&lt;aside&gt;</code></span> is een speciaal geval van <code>&lt;section&gt;</code>, en bevat <strong>bijkomende informatie</strong>, zoals gerelateerde links, product suggesties, reclame, quick facts, auteur informatie enz... Een typisch voorbeeld:</p>
       <div>
          <pre><code>&lt;aside&gt;
-  &lt;h3&gt;Over de auteur&lt;/h3&gt;
-  &lt;p&gt;Hi, ik ben Dan!&lt;/p&gt;
-  &lt;img src="img/photo_dan.jpg" alt="een foto van Dan!"&gt;
-  &lt;h3&gt;Recente posts&lt;/h3&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="..."&gt;Firefighters zijn ECHTE Superheroes&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Vrienden&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+   &lt;h3&gt;Over de auteur&lt;/h3&gt;
+   &lt;p&gt;Hi, ik ben Dan!&lt;/p&gt;
+   &lt;img src="img/photo_dan.jpg" alt="een foto van Dan!"&gt;
+   &lt;h3&gt;Recente posts&lt;/h3&gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;Firefighters zijn ECHTE Superheroes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;ZippyPaws Woodland Vrienden&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;Brusha brusha brusha&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
 &lt;/aside&gt;</code></pre>
       </div>
       <p>
@@ -337,15 +337,15 @@
       <p>De <span class="em"><code>&lt;article&gt;</code></span> bevat <strong>onafhankelijke en herbruikbare content</strong>. Als je het integraal kan kopiëren naar een andere website, dan is het waarschijnlijk een article. Denk aan embedded tweets, widgets als polls, kalenders of weersvoorspelling... Typisch voorbeeld:</p>
       <div>
          <pre><code>&lt;article&gt;
-  &lt;h1&gt;Weersvoorspelling&lt;/h1&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;maandag&lt;/dt&gt;
-    &lt;dd&gt;Regen, af en toe een opklaring&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;dinsdag&lt;/dt&gt;
-    &lt;dd&gt;Zonnig, maar fris voor de tijd van het jaar&lt;/dd&gt;
-  &lt;/dl&gt;
+   &lt;h1&gt;Weersvoorspelling&lt;/h1&gt;
+   &lt;dl&gt;
+      &lt;dt&gt;maandag&lt;/dt&gt;
+      &lt;dd&gt;Regen, af en toe een opklaring&lt;/dd&gt;
+   &lt;/dl&gt;
+   &lt;dl&gt;
+      &lt;dt&gt;dinsdag&lt;/dt&gt;
+      &lt;dd&gt;Zonnig, maar fris voor de tijd van het jaar&lt;/dd&gt;
+   &lt;/dl&gt;
 &lt;/article&gt;</code></pre>
       </div>
       <p>
@@ -374,9 +374,9 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Testpage&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
@@ -473,9 +473,9 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Testpage&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;div id="wrapper"&gt;
@@ -589,9 +589,9 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Testpage&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;div id="wrapper"&gt;
@@ -735,17 +735,17 @@
       <div class="codecompare">
          <pre class="wrong notoolbar"><code>&lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
 &lt;form&gt;
-  &lt;p&gt;
-    ...
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
+   &lt;p&gt;
+      ...
+   &lt;/p&gt;
+   &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>
          <pre class="right notoolbar"><code>&lt;form&gt;
    &lt;p&gt;velden met een * zijn verplicht&lt;/p&gt;
-  &lt;p&gt;
-    ...
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
+   &lt;p&gt;
+      ...
+   &lt;/p&gt;
+   &lt;p&gt;&lt;input type="submit" value="registreren"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>
       </div>
 
@@ -769,13 +769,13 @@
          <pre class="wrong notoolbar"><code>...
 &lt;h3&gt;Worst movie ever&lt;/h3&gt;
 &lt;p&gt;
-  Gumbo beet greens corn soko endive gumbo gourd...
+   Gumbo beet greens corn soko endive gumbo gourd...
 &lt;/p&gt;
 &lt;img src="img/users/avatar080450.png" alt="avatar Bob"&gt;
 &lt;p&gt;posted on 11/09/2014 12:45 by &lt;em&gt;Bob&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;Great movie&lt;/h3&gt;
 &lt;p&gt;
-  Turnip greens yarrow ricebean rutabaga endive cauliflower...
+   Turnip greens yarrow ricebean rutabaga endive cauliflower...
 &lt;/p&gt;
 &lt;img src="img/users/avatar059458.png" alt="avatar Alice"&gt;
 &lt;p&gt;posted on 10/09/2014 16:23 by &lt;em&gt;Alice&lt;/em&gt;&lt;/p&gt;
@@ -788,25 +788,25 @@
 
 </code></pre>
          <pre class="right notoolbar"><code>...
-  &lt;h1&gt;Worst movie ever&lt;/h1&gt;
-  &lt;p&gt;
-    Gumbo beet greens corn soko endive gumbo gourd...
-  &lt;/p&gt;
+   &lt;h1&gt;Worst movie ever&lt;/h1&gt;
+   &lt;p&gt;
+      Gumbo beet greens corn soko endive gumbo gourd...
+   &lt;/p&gt;
 &lt;/article&gt;
 
 &lt;article&gt;
-  &lt;img src="img/users/avatar080450.png" alt="avatar Bob"&gt;
-  &lt;p&gt;posted on 11/09/2014 12:45 by &lt;em&gt;Bob&lt;/em&gt;&lt;/p&gt;
-  &lt;h1&gt;Great movie&lt;/h1&gt;
-  &lt;p&gt;
-    Turnip greens yarrow ricebean rutabaga endive cauliflower...
-  &lt;/p&gt;
+   &lt;img src="img/users/avatar080450.png" alt="avatar Bob"&gt;
+   &lt;p&gt;posted on 11/09/2014 12:45 by &lt;em&gt;Bob&lt;/em&gt;&lt;/p&gt;
+   &lt;h1&gt;Great movie&lt;/h1&gt;
+   &lt;p&gt;
+      Turnip greens yarrow ricebean rutabaga endive cauliflower...
+   &lt;/p&gt;
 &lt;/article&gt;
 
 &lt;article&gt;
-  &lt;img src="img/users/avatar059458.png" alt="avatar Alice"&gt;
-  &lt;p&gt;posted on 10/09/2014 16:23 by &lt;em&gt;Alice&lt;/em&gt;&lt;/p&gt;
-  ...</code></pre>
+   &lt;img src="img/users/avatar059458.png" alt="avatar Alice"&gt;
+   &lt;p&gt;posted on 10/09/2014 16:23 by &lt;em&gt;Alice&lt;/em&gt;&lt;/p&gt;
+   ...</code></pre>
       </div>
 
       <h3>Voorbeeld: contact info</h3>
@@ -843,6 +843,7 @@
    <!-- scripts -->
    <script src="common/vendor/prism/prism.js"></script>
    <script src="common/vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="common/vendor/css.min.js"></script>
    <script src="common/js/mode.js"></script>
    <script src="common/js/scripts.js"></script>
    <!-- Google tag (gtag.js) -->

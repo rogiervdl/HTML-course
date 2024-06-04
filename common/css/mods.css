@@ -12,10 +12,6 @@ code[class*="language-"] {
 	background-color: transparent !important;
 }
 
-.token.comment * {
-	color: inherit !important;
-}
-
 /* toolbar mods */
 
 div.code-toolbar {
@@ -70,11 +66,11 @@ div.code-toolbar>.toolbar>.toolbar-item>button:focus {
 }
 
 pre.notoolbar {
-   padding: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
-pre.notoolbar + .toolbar .toolbar-item {
-   display: none !important;
+pre.notoolbar+.toolbar .toolbar-item {
+	display: none !important;
 }
 
 /* hystmodal mods */
@@ -85,13 +81,20 @@ pre.notoolbar + .toolbar .toolbar-item {
 }
 
 .hystmodal__window {
-	width: 800px;
+	width: 1200px;
+	max-width: 90vw;
 }
 
 /* fancybox mods */
 
 [data-fancybox] {
 	cursor: pointer;
+}
+
+/* contenteditable */
+
+[contenteditable] {
+	outline: 0px solid transparent;
 }
 
 /* MEDIA QUERIES */
