@@ -82,8 +82,8 @@ function repaint() {
 
 /**
  * Minimizes CSS: remove comments and newlines
- * 
- * @param {string} strCss 
+ *
+ * @param {string} strCss
  */
 function minimizeCss(strCss) {
    strCss = strCss.replace(/(\/\*.*\*\/)|(\n|\r)+|\t*/g, '');
@@ -93,7 +93,7 @@ function minimizeCss(strCss) {
 
 /**
  * Applies CSS snippet to selector, basically by prefixing snippet rule selectors with selector
- * 
+ *
  * @param {str} strSelector selector to apply CSS to
  * @param {str} strCss string containing CSS snippet
  */
@@ -206,13 +206,23 @@ function startApp() {
 		if (t.innerText.toLowerCase().includes('// fout')) t.classList.add('error');
 	});
 
-	// part 6: make CSS editable
+	// part 6: apply css snippets to targets
 	document.querySelectorAll('[data-target][contenteditable]').forEach(cssBlock => {
 		const targetId = cssBlock.dataset.target;
 		if (!targetId || !document.querySelector(targetId)) return;
 		cssApplySnippet(targetId, cssBlock.innerText);
 		cssBlock.addEventListener('keyup', function () {
 			cssApplySnippet(targetId, this.innerText);
+		});
+	});
+
+	// part 7: make code editable
+	document.querySelectorAll('pre code').forEach(c => {
+		c.setAttribute('contenteditable', 'true');
+	});
+	document.querySelectorAll('[contenteditable]').forEach(prismBlock => {
+		prismBlock.addEventListener('blur', () => {
+			Prism.highlightElement(prismBlock);
 		});
 	});
 
@@ -310,7 +320,8 @@ window.addEventListener('load', function () {
 			const pre = env.element.parentNode;
 			if (!pre || !/pre/i.test(pre.nodeName)) return;
 			if (pre.dataset.notoolbar != undefined) return;
-			const caption = pre.getAttribute('data-caption') || pre.getAttribute('data-language');
+			let caption = pre.dataset.caption || pre.getAttribute('data-language');
+			if (!caption && pre.hasAttribute('data-caption')) caption = env.language;
 			if (!caption) return;
 			const element = document.createElement('span');
 			element.textContent = caption == 'cs' ? 'c#' : caption;
