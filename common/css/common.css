@@ -926,8 +926,16 @@ figure pre {
 	margin: 0;
 }
 
-figure img + img {
-	margin-left: 20px;
+figure img:not(:last-of-type) {
+	margin-right: 20px;
+}
+
+figure img {
+	margin-bottom: 10px;
+}
+
+figcaption {
+	margin-top: -5px;
 }
 
 .codecompare {

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>Syntax | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="common/styles.css">
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="language-html showpro prism-default">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="00_devenv.html" class="main__thumb active" title="00. ontwikkelomgeving">
+         <p class="thumb__title">00. ontwikkelomgeving</p>
+         <img class="thumb__visual" src="img/00_devenv/icon.jpg" alt="">
+      </a>
+      <a href="01_syntax.html" class="main__thumb" title="01. syntax">
+         <p class="thumb__title">01. syntax</p>
+         <img class="thumb__visual" src="img/01_syntax/icon.jpg" alt="">
+      </a>
+      <a href="02_tekst.html" class="main__thumb" title="02. tekst">
+         <p class="thumb__title">02. tekst</p>
+         <img class="thumb__visual" src="img/02_tekst/icon.jpg" alt="">
+      </a>
+      <a href="03_links.html" class="main__thumb" title="03. links">
+         <p class="thumb__title">03. links</p>
+         <img class="thumb__visual" src="img/03_links/icon.jpg" alt="">
+      </a>
+      <a href="04_tabellen.html" class="main__thumb" title="04. tabellen">
+         <p class="thumb__title">04. tabellen</p>
+         <img class="thumb__visual" src="img/04_tabellen/icon.jpg" alt="">
+      </a>
+      <a href="05_media.html" class="main__thumb" title="05. media">
+         <p class="thumb__title">05. media</p>
+         <img class="thumb__visual" src="img/05_media/icon.jpg" alt="">
+      </a>
+      <a href="06_formulieren.html" class="main__thumb" title="06. formulieren">
+         <p class="thumb__title">06. formulieren</p>
+         <img class="thumb__visual" src="img/06_formulieren/icon.jpg" alt="">
+      </a>
+      <a href="07_structureren.html" class="main__thumb" title="07. structureren">
+         <p class="thumb__title">07. structureren</p>
+         <img class="thumb__visual" src="img/07_structureren/icon.jpg" alt="">
+      </a>
+      <a href="08_samenvatting.html" class="main__thumb" title="08. samenvatting">
+         <p class="thumb__title">08. samenvatting</p>
+         <img class="thumb__visual" src="img/08_samenvatting/icon.png" alt="">
+      </a>
+   </nav>
+   <h1>00. Ontwikkelomgeving</h1>
+   <div id="toc"></div>
+   <main>
+      <h2>Browserkeuze</h2>
+      <p>
+         In deze opleiding maken we gebruik van <mark>Chromium-based browsers</mark>; dit zijn browsers gebaseerd op Google's open source <a href="https://www.chromium.org/chromium-projects/">Chromium project</a>. 
+         Voorbeelden zijn uiteraard Google Chrome zelf, maar ook Microsoft Edge, Opera en Brave - eigenlijk zowat alle browsers behalve Apple Safari (gebaseerd op Webkit) en Mozilla Firefox (gebaseerd op Gecko). Voor dit vak gebruik je een chromium based browser, dus <strong>elke browser behalve Safari of Mozilla</strong>. 
+         Op MAC/OSx installer je best een alternatief als Google Chrome (link).
+      </p>
+      <h2>Browser developer tools</h2>
+      <p><img src="img/00_devenv/browsers.png" alt="" class="w-800"></p>
+      <h3>Openen</h3>
+      <p>
+         Elke degelijke browser heeft tegenwoordig developer tools ingebouwd. Open in elke webpagina met <strong>F12</strong> of <strong>Ctrl-Shift-I</strong>. 
+      </p>
+      <figure>
+         <img src="img/00_devenv/dev-dock-right.jpg" alt="" class="bordered w-700">
+         <figcaption>browser developer tools</figcaption>
+      </figure>
+      <p>Je kan de tools net zoals de browser in- en uitzoomen met Ctrl-+ en Ctrl-&minus;</p>
+      <figure>
+         <img src="img/00_devenv/dev-zoomin.jpg" alt="" class="bordered w-250">
+         <img src="img/00_devenv/dev-zoomout.jpg" alt="" class="bordered w-250">
+         <figcaption>in- en uitzoomen</figcaption>
+      </figure>
+      <h3>Docken</h3>
+      <p>Je kan het via de <strong>Dock to Location</strong> knop docken waar je wil: rechts, onder... of zelfs als apart venster &mdash; handig als je een tweede monitor hebt:</p>
+      <figure>
+         <img src="img/00_devenv/dev-dock-bottom.jpg" alt="" class="bordered w-800">
+         <img src="img/00_devenv/dev-dock-undock.jpg" alt="" class="bordered w-800">
+         <figcaption>browser tools docken: rechts, onder en in apart venster</figcaption>
+      </figure>
+      <h3>Activity bar</h3>
+      <p>De <mark>activity bar</mark> is de knoppenrij met alle beschikbare tools. </p>
+      <h4>positie</h4>
+      <p>Je kan het boven of links plaatsen. Ik persoonlijk vind links makkelijker als je de devtools rechts geplaatst hebt:</p>
+      <figure>
+         <img src="img/00_devenv/dev-activity-top.jpg" alt="" class="bordered w-300">
+         <img src="img/00_devenv/dev-activity-left.jpg" alt="" class="bordered w-300">
+         <figcaption>activity bar links plaatsen</figcaption>
+      </figure>
+      <h4>aanpassen</h4>
+      <p>Je kan tools aan de activity bar toevoegen via het plusteken:</p>
+      <p>
+         <img src="img/00_devenv/dev-tools-add.jpg" alt="" class="bordered w-300">
+      </p>
+      <h3>Inspector</h3>
+      <p>
+         De <strong>inspector</strong> is het meest gebruikte onderdeel van de developer tools. Klik de inspector knop, en duid dan een element aan om de HTML en CSS eigenschappen te inspecteren:
+      </p>
+      <p>
+         <img src="img/00_devenv/dev-inspecter.jpg" alt="" class="bordered w-800">
+      </p>
+      <p>Hoe je alle informatie moet interpreteren en gebruiken wordt uitgelegd in het deel <a href="#elements">Elements</a>.</p>
+      <h3>Device emulation</h3>
+      <p>Inspecteer de pagina voor verschillende toestellen via de <strong>device emulator</strong> knop:</p>
+      <figure>
+         <img src="img/00_devenv/dev-device.jpg" alt="" class="bordered w-700">
+         <figcaption>device emulator: je kan zelfs uit verschillende soorten toestellen kiezen</figcaption>
+      </figure>
+      <h3>Elements</h3>
+      <p>Dit is veruit het belangrijkste onderdeel voor de web developer. Het bestaat uit twee delen: een HTML inspector, en een CSS inspector.</p>
+      <p><img src="img/00_devenv/dev-elements.jpg" alt="" class="bordered w-500"></p>
+      <h4>HTML</h4>
+      <p>
+         Het <strong>HTML panel</strong> bevat alle HTML code (d.i. de structuur) nadat de pagina geparsed is. Het is belangrijk te begrijpen dat dit <em>niet</em> hetzelfde is als de broncode (roep op met <strong>Ctrl-U</strong>), dat is de rauwe HTML code vóór alle scripts, die b.v. dynamisch content kunnen inladen, werden uitgevoerd
+      </p>
+      <figure>
+         <img src="img/00_devenv/dev-source.jpg" alt="" class="bordered w-400">
+         <img src="img/00_devenv/dev-parsed.jpg" alt="" class="bordered w-400">
+         <figcaption>HTML broncode (links) vs. geparste code (rechts)</figcaption>
+      </figure>
+      <p>De verschillende onderdelen van de pagina kan je inspecteren met de <a href="#inspector">inspector</a>.</p>
+      <h5>elementen en attributen</h5>
+      <p>Inspecteer b.v. deze afbeelding:</p>
+      <p><img src="img/00_devenv/dev-html.jpg" alt="" class="bordered w-700"></p>
+      <p>Je ziet:</p>
+      <ul>
+         <li>welk <mark>HTML element</mark> gebruikt werd &mdash; hier: een <code>&lt;img&gt;</code> element</li>
+         <li>welke <mark>attributen</mark> dit element heeft &mdash; hier: <code>src</code> (de bron), <code>width</code> en <code>height</code> (standaardafmetingen), <code>alt</code> (beschrijving) en <code>loading</code> (manier van laden)</li>
+         <li>een popupvenster met een paar <strong>eigenschappen</strong>, in dit geval de (werkelijke) afmetingen</li>
+      </ul>
+      <h5>element state</h5>
+      <p>Een HTML element kan verschillende uitzichten hebben naargelang de staat, denk b.v. aan een ingedrukte knop die van kleur verandert, een link die bij hover een lijntje krijgt... Om die te kunnen inspecteren gebruik je dit subpanel (merk op hoe de stijlen veranderen):</p>
+      <figure>
+         <img src="img/00_devenv/dev-states.gif" alt="" class="bordered w-600">
+         <figcaption>inspecteren van de hover state van een social media link</figcaption>
+      </figure>
+
+      <h4>CSS</h4>
+      <p>De CSS (of <strong>Cascading StyleSheets</strong>) is de opmaak: kleuren, lettertypes, layout... We beperken ons tot de twee belangrijkste: <strong>Styles</strong> en <strong>Computed</strong>.</p>
+      <h5>styles tab</h5>
+      <p>De <strong>styles</strong> tab toont alle CSS regels die van toepassing zijn op een element. Deze regels kunnen in verschillende CSS bestanden gecombineerd worden, en kunnen daardoor aanvullen, overlappen of overschrijven. De overschreven regels zijn doorstreept:</p>
+      <figure>
+         <img src="img/00_devenv/dev-styles-override.jpg" alt="" class="bordered w-700">
+         <figcaption>inspecteren van de hover state van een social media link</figcaption>
+      </figure>
+      <p>Probeer je ook alvast de CSS terminologie eigen te maken:</p>
+      <ul>
+         <li><mark>selector</mark>: op welke elementen de stijl van toepassing is</li>
+         <li><mark>stijlregel</mark>: property met waarde, b.v. <code>color: blue</code></li>
+         <li><mark>property</mark>: de stijl die je wil instellen, b.v. <code>color</code></li>
+         <li><mark>waarde</mark>: de ingestelde waarde, b.v. <code>blue</code></li>
+      </ul>
+      <div class="tips" data-caption="💡REM vs. PX">
+         <p>
+            Er bestaan tientallen eenheden in CSS, zie de <a href="https://rogiervdl.github.io/CSS-course/02_design.html#eenheden">CSS cursus</a>. Voorlopig volstaat het dat in de meeste gevallen 1rem = 10px. 
+         </p>
+      </div>
+      <p>De browser (ook <mark>user agent</mark> genoemd) voorziet zelf ook standaardstijlen voor HTML elementen. Je herkent ze aan de schuine weergave:</p>
+      <figure>
+         <img src="img/00_devenv/dev-styles-browser.jpg" alt="" class="bordered w-300">
+         <figcaption>browser defaults</figcaption>
+      </figure>
+      <h5>computed tab</h5>
+      <p>Met al die overlappende/overschrijvende stijlen is het soms lastig te zien welke stijl het nu uiteindelijk geworden is. Daarvoor dient de <strong>computed tab</strong>:</p>
+      <figure>
+         <img src="img/00_devenv/dev-styles-computed.jpg" alt="" class="bordered w-700">
+         <figcaption>browser defaults</figcaption>
+      </figure>
+
+      <h3>Console</h3>
+      <p>Hier vind je alle waarschuwingen en foutmeldingen:</p>
+      <ul>
+         <li>scriptfouten</li>
+         <li>veiligheidswaarschuwingen</li>
+         <li>netwerkfouten</li>
+         <li>allerhande logs</li>
+         <li>niet gevonden afbeeldingen en andere bestanden</li>
+         <li>...</li>
+      </ul>
+      <p><img src="img/00_devenv/dev-console.jpg" alt="" class="bordered w-400"></p>
+      <h3>Network</h3>
+      <p>De <strong>network</strong> tab toont alle netwerkactiviteit van de pagina:</p>
+      <p><img src="img/00_devenv/dev-network1.jpg" alt="" class="bordered w-700"></p>
+      <p>Klik op een request om alle response informatie te zien:</p>
+      <p><img src="img/00_devenv/dev-network2.jpg" alt="" class="bordered w-700"></p>
+      <h3>Sources</h3>
+      <p>De <strong>sources</strong> tab toont een boomstructuur van alle bronnen (afbeeldingen, scripts, bestanden...) gebruikt in deze pagina en waar ze vandaan komen:</p>
+      <p><img src="img/00_devenv/dev-sources.jpg" alt="" class="bordered w-500"></p>
+      <h3>Performance</h3>
+      <p>De <strong>performance</strong> tab gaan we niet direct gebruiken, maar vermelden we toch voor de volledigheid. Daarmee kan je een analyse maken van de performantie van de pagina, en waar de knelpunten liggen:</p>
+      <p><img src="img/00_devenv/dev-performance.jpg" alt="" class="bordered w-500"></p>
+      <h3>Application</h3>
+      <p>Onder de <strong>application</strong> tab vind je informatie over de code opbouw als background services, gegevensopslag enz... Het meeste is redelijk technisch, maar wel interessant zijn de <strong>cookies</strong> en <strong>localStorage</strong> (een soort modernere versie van cookies):</p>
+      <p><img src="img/00_devenv/dev-application.jpg" alt="" class="bordered w-500"></p>
+      <h3>Experimenteren met code</h3>
+      <p>
+         Je kan alle weergegeven HTML en CSS aanpassen in de developer tools. Denk aan:
+      </p>
+      <ul>
+         <li>HTML nodes verwijderen</li>
+         <li>HTML teksten en attribuutwaarden veranderen</li>
+         <li>CSS waarden als kleuren of lettertypes veranderen</li>
+         <li>andere kleuren uitproberen</li>
+         <li>CSS stijlen aan- en uitzetten</li>
+         <li>...</li>
+      </ul>
+      <p>
+         De wijzigingen gaan uiteraard wel verloren bij het verversen van de pagina, maar het is ideaal om een paar dingen uit te proberen. 
+         <span class="noprint">Een korte demovideo:</span>
+      </p>
+      <div class="noprint">
+         <video src="img/00_devenv/devtools experiment.mp4" width="800" controls></video>
+      </div>
+
+      <h2>Visual Studio Code</h2>
+       
+      <h2>GitHub</h2>
+       
+   </main>
+   <footer>
+      <img src="common/img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="common/vendor/prism/prism.js"></script>
+   <script src="common/vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="common/vendor/css.min.js"></script>
+   <script src="common/js/mode.js"></script>
+   <script src="common/js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>
