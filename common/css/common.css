@@ -31,15 +31,6 @@ main {
 	margin: 0 2.5rem;
 }
 
-h1 {
-	position: relative;
-}
-
-#h1__anchor {
-	position: absolute;
-	top: -100px;
-}
-
 #downloads p {
    margin: 0;
 }
@@ -71,7 +62,9 @@ pre {
 
 figure {
 	line-height: 1.2;
-	margin: 0 0 2rem 0;
+	margin-left: 0;
+	margin-bottom: 2rem;
+	margin-top: 0;
 }
 
 figcaption {
@@ -485,6 +478,10 @@ ul.lower-latin {
 	padding-left: 4em;
 	list-style: lower-latin;
 }
+
+ul:has(.arrow, .right, .wrong) {
+	padding: 0;
+} 
 
 ul.arrow,
 li.arrow {
@@ -926,12 +923,12 @@ figure pre {
 	margin: 0;
 }
 
-figure img:not(:last-of-type) {
-	margin-right: 20px;
-}
-
 figure img {
 	margin-bottom: 10px;
+}
+
+figure img:not(:last-of-type) {
+	margin-right: 20px;
 }
 
 figcaption {
