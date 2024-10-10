@@ -119,19 +119,24 @@
             </colgroup>
             <tbody>
                <tr>
-                  <td><code>&lt;p&gt;</code></td>
+                  <td><pre><code>&lt;p&gt;</code></pre></td>
                   <td>paragraaf</td>
                   <td><img src="img/02_tekst/paragrafen.png" alt="" class="bordered"></td>
                </tr>
                <tr>
-                  <td><code>&lt;h1&gt;...&lt;h6&gt;</code></td>
+                  <td><pre><code>&lt;h1&gt;...&lt;h6&gt;</code></pre></td>
                   <td>titels</td>
                   <td><img src="img/02_tekst/titels.png" alt="" class="bordered w-200"></td>
                </tr>
                <tr>
-                  <td><code>&lt;blockquote&gt;</code></td>
+                  <td><pre><code>&lt;blockquote&gt;</code></pre></td>
                   <td>quote, pull quote</td>
                   <td><img src="img/02_tekst/blockquote.png" alt="" class="bordered"></td>
+               </tr>
+               <tr>
+                  <td><pre><code>&lt;address&gt;</code></pre></td>
+                  <td>primaire contactinformatie (hoeft geen fysiek adres te zijn)</td>
+                  <td><img src="img/02_tekst/address1.png" alt="" class="bordered w-200"></td>
                </tr>
                <tr>
                   <td>
@@ -171,11 +176,11 @@
                      <pre><code>
 &lt;table&gt;
    &lt;caption&gt;...&lt;/caption&gt;
-   &lt;colgroup&gt;
+<span class="pro">   &lt;colgroup&gt;
       &lt;col&gt;
       &lt;col span="2"&gt;
    &lt;/colgroup&gt;
-   &lt;tr&gt;
+</span>   &lt;tr&gt;
       &lt;th scope="col"&gt;...&lt;/th&gt;
       &lt;th scope="col"&gt;...&lt;/th&gt;
       &lt;th scope="col"&gt;...&lt;/th&gt;
@@ -209,48 +214,44 @@
             </colgroup>
             <tbody>
                <tr>
-                  <td><code>&lt;em&gt;</code></td>
+                  <td><pre><code>&lt;em&gt;</code></pre></td>
                   <td>nieuwe term, spreek trager uit</td>
                </tr>
                <tr>
-                  <td><code>&lt;strong&gt;</code></td>
+                  <td><pre><code>&lt;strong&gt;</code></pre></td>
                   <td>belangrijke term, spreek luider uit</td>
                </tr>
                <tr>
-                  <td><code>&lt;small&gt;</code></td>
+                  <td><pre><code>&lt;small&gt;</code></pre></td>
                   <td>meestal in footer: "kleine lettertjes" (voorwaarden, copyright info...)</td>
                </tr>
                <tr>
-                  <td><code>&lt;sup&gt;</code></td>
+                  <td><pre><code>&lt;sup&gt;</code></pre></td>
                   <td>superscript, b.v. m<sup>2</sup></td>
                </tr>
                <tr>
-                  <td><code>&lt;sub&gt;</code></td>
+                  <td><pre><code>&lt;sub&gt;</code></pre></td>
                   <td>subscript, b.v. H<sub>2</sub>O</td>
                </tr>
                <tr>
-                  <td><code>&lt;cite&gt;</code></td>
+                  <td><pre><code>&lt;cite&gt;</code></pre></td>
                   <td>referentie naar een werk: schilderij, boek, publicatie...</td>
                </tr>
                <tr>
-                  <td><code>&lt;code&gt;</code></td>
+                  <td><pre><code>&lt;code&gt;</code></pre></td>
                   <td>code blok, b.v. in programmeerblogs</td>
                </tr>
                <tr>
-                  <td><code>&lt;abbr&gt;</code></td>
+                  <td><pre><code>&lt;abbr&gt;</code></pre></td>
                   <td>afkorting</td>
                </tr>
                <tr>
-                  <td><code>&lt;br&gt;</code></td>
+                  <td><pre><code>&lt;br&gt;</code></pre></td>
                   <td>line break</td>
                </tr>
                <tr>
-                  <td>&amp;lt; &amp;gt; &amp;copy; &amp;mdash; ...</td>
+                  <td><pre><code>&amp;lt; &amp;gt; &amp;copy; &amp;mdash; ...</code></pre></td>
                   <td>karakter entiteiten: &lt; &gt; &copy; &mdash; ...</td>
-               </tr>
-               <tr>
-                  <td><code>&lt;address&gt;</code></td>
-                  <td>primaire contactinformatie (hoeft geen fysiek adres te zijn)</td>
                </tr>
             </tbody>
 
@@ -266,32 +267,31 @@
             </colgroup>
             <tbody>
                <tr>
-                  <td><code>&lt;a href="..."&gt;...&lt;/a&gt;</code></td>
+                  <td><pre><code>&lt;a href="..."&gt;...&lt;/a&gt;</code></pre></td>
                   <td>hyperlink</td>
                </tr>
                <tr>
-                  <td><code>&lt;a href="..." title="..."&gt;...&lt;/a&gt;</code></td>
+                  <td><pre><code>&lt;a href="..." title="..."&gt;...&lt;/a&gt;</code></pre></td>
                   <td>hyperlink met beschrijving</td>
                </tr>
                <tr>
-                  <td><code>&lt;a href="mailto:..."&gt;...&lt;/a&gt;</code></td>
+                  <td><pre><code>&lt;a href="mailto:..."&gt;...&lt;/a&gt;</code></pre></td>
                   <td>email link</td>
                </tr>
                <tr>
-                  <td><code>&lt;a href="tel:..."&gt;...&lt;/a&gt;</code></td>
+                  <td><pre><code>&lt;a href="tel:..."&gt;...&lt;/a&gt;</code></pre></td>
                   <td>telefoon of gsm link</td>
                </tr>
                <tr>
                   <td>
-                     <code> &lt;a href="#ref1"&gt;...&lt;/a&gt;</code>
-                     <br><code>&lt;p id="ref1"&gt;...&lt;/p&gt;</code>
+                     <pre><code>&lt;a href="#ref1"&gt;...&lt;/a&gt;
+&lt;p id="ref1"&gt;...&lt;/p&gt;</code></pre>
                   </td>
                   <td>anker (interne link in de pagina)</td>
                </tr>
                <tr>
                   <td>
                      <pre><code>&lt;a href=""&gt;company name&lt;/a&gt;
-
 &lt;a href=""&gt;&lt;img src="img/logo.png" alt="logo"&gt;&lt;/a&gt;</code></pre>
                   </td>
                   <td>typische code voor logo</td>
@@ -323,7 +323,7 @@
             </colgroup>
             <tbody>
                <tr>
-                  <td><code>&lt;img src="..." alt="..."&gt;</code></td>
+                  <td><pre><code>&lt;img src="..." alt="..."&gt;</code></pre></td>
                   <td>image</td>
                </tr>
                <tr>
@@ -396,47 +396,47 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;!DOCTYPE html&gt;</code></td>
+               <td><pre><code>&lt;!DOCTYPE html&gt;</code></pre></td>
                <td>HTML document type</td>
             </tr>
             <tr>
-               <td><code>&lt;html&gt;</code></td>
+               <td><pre><code>&lt;html&gt;</code></pre></td>
                <td>HTML document</td>
             </tr>
             <tr>
-               <td><code>&lt;head&gt;</code></td>
+               <td><pre><code>&lt;head&gt;</code></pre></td>
                <td>invisible meta content</td>
             </tr>
             <tr>
-               <td><code>&lt;title&gt;</code></td>
+               <td><pre><code>&lt;title&gt;</code></pre></td>
                <td>document title</td>
             </tr>
             <tr>
-               <td><code>&lt;meta charset="utf-8"&gt;</code></td>
+               <td><pre><code>&lt;meta charset="utf-8"&gt;</code></pre></td>
                <td>UTF8 characterset declaration</td>
             </tr>
             <tr>
-               <td><code>&lt;style&gt;...&lt;/style&gt;</code></td>
+               <td><pre><code>&lt;style&gt;...&lt;/style&gt;</code></pre></td>
                <td>internal stylesheet</td>
             </tr>
             <tr>
-               <td><code>&lt;link rel="stylesheet" href="..."&gt;</code></td>
+               <td><pre><code>&lt;link rel="stylesheet" href="..."&gt;</code></pre></td>
                <td>linked stylesheet</td>
             </tr>
             <tr>
-               <td><code>&lt;script&gt;&lt;/script&gt;</code></td>
+               <td><pre><code>&lt;script&gt;&lt;/script&gt;</code></pre></td>
                <td>internal script</td>
             </tr>
             <tr>
-               <td><code>&lt;script src=""&gt;&lt;/script&gt;</code></td>
+               <td><pre><code>&lt;script src=""&gt;&lt;/script&gt;</code></pre></td>
                <td>linked script</td>
             </tr>
             <tr>
-               <td><code>&lt;head&gt;</code></td>
+               <td><pre><code>&lt;head&gt;</code></pre></td>
                <td>invisible meta content</td>
             </tr>
             <tr>
-               <td><code>&lt;body&gt;</code></td>
+               <td><pre><code>&lt;body&gt;</code></pre></td>
                <td>visible content</td>
             </tr>
          </table>
@@ -447,39 +447,39 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;div&gt;</code></td>
+               <td><pre><code>&lt;div&gt;</code></pre></td>
                <td>blocklevel division (part of document)</td>
             </tr>
             <tr>
-               <td><code>&lt;span&gt;</code></td>
+               <td><pre><code>&lt;span&gt;</code></pre></td>
                <td>inline span (part of text)</td>
             </tr>
             <tr>
-               <td><code>&lt;section&gt;</code></td>
+               <td><pre><code>&lt;section&gt;</code></pre></td>
                <td>groups a title and content</td>
             </tr>
             <tr>
-               <td><code>&lt;nav&gt;</code></td>
+               <td><pre><code>&lt;nav&gt;</code></pre></td>
                <td>main navigation block</td>
             </tr>
             <tr>
-               <td><code>&lt;article&gt;</code></td>
+               <td><pre><code>&lt;article&gt;</code></pre></td>
                <td>self-contained independent content</td>
             </tr>
             <tr>
-               <td><code>&lt;main&gt;</code></td>
+               <td><pre><code>&lt;main&gt;</code></pre></td>
                <td>main page content</td>
             </tr>
             <tr>
-               <td><code>&lt;header&gt;</code></td>
+               <td><pre><code>&lt;header&gt;</code></pre></td>
                <td>introductory content (page or section)</td>
             </tr>
             <tr>
-               <td><code>&lt;aside&gt;</code></td>
+               <td><pre><code>&lt;aside&gt;</code></pre></td>
                <td>related content (page or section)</td>
             </tr>
             <tr>
-               <td><code>&lt;footer&gt;</code></td>
+               <td><pre><code>&lt;footer&gt;</code></pre></td>
                <td>closing content (page or section)</td>
             </tr>
          </table>
@@ -493,7 +493,7 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;form action="..."&gt;...&lt;/form&gt;</code></td>
+               <td><pre><code>&lt;form action="..."&gt;...&lt;/form&gt;</code></pre></td>
                <td>basic form</td>
             </tr>
             <tr>
@@ -536,39 +536,39 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;input type="text"&gt;</code></td>
+               <td><pre><code>&lt;input type="text"&gt;</code></pre></td>
                <td>text field</td>
             </tr>
             <tr>
-               <td><code>&lt;textarea&gt;...&lt;/textarea&gt;</code></td>
+               <td><pre><code>&lt;textarea&gt;...&lt;/textarea&gt;</code></pre></td>
                <td>text area</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="passwoord"&gt;</code></td>
+               <td><pre><code>&lt;input type="passwoord"&gt;</code></pre></td>
                <td>password field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="email"&gt;</code></td>
+               <td><pre><code>&lt;input type="email"&gt;</code></pre></td>
                <td>email field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="tel"&gt;</code></td>
+               <td><pre><code>&lt;input type="tel"&gt;</code></pre></td>
                <td>telephone field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="url"&gt;</code></td>
+               <td><pre><code>&lt;input type="url"&gt;</code></pre></td>
                <td>url field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="date"&gt;</code></td>
+               <td><pre><code>&lt;input type="date"&gt;</code></pre></td>
                <td>datepicker field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="color"&gt;</code></td>
+               <td><pre><code>&lt;input type="color"&gt;</code></pre></td>
                <td>colorpicker field</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="range" min="1" max="10"&gt;</code></td>
+               <td><pre><code>&lt;input type="range" min="1" max="10"&gt;</code></pre></td>
                <td>slider field</td>
             </tr>
             <tr>
@@ -590,15 +590,15 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;input type="submit" value="send"&gt;</code></td>
+               <td><pre><code>&lt;input type="submit" value="send"&gt;</code></pre></td>
                <td>submit button</td>
             </tr>
             <tr>
-               <td><code>&lt;button type="submit"&gt;send&lt;/button&gt;</code></td>
+               <td><pre><code>&lt;button type="submit"&gt;send&lt;/button&gt;</code></pre></td>
                <td>submit button, alternative syntax</td>
             </tr>
             <tr>
-               <td><code>&lt;input type="reset" value="clear form"&gt;</code></td>
+               <td><pre><code>&lt;input type="reset" value="clear form"&gt;</code></pre></td>
                <td>reset button</td>
             </tr>
          </table>
@@ -609,36 +609,34 @@
                <col>
             </colgroup>
             <tr>
-               <td><code>&lt;input ... placeholder="..."&gt;</code></td>
+               <td><pre><code>&lt;input ... placeholder="..."&gt;</code></pre></td>
                <td>set watermark text</td>
             </tr>
             <tr>
-               <td><code>&lt;input ... value="..."&gt;</code></td>
+               <td><pre><code>&lt;input ... value="..."&gt;</code></pre></td>
                <td>set input value</td>
             </tr>
             <tr>
-               <td><code>&lt;input ... disabled&gt;</code></td>
+               <td><pre><code>&lt;input ... disabled&gt;</code></pre></td>
                <td>control is disabled</td>
             </tr>
             <tr>
-               <td><code>&lt;input ... autofocus&gt;</code></td>
+               <td><pre><code>&lt;input ... autofocus&gt;</code></pre></td>
                <td>autofocus on this control</td>
             </tr>
             <tr>
-               <td><code>&lt;input ... required&gt;</code></td>
+               <td><pre><code>&lt;input ... required&gt;</code></pre></td>
                <td>value is required</td>
             </tr>
             <tr>
                <td>
-                  <code>
-                  &lt;input type="radio" checked&gt;
-                  <br>&lt;input type="checkbox" checked&gt;
-               </code>
+                  <pre><code>&lt;input type="radio" checked&gt;
+&lt;input type="checkbox" checked&gt;</code></pre>
                </td>
                <td>radiobutton is aangevinkt</td>
             </tr>
             <tr>
-               <td><code>&lt;option selected&gt;...&lt;/option&gt;</code></td>
+               <td><pre><code>&lt;option selected&gt;...&lt;/option&gt;</code></pre></td>
                <td>optie is aangevinkt</td>
             </tr>
          </table>

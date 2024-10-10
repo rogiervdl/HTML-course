@@ -60,7 +60,7 @@
 
       <!-- VIDEO -->
       <h2>Youtube: HTML tabellen</h2>
-      <p><em>Let op: deze Youtube video is nog een oudere versie, zonder elementen <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code>, en het <code>scope</code> attribuut.</em></p>
+      <p><em>Let op: deze Youtube video is nog een oudere versie, zonder elementen <span class="pro"><code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code>, </span><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> en <code>&lt;tfoot&gt;</code>, en het <code>scope</code> attribuut.</em></p>
       <div class="flexcontainer youtubecontainer">
          <iframe class="youtube" width="600" height="378" src="https://www.youtube.com/embed/uqkCF5ka1TM?si=ysh7T1gWinIKhGQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
          <figure class="print">
@@ -109,11 +109,11 @@
                <td><code>&lt;caption&gt;</code></td>
                <td>bijschrift, dus een tekst die de tabel beschrijft</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>&lt;colgroup&gt;</code></td>
                <td>optioneel: hiermee kan je kolommen in groepen onderverdelen</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>&lt;col&gt;</code></td>
                <td>gebruikt in <code>&lt;colgroup&gt;</code>: duidt een groep kolommen aan</td>
             </tr>
@@ -159,13 +159,13 @@
                <td><code>row</code>, <code>col</code></td>
                <td>beschrijft deze header cell een rij of een kolom?</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>colspan</code></td>
                <td><code>&lt;td colspan="2"&gt;</code></td>
                <td>getal</td>
                <td>cel overspant meerdere kolommen</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>rowspan</code></td>
                <td><code>&lt;td rowspan="2"&gt;</code></td>
                <td>getal</td>
@@ -303,14 +303,14 @@
          <img src="img/04_tabellen/tabel3.png" alt="" class="w-350">
 
       </div>
-
-      <h3>Uitbreiding met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code></h3>
-      <p>
-         Met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code> kun je kolommen groeperen.
-         Dit is kan zinvol zijn om b.v. in dit voorbeeld wetenschapsvakken een andere achtergrondkleur te geven dan taalvakken:
-      </p>
-      <div class="codecompare top">
-         <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
+      <div class="pro">
+         <h3>Uitbreiding met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code></h3>
+         <p>
+            Met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code> kun je kolommen groeperen.
+            Dit is kan zinvol zijn om b.v. in dit voorbeeld wetenschapsvakken een andere achtergrondkleur te geven dan taalvakken:
+         </p>
+         <div class="codecompare top">
+            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
 &lt;style&gt;
    table { border-collapse: collapse; }  
    td, th { border: 1px solid black; padding: 5px; }       
@@ -365,13 +365,15 @@
       &lt;/tr&gt;
    &lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
-         <img src="img/04_tabellen/tabel4.png" alt="" class="w-350">
+            <img src="img/04_tabellen/tabel4.png" alt="" class="w-350">
+         </div>
       </div>
 
-      <h3>Uitbreiding met <code>rowspan</code> en <code>colspan</code></h3>
-      <p>Met <code>rowspan</code> en <code>colspan</code> kan je cellen samenvoegen. </p>
-      <div class="codecompare top">
-         <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
+      <div class="pro">
+         <h3>Uitbreiding met <code>rowspan</code> en <code>colspan</code></h3>
+         <p>Met <code>rowspan</code> en <code>colspan</code> kan je cellen samenvoegen. </p>
+         <div class="codecompare top">
+            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
    &lt;style&gt;
    table { border-collapse: collapse; }  
    td, th { border: 1px solid black; padding: 5px; }       
@@ -439,8 +441,8 @@
       &lt;/tr&gt;
    &lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
-         <img src="img/04_tabellen/tabel5.png" alt="" class="w-400">
-
+            <img src="img/04_tabellen/tabel5.png" alt="" class="w-400">
+         </div>
       </div>
    </main>
    <footer>

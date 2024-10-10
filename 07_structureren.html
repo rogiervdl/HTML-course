@@ -230,10 +230,11 @@
       </div>
 
       <h3>section</h3>
-      <h4>strikte interpretatie</h4>
-      <p>Volgens de strikte definitie markeren <span class="em"><code>&lt;section&gt;</code></span>'s de <strong>titels</strong> met bijhorende <strong>inhoud</strong>, waarbij sections genest worden volgens de hiërarchische documentstructuur:</p>
-      <div>
-         <pre><code>&lt;section&gt;
+      <div class="pro">
+         <p class="h4">strikte interpretatie</p>
+         <p>Volgens de strikte definitie markeren <span class="em"><code>&lt;section&gt;</code></span>'s de <strong>titels</strong> met bijhorende <strong>inhoud</strong>, waarbij sections genest worden volgens de hiërarchische documentstructuur:</p>
+         <div>
+            <pre><code>&lt;section&gt;
    &lt;h2&gt;Chapter 1&lt;/h2&gt;
    &lt;section&gt;
       &lt;h3&gt;Chapter 1.1&lt;/h3&gt;
@@ -248,22 +249,24 @@
    &lt;h2&gt;Chapter 2&lt;/h2&gt;
    ...
 &lt;/section&gt;</code></pre>
-      </div>
-      <p>
-         → denk aan de inhoudsopgave van een rapport of boek
-         <br>→ een sectie moet <i>altijd</i> de titel en de volledige inhoud omvatten en omgekeerd
-         <br>→ strikt gezien zijn er dus altijd exact evenveel sections als titels
-      </p>
-      <div class="tips" data-caption="📜W3C QUOTES">
-         <blockquote>
-            A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
-         </blockquote>
-         <blockquote>
-            The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
-         </blockquote>
-      </div>
-      <h4>losse interpretatie</h4>
-      <p>Deze strikte definitie is niet altijd werkbaar. In praktijk hebben niet alle blokken altijd een titel, en de hiërarchische pagina opbouw is niet altijd even duidelijk. Daarom gebruiken we soms een lossere definitie voor section als gewoon een <strong>"visueel samenhanged stuk van de pagina"</strong> &mdash; met of zonder titel. De <code>&lt;main&gt;</code> is een goede kandidaat om in sections te verdelen:</p>
+         </div>
+         <p>
+            → denk aan de inhoudsopgave van een rapport of boek
+            <br>→ een sectie moet <i>altijd</i> de titel en de volledige inhoud omvatten en omgekeerd
+            <br>→ strikt gezien zijn er dus altijd exact evenveel sections als titels
+         </p>
+         <div class="tips" data-caption="📜W3C QUOTES">
+            <blockquote>
+               A general rule is that the section element is appropriate (...) if the element's contents would be listed explicitly in the document's outline.
+            </blockquote>
+            <blockquote>
+               The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.
+            </blockquote>
+         </div>
+         <p class="h4">losse interpretatie</p>
+
+      </div>      
+      <p>De strikte W3C definitie dat <code>&lt;section&gt;</code> een blok met een titel voorstelt en dus altijd een titel hebben (en omgekeerd een titel altijd in een <code>&lt;section&gt;</code> moet zitten) is niet altijd werkbaar: in praktijk hebben niet alle blokken altijd een titel, en de hiërarchische pagina opbouw is niet altijd even duidelijk. Daarom gebruiken we in deze cursus de lossere definitie als een <strong>"visueel samenhanged stuk van de pagina"</strong> &mdash; met of zonder titel. De <code>&lt;main&gt;</code> is een goede kandidaat om in sections verdeeld te worden:</p>
       <div>
          <pre><code>&lt;main&gt;
    &lt;section&gt;
