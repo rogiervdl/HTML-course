@@ -75,6 +75,7 @@ figure {
 figcaption {
 	font-size: smaller;
 	font-style: italic;
+	margin-top: -5px;
 }
 
 main>h1,
@@ -843,17 +844,14 @@ table.blue tr+tr>td {
 }
 
 table.blue th[scope=col] {
+	background-color: #3A81BA;
 	border-bottom: 1px solid #000;
+	color: white;
 }
 
 table.blue td,
 table.blue th[scope=row] {
 	vertical-align: top;
-}
-
-table.blue th[scope=col] {
-	background-color: #3A81BA;
-	color: white;
 }
 
 table.blue th[scope=row] {
@@ -966,10 +964,6 @@ figure img:not(:last-of-type) {
 	margin-right: 20px;
 }
 
-figcaption {
-	margin-top: -5px;
-}
-
 .codecompare {
 	column-gap: 20px;
 }
@@ -1038,6 +1032,7 @@ figure.console pre {
 
 .range-container-width {
 	-webkit-appearance: none !important;
+	appearance: none !important;
 	background: #999;
 	height: 7px;
 	margin-top: 10px;
@@ -1046,6 +1041,7 @@ figure.console pre {
 
 .range-container-width::-webkit-slider-thumb {
 	-webkit-appearance: none !important;
+	appearance: none !important;
 	background: #333;
 	height: 10px;
 	width: 10px;

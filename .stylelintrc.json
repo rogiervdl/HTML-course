@@ -1,0 +1,199 @@
+{
+   "plugins": [
+      "stylelint-csstree-validator"
+   ],
+   "extends": "stylelint-config-recommended",
+   "rules": {
+      "at-rule-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "at-rule-no-vendor-prefix": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "block-no-empty": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "color-no-invalid-hex": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "comment-no-empty": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "custom-property-no-missing-var-function": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "declaration-block-no-duplicate-properties": [
+         true,
+         {
+            "ignore": [
+               "consecutive-duplicates-with-different-values"
+            ],
+            "severity": "warning"
+         }
+      ],
+      "declaration-block-single-line-max-declarations": [
+         1,
+         {
+            "severity": "warning"
+         }
+      ],
+      "font-family-name-quotes": [
+         "always-where-recommended",
+         {
+            "severity": "error"
+         }
+      ],
+      "font-family-no-duplicate-names": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "font-family-no-missing-generic-family-keyword": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "function-calc-no-unspaced-operator": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "function-linear-gradient-no-nonstandard-direction": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "media-feature-name-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "no-duplicate-at-import-rules": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "no-duplicate-selectors": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "no-invalid-double-slash-comments": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "no-invalid-position-at-import-rule": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "no-irregular-whitespace": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "selector-no-vendor-prefix": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "selector-pseudo-class-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "selector-pseudo-element-colon-notation": [
+         "double",
+         {
+            "severity": "warning"
+         }
+      ],
+      "selector-pseudo-element-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "selector-type-case": [
+         "lower",
+         {
+            "severity": "warning"
+         }
+      ],
+      "selector-type-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "string-no-newline": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "unit-no-unknown": [
+         true,
+         {
+            "severity": "error"
+         }
+      ],
+      "value-keyword-case": [
+         "lower",
+         {
+            "severity": "warning"
+         }
+      ],
+      "value-no-vendor-prefix": [
+         true,
+         {
+            "severity": "warning"
+         }
+      ],
+      "custom-property-pattern": null,
+      "custom-media-pattern": null,
+      "declaration-block-no-duplicate-custom-properties": null,
+      "declaration-block-no-redundant-longhand-properties": null,
+      "declaration-block-no-shorthand-property-overrides": null,
+      "function-name-case": null,
+      "hue-degree-notation": null,
+      "length-zero-no-unit": null,
+      "media-feature-name-no-vendor-prefix": true,
+      "no-descending-specificity": null,
+      "no-empty-source": null,
+      "selector-class-pattern": null,
+      "selector-id-pattern": null,
+      "shorthand-property-no-redundant-values": null
+   }
+}
