@@ -75,6 +75,9 @@ figure {
 figcaption {
 	font-size: smaller;
 	font-style: italic;
+}
+
+figure:not(.console) figcaption {
 	margin-top: -5px;
 }
 
@@ -206,6 +209,10 @@ table {
 	width: fit-content;
 }
 
+.larger {
+	font-size: 150%;
+}
+
 .print {
 	display: none;
 }
@@ -263,6 +270,25 @@ body .green {
 body .brown {
 	border-color: #996633;
 	color: #996633;
+}
+
+figure.console pre {
+	background-color: black;
+	background-image: url(../img/console-top.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	color: #ddd;
+	display: inline-block;
+	font-family: Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 0.8em;
+	line-height: 1.357em;
+	min-width: 25rem;
+	padding-top: 3.5rem;
+	width: 40rem;
+}
+
+figure.console code {
+	min-width: 25rem;
 }
 
 .greenline {
@@ -998,20 +1024,6 @@ pre {
 	padding: 1em;
 	position: relative;
 	white-space: pre;
-}
-
-figure.console pre {
-	background-color: black;
-	background-image: url(../img/console-top.png);
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	color: #ddd;
-	display: inline-block;
-	font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-	font-size: 0.8em;
-	line-height: 1.357em;
-	padding-top: 3.5rem;
-	width: 40rem;
 }
 
 .target {

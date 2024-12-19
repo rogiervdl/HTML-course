@@ -137,7 +137,7 @@ function startApp() {
 	// part 1: assign id's to titles and toctitles
 	DOM.h1.innerHTML = DOM.h1.innerHTML + '<span class="title__anchor"></span>';
 	DOM.titles.forEach((title) => {
-		const id = createIdFrom(title.textContent);
+		const id = title.id || createIdFrom(title.textContent);
 		title.dataset.id = id;
 		title.dataset.text = title.innerHTML;
 		title.innerHTML = title.innerHTML + `<span class="title__anchor" id="${id}"></span>`;
