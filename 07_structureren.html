@@ -11,7 +11,7 @@
    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="language-html showpro prism-default">
+<body class="prism language-html showpro prism-default">
    <div id="mode">
       <span>n00b</span>
       <label class="switch">
@@ -253,7 +253,7 @@
          </div>
          <p>
             → denk aan de inhoudsopgave van een rapport of boek
-            <br>→ een sectie moet <i>altijd</i> de titel en de volledige inhoud omvatten en omgekeerd
+            <br>→ een sectie moet <em>altijd</em> de titel en de volledige inhoud omvatten en omgekeerd
             <br>→ strikt gezien zijn er dus altijd exact evenveel sections als titels
          </p>
          <div class="tips" data-caption="📜W3C QUOTES">
@@ -284,7 +284,7 @@
       <p>
          → gebruik het enkel om grote blokken aan te duiden; voor kleinere onderverdelingen of puur als grafisch of technisch hulpmiddel gebruik je best nog steeds <code>&lt;div&gt;</code>
          <br>→ mix binnen één element geen sections met andere elementen: gebruik ofwel <code>&lt;section&gt;</code>, ofwel niet
-         <br>→ <i>vraag aan je docent welke interpretatie gebruikt wordt, strikt of los</i>
+         <br>→ <em>vraag aan je docent welke interpretatie gebruikt wordt, strikt of los</em>
       </p>
 
       <h3>nav</h3>
@@ -369,7 +369,7 @@
          <figcaption>
             zie <a href="demos/07_structuring/unstructured.html">demo zonder CSS</a>
             &mdash;
-            <a href="demos/07_structuring/designed.html">demo met CSS</a>
+            <a href="demos/07_structuring/structured.html">demo met CSS</a>
          </figcaption>
       </figure>
 
@@ -379,22 +379,22 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Classical Page Layout&lt;/title&gt;
+   &lt;meta charset="utf-8"&gt;
    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-   &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;link rel="stylesheet" href="css/styles.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
+
    &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-
-   &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
-
+   &lt;p class="header_login"&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
    &lt;ul&gt;
       &lt;li&gt;&lt;a href="#"&gt;home&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
    &lt;/ul&gt;
 
-   &lt;p&gt;Submenu&lt;/p&gt;
+   &lt;h2&gt;Submenu&lt;/h2&gt;
    &lt;ul&gt;
       &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
@@ -402,74 +402,55 @@
       &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
    &lt;/ul&gt;
 
    &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+   &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+
+   &lt;h3&gt;Advertisement&lt;/h3&gt;
+   &lt;p&gt;Buy our &lt;a href="#"&gt;brand new T-shirt&lt;/a&gt; today!&lt;/p&gt;
+   &lt;img src="img/shirt.png" alt="shirt" class="article_visual"&gt;
+   &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+   &lt;p class="content_header"&gt;Posted on 2018-11-03 by Bobby Peru&lt;/p&gt;
 
    &lt;h3&gt;Part 1&lt;/h3&gt;
    &lt;p&gt;
       But I must explain to you how all this mistaken idea of denouncing pleasure
-      and praising pain was born and I will give you a complete account of the system,
-      and expound the actual teachings of the great explorer of the truth, the
-      master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-      itself, because it is pleasure, but because those who do not know how to pursue
-      pleasure rationally encounter consequences that are extremely painful.
+      and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know.
    &lt;/p&gt;
 
    &lt;h3&gt;Part 2&lt;/h3&gt;
    &lt;p&gt;
-      Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
-      because it is pain, but because occasionally circumstances occur in which toil
-      and pain can procure him some great pleasure. To take a trivial example, which of
-      us ever undertakes laborious physical exercise, except to obtain some advantage
-      from it? But who has any right to find fault with a man who chooses to enjoy a
-      pleasure that has no annoying consequences, or one who avoids a pain that
-      produces no resultant pleasure?
+      Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+   &lt;/p&gt;
+   &lt;p&gt;
+      &lt;img src="img/picture.jpg" alt="just some picture" class="content_picture"&gt;
    &lt;/p&gt;
 
    &lt;h3&gt;Part 3&lt;/h3&gt;
    &lt;p&gt;
-      On the other hand, we denounce with righteous indignation and dislike men who are
-      so beguiled and demoralized by the charms of pleasure of the moment, so blinded
-      by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-      and equal blame belongs to those who fail in their duty through weakness of will,
-      which is the same as saying through shrinking from toil and pain.
+      On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
    &lt;/p&gt;
 
-   &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-   &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+   &lt;h3&gt;Comments&lt;/h3&gt;
 
-   &lt;h4&gt;Advertisement&lt;/h4&gt;
-   &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-   &lt;p&gt;&amp;copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-
-   &lt;h4&gt;Comments&lt;/h4&gt;
-   &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+   &lt;h4 class="comment_title"&gt;I love Lorem Ipsum &lt;span class="comment_author"&gt;&mdash; Alice, 3 hours ago&lt;/span&gt;&lt;/h4&gt;
    &lt;p&gt;
-      I personally believe Lorem Ipsum is the most sensitive poem ever written
-      (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+      &ldquo;I personally believe Lorem Ipsum is the most sensitive poem ever written&rdquo;. As it so contrasted oh estimating instrument. Size like body some one had. Are conduct viewing boy minutes warrant expense.
    &lt;/p&gt;
-   &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
-   &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
 
-   &lt;p&gt;&amp;copy; Rogier van der Linde, 2010&lt;/p&gt;
+   &lt;h4 class="comment_title"&gt;Lorem Ipsum Sucks &lt;span class="comment_author"&gt;&mdash; Bob, 2 hours ago&lt;/span&gt;&lt;/h4&gt;
+   &lt;p&gt;&ldquo;Tolerably behaviour may admitting daughters offending her ask own. Praise effect wishes change way and any wanted. There, I said it!&rdquo;&lt;/p&gt;
 
+   &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
-      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
-      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+      &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;&lt;/li&gt;
    &lt;/ul&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+</code></pre>
       </div>
 
       <h3>Gestructureerd met div's</h3>
@@ -478,15 +459,16 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Classical Page Layout&lt;/title&gt;
+   &lt;meta charset="utf-8"&gt;
    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-   &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;link rel="stylesheet" href="css/styles.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;div id="wrapper"&gt;
       &lt;div id="header"&gt;
          &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-         &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+         &lt;p class="header_login"&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
       &lt;/div&gt;
       &lt;div id="mainmenu"&gt;
          &lt;ul&gt;
@@ -495,8 +477,9 @@
             &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
          &lt;/ul&gt;
       &lt;/div&gt;
-      &lt;div id="submenu"&gt;
-         &lt;p&gt;Submenu&lt;/p&gt;
+
+      &lt;div id="leftmenu"&gt;
+         &lt;h2&gt;Submenu&lt;/h2&gt;
          &lt;ul&gt;
             &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
@@ -504,85 +487,68 @@
             &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
          &lt;/ul&gt;
       &lt;/div&gt;
       &lt;div id="content"&gt;
-         &lt;div id="blogpost"&gt;
-            &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+         &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+         &lt;div id="sidebar"&gt;
+            &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+            &lt;div class="ad"&gt;
+               &lt;h3&gt;Advertisement&lt;/h3&gt;
+               &lt;p&gt;Buy our &lt;a href="#"&gt;brand new T-shirt&lt;/a&gt; today!&lt;/p&gt;
+               &lt;img src="img/shirt.png" alt="shirt" class="article_visual"&gt;
+               &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;p class="content_header"&gt;Posted on 2018-11-03 by Bobby Peru&lt;/p&gt;
+         &lt;div class="chapter"&gt;
             &lt;h3&gt;Part 1&lt;/h3&gt;
             &lt;p&gt;
                But I must explain to you how all this mistaken idea of denouncing pleasure
-               and praising pain was born and I will give you a complete account of the system,
-               and expound the actual teachings of the
-               &lt;span class="highlight"&gt;great explorer&lt;/span&gt; of the truth, the
-               master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
-               itself, because it is pleasure, but because those who do not know how to pursue
-               pleasure rationally encounter consequences that are extremely painful.
+               and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know.
             &lt;/p&gt;
+         &lt;/div&gt;
+         &lt;div class="chapter"&gt;
             &lt;h3&gt;Part 2&lt;/h3&gt;
             &lt;p&gt;
-               Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
-               because it is pain, but because occasionally circumstances occur in which toil
-               and pain can procure him some great pleasure. To take a trivial example, which of
-               us ever undertakes laborious physical exercise, except to obtain some advantage
-               from it? But who has any right to find fault with a man who chooses to enjoy a
-               pleasure that has no annoying consequences, or one who avoids a pain that
-               produces no resultant pleasure?
+               Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
             &lt;/p&gt;
+            &lt;p&gt;
+               &lt;img src="img/picture.jpg" alt="just some picture" class="content_picture"&gt;
+            &lt;/p&gt;
+         &lt;/div&gt;
+         &lt;div class="chapter"&gt;
             &lt;h3&gt;Part 3&lt;/h3&gt;
             &lt;p&gt;
-               On the other hand, we denounce with righteous indignation and dislike men who are
-               so beguiled and demoralized by the
-               &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt; of the moment, so blinded
-               by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-               and equal blame belongs to those who fail in their duty through weakness of will,
-               which is the same as saying through shrinking from toil and pain.
+               On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
             &lt;/p&gt;
-            &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-            &lt;div id="extra"&gt;
-               &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
-               &lt;div class="ad"&gt;
-                  &lt;h4&gt;Advertisement&lt;/h4&gt;
-                  &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-                  &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
          &lt;/div&gt;
          &lt;div id="comments"&gt;
-            &lt;h4&gt;Comments&lt;/h4&gt;
+            &lt;h3&gt;Comments&lt;/h3&gt;
             &lt;div class="comment"&gt;
-               &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+               &lt;h4 class="comment_title"&gt;I love Lorem Ipsum &lt;span class="comment_author"&gt;&mdash; Alice, 3 hours ago&lt;/span&gt;&lt;/h4&gt;
                &lt;p&gt;
-                  I personally believe Lorem Ipsum is the most sensitive poem ever written
-                  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+                  &ldquo;I personally believe Lorem Ipsum is the most sensitive poem ever written&rdquo;. As it so contrasted oh estimating instrument. Size like body some one had. Are conduct viewing boy minutes warrant expense.
                &lt;/p&gt;
             &lt;/div&gt;
             &lt;div class="comment"&gt;
-               &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
-               &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
+               &lt;h4 class="comment_title"&gt;Lorem Ipsum Sucks &lt;span class="comment_author"&gt;&mdash; Bob, 2 hours ago&lt;/span&gt;&lt;/h4&gt;
+               &lt;p&gt;&ldquo;Tolerably behaviour may admitting daughters offending her ask own. Praise effect wishes change way and any wanted. There, I said it!&rdquo;&lt;/p&gt;
             &lt;/div&gt;
          &lt;/div&gt;
       &lt;/div&gt;
       &lt;div id="footer"&gt;
          &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
          &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
-            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
-            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;&lt;/li&gt;
          &lt;/ul&gt;
       &lt;/div&gt;
    &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+</code></pre>
       </div>
       <p>
          → dit werkt, maar <code>&lt;div&gt;</code> heeft geen semantische betekenis
@@ -594,15 +560,16 @@
          <pre class="h-500"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Classical Page Layout&lt;/title&gt;
+   &lt;meta charset="utf-8"&gt;
    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-   &lt;title&gt;Testpage&lt;/title&gt;
+   &lt;link rel="stylesheet" href="css/styles.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;div id="wrapper"&gt;
       &lt;header&gt;
          &lt;h1&gt;&lt;a href="#"&gt;My Blog&lt;/a&gt;&lt;/h1&gt;
-         &lt;p&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
+         &lt;p class="header_login"&gt;You are not logged in &ndash; &lt;a href="#"&gt;login&lt;/a&gt;&lt;/p&gt;
       &lt;/header&gt;
       &lt;nav&gt;
          &lt;ul&gt;
@@ -611,98 +578,79 @@
             &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;
          &lt;/ul&gt;
       &lt;/nav&gt;
-      &lt;div&gt;
-         &lt;p&gt;Submenu&lt;/p&gt;
-         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item9&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item10&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item11&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item12&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item13&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item14&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;item15&lt;/a&gt;&lt;/li&gt;
-         &lt;/ul&gt;
-      &lt;/div&gt;
       &lt;main&gt;
-         &lt;section id="blogpost"&gt;
+         &lt;section id="leftmenu"&gt;
+            &lt;h2&gt;Submenu&lt;/h2&gt;
+            &lt;ul&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item1&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item2&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item3&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item4&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item5&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href="#"&gt;item6&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+         &lt;/section&gt;
+         &lt;section id="content"&gt;
             &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+            &lt;aside&gt;
+               &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
+               &lt;section class="ad"&gt;
+                  &lt;h3&gt;Advertisement&lt;/h3&gt;
+                  &lt;p&gt;Buy our &lt;a href="#"&gt;brand new T-shirt&lt;/a&gt; today!&lt;/p&gt;
+                  &lt;img src="img/shirt.png" alt="shirt" class="article_visual"&gt;
+                  &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
+               &lt;/section&gt;
+            &lt;/aside&gt;
+            &lt;p class="content_header"&gt;Posted on 2018-11-03 by Bobby Peru&lt;/p&gt;
             &lt;section&gt;
                &lt;h3&gt;Part 1&lt;/h3&gt;
                &lt;p&gt;
                   But I must explain to you how all this mistaken idea of denouncing pleasure
-                  and praising pain was born and I will give you a complete account of the system,
-                  and expound the actual teachings of the &lt;span class="highlight"&gt;great explorer&lt;/span&gt;
-                  of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids
-                  pleasure itself, because it is pleasure, but because those who do not know how to pursue
-                  pleasure rationally encounter consequences that are extremely painful.
+                  and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know.
                &lt;/p&gt;
             &lt;/section&gt;
             &lt;section&gt;
                &lt;h3&gt;Part 2&lt;/h3&gt;
                &lt;p&gt;
-                  Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
-                  because it is pain, but because occasionally circumstances occur in which toil
-                  and pain can procure him some great pleasure. To take a trivial example, which of
-                  us ever undertakes laborious physical exercise, except to obtain some advantage
-                  from it? But who has any right to find fault with a man who chooses to enjoy a
-                  pleasure that has no annoying consequences, or one who avoids a pain that
-                  produces no resultant pleasure?
+                  Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+               &lt;/p&gt;
+               &lt;p&gt;
+                  &lt;img src="img/picture.jpg" alt="just some picture" class="content_picture"&gt;
                &lt;/p&gt;
             &lt;/section&gt;
             &lt;section&gt;
-            &lt;h3&gt;Part 3&lt;/h3&gt;
-            &lt;p&gt;
-               On the other hand, we denounce with righteous indignation and dislike men who are
-               so beguiled and demoralized by the &lt;span class="highlight"&gt;charms of pleasure&lt;/span&gt;
-               of the moment, so blinded by desire, that they cannot foresee the pain and trouble that
-               are bound to ensue; and equal blame belongs to those who fail in their duty through
-               weakness of will, which is the same as saying through shrinking from toil and pain.
-            &lt;/p&gt;
-            &lt;/section&gt;
-            &lt;p&gt;Posted on &lt;time pubdate datetime="2011-11-03"&gt;yesterday&lt;/time&gt; by Bobby Peru&lt;/p&gt;
-            &lt;aside&gt;
-               &lt;p&gt;For further reading, see also this &lt;a href="#"&gt;more detailed article&lt;/a&gt;&lt;/p&gt;
-               &lt;article&gt;
-                  &lt;h4&gt;Advertisement&lt;/h4&gt;
-                  &lt;p&gt;Buy our &lt;a href="#"&gt;brand new lorem ipsum T-shirt&lt;/a&gt; today!&lt;/p&gt;
-                  &lt;p&gt;&copy; &lt;a href="#"&gt;someCompany&lt;/a&gt;&lt;/p&gt;
-               &lt;/article&gt;
-            &lt;/aside&gt;
-         &lt;/section&gt;
-         &lt;div id="comments"&gt;
-            &lt;h4&gt;Comments&lt;/h4&gt;
-            &lt;div class="comment"&gt;
-               &lt;h5&gt;I love Lorem Ipsum&lt;/h5&gt;
+               &lt;h3&gt;Part 3&lt;/h3&gt;
                &lt;p&gt;
-                  I personally believe Lorem Ipsum is the most sensitive poem ever written
-                  (Alice, &lt;time datetime="2009-02-17T11:22"&gt;3 hours ago&lt;/time&gt;)
+                  On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
                &lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class="comment"&gt;
-               &lt;h5&gt;Lorem Ipsum Sucks&lt;/h5&gt;
-               &lt;p&gt;There, I said it! (Bob, &lt;time datetime="2009-02-17T12:35"&gt;2 hours ago&lt;/time&gt;)&lt;/p&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;section id="comments"&gt;
+               &lt;h3&gt;Comments&lt;/h3&gt;
+               &lt;section class="comment"&gt;
+                  &lt;h4 class="comment_title"&gt;I love Lorem Ipsum &lt;span class="comment_author"&gt;&mdash; Alice, 3 hours ago&lt;/span&gt;&lt;/h4&gt;
+                  &lt;p&gt;
+                    &ldquo;I personally believe Lorem Ipsum is the most sensitive poem ever written&rdquo;. As it so contrasted oh estimating instrument. Size like body some one had. Are conduct viewing boy minutes warrant expense.
+                  &lt;/p&gt;
+               &lt;/section&gt;
+               &lt;section class="comment"&gt;
+                  &lt;h4 class="comment_title"&gt;Lorem Ipsum Sucks &lt;span class="comment_author"&gt;&mdash; Bob, 2 hours ago&lt;/span&gt;&lt;/h4&gt;
+                  &lt;p&gt;&ldquo;Tolerably behaviour may admitting daughters offending her ask own. Praise effect wishes change way and any wanted. There, I said it!&rdquo;&lt;/p&gt;
+               &lt;/section&gt;
+            &lt;/section&gt;
+         &lt;/section&gt;
       &lt;/main&gt;
       &lt;footer&gt;
          &lt;p&gt;&copy; Rogier van der Linde, 2010&lt;/p&gt;
          &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;
-            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;
-            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;
+            &lt;li&gt;&lt;a href="#"&gt;disclaimer&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;contact&lt;/a&gt;&lt;/li&gt;
          &lt;/ul&gt;
       &lt;/footer&gt;
    &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+</code></pre>
       </div>
       <p>
          → veel betere semantische HTML markup

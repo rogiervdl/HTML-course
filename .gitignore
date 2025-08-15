@@ -1,8 +1,4 @@
-# Ignores
+_*
+node_modules
 .DS_Store
 .vscode
-/_old/*
-node_modules
-.gitignore
-.gitattributes
-LICENSE

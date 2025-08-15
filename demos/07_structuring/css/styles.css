@@ -1,181 +1,266 @@
+/**
+*
+* Styles 
+* @author Rogier van der Linde
+*
+*/
 
-/* General Section */
+
+/* Reset
+/* ============== */
+
+* {
+   box-sizing: border-box; /* corrigeer het box model */
+   margin: 0; /* wis verschillen tussen browsers uit */
+   padding: 0; /* wis verschillen tussen browsers uit */
+}
+
+img {
+   border: 0;
+}
+
+/* General
+/* ============== */
+
 body {
-	background-color: #999;
-	font-family: Verdana;
+   background-color: #999;
+   font-family: Verdana, sans-serif;
+   font-size: 16px;
 }
 
-.highlight {
-	background-color: #ccc;
-	color: #600;
+h2,
+h3,
+h4,
+h5 {
+   margin: 1em 0;
 }
 
-/* Site Wrapper */
+h3 {
+   font-size: 16px;
+   font-weight: normal;
+}
+
+h4 {
+   font-size: 14px;
+}
+
+h5 {
+   font-size: 12px;
+   font-weight: normal;
+}
+
+/* site wrapper */
+
 #wrapper {
-	width: 900px;
-	margin: 0 auto;
-	background-color: white;
-	background-image: url(../img/fauxcolumn.png);
-	background-repeat: repeat-y;
+   width: 900px;
+   margin: 0 auto;
+   background-color: white;
 }
 
-/* Header Section */
-#wrapper > header {
-	background-color: #333;
-	padding: 20px;
-	height: 60px;
-	position: relative;
-	color: #ccc;
-}
-#wrapper > header h1 {
-	position: absolute;
-	top: 10px;
-	left: 20px;
-	margin: 0;
-	padding: 0px;
-}
-#wrapper > header p {
-	text-align: right;
-	position: absolute;
-	top: 10px;
-	right: 20px;
-	margin: 0;
-}
-#wrapper > header a {
-	color: #ddd;
-}
-#wrapper > header a:hover {
-	color: white;
+
+/* Header
+/* ============== */
+
+header {
+   align-items: flex-start;
+   background-color: #333;
+   color: #ccc;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   height: 100px;
+   padding: 20px;
+   position: relative;
 }
 
-/* Main Menu Section */
+header h1 a {
+   font-weight: normal;
+   text-decoration: none;
+}
+
+header a {
+   color: #ddd;
+}
+
+.header_login {
+   text-align: right;
+}
+
+.header_login a:hover {
+   color: white;
+}
+
+
+/* Menu
+/* ============== */
+
+/* top menu */
+
+header+nav {
+   background-color: #666;
+   padding: 10px 20px;
+}
+
 #mainmenu {
-	display: block;
+   display: block;
 }
+
+#mainmenu li {
+   display: inline-block;
+}
+
 #mainmenu a {
-	color: #ccc;
-}
-#mainmenu ul {
-	background-color: #666;
-	margin: 0;
-	padding-left: 10px;
-}
-#mainmenu ul li {
-	display: inline-block;
-}
-#mainmenu ul li a {
-	line-height: 24px;
-	display: inline-block;
-	height: 28px;
-	width: 50px;
-	padding: 2px 5px;
-	text-align: center;
-}
-#mainmenu ul li + li:before {
-	content: '|';
-	color: #999;
+   color: #ccc;
+   display: inline-block;
+   height: 28px;
+   line-height: 24px;
+   padding: 2px 5px;
+   text-align: center;
+   width: 50px;
 }
 
-/* Sub Menu Section */
-
-#submenu {
-	width: 180px;
-	padding: 10px 10px 10px 20px;
-	float: left;
-}
-#submenu ul {
-	padding-left: 0px;
-}
-#submenu h2 {
-	margin-top: 18px;
-	font-size: 16px;	
+#mainmenu li+li::before {
+   color: #999;
+   content: '|';
 }
 
-/* Content Section */
+
+/* Main
+/* ============== */
+
 main {
-	width: 640px;
-	padding: 10px 10px 10px 20px;
-	float: left;
+   display: flex;
+   flex-flow: row nowrap;
 }
 
-main h2 {
-	margin-top: 10px;
+/* sub menu */
+
+#leftmenu {
+   background-color: #FEFF99;
+   padding: 10px 20px;
+   width: 190px;
 }
+
+#leftmenu ul {
+   list-style: none;
+}
+
+/* content */
+
+#content {
+   padding: 10px 20px;
+   width: 710px;
+}
+
+.content_header {
+   font-size: smaller;
+   font-style: italic;
+   margin-bottom: 15px;
+   margin-top: 25px;
+}
+
+.content_picture {
+   margin: 20px 0;
+   width: 450px;
+}
+
+/* aside */
 
 main aside {
-	float: right;
-	width: 130px;
-	border: 1px solid gray;
-	font-size: smaller;
-	padding: 10px;
-	margin: 0 0 10px 10px;
+   border: 1px solid gray;
+   float: right;
+   font-size: smaller;
+   margin: 15px 0 10px 10px;
+   padding: 10px;
+   width: 160px;
 }
 
-main aside p {
-	margin: 0;
+main aside article {
+   font-size: 12px;
+   margin-top: 10px;
+   text-align: justify;
 }
 
-main aside h1 {
-	font-size: 10px;
+.article_visual {
+   display: block;
+   margin: 0 auto;
+   width: 80%;
 }
 
-main article footer {
-	font-size: smaller;
-	margin-bottom: 10px;
+main aside article p:last-child {
+   margin-top: 5px;
 }
 
-main article {
-	font-size: 12px;
-	line-height: 1.7;
+main aside article h1 {
+   margin: 10px 0;
 }
 
-main article {
-	text-align: justify;
-}
+/* comments */
 
 #comments {
-	border-top: 1px dotted #ccc;
+   border-top: 1px dotted #ccc;
+   font-size: 12px;
+   margin-top: 40px;
 }
 
-#comments footer {
-	font-size: smaller;
-	font-style: italic;
+.comment {
+   width: 500px;
 }
 
-/* Footer Section */
-#wrapper > footer {
-	background-color: #666;
-	text-align: center;
-	font-size: smaller;
-	color: #eee;
-	clear: both;
-	padding: 10px;
+.comment_title {
+   margin-bottom: 0.5em;
+   font-weight: 600;
 }
 
-#wrapper > footer a {
-	color: #ccc;
+.comment::after {
+   border-top: 1px solid #ccc;
+   content: "";
+   display: block;
+   margin: 10px 0;
+   width: 100px;
 }
 
-#wrapper > footer p, #wrapper > footer ul  {
-	margin: 0;
+.comment_author {
+   font-style: italic;
 }
 
-#wrapper > footer ul {
-	list-style: none;
-	padding: 0;
+
+/* Footer
+/* ============== */
+
+footer {
+   background-color: #666;
+   color: #eee;
+   font-size: smaller;
+   padding: 10px;
+   text-align: center;
 }
 
-#wrapper > footer li {
-	display: inline-block;
+footer a {
+   color: #ccc;
 }
 
-#wrapper > footer ul a {
-	line-height: 24px;
-	display: inline;
-	padding: 2px 5px;
-}
-#wrapper > footer li + li:before {
-	content: '|';
-	color: #999;
+footer p,
+footer ul {
+   margin: 10px 0;
 }
 
+footer ul {
+   list-style: none;
+   padding: 0;
+}
+
+footer li {
+   display: inline-block;
+}
+
+footer ul a {
+   display: inline;
+   line-height: 24px;
+   padding: 2px 5px;
+}
+
+footer li+li::before {
+   content: ' | ';
+   color: #999;
+}

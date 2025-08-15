@@ -12,7 +12,7 @@
    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="language-html showpro prism-default">
+<body class="prism language-html showpro prism-default">
    <div id="mode">
       <span>n00b</span>
       <label class="switch">
@@ -88,7 +88,7 @@
       <h2>Afbeeldingen</h2>
       <h3>Inhoud of design?</h3>
       <p>
-         Let op! Niet alle afbeeldingen van webpagina's worden in de HTML gecodeerd. Sommige worden latern met <a href="https://rogiervdl.github.io/CSS-course/02_design.html">CSS</a> toegevoegd (zie later). 
+         Let op! Niet alle afbeeldingen van webpagina's worden in de HTML gecodeerd. Sommige worden latern met <a href="https://rogiervdl.github.io/CSS-course/02_design.html">CSS</a> toegevoegd (zie later).
          Kort gezegd: <strong>design</strong> hoort thuis in <strong>CSS</strong>, <strong>inhoud</strong> hoort thuis in <strong>HTML</strong>. Vuistregels:
       </p>
       <ul class="arrow">
@@ -201,7 +201,7 @@
       </ul>
       <h3>Keuze formaat</h3>
       <p>
-         Welk formaat is nu het meest geschikte? 
+         Welk formaat is nu het meest geschikte?
          Bestaat je afbeelding vooral uit <mark>vlakken en lijnen</mark> (denk aan iconen en logo's):
       </p>
       <ul>
@@ -320,7 +320,7 @@
       <h3>&lt;img&gt;   </h3>
       <p>De standaardwijze om een afbeelding toe te voegen, is met de HTML &lt;img&gt; tag:</p>
       <div class="codecompare top">
-         <pre><code>&lt;img src="img/05_media/schaakstukken.jpg" 
+         <pre><code>&lt;img src="img/05_media/schaakstukken.jpg"
      alt="Staunton schaakstukken, 1852 Morphy serie"&gt;&lt;!-- alt is verplicht! --&gt;
 </code></pre>
 
@@ -328,7 +328,7 @@
       <ul class="arrow">
          <li>dit kan met alle afbeeldingsformaten, niet enkel jpg</li>
          <li>het <code>alt</code> attribuut is <strong>verplicht</strong> voor visueel beperkten, maar ook om zoekmachines te helpen indexeren</li>
-         <li>geef een <i>relevante beschrijving</i>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
+         <li>geef een <em>relevante beschrijving</em>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
       </ul>
 
       <h3>&lt;figure&gt; en &lt;figcaption&gt;</h3>
@@ -400,7 +400,7 @@
 
       <h3>Google maps</h3>
       <p>Ook Google maps kan je embedden op je pagina. Klik "delen" en kopieer de &lt;iframe&gt; embed code naar jouw HTML:</p>
-      <br><img src="img/05_media/embed_map.png" alt="" class="shadow bordered" style="max-width: 400px;">
+      <br><img src="img/05_media/embed_map.png" alt="" class="shadow bordered w-400">
       <div class="demolink"><a href="demos/05_media/embed_map.html">demo</a></div>
 
       <h3>Andere</h3>
@@ -408,8 +408,8 @@
          Veel andere sites bieden eveneens de optie om hun code te embedden, zoals <a href="https://trends.google.com/trends/explore?date=all&geo=US&q=minecraft,fortnite,warcraft">Google Trends</a>:
       </p>
       <div class="w-800">
-         <script src="https://ssl.gstatic.com/trends_nrtr/3728_RC01/embed_loader.js"></script> 
-         <script> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"minecraft","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"fortnite","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"warcraft","geo":"US","time":"2004-01-01 2024-05-19"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=minecraft,fortnite,warcraft","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>      
+         <script src="https://ssl.gstatic.com/trends_nrtr/3728_RC01/embed_loader.js"></script>
+         <script> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"minecraft","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"fortnite","geo":"US","time":"2004-01-01 2024-05-19"},{"keyword":"warcraft","geo":"US","time":"2004-01-01 2024-05-19"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=minecraft,fortnite,warcraft","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
       </div>
    </main>
    <footer>

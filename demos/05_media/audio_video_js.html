@@ -5,19 +5,19 @@
 	<meta charset="utf-8">
 	<script>
 		window.onload = function() {
-			var video = document.getElementById("video");
+			const video = document.querySelector('#video');
 			video.controls = false;
-			document.getElementById("lnkPlay").onclick = function() {
+			document.querySelector('#lnkPlay').onclick = function() {
 				if (video.paused) video.play();
 				else video.pause();
 				return false;
 			}
-			document.getElementById("lnkMute").onclick = function() {
+			document.querySelector('#lnkMute').onclick = function() {
 				if (video.volume > 0) video.volume = 0;
 				else video.volume = 1;
 				return false;
 			}
-			document.getElementById("inpSeek").onchange = function() {
+			document.querySelector('#inpSeek').onchange = function() {
 				video.currentTime = this.value;
 			}
 		}
