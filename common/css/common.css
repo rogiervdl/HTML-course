@@ -671,6 +671,10 @@ html body .small {
 	width: fit-content;
 }
 
+.tips:not([data-caption]) {
+	padding: 1rem 5rem 1rem 4.5rem;
+}
+
 .tips> :first-child {
 	margin-top: 1em;
 }
@@ -680,7 +684,12 @@ html body .small {
 	font-size: 1.8rem;
 	left: 0.5rem;
 	position: absolute;
-	top: 0.5rem;
+	top: 1.5rem;
+}
+
+.tips:not([data-caption])::before {
+	content: attr(data-icon);
+	font-size: 3rem;
 }
 
 .tips.topmessage {
