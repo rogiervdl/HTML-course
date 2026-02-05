@@ -180,6 +180,10 @@ table caption {
 
 /* general */
 
+.hidden {
+	display: none;
+}
+
 .title__anchor {
 	margin-top: -100px;
 	padding-bottom: 100px;
@@ -444,6 +448,11 @@ body main .w-1200 {
 
 .h-200 {
 	height: 200px;
+	overflow-y: auto;
+}
+
+.h-250 {
+	height: 250px;
 	overflow-y: auto;
 }
 
