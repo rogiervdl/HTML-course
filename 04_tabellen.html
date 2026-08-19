@@ -118,17 +118,17 @@
                <td><code>&lt;col&gt;</code></td>
                <td>gebruikt in <code>&lt;colgroup&gt;</code>: duidt een groep kolommen aan</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>&lt;thead&gt;</code></td>
                <td>optioneel: duidt het bovenste deel van de tabel aan</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>&lt;tbody&gt;</code></td>
-               <td>duidt het middelste deel van de tabel aan</td>
+               <td>optioneel: duidt het middelste deel van de tabel aan</td>
             </tr>
-            <tr>
+            <tr class="pro">
                <td><code>&lt;tfoot&gt;</code></td>
-               <td>duidt het onderste deel van de tabel aan</td>
+               <td>optioneel: duidt het onderste deel van de tabel aan</td>
             </tr>
             <tr>
                <td><code>&lt;tr&gt;</code></td>
@@ -160,13 +160,13 @@
                <td><code>row</code>, <code>col</code></td>
                <td>beschrijft deze header cell een rij of een kolom?</td>
             </tr>
-            <tr class="pro">
+            <tr>
                <td><code>colspan</code></td>
                <td><code>&lt;td colspan="2"&gt;</code></td>
                <td>getal</td>
                <td>cel overspant meerdere kolommen</td>
             </tr>
-            <tr class="pro">
+            <tr>
                <td><code>rowspan</code></td>
                <td><code>&lt;td rowspan="2"&gt;</code></td>
                <td>getal</td>
@@ -209,7 +209,7 @@
          <img src="img/04_tabellen/tabel1.png" alt="" class="w-150">
       </div>
 
-      <h3>Uitbreiding met <code>&lt;caption&gt;</code> en <code>&lt;th scope="..."&gt;</code></h3>
+      <h3>Bijschrift met <code>&lt;caption&gt;</code> en koppen met <code>&lt;th scope="..."&gt;</code></h3>
       <p>Het <code>&lt;th&gt;</code> element duidt een header cel aan, het <code>scope</code> attribuut duidt aan of het om een rij of een kolom gaat:</p>
       <div class="codecompare top">
          <pre data-demo class="w-700"><code>&lt;!-- begin CSS blok --&gt;
@@ -248,13 +248,75 @@
          <img src="img/04_tabellen/tabel2.png" alt="" class="w-300">
       </div>
 
-      <h3>Uitbreiding met <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> en <code>&lt;tfoot&gt;</code></h3>
+      <h3>Cellen samenvoegen met <code>colspan</code> en <code>rowspan</code></h3>
       <p>
-         Met deze elementen kan je je tabel onderverdelen in een bovenste, middelste en onderste gedeelte.
-         Op zich zul je geen verschil zien, maar het is wel handig om b.v. de header een achtergrondkleur te geven, en de footer in schuin te zetten:
+         Met <code>colspan</code> en <code>rowspan</code> kan je cellen samenvoegen: de cel overspant dan meerdere kolommen of meerdere rijen.
+         Zo kan je b.v. de vakken onder één gemeenschappelijke titel groeperen, of aanduiden dat een student voor alle vakken vrijgesteld is:
       </p>
       <div class="codecompare top">
-        <pre class="w-700" data-demo><code>&lt;!-- begin CSS blok --&gt;
+         <pre class="w-700" data-demo><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }
+   td, th { border: 1px solid black; padding: 5px; }
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;tr&gt;
+      &lt;th scope="col" rowspan="2"&gt;student&lt;/th&gt;
+      &lt;th scope="col" colspan="3"&gt;vakken&lt;/th&gt;
+      &lt;th scope="col" rowspan="2"&gt;aanwezigheid&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
+      &lt;th scope="col"&gt;fysica&lt;/th&gt;
+      &lt;th scope="col"&gt;nederlands&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;88&lt;/td&gt;
+      &lt;td&gt;hoog&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Bryan&lt;/th&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;gemiddeld&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;Chee&lt;/th&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+      &lt;td&gt;laag&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;David&lt;/th&gt;
+      &lt;td colspan="3"&gt;vrijgesteld&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
+      &lt;td&gt;84.33&lt;/td&gt;
+      &lt;td&gt;88.67&lt;/td&gt;
+      &lt;td&gt;86.67&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+         <img src="img/04_tabellen/tabel3.png" alt="" class="w-400">
+      </div>
+
+      <div class="pro">
+         <h3>Secties met <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> en <code>&lt;tfoot&gt;</code></h3>
+         <p>
+            Met deze elementen kan je je tabel onderverdelen in een bovenste, middelste en onderste gedeelte.
+            Op zich zul je geen verschil zien, maar het is wel handig om b.v. de header een achtergrondkleur te geven, en de footer schuin te zetten:
+         </p>
+         <div class="codecompare top">
+            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
 &lt;style&gt;
    table { border-collapse: collapse; }
    td, th { border: 1px solid black; padding: 5px; }
@@ -266,142 +328,14 @@
    &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
    &lt;thead&gt;
       &lt;tr&gt;
-         &lt;th scope="col"&gt;student&lt;/th&gt;
+         &lt;th scope="col" rowspan="2"&gt;student&lt;/th&gt;
+         &lt;th scope="col" colspan="3"&gt;vakken&lt;/th&gt;
+         &lt;th scope="col" rowspan="2"&gt;aanwezigheid&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
          &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
          &lt;th scope="col"&gt;fysica&lt;/th&gt;
          &lt;th scope="col"&gt;nederlands&lt;/th&gt;
-      &lt;/tr&gt;
-   &lt;/thead&gt;
-   &lt;tbody&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
-         &lt;td&gt;90&lt;/td&gt;
-         &lt;td&gt;85&lt;/td&gt;
-         &lt;td&gt;88&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
-         &lt;td&gt;78&lt;/td&gt;
-         &lt;td&gt;92&lt;/td&gt;
-         &lt;td&gt;80&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Chee&lt;/th&gt;
-         &lt;td&gt;85&lt;/td&gt;
-         &lt;td&gt;89&lt;/td&gt;
-         &lt;td&gt;92&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tbody&gt;
-   &lt;tfoot&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
-         &lt;td&gt;84.33&lt;/td&gt;
-         &lt;td&gt;88.67&lt;/td&gt;
-         &lt;td&gt;86.67&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tfoot&gt;
-&lt;/table&gt;</code></pre>
-         <img src="img/04_tabellen/tabel3.png" alt="" class="w-350">
-
-      </div>
-      <div class="pro">
-         <h3>Uitbreiding met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code></h3>
-         <p>
-            Met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code> kun je kolommen groeperen.
-            Dit is kan zinvol zijn om b.v. in dit voorbeeld wetenschapsvakken een andere achtergrondkleur te geven dan taalvakken:
-         </p>
-         <div class="codecompare top">
-            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
-&lt;style&gt;
-   table { border-collapse: collapse; }
-   td, th { border: 1px solid black; padding: 5px; }
-   thead { background-color: #f0f0f0 }
-   tfoot { font-style: italic; }
-   col {background-color: #f0f0f0;} /* grijze achtergrondkleur */
-   col.wetenschapsvakken { background-color: #f0fff0; } /* lichtgroene achtergrondkleur */
-   col.taalvakken { background-color: #f0f0ff; } /* lichtblauwe achtergrondkleur */
-&lt;/style&gt;
-&lt;!-- einde CSS blok --&gt;
-&lt;table&gt;
-   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
-   &lt;colgroup&gt;
-      &lt;col&gt;
-      &lt;col class="wetenschapsvakken" span="2"&gt;
-      &lt;col class="taalvakken"&gt;
-   &lt;/colgroup&gt;
-   &lt;thead&gt;
-      &lt;tr&gt;
-         &lt;th scope="col"&gt;student&lt;/th&gt;
-         &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
-         &lt;th scope="col"&gt;fysica&lt;/th&gt;
-         &lt;th scope="col"&gt;nederlands&lt;/th&gt;
-      &lt;/tr&gt;
-   &lt;/thead&gt;
-   &lt;tbody&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
-         &lt;td&gt;90&lt;/td&gt;
-         &lt;td&gt;85&lt;/td&gt;
-         &lt;td&gt;88&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
-         &lt;td&gt;78&lt;/td&gt;
-         &lt;td&gt;92&lt;/td&gt;
-         &lt;td&gt;80&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;Chee&lt;/th&gt;
-         &lt;td&gt;85&lt;/td&gt;
-         &lt;td&gt;89&lt;/td&gt;
-         &lt;td&gt;92&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tbody&gt;
-   &lt;tfoot&gt;
-      &lt;tr&gt;
-         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
-         &lt;td&gt;84.33&lt;/td&gt;
-         &lt;td&gt;88.67&lt;/td&gt;
-         &lt;td&gt;86.67&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tfoot&gt;
-&lt;/table&gt;</code></pre>
-            <img src="img/04_tabellen/tabel4.png" alt="" class="w-350">
-         </div>
-      </div>
-
-      <div class="pro">
-         <h3>Uitbreiding met <code>rowspan</code> en <code>colspan</code></h3>
-         <p>Met <code>rowspan</code> en <code>colspan</code> kan je cellen samenvoegen. </p>
-         <div class="codecompare top">
-            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
-   &lt;style&gt;
-   table { border-collapse: collapse; }
-   td, th { border: 1px solid black; padding: 5px; }
-   thead { background-color: #f0f0f0 }
-   tfoot { font-style: italic; }
-   col {background-color: #f0f0f0;} /* grijze achtergrondkleur */
-   col.wetenschapsvakken { background-color: #f0fff0; } /* lichtgroene achtergrondkleur */
-   col.taalvakken { background-color: #f0f0ff; } /* lichtblauwe achtergrondkleur */
-&lt;/style&gt;
-&lt;!-- einde CSS blok --&gt;
-&lt;table&gt;
-   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
-   &lt;colgroup&gt;
-      &lt;col&gt;
-      &lt;col class="wetenschapsvakken" span="2"&gt;
-      &lt;col class="taalvakken"&gt;
-   &lt;/colgroup&gt;
-   &lt;thead&gt;
-      &lt;tr&gt;
-         &lt;th scope="col" rowspan="2"&gt;Student&lt;/th&gt;
-         &lt;th scope="col" colspan="3"&gt;Vakken&lt;/th&gt;
-         &lt;th scope="col" rowspan="2"&gt;Aanwezigheid&lt;/th&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;th scope="col"&gt;Wiskunde&lt;/th&gt;
-         &lt;th scope="col"&gt;Fysica&lt;/th&gt;
-         &lt;th scope="col"&gt;Nederlands&lt;/th&gt;
       &lt;/tr&gt;
    &lt;/thead&gt;
    &lt;tbody&gt;
@@ -413,7 +347,7 @@
          &lt;td&gt;hoog&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;th scope="row"&gt;Brian&lt;/th&gt;
+         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
          &lt;td&gt;78&lt;/td&gt;
          &lt;td&gt;92&lt;/td&gt;
          &lt;td&gt;80&lt;/td&gt;
@@ -438,7 +372,87 @@
          &lt;td&gt;84.33&lt;/td&gt;
          &lt;td&gt;88.67&lt;/td&gt;
          &lt;td&gt;86.67&lt;/td&gt;
-         &lt;td&gt;&nbsp;&lt;/td&gt;
+         &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+            <img src="img/04_tabellen/tabel4.png" alt="" class="w-400">
+         </div>
+      </div>
+
+      <div class="pro">
+         <h3>Kolommen met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code></h3>
+         <p>
+            Met <code>&lt;colgroup&gt;</code> en <code>&lt;col&gt;</code> kun je kolommen groeperen.
+            Dit is kan zinvol zijn om b.v. in dit voorbeeld wetenschapsvakken een andere achtergrondkleur te geven dan taalvakken:
+         </p>
+         <div class="codecompare top">
+            <pre data-demo><code>&lt;!-- begin CSS blok --&gt;
+&lt;style&gt;
+   table { border-collapse: collapse; }
+   td, th { border: 1px solid black; padding: 5px; }
+   thead { background-color: #f0f0f0 }
+   tfoot { font-style: italic; }
+   col { background-color: #f0f0f0; } /* grijze achtergrondkleur */
+   col.wetenschapsvakken { background-color: #f0fff0; } /* lichtgroene achtergrondkleur */
+   col.taalvakken { background-color: #f0f0ff; } /* lichtblauwe achtergrondkleur */
+&lt;/style&gt;
+&lt;!-- einde CSS blok --&gt;
+&lt;table&gt;
+   &lt;caption&gt;Cijfers studenten&lt;/caption&gt;
+   &lt;colgroup&gt;
+      &lt;col&gt;
+      &lt;col class="wetenschapsvakken" span="2"&gt;
+      &lt;col class="taalvakken"&gt;
+      &lt;col&gt;
+   &lt;/colgroup&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th scope="col" rowspan="2"&gt;student&lt;/th&gt;
+         &lt;th scope="col" colspan="3"&gt;vakken&lt;/th&gt;
+         &lt;th scope="col" rowspan="2"&gt;aanwezigheid&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="col"&gt;wiskunde&lt;/th&gt;
+         &lt;th scope="col"&gt;fysica&lt;/th&gt;
+         &lt;th scope="col"&gt;nederlands&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Ayoub&lt;/th&gt;
+         &lt;td&gt;90&lt;/td&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;88&lt;/td&gt;
+         &lt;td&gt;hoog&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Bryan&lt;/th&gt;
+         &lt;td&gt;78&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;80&lt;/td&gt;
+         &lt;td&gt;gemiddeld&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;Chee&lt;/th&gt;
+         &lt;td&gt;85&lt;/td&gt;
+         &lt;td&gt;89&lt;/td&gt;
+         &lt;td&gt;92&lt;/td&gt;
+         &lt;td&gt;laag&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;David&lt;/th&gt;
+         &lt;td colspan="3"&gt;vrijgesteld&lt;/td&gt;
+         &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+      &lt;tr&gt;
+         &lt;th scope="row"&gt;gemiddelde&lt;/th&gt;
+         &lt;td&gt;84.33&lt;/td&gt;
+         &lt;td&gt;88.67&lt;/td&gt;
+         &lt;td&gt;86.67&lt;/td&gt;
+         &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
    &lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
