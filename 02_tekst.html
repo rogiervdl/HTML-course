@@ -297,6 +297,31 @@
 &lt;/details&gt;</code></pre>
          <img src="img/02_tekst/details.gif" alt="" class="w-400 bordered">
       </div>
+      <p>
+         Geef je meerdere <code>&lt;details&gt;</code>-blokken hetzelfde <code>name</code>, dan vormen ze
+         samen een accordeon: er kan er maar &eacute;&eacute;n tegelijk openstaan, want zodra je er een
+         opent klapt de vorige dicht. Zonder <code>name</code> staan de blokken los van elkaar en mogen
+         ze allemaal tegelijk openstaan. Zo maak je bijvoorbeeld een FAQ, zonder een regel JavaScript:
+      </p>
+      <div class="codecompare top">
+         <pre data-demo><code>&lt;details name="faq" open&gt;
+   &lt;summary&gt;Hoe lang blijft het brood vers?&lt;/summary&gt;
+   &lt;p&gt;Twee tot drie dagen, in een linnen zak.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details name="faq"&gt;
+   &lt;summary&gt;Kan ik het invriezen?&lt;/summary&gt;
+   &lt;p&gt;Ja, in sneden, tot drie maanden.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details name="faq"&gt;
+   &lt;summary&gt;Waarom is de korst zo hard?&lt;/summary&gt;
+   &lt;p&gt;Laat het brood volledig afkoelen op een rooster, nooit in een gesloten zak.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details name="faq"&gt;
+   &lt;summary&gt;Zit er gist in?&lt;/summary&gt;
+   &lt;p&gt;Nee, enkel desem, bloem, water en zout.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+         <img src="img/02_tekst/details-name.gif" alt="" class="w-300 bordered">
+      </div>
 
       <div class="pro">
          <h3>Dialog</h3>
