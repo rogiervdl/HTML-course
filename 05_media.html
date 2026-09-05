@@ -331,6 +331,28 @@
          <li>geef een <em>relevante beschrijving</em>, dus niet "IMG_20190605_175721.jpg" e.d.</li>
       </ul>
 
+      <h3>&lt;img&gt; afmetingen</h3>
+      <p>
+         Met de attributen <code>width</code> en <code>height</code> geef je de <strong>afmetingen van het afbeeldingsbestand</strong> mee, in pixels en zonder eenheid:
+      </p>
+      <div class="codecompare top">
+         <pre><code>&lt;img src="img/05_media/schaakstukken.jpg"
+     alt="Staunton schaakstukken, 1852 Morphy serie"
+     width="800" height="600"&gt;
+</code></pre>
+      </div>
+      <ul class="arrow">
+         <li>ze zijn <strong>niet verplicht</strong>, maar wel <strong>aanbevolen</strong> waar je de afmetingen kent</li>
+         <li>
+            de browser kan dan al <strong>plaats reserveren</strong> voor de afbeelding voordat die geladen is, waardoor de pagina niet meer <em>verspringt</em> tijdens het laden
+            (dit heet <em>layout shift</em>, en telt mee voor je Google-score)
+         </li>
+         <li>gebruik de <em>echte</em> afmetingen van het bestand: het zijn geen schaalinstellingen, schalen doe je met <a href="https://rogiervdl.github.io/CSS-course/">CSS</a></li>
+      </ul>
+      <div class="tips" data-caption="💡TIP">
+         <p>in deze cursus laten we <code>width</code> en <code>height</code> meestal weg, om de voorbeeldcode kort en leesbaar te houden &mdash; in een echt project zet je ze er wel bij.</p>
+      </div>
+
       <h3>&lt;figure&gt; en &lt;figcaption&gt;</h3>
       <p>Als je een <strong>afbeelding met een bijschrift</strong> wil groeperen, kan je ook <code>&lt;figure&gt;</code> en <code>&lt;figcaption&gt;</code> gebruiken</p>
       <div class="codecompare top">
